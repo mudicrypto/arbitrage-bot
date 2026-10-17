@@ -1,0 +1,86 @@
+{
+  "duration_seconds": 180,
+  "universe_limit": 6,
+  "policy": {
+    "capital_usdt": 5000,
+    "clip_usdt": 100,
+    "min_quote_volume_24h": 5000000,
+    "min_trades_24h": 20000,
+    "max_tick_bps": 10.0,
+    "max_min_order_usdt": 50,
+    "max_level_concentration": 0.85,
+    "min_depth_10bps_usdt": 1000.0,
+    "min_uptime": 0.85
+  },
+  "economics": {
+    "inventory_bps": 2.0,
+    "rebalance_fraction": 0.1,
+    "rebalance_slippage_bps": 1.0,
+    "safety_bps": 2.0,
+    "adverse_floors_bps": [
+      0.0,
+      1.0,
+      3.0,
+      10.0
+    ]
+  },
+  "fees": [
+    {
+      "name": "manual_standard",
+      "account_verified": false,
+      "description": "Unverified conservative manual assumption: 10bps maker and 10bps taker each side; no rebate or promotion.",
+      "periods": [
+        {
+          "from_ms": 0,
+          "until_ms": null,
+          "symbol": null,
+          "standard_maker_microbps": 10000000,
+          "standard_taker_microbps": 10000000,
+          "buy_extra_microbps": 0,
+          "sell_extra_microbps": 0,
+          "bnb_discount_ppm": 0,
+          "asset": "quote",
+          "bnb_quote_price_units": null
+        }
+      ]
+    },
+    {
+      "name": "hypothetical_bnb_discount",
+      "account_verified": false,
+      "description": "Unverified 25% standard-commission discount, fees in BNB; conversion assumes 1000 USDT/BNB solely for fee-asset arithmetic, not a market observation.",
+      "periods": [
+        {
+          "from_ms": 0,
+          "until_ms": null,
+          "symbol": null,
+          "standard_maker_microbps": 10000000,
+          "standard_taker_microbps": 10000000,
+          "buy_extra_microbps": 0,
+          "sell_extra_microbps": 0,
+          "bnb_discount_ppm": 250000,
+          "asset": "bnb",
+          "bnb_quote_price_units": 100000000000
+        }
+      ]
+    },
+    {
+      "name": "hypothetical_zero_maker",
+      "account_verified": false,
+      "description": "Hypothetical promotional maker-zero scenario only; eligibility is NOT asserted; taker remains 10bps.",
+      "periods": [
+        {
+          "from_ms": 0,
+          "until_ms": null,
+          "symbol": null,
+          "standard_maker_microbps": 0,
+          "standard_taker_microbps": 10000000,
+          "buy_extra_microbps": 0,
+          "sell_extra_microbps": 0,
+          "bnb_discount_ppm": 0,
+          "asset": "quote",
+          "bnb_quote_price_units": null
+        }
+      ]
+    }
+  ]
+}

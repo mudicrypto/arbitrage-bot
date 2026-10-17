@@ -33,4 +33,8 @@ docker compose exec -T postgres psql -U marketmaker -d marketmaker -v ON_ERROR_S
 docker compose exec -T postgres psql -U marketmaker -d marketmaker -v ON_ERROR_STOP=1 < scripts/db-test.sql
 ```
 
-Start the processes using the working directories in README.md. Use managed terminals; reuse a healthy process rather than launching duplicates. The recorder rejects concurrent writers in each symbol directory. Verify `/health`, `/markets`, and `/metrics` with local HTTP requests. Do not expose localhost previews. Do not enable trading. Stop after M2; M3 requires approval.
+Start the processes using the working directories in README.md. Use managed terminals; reuse a healthy process rather than launching duplicates. The recorder rejects concurrent writers in each symbol directory. Verify `/health`, `/markets`, and `/metrics` with local HTTP requests. Do not expose localhost previews. Do not enable trading. Stop after M3; M4 requires approval.
+
+## Milestone 3 update
+
+M1–M3 are approved; stop before M4. The same installation script builds `mm-research` through the Rust workspace, without additional services, domains or credentials. Startup instructions now include read-only historical research routes and optional explicitly requested public collection. The API can serve committed preliminary reports without raw captures; replay requires the original local `.local/research/run-*` inputs. Raw data/checksums in the capture audit are not a remote backup. Use an alternate `PORT` or restart an owned API process to load new routes if an old instance occupies port 3001. The current research API was verified on port 3003. Review/save and publish the updated draft for future cloud tasks; publication/restoration have not been performed by the agent.

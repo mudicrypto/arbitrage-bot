@@ -67,3 +67,31 @@ Each symbol has a 64-message transport queue and 64-event snapshot buffer, 1 MiB
 Every finalized segment is flushed, fsynced, renamed atomically and checked with SHA-256 on replay. A process crash can lose the unflushed tail (normally up to 2 seconds; slow storage can increase this). Shutdown attempts to flush buffered data. Disk-full/write errors clear the affected book and halt its collector; free space/fix permissions and restart to recover. Overflow means coverage is lost: pending frames may be discarded and a new session begins. The invalidation reason is recorded when storage is writable. The API never treats the last quote as usable after a failure. Fixed-size status output is atomically replaced every 250 ms; metrics are process-local and reset on restart.
 
 Stop after M2; Milestone 3 requires explicit approval. No order submission, private exchange transport, simulated fills, strategy or live trading is implemented.
+
+## Market scanner and profitability research (Milestone 3)
+
+Rust `mm-research` discovers active USDT Spot pairs from public `exchangeInfo` and 24-hour tickers, applies activity/tick/lot/notional constraints, and reuses the M2 collector, synchronized books and Parquet replay. The default universe is six pairs; `config/research.json` allows up to 20 after memory/storage checks. Symbols start four seconds apart, with a shared scanner snapshot budget of at most one 5000-level request per three seconds. No funds are assigned: the $5,000 capital and $100 clip are research assumptions.
+
+From the repository root:
+
+```sh
+cargo build --workspace --locked
+./target/debug/mm-research run config/research.json reports/milestone3
+```
+
+Default collection lasts 180 seconds; results are always preliminary. Do not infer executable edge from quoted spreads or the ranking. Fees are explicit manual assumptions, never account-verified. All requested reports, selected metadata and exclusions are under `reports/milestone3/`. Capture hashes/counts from the milestone run are in `capture_audit.json`; the raw bounded journal remains under `.local/research/run-<timestamp>/` and is not pushed.
+
+Replay captured research observations without contacting Binance:
+
+```sh
+./target/debug/mm-research replay .local/research/run-<timestamp> > /tmp/replayed-research.json
+./target/debug/mm-research summarize .local/research/run-<timestamp> reports/milestone3
+```
+
+`summarize` verifies persisted online observations against checksum-verified replay before recomputing analytics with the saved manifest's assumptions. It requires the original report generation metadata and local capture; it does not invent missing history. Truncated windows expose their actual durations and `requested_window_complete=false`. Comparisons between report generations must use identical raw inputs and explicit fee assumptions.
+
+Additional read-only TypeScript routes: `/research/rankings` (JSON), `/research/rankings.csv`, `/research/summary` (Markdown), `/research/fees` (Markdown). They serve historical reports with timestamps, not live recommendations. `RESEARCH_REPORT_DIR` overrides the report directory; default is `../reports/milestone3` relative to `control-api/`. Restart an older API process to load new routes, or start a separate instance with `PORT=3003` if port 3001 is occupied. No research route accepts writes or orders.
+
+Research memory is capped at 7,200 sampled book observations and one-second trade bins per symbol; inputs retain M2 frame/book bounds. Research recording uses the same recorder with up to 128 segments/symbol, at most 8 MiB each (1 GiB/symbol), a 2 MiB target, 4,096-row target, and normal two-second flush. Free storage must exceed the worst-case per-symbol reservation plus 1 GiB; memory must exceed 256 MiB per symbol plus reserve. Long/high-activity runs may evict early segments; a missing prefix, segment gap or replay mismatch disqualifies candidates. Completed runs are retained for audit rather than silently deleted; explicitly archive/remove old captures if the next resource check refuses to start. Public request rate limits remain per process, so avoid running many scanners at once on a shared IP.
+
+See [M3 findings and limitations](docs/MILESTONE_3.md). Stop after M3; M4 needs explicit approval. There are still no trading strategies, fill simulator, orders, capital allocation or private API credentials.

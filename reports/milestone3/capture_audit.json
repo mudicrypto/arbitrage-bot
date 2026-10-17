@@ -1,0 +1,2346 @@
+{
+  "input_sha256": {
+    "exchange-info.json": "9ce37f7c2fd50e8632c8c9b108b9721436d175d2c5263207dea283a2a6f6267e",
+    "manifest.json": "88171fd3b9193b6232c4c3f160a68429f6d0385b9a38bdf11ec9243e13113e5e",
+    "online-observations.json": "ed0036e003161778f330e38fd31fb1b5c6163b42ea5b6226b9ff2d2098016693",
+    "tickers-24h.json": "6dad928a128fd9d0cb17a550950ec1ecd8eebe42c7e68c9cdb96c7e0e5f7d7cb"
+  },
+  "observation_samples": {
+    "BTCUSDT": {
+      "aggregate_gaps": 0,
+      "aggregate_trade_messages": 743,
+      "book_samples": 176,
+      "capacity_exceeded": false,
+      "end_ms": 1792249069904,
+      "start_ms": 1792248892917,
+      "trade_bins": 141,
+      "underlying_trade_count": 1877
+    },
+    "ETHUSDT": {
+      "aggregate_gaps": 0,
+      "aggregate_trade_messages": 204,
+      "book_samples": 173,
+      "capacity_exceeded": false,
+      "end_ms": 1792249069904,
+      "start_ms": 1792248895919,
+      "trade_bins": 82,
+      "underlying_trade_count": 1057
+    },
+    "SOLUSDT": {
+      "aggregate_gaps": 0,
+      "aggregate_trade_messages": 151,
+      "book_samples": 167,
+      "capacity_exceeded": false,
+      "end_ms": 1792249069904,
+      "start_ms": 1792248901922,
+      "trade_bins": 89,
+      "underlying_trade_count": 307
+    },
+    "USD1USDT": {
+      "aggregate_gaps": 0,
+      "aggregate_trade_messages": 154,
+      "book_samples": 146,
+      "capacity_exceeded": false,
+      "end_ms": 1792249069904,
+      "start_ms": 1792248898921,
+      "trade_bins": 72,
+      "underlying_trade_count": 223
+    },
+    "USDCUSDT": {
+      "aggregate_gaps": 0,
+      "aggregate_trade_messages": 548,
+      "book_samples": 178,
+      "capacity_exceeded": false,
+      "end_ms": 1792249069904,
+      "start_ms": 1792248889916,
+      "trade_bins": 160,
+      "underlying_trade_count": 568
+    },
+    "ZECUSDT": {
+      "aggregate_gaps": 0,
+      "aggregate_trade_messages": 403,
+      "book_samples": 164,
+      "capacity_exceeded": false,
+      "end_ms": 1792249069904,
+      "start_ms": 1792248904922,
+      "trade_bins": 89,
+      "underlying_trade_count": 480
+    }
+  },
+  "replay_consistency_verified": true,
+  "run_directory": ".local/research/run-1792248889904",
+  "segments": [
+    {
+      "bytes": 306011,
+      "path": "recordings/BTCUSDT/00000001792248897708-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000001.parquet",
+      "sha256": "f3f5cee840ffb353d7f2bbac511a8e8ed9467feeb5c1673fe084a92ad5a8c406"
+    },
+    {
+      "bytes": 86984,
+      "path": "recordings/BTCUSDT/00000001792248899958-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000002.parquet",
+      "sha256": "0e0c1a74e4f8c4eb483345ce4ea0080fd55c8d7556d147032d87b28307b36127"
+    },
+    {
+      "bytes": 86740,
+      "path": "recordings/BTCUSDT/00000001792248902207-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000003.parquet",
+      "sha256": "bd26dcfb580b319f3d7d9f033b8278fc614a73d385d54572cf0233d282c16527"
+    },
+    {
+      "bytes": 90551,
+      "path": "recordings/BTCUSDT/00000001792248904458-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000004.parquet",
+      "sha256": "698f40584bfb4710cc5a08c53ade20757df609fee4f6d4dea8c0b58245ab4966"
+    },
+    {
+      "bytes": 86463,
+      "path": "recordings/BTCUSDT/00000001792248906708-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000005.parquet",
+      "sha256": "7fff3f5101cfc3e1870af69f355c6a0c55f89cd7f0a7c44906ead50a2604628c"
+    },
+    {
+      "bytes": 87088,
+      "path": "recordings/BTCUSDT/00000001792248908958-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000006.parquet",
+      "sha256": "6f6b9349f4c7bbea9c6f49b88ea45d721af9714591bd6330198abb5b7546b445"
+    },
+    {
+      "bytes": 87283,
+      "path": "recordings/BTCUSDT/00000001792248911207-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000007.parquet",
+      "sha256": "a273f0890caac75be65afb519e3853df3298165b25faf3544d2fc31f6674e53c"
+    },
+    {
+      "bytes": 85312,
+      "path": "recordings/BTCUSDT/00000001792248913458-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000008.parquet",
+      "sha256": "194cbd3ccf0183006c0401b7cae8203a91ab23badd05ca24296bd91192836959"
+    },
+    {
+      "bytes": 85107,
+      "path": "recordings/BTCUSDT/00000001792248915708-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000009.parquet",
+      "sha256": "d9ff122616720ccf48e2d4a71524bc94bdcd6e03dd4b2b23a7412309205a2c6e"
+    },
+    {
+      "bytes": 84953,
+      "path": "recordings/BTCUSDT/00000001792248917958-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000010.parquet",
+      "sha256": "2c44d3d7a286596e19391396ffc757732e42ba9d64d0db4164d8d441a54e1ca0"
+    },
+    {
+      "bytes": 87079,
+      "path": "recordings/BTCUSDT/00000001792248920208-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000011.parquet",
+      "sha256": "344fa44458365aae4828e0828bc4cf29a954debf4759f22898737554eaac79dc"
+    },
+    {
+      "bytes": 87578,
+      "path": "recordings/BTCUSDT/00000001792248922458-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000012.parquet",
+      "sha256": "adbec5f40fd4de8ce49b8d1036a50a41467e15cb57ca6ff4ac44085b53ff89e3"
+    },
+    {
+      "bytes": 87376,
+      "path": "recordings/BTCUSDT/00000001792248924708-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000013.parquet",
+      "sha256": "f1306d60c4063c8c595ad977c7860eb1e016aaacf90b71844b691bec8be3c244"
+    },
+    {
+      "bytes": 84805,
+      "path": "recordings/BTCUSDT/00000001792248926959-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000014.parquet",
+      "sha256": "270dbdce38ed42e9ae788933863edd8db5f2132ee1c543df3773cbd8bef2a0c7"
+    },
+    {
+      "bytes": 92608,
+      "path": "recordings/BTCUSDT/00000001792248929208-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000015.parquet",
+      "sha256": "53f8bb7e12565fccf47d64a38e62c1077757b86bd4ce6630cf0f3dffb7fb9800"
+    },
+    {
+      "bytes": 87588,
+      "path": "recordings/BTCUSDT/00000001792248931458-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000016.parquet",
+      "sha256": "aeb141093418e99bfbf0033146cdde1f4254d3cfa2baf2fd6509e370f94119a8"
+    },
+    {
+      "bytes": 85192,
+      "path": "recordings/BTCUSDT/00000001792248933708-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000017.parquet",
+      "sha256": "2502fc7361e356bcd644f1621cdb070df7821b278339dce445dfc1a81b0f771d"
+    },
+    {
+      "bytes": 90472,
+      "path": "recordings/BTCUSDT/00000001792248935959-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000018.parquet",
+      "sha256": "5341545301c0d55e1f8d14330df525736728466c3398a3e05a44ddf011135026"
+    },
+    {
+      "bytes": 90225,
+      "path": "recordings/BTCUSDT/00000001792248938208-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000019.parquet",
+      "sha256": "6f3438761206bbde478a0cfa8156303b6ad47b242707c2c1238351f1fdaf8eca"
+    },
+    {
+      "bytes": 94041,
+      "path": "recordings/BTCUSDT/00000001792248940458-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000020.parquet",
+      "sha256": "25270ec916cda2bf88c94dc4459c29452d6586fbc562b81e8ca3873fa3fe0009"
+    },
+    {
+      "bytes": 87750,
+      "path": "recordings/BTCUSDT/00000001792248942708-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000021.parquet",
+      "sha256": "e9fe36e747e5b3933391053d1f316b1f610afe57139a11dc54f4156ddc8bd0f7"
+    },
+    {
+      "bytes": 86919,
+      "path": "recordings/BTCUSDT/00000001792248944958-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000022.parquet",
+      "sha256": "972ef837fbda572127c1fbe9df4f948be60f65d271f17418eeb79046e3ff7301"
+    },
+    {
+      "bytes": 85107,
+      "path": "recordings/BTCUSDT/00000001792248947237-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000023.parquet",
+      "sha256": "6cfcc06d399436d3087a10453c4d1c888d794e5e81da43715e7a831fd635b17b"
+    },
+    {
+      "bytes": 84990,
+      "path": "recordings/BTCUSDT/00000001792248949458-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000024.parquet",
+      "sha256": "e58da1f2cebc4f488a5cdbbcb082623cec6ef961d855de440b11463e12b8db1f"
+    },
+    {
+      "bytes": 86839,
+      "path": "recordings/BTCUSDT/00000001792248951574-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000025.parquet",
+      "sha256": "3da758571a56fa799c898e93d764414ef433b77c74f5e8e3943e8d98878de214"
+    },
+    {
+      "bytes": 87776,
+      "path": "recordings/BTCUSDT/00000001792248953708-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000026.parquet",
+      "sha256": "a4896720c0e5e9dbcad38658e50f2e107b2d091f98b3640192fb22ebb9434f24"
+    },
+    {
+      "bytes": 86776,
+      "path": "recordings/BTCUSDT/00000001792248955959-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000027.parquet",
+      "sha256": "760da174f281627d6f6a14466bce10f74a7123fd6cea03386f7c45ff95cb411b"
+    },
+    {
+      "bytes": 86449,
+      "path": "recordings/BTCUSDT/00000001792248958208-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000028.parquet",
+      "sha256": "5c2e8ff2966860a81bfa264cf877686fd6a8c56f3a6c7355c0b4ab5e32caec39"
+    },
+    {
+      "bytes": 86518,
+      "path": "recordings/BTCUSDT/00000001792248960458-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000029.parquet",
+      "sha256": "e3d0bbc8fac4682d5513762fa1c7139ea1d734843f4e043a8d1d2b5666f6416c"
+    },
+    {
+      "bytes": 92459,
+      "path": "recordings/BTCUSDT/00000001792248962708-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000030.parquet",
+      "sha256": "ba18233ee1d086e22fcc1ff3eb1bb277602eac5e793879a6436ba7a983886a34"
+    },
+    {
+      "bytes": 87899,
+      "path": "recordings/BTCUSDT/00000001792248964958-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000031.parquet",
+      "sha256": "c8cc128b10a09d3d13e28a5efc02d5efab115de0120c87d6895f71de4cd41c5c"
+    },
+    {
+      "bytes": 87324,
+      "path": "recordings/BTCUSDT/00000001792248967209-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000032.parquet",
+      "sha256": "918a1735022719999329c91cc24d059dd94a679930d665d5a8388a5bb98c1a4a"
+    },
+    {
+      "bytes": 90431,
+      "path": "recordings/BTCUSDT/00000001792248969458-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000033.parquet",
+      "sha256": "40bd88c0593e6edddd62af9d72be5b8f2b33d6f41fb24b2554b749246f721a6e"
+    },
+    {
+      "bytes": 86149,
+      "path": "recordings/BTCUSDT/00000001792248971708-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000034.parquet",
+      "sha256": "285c5a14986a949a630838e40c4460d3011966587ca18bb7170d6ab2907e19e7"
+    },
+    {
+      "bytes": 86927,
+      "path": "recordings/BTCUSDT/00000001792248973959-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000035.parquet",
+      "sha256": "a9e49ed1fe333b1ebaf035ff16d82bb315ae059b8a875e5c8d9b51490abb2ff5"
+    },
+    {
+      "bytes": 90889,
+      "path": "recordings/BTCUSDT/00000001792248976209-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000036.parquet",
+      "sha256": "4b25de06c7be053fa6393e4ab3f9518c92053a967b31f12c9915ebd577c62818"
+    },
+    {
+      "bytes": 89622,
+      "path": "recordings/BTCUSDT/00000001792248978459-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000037.parquet",
+      "sha256": "ef66b60123927412a874d7594c9d3f12aa97b549ecb9e6767136bea506435d33"
+    },
+    {
+      "bytes": 87317,
+      "path": "recordings/BTCUSDT/00000001792248980708-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000038.parquet",
+      "sha256": "a2b7653ac1a6b893ca1d26c765162418153a4a4d2c524d1dfa38dc2dd308d762"
+    },
+    {
+      "bytes": 85354,
+      "path": "recordings/BTCUSDT/00000001792248982959-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000039.parquet",
+      "sha256": "1e497cba72fd121fdf2075b5061e3c8e7cfb6c83c91a2db7ef68398292a2b270"
+    },
+    {
+      "bytes": 85592,
+      "path": "recordings/BTCUSDT/00000001792248985208-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000040.parquet",
+      "sha256": "60029ec004e5008a59f711d93d5b734c949375840a0c6e7c2cecf2638300197a"
+    },
+    {
+      "bytes": 85114,
+      "path": "recordings/BTCUSDT/00000001792248987459-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000041.parquet",
+      "sha256": "afcc9e68ee619c106d3e9b1d5ebfcd0db953a239c8dad79fd2b9e3b8342df3ca"
+    },
+    {
+      "bytes": 86602,
+      "path": "recordings/BTCUSDT/00000001792248989711-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000042.parquet",
+      "sha256": "1c8ff24ba641458936f0752b200fb731b0df9b3a94668ea18b978a57695484fa"
+    },
+    {
+      "bytes": 84738,
+      "path": "recordings/BTCUSDT/00000001792248991959-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000043.parquet",
+      "sha256": "f36ab9704be26f49aa2235c39e972a2d3e0972a31cbe7435fe06dd2a58086155"
+    },
+    {
+      "bytes": 149649,
+      "path": "recordings/BTCUSDT/00000001792248994209-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000044.parquet",
+      "sha256": "d57cdc35382bcd598ce15d1e09934d66b5a0188ca85504e14d5374b33499d19f"
+    },
+    {
+      "bytes": 127843,
+      "path": "recordings/BTCUSDT/00000001792248996459-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000045.parquet",
+      "sha256": "593d4dcdae836ddf5a65629c05a3ba214eb526346dcc5ad25d0db9f96a6efea4"
+    },
+    {
+      "bytes": 86813,
+      "path": "recordings/BTCUSDT/00000001792248998709-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000046.parquet",
+      "sha256": "1f528fe2a8fbead05788a1f041c9fce3d00991a87cff781826a1989d1a5730fe"
+    },
+    {
+      "bytes": 88181,
+      "path": "recordings/BTCUSDT/00000001792249000960-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000047.parquet",
+      "sha256": "04975f9f4718d64002396e25c8d1e8fa792b45d32fe1ebf7693b95929110c3f0"
+    },
+    {
+      "bytes": 87198,
+      "path": "recordings/BTCUSDT/00000001792249003208-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000048.parquet",
+      "sha256": "5f8472d1d2678e06bdda4a4d8989bdc84c9f9a23bc1d7923e060325f5ae3b8f1"
+    },
+    {
+      "bytes": 88770,
+      "path": "recordings/BTCUSDT/00000001792249005458-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000049.parquet",
+      "sha256": "e3d11656f625a30634fe0c7582de93677f8d944122e6e7b468cf678acea07f00"
+    },
+    {
+      "bytes": 87856,
+      "path": "recordings/BTCUSDT/00000001792249007709-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000050.parquet",
+      "sha256": "c523fedb18ed7197bb2b3f3a68cda2c0cf787f34053e3b978dc0a114f1013c29"
+    },
+    {
+      "bytes": 87758,
+      "path": "recordings/BTCUSDT/00000001792249009959-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000051.parquet",
+      "sha256": "83b89c362b7790aed8638d9eceb2b16db085c1d2fe4228b27654142c1f5febca"
+    },
+    {
+      "bytes": 95074,
+      "path": "recordings/BTCUSDT/00000001792249012208-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000052.parquet",
+      "sha256": "b7824ba48c45353a97e438da7a107b98a9550c0457e266a3e63a052b98ba4653"
+    },
+    {
+      "bytes": 115271,
+      "path": "recordings/BTCUSDT/00000001792249014459-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000053.parquet",
+      "sha256": "a17ff1c76bbeeb799551c2b2442c491eee003c1b64a00742b5a7c7acec87c6f1"
+    },
+    {
+      "bytes": 108238,
+      "path": "recordings/BTCUSDT/00000001792249016708-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000054.parquet",
+      "sha256": "7edca42148bc3fc8a5f4007ba88eb9eba3d46834f028c8378b9845f32fcc7923"
+    },
+    {
+      "bytes": 95759,
+      "path": "recordings/BTCUSDT/00000001792249018958-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000055.parquet",
+      "sha256": "d41b42282515dca33d25e57307c2820a3cda5ff8a0c86880f18cc81d0b6795db"
+    },
+    {
+      "bytes": 90387,
+      "path": "recordings/BTCUSDT/00000001792249021209-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000056.parquet",
+      "sha256": "91d1f75345a1fe21e329ba58cd96da70000da5b43b8ac3765a6dabd0c92aa39e"
+    },
+    {
+      "bytes": 88516,
+      "path": "recordings/BTCUSDT/00000001792249023459-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000057.parquet",
+      "sha256": "6b97850f12f67258d35ad120a1603f6523a66207a3b5b0859848a5ac45d28e17"
+    },
+    {
+      "bytes": 108334,
+      "path": "recordings/BTCUSDT/00000001792249025709-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000058.parquet",
+      "sha256": "da2a71f516ea7b18bcc2bbde2d64306bd8bc1e75fe01e9067c57d90a8cf61be9"
+    },
+    {
+      "bytes": 93421,
+      "path": "recordings/BTCUSDT/00000001792249027959-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000059.parquet",
+      "sha256": "82e5c7daf41c6e04cca591fb8b063dfa367d21df34aaa459570d4518cad87028"
+    },
+    {
+      "bytes": 89679,
+      "path": "recordings/BTCUSDT/00000001792249030208-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000060.parquet",
+      "sha256": "a00a795464a686125b989eb6ba48f7769156673dd381922c23a44000b9d26a41"
+    },
+    {
+      "bytes": 85287,
+      "path": "recordings/BTCUSDT/00000001792249032459-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000061.parquet",
+      "sha256": "97c5f30fceeb7116ad5b10fcb1521696cad00787a618beac4a17bd465acbf1df"
+    },
+    {
+      "bytes": 87032,
+      "path": "recordings/BTCUSDT/00000001792249034709-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000062.parquet",
+      "sha256": "85ac8c346b88e354cf1f81270d40a43ee5c830efe3774d0069b23e6b7ec61da4"
+    },
+    {
+      "bytes": 86302,
+      "path": "recordings/BTCUSDT/00000001792249036959-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000063.parquet",
+      "sha256": "9e19d5ae013689e2aa2f9f5cdaaa6b12c7c379e7484a32f2fa25e3f67938b71d"
+    },
+    {
+      "bytes": 85381,
+      "path": "recordings/BTCUSDT/00000001792249039210-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000064.parquet",
+      "sha256": "015bd57b918464d737f1794703d2c35f32678f2084f1cbd1c5bfe9233b953487"
+    },
+    {
+      "bytes": 86323,
+      "path": "recordings/BTCUSDT/00000001792249041459-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000065.parquet",
+      "sha256": "877b2dc341914c872854970fb08c22b414e98e28fd58f2fe1ac76a26a40323e6"
+    },
+    {
+      "bytes": 86012,
+      "path": "recordings/BTCUSDT/00000001792249043709-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000066.parquet",
+      "sha256": "68cd0ed52bd7b6e32f06ff3385461a96713a7e340766b34d6325b4b637fb88d5"
+    },
+    {
+      "bytes": 86624,
+      "path": "recordings/BTCUSDT/00000001792249045959-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000067.parquet",
+      "sha256": "6c97b783336189a54cf93ba307374b55cc2a86f0aca91f64cb240656445170ff"
+    },
+    {
+      "bytes": 87002,
+      "path": "recordings/BTCUSDT/00000001792249048209-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000068.parquet",
+      "sha256": "d3138511d609005b2fedfab3583201cdafd96c20f827d99e288e2a2318f43f5d"
+    },
+    {
+      "bytes": 90229,
+      "path": "recordings/BTCUSDT/00000001792249050459-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000069.parquet",
+      "sha256": "1879731160fd6b66662ec80801c266cec866d26963f3f31d659517cdaa65308d"
+    },
+    {
+      "bytes": 90512,
+      "path": "recordings/BTCUSDT/00000001792249052710-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000070.parquet",
+      "sha256": "d60251b1a897664598be8519cdd008f13628f4415396c090094181efcc36bee7"
+    },
+    {
+      "bytes": 86532,
+      "path": "recordings/BTCUSDT/00000001792249054959-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000071.parquet",
+      "sha256": "4951d6112a4fe396713f337af0197acfe1aef63bc3d32558d195696e706101d8"
+    },
+    {
+      "bytes": 85128,
+      "path": "recordings/BTCUSDT/00000001792249057209-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000072.parquet",
+      "sha256": "a3dbccbf434781f48b14c75ead288f5f63d90e6757bcd5b46709c16528c32aa7"
+    },
+    {
+      "bytes": 87263,
+      "path": "recordings/BTCUSDT/00000001792249059458-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000073.parquet",
+      "sha256": "c5ad323d9fb13e83a8f9d8d37edcd3a2525668e36765c939a5cedecaa60a3755"
+    },
+    {
+      "bytes": 89926,
+      "path": "recordings/BTCUSDT/00000001792249061709-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000074.parquet",
+      "sha256": "538706d5f960ae65a93f0e3b605aba9aa36d8bfaeab78d7c9c7c5406cce0540e"
+    },
+    {
+      "bytes": 87631,
+      "path": "recordings/BTCUSDT/00000001792249063959-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000075.parquet",
+      "sha256": "84dd8d5cd18723cc87882a73763d4a324e94b5031683bfcb8f7e35189602010a"
+    },
+    {
+      "bytes": 107390,
+      "path": "recordings/BTCUSDT/00000001792249066209-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000076.parquet",
+      "sha256": "d04260a85be0cc672b4cdc443f05feed1bc287102bc9e0129538d45e09c562a0"
+    },
+    {
+      "bytes": 89799,
+      "path": "recordings/BTCUSDT/00000001792249068458-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000077.parquet",
+      "sha256": "d031b732ebba49d2d56c93b2492b5870c307b82ad5e856d15e7beaf20b736625"
+    },
+    {
+      "bytes": 85921,
+      "path": "recordings/BTCUSDT/00000001792249069909-18da73fb-90df-4d45-ba52-2268a4b6db7d-00000000000000000078.parquet",
+      "sha256": "4e058d0b805b2a89d0a800fdb4d6365e89eed397045d45582a91840845ff570b"
+    },
+    {
+      "bytes": 303718,
+      "path": "recordings/ETHUSDT/00000001792248900298-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000001.parquet",
+      "sha256": "9b970d226092122e53cbb7e69a4a404dcde5d8954f81c6f74bf41a13c8b76cee"
+    },
+    {
+      "bytes": 89315,
+      "path": "recordings/ETHUSDT/00000001792248902549-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000002.parquet",
+      "sha256": "f83c1253e350a1bbe6e60f6e8168b6615115e858228f60122822e751e17a4235"
+    },
+    {
+      "bytes": 87665,
+      "path": "recordings/ETHUSDT/00000001792248904802-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000003.parquet",
+      "sha256": "d00c00eaa785d4145c0fd75c03402460c40812c95362361db08edffdb290dd10"
+    },
+    {
+      "bytes": 83628,
+      "path": "recordings/ETHUSDT/00000001792248907049-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000004.parquet",
+      "sha256": "11c1625a18d7fe86f996965e0b41f3c6a10643ec83357f0d53bfea566c372d64"
+    },
+    {
+      "bytes": 88225,
+      "path": "recordings/ETHUSDT/00000001792248909301-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000005.parquet",
+      "sha256": "bd38d9b8da7bf82729c78c7b0581f7de604f6a2607709a8abf18e8c7677aa3c6"
+    },
+    {
+      "bytes": 83805,
+      "path": "recordings/ETHUSDT/00000001792248911548-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000006.parquet",
+      "sha256": "e18d574f8b78b4ff70110a51a05982c182da81c7d805bf9b7f0252d268ce997f"
+    },
+    {
+      "bytes": 83829,
+      "path": "recordings/ETHUSDT/00000001792248913799-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000007.parquet",
+      "sha256": "238140a0114ced0d5764b0f24f1d50e093f527fef9d086f14f79faf1f3a50d50"
+    },
+    {
+      "bytes": 82750,
+      "path": "recordings/ETHUSDT/00000001792248916049-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000008.parquet",
+      "sha256": "a05576ff8ede36a7bd8ac5753d418a5a45d75a0b2eefd4f7299f2d706798644c"
+    },
+    {
+      "bytes": 83911,
+      "path": "recordings/ETHUSDT/00000001792248918301-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000009.parquet",
+      "sha256": "ab9adc161a0fc99ab705c5d3d7114eeb83589db99bc982b1557daec90446af02"
+    },
+    {
+      "bytes": 83323,
+      "path": "recordings/ETHUSDT/00000001792248920549-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000010.parquet",
+      "sha256": "e0654bb5d269b62cd029e61db827b7f920eae4d7333cc09424e43ff900ef4500"
+    },
+    {
+      "bytes": 83970,
+      "path": "recordings/ETHUSDT/00000001792248922799-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000011.parquet",
+      "sha256": "b86c40ce1b4aec59ad36de1e13385219e138b8b4d1f67c30441a47e1ceeb0eeb"
+    },
+    {
+      "bytes": 83542,
+      "path": "recordings/ETHUSDT/00000001792248925049-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000012.parquet",
+      "sha256": "7be2f673d243f9e7bba897daafd0b0b0c9ee0f8506e90ddb2c42397f277096fa"
+    },
+    {
+      "bytes": 83129,
+      "path": "recordings/ETHUSDT/00000001792248927299-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000013.parquet",
+      "sha256": "6543dedc198b172689187712745c06a3d7f930bf79cbbc9dc33e56b7bb5c4120"
+    },
+    {
+      "bytes": 82757,
+      "path": "recordings/ETHUSDT/00000001792248929549-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000014.parquet",
+      "sha256": "48e17f7dcfde4d0fa92be0678795e79d3654b1fcd0fd384538f03fa86bb8cff9"
+    },
+    {
+      "bytes": 83578,
+      "path": "recordings/ETHUSDT/00000001792248931801-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000015.parquet",
+      "sha256": "578987837fe160ba49e2c2cf44cf09b0d0d14044f885cc64ee33683b2cb59251"
+    },
+    {
+      "bytes": 83591,
+      "path": "recordings/ETHUSDT/00000001792248934049-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000016.parquet",
+      "sha256": "957b59547fd5ac75302bd7627c63d5858804220efe7adfa2e3d972d28c872e66"
+    },
+    {
+      "bytes": 98791,
+      "path": "recordings/ETHUSDT/00000001792248936302-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000017.parquet",
+      "sha256": "85584cd18a74cacdcb9f5382f6e8ba6ca662b1d17edfca113f3096c5c17c67a8"
+    },
+    {
+      "bytes": 95371,
+      "path": "recordings/ETHUSDT/00000001792248938550-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000018.parquet",
+      "sha256": "7903dc29489eadd228361c476036482b38ae86c52c0d13e90c609ca78560adfa"
+    },
+    {
+      "bytes": 85953,
+      "path": "recordings/ETHUSDT/00000001792248940801-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000019.parquet",
+      "sha256": "02a0b0962713c21fa0645fe4bfb7870c3f376508c7f0fa007c8f90edaaf97d7f"
+    },
+    {
+      "bytes": 84644,
+      "path": "recordings/ETHUSDT/00000001792248943049-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000020.parquet",
+      "sha256": "ad3b11b1cac7bd137f36432d78fe7ce26c07182ad72d8f1a244f6fb8ea15e30c"
+    },
+    {
+      "bytes": 84084,
+      "path": "recordings/ETHUSDT/00000001792248945300-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000021.parquet",
+      "sha256": "69edceadb865866f89bd2421bda1ca255852f456576eab0047cb0807c2e5b17b"
+    },
+    {
+      "bytes": 85837,
+      "path": "recordings/ETHUSDT/00000001792248947549-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000022.parquet",
+      "sha256": "ef0fc0a0d8fb41aa5fe7783ca4d2a0b94ef0c383a70393b32a66e874096e7d75"
+    },
+    {
+      "bytes": 84422,
+      "path": "recordings/ETHUSDT/00000001792248949803-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000023.parquet",
+      "sha256": "512b72e8b338ab7125a2f5af406a9903ccabb7d2802e6f8c01149f71dd2a9bc3"
+    },
+    {
+      "bytes": 84012,
+      "path": "recordings/ETHUSDT/00000001792248952049-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000024.parquet",
+      "sha256": "56aea75385741d60cf899e1d2263b93630a02458414c29895d58505f1cad1df5"
+    },
+    {
+      "bytes": 82675,
+      "path": "recordings/ETHUSDT/00000001792248954302-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000025.parquet",
+      "sha256": "14d83a681caba2136b12d5791882676af503d39c37462d735598d842271f249a"
+    },
+    {
+      "bytes": 83745,
+      "path": "recordings/ETHUSDT/00000001792248956549-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000026.parquet",
+      "sha256": "7545ec83f7e6ff5ce3852d3be630b181f8fa1a88a126a764f79d8e76571f3acc"
+    },
+    {
+      "bytes": 83485,
+      "path": "recordings/ETHUSDT/00000001792248958803-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000027.parquet",
+      "sha256": "b92a6095a960de66337e3ce1fd4e962dc0593f3ba0771851e1f7bb975cd28ede"
+    },
+    {
+      "bytes": 83686,
+      "path": "recordings/ETHUSDT/00000001792248961049-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000028.parquet",
+      "sha256": "2d43e1fe94dfdf7b210a700fdc8026b7440d2817655776c582165823f014459d"
+    },
+    {
+      "bytes": 84614,
+      "path": "recordings/ETHUSDT/00000001792248963300-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000029.parquet",
+      "sha256": "0870ad15bcff86d103c9abcb8abe01b75a79402f369af431fe19bb0429c4145e"
+    },
+    {
+      "bytes": 83997,
+      "path": "recordings/ETHUSDT/00000001792248965549-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000030.parquet",
+      "sha256": "185cbe5170d70745de476d5cd6ffe49d98f153c532ec9880533adf238b9fa86c"
+    },
+    {
+      "bytes": 84241,
+      "path": "recordings/ETHUSDT/00000001792248967800-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000031.parquet",
+      "sha256": "05475f5b754586a564d3418a0c95c78c936853b382bfa99f2aaa7b0e5a71de1f"
+    },
+    {
+      "bytes": 88979,
+      "path": "recordings/ETHUSDT/00000001792248970050-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000032.parquet",
+      "sha256": "b515d6e9035fa09678fa5f5a2a5cd8aaffe9d9009621e226552bf875616e6046"
+    },
+    {
+      "bytes": 84185,
+      "path": "recordings/ETHUSDT/00000001792248972299-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000033.parquet",
+      "sha256": "a19b69f6d9bef4deca5e252ba802a5f5e1248bdb3d9f990bf7788763a72a132e"
+    },
+    {
+      "bytes": 83767,
+      "path": "recordings/ETHUSDT/00000001792248974550-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000034.parquet",
+      "sha256": "95c2f8e97df606e64420c6d3499ee29b6a5877e85c9ceb9fd05eefc387b08d2a"
+    },
+    {
+      "bytes": 83967,
+      "path": "recordings/ETHUSDT/00000001792248976799-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000035.parquet",
+      "sha256": "ecd96f7ab1428b6d550d112ae5ed43fdbf574f0a0b7150a0eb8ce0dad57851ed"
+    },
+    {
+      "bytes": 85782,
+      "path": "recordings/ETHUSDT/00000001792248979050-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000036.parquet",
+      "sha256": "7c465adeb7e030727deb96ad4127ce1cc9a47bc1dbf2285b0952c5e0d4402106"
+    },
+    {
+      "bytes": 84330,
+      "path": "recordings/ETHUSDT/00000001792248981302-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000037.parquet",
+      "sha256": "bb0feeec0a9f75c7eeed6055c048f58ad4644841754a6ec57101ff9be9624952"
+    },
+    {
+      "bytes": 83499,
+      "path": "recordings/ETHUSDT/00000001792248983549-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000038.parquet",
+      "sha256": "c38ad51b05021b01aefad1af061cfbfb8182b3e88cf0524b3f5be79702bbba87"
+    },
+    {
+      "bytes": 83366,
+      "path": "recordings/ETHUSDT/00000001792248985801-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000039.parquet",
+      "sha256": "ea267428a1b0d186e8a51ccdce9f7bffc6855896df2f4b88a4f65f34924adb97"
+    },
+    {
+      "bytes": 83271,
+      "path": "recordings/ETHUSDT/00000001792248988050-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000040.parquet",
+      "sha256": "602b72290dac074d7e3dce16f8a6fae8a5a963244b2dfdc24768de0ad0755954"
+    },
+    {
+      "bytes": 84181,
+      "path": "recordings/ETHUSDT/00000001792248990301-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000041.parquet",
+      "sha256": "37e2daff6aa6352f1c95ea1f7ffa31f20fc2f41b0f335715459f8bc8e60e9b38"
+    },
+    {
+      "bytes": 87837,
+      "path": "recordings/ETHUSDT/00000001792248992549-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000042.parquet",
+      "sha256": "97caedf587c85986494553078d1c72bec0ebf07f62dc34dbc58cc905d6baab46"
+    },
+    {
+      "bytes": 114709,
+      "path": "recordings/ETHUSDT/00000001792248994800-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000043.parquet",
+      "sha256": "0559f77c427f8079ec87ac23807b0d44e8f4ed8740a87fd1a058a1f696ecb79f"
+    },
+    {
+      "bytes": 88785,
+      "path": "recordings/ETHUSDT/00000001792248997049-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000044.parquet",
+      "sha256": "845ea2016baedcaf967cbd1b1a93f6f80a1b9aee40413584999f7bd886c1e501"
+    },
+    {
+      "bytes": 86424,
+      "path": "recordings/ETHUSDT/00000001792248999301-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000045.parquet",
+      "sha256": "897061b5a855954ec428f7a2abaa9e53ce6a6612361c056c0d1a15535c8ba1ec"
+    },
+    {
+      "bytes": 84965,
+      "path": "recordings/ETHUSDT/00000001792249001550-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000046.parquet",
+      "sha256": "06419a7d7a4d8b3029f6149bbeae796e77885b202d84711f91df6ac142618a26"
+    },
+    {
+      "bytes": 84096,
+      "path": "recordings/ETHUSDT/00000001792249003800-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000047.parquet",
+      "sha256": "689701e25cdb531b7fef9f77749e7df7b1c172f84a0f8ded65841141d933427a"
+    },
+    {
+      "bytes": 83892,
+      "path": "recordings/ETHUSDT/00000001792249006049-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000048.parquet",
+      "sha256": "6891d50ec3b8f89302d2b1ebf086be46c547d70b58fb2df5e35074f4d967649a"
+    },
+    {
+      "bytes": 84006,
+      "path": "recordings/ETHUSDT/00000001792249008299-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000049.parquet",
+      "sha256": "23a3220f8e49c5300b2a80cf7d658622522d7b79acd6d64536a031816f9cdc31"
+    },
+    {
+      "bytes": 84157,
+      "path": "recordings/ETHUSDT/00000001792249010550-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000050.parquet",
+      "sha256": "cb843206c8c17a83a014bbbd8f175d0b9f47eaa6ca65f52ac92350de4372fdc0"
+    },
+    {
+      "bytes": 89947,
+      "path": "recordings/ETHUSDT/00000001792249012804-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000051.parquet",
+      "sha256": "6b5ba232a8e9fb49385205ce5ef0271e8ce0071fbf77c1ac190af7037fa57b4e"
+    },
+    {
+      "bytes": 97399,
+      "path": "recordings/ETHUSDT/00000001792249015050-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000052.parquet",
+      "sha256": "5b5e3e75b6e813c62ea396ac0676eb2357f2dd3eb58b5c88ae80785f763a44e5"
+    },
+    {
+      "bytes": 94464,
+      "path": "recordings/ETHUSDT/00000001792249017300-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000053.parquet",
+      "sha256": "c8a46e0e7aaca3292cff36d390fa17bdeaad3f005fb9befbd7d1d66fe6f4d89f"
+    },
+    {
+      "bytes": 86619,
+      "path": "recordings/ETHUSDT/00000001792249019550-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000054.parquet",
+      "sha256": "742b621fc33cad206a9db49774b6261701ea6a17e44458cabe2301dedad841d3"
+    },
+    {
+      "bytes": 86986,
+      "path": "recordings/ETHUSDT/00000001792249021799-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000055.parquet",
+      "sha256": "814a566b0a6de2bb135f8c9f61b6b40181a35af7af49da5ca6a282d680349893"
+    },
+    {
+      "bytes": 84484,
+      "path": "recordings/ETHUSDT/00000001792249024049-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000056.parquet",
+      "sha256": "daaf6c457037f847408149fa47a0859380491bb0027677ee5826a56a67f25fe8"
+    },
+    {
+      "bytes": 90608,
+      "path": "recordings/ETHUSDT/00000001792249026299-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000057.parquet",
+      "sha256": "e030c3a60170db32d976c7f2822d35fe91ef8fdedf5e06dd21f8c13cb88b370d"
+    },
+    {
+      "bytes": 84006,
+      "path": "recordings/ETHUSDT/00000001792249028550-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000058.parquet",
+      "sha256": "da64d61b2f33746794d6aa0fc204221ad22d09ae0535ac15f4b3fd3aabd84a25"
+    },
+    {
+      "bytes": 86650,
+      "path": "recordings/ETHUSDT/00000001792249030803-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000059.parquet",
+      "sha256": "271f27656734cd4d183d86e4031dfc00e3acd507bc6d49cb9c5bb937259e8295"
+    },
+    {
+      "bytes": 84810,
+      "path": "recordings/ETHUSDT/00000001792249033050-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000060.parquet",
+      "sha256": "f88ea88a03fea4708715de328f6e83fe01f9449e5f8cb1ad4c0dabc31fbae973"
+    },
+    {
+      "bytes": 83877,
+      "path": "recordings/ETHUSDT/00000001792249035078-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000061.parquet",
+      "sha256": "c69ef109d97320d1f54555e52143a5b59e9e738b5d4cc774c3704d03e81dc5f7"
+    },
+    {
+      "bytes": 83698,
+      "path": "recordings/ETHUSDT/00000001792249037308-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000062.parquet",
+      "sha256": "c1290b2bbfd508d8a71c9bf7b164aa3ac2dab26f7a1e49204d13d34787b4e46b"
+    },
+    {
+      "bytes": 83830,
+      "path": "recordings/ETHUSDT/00000001792249039551-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000063.parquet",
+      "sha256": "1b8fe13d68b24f2f4e6800d6cd1fd7d8ed357a0db74ae3589feeaff4c3905b26"
+    },
+    {
+      "bytes": 84776,
+      "path": "recordings/ETHUSDT/00000001792249041802-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000064.parquet",
+      "sha256": "8fc8bbf3689ebe233adb3054d791891d9df1155f7e08cb047248ca42d178516d"
+    },
+    {
+      "bytes": 83331,
+      "path": "recordings/ETHUSDT/00000001792249044049-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000065.parquet",
+      "sha256": "0d5ced1af0a251a5c154a92ac91dcbbda64d7c4fabe0b7e542b3a70e0715e6c2"
+    },
+    {
+      "bytes": 83580,
+      "path": "recordings/ETHUSDT/00000001792249046310-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000066.parquet",
+      "sha256": "e65338840e3b958161823f888119cc78d263e600e647ff9c8b4f8856d1b65503"
+    },
+    {
+      "bytes": 83194,
+      "path": "recordings/ETHUSDT/00000001792249048550-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000067.parquet",
+      "sha256": "3aeea0da64b8607c7a9315775dc92b537aafd93c85c069c05082a3eea1b050c2"
+    },
+    {
+      "bytes": 94032,
+      "path": "recordings/ETHUSDT/00000001792249050802-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000068.parquet",
+      "sha256": "bcc180fbe64e6518f5fe2e0f2de461a7bc708ae4e66c069c6d9810ad6e036bcf"
+    },
+    {
+      "bytes": 84349,
+      "path": "recordings/ETHUSDT/00000001792249053049-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000069.parquet",
+      "sha256": "51591ac5a6bf686cc2c4ae11a0f6edbcc9b57fdfbfc463eaa45b8f71a0dcedbf"
+    },
+    {
+      "bytes": 83362,
+      "path": "recordings/ETHUSDT/00000001792249055304-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000070.parquet",
+      "sha256": "cca33bc603e63f6c78aab4ee6aadc89fb43c61337f56b1134b74a968baa2192b"
+    },
+    {
+      "bytes": 83568,
+      "path": "recordings/ETHUSDT/00000001792249057550-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000071.parquet",
+      "sha256": "be67fe514604d8862d38ed4da00643824ab34bd608a7fd76412c1cfec2a20a2c"
+    },
+    {
+      "bytes": 84244,
+      "path": "recordings/ETHUSDT/00000001792249059802-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000072.parquet",
+      "sha256": "050072a0b30dfba5f7f6a2043293588f793dfb1dba8263f421c665306c9e451c"
+    },
+    {
+      "bytes": 83859,
+      "path": "recordings/ETHUSDT/00000001792249062050-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000073.parquet",
+      "sha256": "1a72f419b9c536b109186874af86338c7c3d6ff034b4bb372ff8f34ff5b2edec"
+    },
+    {
+      "bytes": 84632,
+      "path": "recordings/ETHUSDT/00000001792249064300-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000074.parquet",
+      "sha256": "437d21c8e977f856067e5e7d35decdd910dc30a3c2e942aa05f9afe91ae0a728"
+    },
+    {
+      "bytes": 88859,
+      "path": "recordings/ETHUSDT/00000001792249066550-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000075.parquet",
+      "sha256": "2fc32e7f60e697d0f4ffda21ceb54b3a470a5eab13b2efb37b7a2af4b892f06b"
+    },
+    {
+      "bytes": 86856,
+      "path": "recordings/ETHUSDT/00000001792249068801-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000076.parquet",
+      "sha256": "9e6b30b01577fb1b8bde5b4dbc9275ec1c56ad40d57d122691ccafe38f565dd1"
+    },
+    {
+      "bytes": 85139,
+      "path": "recordings/ETHUSDT/00000001792249069910-f981e097-0fb8-4a4a-b739-2124b5af2022-00000000000000000077.parquet",
+      "sha256": "e8123c84b3eadf9db0efd6d70ba03197d29d1e1dd6d24132c873a190e0012bba"
+    },
+    {
+      "bytes": 343547,
+      "path": "recordings/SOLUSDT/00000001792248906522-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000001.parquet",
+      "sha256": "af5e9903ba4ad9e4058c999bcfe4746fc306ae5c20c2b7582c3d102211f351f4"
+    },
+    {
+      "bytes": 95056,
+      "path": "recordings/SOLUSDT/00000001792248908771-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000002.parquet",
+      "sha256": "dc5ee0f6e501747a1bd6fece404abf4f43e8d48797385294f7ecb481c61e958a"
+    },
+    {
+      "bytes": 92377,
+      "path": "recordings/SOLUSDT/00000001792248911022-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000003.parquet",
+      "sha256": "9e2b0b076fe69534fd0938a2af1602affd9e6b457b3782b86d6d6223daa29f60"
+    },
+    {
+      "bytes": 92439,
+      "path": "recordings/SOLUSDT/00000001792248913271-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000004.parquet",
+      "sha256": "1b3d747cc7dfa955d6d9ed8971c5875bb78a953fd34287e96c86b296f869e818"
+    },
+    {
+      "bytes": 91691,
+      "path": "recordings/SOLUSDT/00000001792248915522-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000005.parquet",
+      "sha256": "df3e82077b3d0005d7a8ce78715b891cefd8d88d0fc2bafd6fb37a9b7cd6db2f"
+    },
+    {
+      "bytes": 92051,
+      "path": "recordings/SOLUSDT/00000001792248917771-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000006.parquet",
+      "sha256": "c60d1727a69fb39404b62f3d45409bc413cd34de0346d456c1ed4df42e5efcae"
+    },
+    {
+      "bytes": 93074,
+      "path": "recordings/SOLUSDT/00000001792248920022-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000007.parquet",
+      "sha256": "93a07169a66a582132d2bb55543ab4bdadfa82e917ed937abcdc4928fe058384"
+    },
+    {
+      "bytes": 92315,
+      "path": "recordings/SOLUSDT/00000001792248922272-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000008.parquet",
+      "sha256": "20696c6db1bee6f3dd25160993f93ceddd1f64474aad5875e6dee83a8356e915"
+    },
+    {
+      "bytes": 92674,
+      "path": "recordings/SOLUSDT/00000001792248924522-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000009.parquet",
+      "sha256": "89898accd2ff574238baffe0b7267e43b8bf64013f62117b1b0444d15028b8ed"
+    },
+    {
+      "bytes": 92416,
+      "path": "recordings/SOLUSDT/00000001792248926772-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000010.parquet",
+      "sha256": "a9cd7bb4a2840504fc5d7502aa474236f1d1258bf56504b3448ec15cf2b29869"
+    },
+    {
+      "bytes": 92971,
+      "path": "recordings/SOLUSDT/00000001792248929022-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000011.parquet",
+      "sha256": "e902e169cc59cbf7709107a4a7820cd067dcaa0ab337dfa5ce9d91e3078209df"
+    },
+    {
+      "bytes": 91901,
+      "path": "recordings/SOLUSDT/00000001792248931272-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000012.parquet",
+      "sha256": "950aab78415baffa24c23aac29e56e0d935d3b75ce0e72e886c4cad70398925e"
+    },
+    {
+      "bytes": 91942,
+      "path": "recordings/SOLUSDT/00000001792248933522-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000013.parquet",
+      "sha256": "abe48799691ea114b78dd9cba0882a34c79a1c8d81d511f378e2f48f1c5ae649"
+    },
+    {
+      "bytes": 92398,
+      "path": "recordings/SOLUSDT/00000001792248935772-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000014.parquet",
+      "sha256": "8565bcbbee2ce80de04509e4307211efad6024dc60a311edb4cd4c197768e3b2"
+    },
+    {
+      "bytes": 94533,
+      "path": "recordings/SOLUSDT/00000001792248938022-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000015.parquet",
+      "sha256": "a2dcb093cdbe76cd08b5e533dda1b810ffeab1fb39a2366b491f45793398e496"
+    },
+    {
+      "bytes": 94054,
+      "path": "recordings/SOLUSDT/00000001792248940272-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000016.parquet",
+      "sha256": "56d1f23082c9426daafa6b73e244133f8a381d975f5568ecd72298ec00470daf"
+    },
+    {
+      "bytes": 92295,
+      "path": "recordings/SOLUSDT/00000001792248942522-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000017.parquet",
+      "sha256": "9173177969ff9a9759908d003c844d4c23185c0a7be39097499cc1c48dac383e"
+    },
+    {
+      "bytes": 92564,
+      "path": "recordings/SOLUSDT/00000001792248944773-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000018.parquet",
+      "sha256": "a7c63dec9c09e0cc72a338043a9d4c4d63426a5f1231a815939265c31c5702f8"
+    },
+    {
+      "bytes": 92340,
+      "path": "recordings/SOLUSDT/00000001792248947022-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000019.parquet",
+      "sha256": "9c1809e69fe5d1e8642aea68e0650de448c5ccd932dee98b14e0b2cf641d9fcd"
+    },
+    {
+      "bytes": 92465,
+      "path": "recordings/SOLUSDT/00000001792248949272-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000020.parquet",
+      "sha256": "fecbebb18175107483898ed2bbeb2151c9455e3552b22f0cc90fc3bc19790151"
+    },
+    {
+      "bytes": 91624,
+      "path": "recordings/SOLUSDT/00000001792248951578-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000021.parquet",
+      "sha256": "51f524a2e7fe885377baeeeec60bed8fee518e71ebd2aca83a842ea25fb024ee"
+    },
+    {
+      "bytes": 91896,
+      "path": "recordings/SOLUSDT/00000001792248953772-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000022.parquet",
+      "sha256": "e5f60c176b78ff59bc4caaf1bb88662106d71e3f0632e091aeb5d4ab533c094e"
+    },
+    {
+      "bytes": 91433,
+      "path": "recordings/SOLUSDT/00000001792248956022-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000023.parquet",
+      "sha256": "e7d98d25e2244432e8bd6ff2ae5822a75645a3895ffbb65be16f3a3f4170e528"
+    },
+    {
+      "bytes": 92555,
+      "path": "recordings/SOLUSDT/00000001792248958272-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000024.parquet",
+      "sha256": "253a8f554c8c7f911bffa17ce5e022e54a3d7adc16319cdaaab8014e7cc270c7"
+    },
+    {
+      "bytes": 91511,
+      "path": "recordings/SOLUSDT/00000001792248960522-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000025.parquet",
+      "sha256": "c9d9bb3c8867f6576a0bf34c363c57604a52130bfc18e3b384b543aebd873d74"
+    },
+    {
+      "bytes": 91795,
+      "path": "recordings/SOLUSDT/00000001792248962772-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000026.parquet",
+      "sha256": "cc3ab40536c8393714d69c9ce4b52ffc841db6af250bf4805a3b83e4c027ba12"
+    },
+    {
+      "bytes": 92343,
+      "path": "recordings/SOLUSDT/00000001792248965022-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000027.parquet",
+      "sha256": "fe42f0b2eb83bdf6765a9e9abbfdbbf1c59fed3b405a6f61b5e65289c40f1a51"
+    },
+    {
+      "bytes": 91963,
+      "path": "recordings/SOLUSDT/00000001792248967276-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000028.parquet",
+      "sha256": "9c2484f292a9dab08e4db433e90b0b355aa3a1dd799930803a9f97bf8be229d9"
+    },
+    {
+      "bytes": 94423,
+      "path": "recordings/SOLUSDT/00000001792248969522-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000029.parquet",
+      "sha256": "9e97c1c3a7b40f982f260c41024a027d32702e0a428959c61e1d4e5c068d9735"
+    },
+    {
+      "bytes": 91810,
+      "path": "recordings/SOLUSDT/00000001792248971777-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000030.parquet",
+      "sha256": "0aa93fc7a12eef7f58fe088c356824628cbc7da9a13448dfec7286fc2950776c"
+    },
+    {
+      "bytes": 92176,
+      "path": "recordings/SOLUSDT/00000001792248974022-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000031.parquet",
+      "sha256": "daff7ec43a6484dab9cd0fd804e570c04173f54a3272f09a01dfea7f49068ea7"
+    },
+    {
+      "bytes": 92293,
+      "path": "recordings/SOLUSDT/00000001792248976272-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000032.parquet",
+      "sha256": "8d818797f1bb13388c00c657a9b275c550a7585616f598ebe5a7671a46fe8d63"
+    },
+    {
+      "bytes": 92714,
+      "path": "recordings/SOLUSDT/00000001792248978523-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000033.parquet",
+      "sha256": "09d0144b8e38b5ee28b453cf4e8e787aa2e9e29fb94ee6b333ad008acd23006b"
+    },
+    {
+      "bytes": 91576,
+      "path": "recordings/SOLUSDT/00000001792248980773-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000034.parquet",
+      "sha256": "0208794465a59d65822a78fbb764ec55a4c25365cd6abfb1ed8dc25e74bcbee6"
+    },
+    {
+      "bytes": 92027,
+      "path": "recordings/SOLUSDT/00000001792248983022-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000035.parquet",
+      "sha256": "f4235876c307ceca071e4a4478166325fe0c56e34e22f4421c94ccf655c6e210"
+    },
+    {
+      "bytes": 91632,
+      "path": "recordings/SOLUSDT/00000001792248985274-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000036.parquet",
+      "sha256": "1c6e35132e9b697fd276cecfa00d52a25a538f6ae6c35b02b5055c7cb19a264f"
+    },
+    {
+      "bytes": 91342,
+      "path": "recordings/SOLUSDT/00000001792248987527-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000037.parquet",
+      "sha256": "a46e37241d0b72706db863add898b2108fb9b61ae5bc27ce3270c51cf9eeb964"
+    },
+    {
+      "bytes": 92067,
+      "path": "recordings/SOLUSDT/00000001792248989774-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000038.parquet",
+      "sha256": "1c75fecfbad318ef90a7ac8c67ed2a2b8c1df9148bb3d48899da322e63c636e5"
+    },
+    {
+      "bytes": 91792,
+      "path": "recordings/SOLUSDT/00000001792248992024-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000039.parquet",
+      "sha256": "91542ea01a47dded029fc05f12393a5e8d876e466595cc09d69a15cb0924782e"
+    },
+    {
+      "bytes": 99853,
+      "path": "recordings/SOLUSDT/00000001792248994273-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000040.parquet",
+      "sha256": "9058402f768a968d16cd04666f04a9920123bd127b0abed91075eb7c0f2b3d4b"
+    },
+    {
+      "bytes": 96180,
+      "path": "recordings/SOLUSDT/00000001792248996523-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000041.parquet",
+      "sha256": "fc555dec03343fe62add1cc51662f99051de611532aa1f5900f4662ee598dd44"
+    },
+    {
+      "bytes": 92924,
+      "path": "recordings/SOLUSDT/00000001792248998776-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000042.parquet",
+      "sha256": "5c621a8f4ca6eba86b32ccb0075b21e68c1b4e6e391c3f512b89b2ee272bec94"
+    },
+    {
+      "bytes": 93110,
+      "path": "recordings/SOLUSDT/00000001792249001023-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000043.parquet",
+      "sha256": "9648a00a5eee154f7b97f94234fd18fa1596b35c2ac676acf0a67bf1d3ba3d60"
+    },
+    {
+      "bytes": 91535,
+      "path": "recordings/SOLUSDT/00000001792249003273-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000044.parquet",
+      "sha256": "9d5c9dcf6bb610bfb4d0c762291fb3b4ffab5bb81bb3d5e560f74e8a1647fda1"
+    },
+    {
+      "bytes": 93033,
+      "path": "recordings/SOLUSDT/00000001792249005522-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000045.parquet",
+      "sha256": "7f3cf387f8863af939fe5e79777f05b8f79440c1b474cbccedd20b00d7dafba4"
+    },
+    {
+      "bytes": 92956,
+      "path": "recordings/SOLUSDT/00000001792249007772-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000046.parquet",
+      "sha256": "ece3b4dfd1b24ae766c9f88483cf9c10f046992547f75b087e8c76a474953831"
+    },
+    {
+      "bytes": 91890,
+      "path": "recordings/SOLUSDT/00000001792249010022-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000047.parquet",
+      "sha256": "8d8e7994f52f462e7a4c7b514d6cb420beb874bcdacce838d89477160a8f8ae7"
+    },
+    {
+      "bytes": 92843,
+      "path": "recordings/SOLUSDT/00000001792249012272-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000048.parquet",
+      "sha256": "fcfe50588aa6206aafb9bbacce58c25368d023ccbd99e3a21d81599b14d0c0db"
+    },
+    {
+      "bytes": 96479,
+      "path": "recordings/SOLUSDT/00000001792249014522-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000049.parquet",
+      "sha256": "964c159ec06c4467abedfb7ce0593a465696747e27c934f42a8df4f8119f836d"
+    },
+    {
+      "bytes": 93446,
+      "path": "recordings/SOLUSDT/00000001792249016776-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000050.parquet",
+      "sha256": "75ca016f8a638be5d4fbf31000a70c9f8225e1aef52d474215decc2be1285fea"
+    },
+    {
+      "bytes": 92653,
+      "path": "recordings/SOLUSDT/00000001792249019022-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000051.parquet",
+      "sha256": "149444c7b4a0a679f0711386b00b8d32cae1be2298362efdcff6d22127027a1c"
+    },
+    {
+      "bytes": 92349,
+      "path": "recordings/SOLUSDT/00000001792249021276-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000052.parquet",
+      "sha256": "fbe3083fc55c0064464490ed0f2b19909ac7499ba1c70eeeea8888309bab23a8"
+    },
+    {
+      "bytes": 92777,
+      "path": "recordings/SOLUSDT/00000001792249023522-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000053.parquet",
+      "sha256": "9045b69a1f928c003eb39bc08db2c1032aa66ac6559064f478c46ce4d50c6345"
+    },
+    {
+      "bytes": 94881,
+      "path": "recordings/SOLUSDT/00000001792249025772-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000054.parquet",
+      "sha256": "6dfa96097d5b7bac335308fb29616d2afa95a4666501bfdfde35e97e3f38843c"
+    },
+    {
+      "bytes": 93287,
+      "path": "recordings/SOLUSDT/00000001792249028022-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000055.parquet",
+      "sha256": "e5b23fc0c5ef15ef9426d8da9aa23a75bea807ec7a10d858f2a72564177686c7"
+    },
+    {
+      "bytes": 92585,
+      "path": "recordings/SOLUSDT/00000001792249030272-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000056.parquet",
+      "sha256": "f91b425f947152349d75c1cc04dcd47edebaf9002cb191875030a6fffba9b9f2"
+    },
+    {
+      "bytes": 91945,
+      "path": "recordings/SOLUSDT/00000001792249032524-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000057.parquet",
+      "sha256": "1f71b754c07c9877d58758480ee50930814ea672d06c04c73f838aed8fa542c4"
+    },
+    {
+      "bytes": 91930,
+      "path": "recordings/SOLUSDT/00000001792249034773-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000058.parquet",
+      "sha256": "05d1f05d35a87129b6d18c22a2150cbc47789121347bcd2777f10fa08a38bb37"
+    },
+    {
+      "bytes": 91757,
+      "path": "recordings/SOLUSDT/00000001792249037023-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000059.parquet",
+      "sha256": "311f16515be5dc2cf1f27ceea8ed89cb67811094158560dfae08fb2b8cf00909"
+    },
+    {
+      "bytes": 91535,
+      "path": "recordings/SOLUSDT/00000001792249039279-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000060.parquet",
+      "sha256": "3f9c7e9660e2873d0a94b277cb7c0aec2886a779f62e9cfb2c3745bdd5be50e1"
+    },
+    {
+      "bytes": 91506,
+      "path": "recordings/SOLUSDT/00000001792249041523-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000061.parquet",
+      "sha256": "456f2343ef087376e4e269f1dc92ebef171d6a8c968e803091f203bde9a71ace"
+    },
+    {
+      "bytes": 91758,
+      "path": "recordings/SOLUSDT/00000001792249043777-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000062.parquet",
+      "sha256": "27f6ba9a82a4c653b1af1e042804e3a0ac4320dea6f0eb9425bda48ebef19e16"
+    },
+    {
+      "bytes": 91043,
+      "path": "recordings/SOLUSDT/00000001792249046023-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000063.parquet",
+      "sha256": "bd9cfe71c2d0fcb4753c4733231a2ed031d87206858c8f32e5548f421387bbe4"
+    },
+    {
+      "bytes": 91182,
+      "path": "recordings/SOLUSDT/00000001792249048272-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000064.parquet",
+      "sha256": "d0d98009295b30ad508e1a6ca105171b352c4d960ee151a9646870f639c9676a"
+    },
+    {
+      "bytes": 96643,
+      "path": "recordings/SOLUSDT/00000001792249050522-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000065.parquet",
+      "sha256": "1715b4415466cde47d067fac70b84365b814737966f93b7730502ecd284d2846"
+    },
+    {
+      "bytes": 96096,
+      "path": "recordings/SOLUSDT/00000001792249052773-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000066.parquet",
+      "sha256": "77b5d4c7308eba941f10e0a4bfd62d460ad396da7e0d350636ba343d630846fc"
+    },
+    {
+      "bytes": 91034,
+      "path": "recordings/SOLUSDT/00000001792249055023-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000067.parquet",
+      "sha256": "8b861deffe05656753baf00499ad4806330b1f1a9d91b0c8bc46c2e79c9b4f0e"
+    },
+    {
+      "bytes": 91629,
+      "path": "recordings/SOLUSDT/00000001792249057273-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000068.parquet",
+      "sha256": "042ecbfbbbeb1eefc63a06ad1aa3b36c59f61644e2e0cb069e16d78c856446dc"
+    },
+    {
+      "bytes": 91785,
+      "path": "recordings/SOLUSDT/00000001792249059522-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000069.parquet",
+      "sha256": "587e2d510694f1242142d7eed4f8605e272de21e378d1ccf3a99dc25355e8ada"
+    },
+    {
+      "bytes": 92549,
+      "path": "recordings/SOLUSDT/00000001792249061772-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000070.parquet",
+      "sha256": "c9087926aa5ddcb4e4519d7cd7cefe23c0d84a55a331d564163fc29ec54c382e"
+    },
+    {
+      "bytes": 91496,
+      "path": "recordings/SOLUSDT/00000001792249064023-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000071.parquet",
+      "sha256": "fb818c120ee1ed10177da63417c457dfa2ba49ca4ce965ad0987c58c751edd66"
+    },
+    {
+      "bytes": 92886,
+      "path": "recordings/SOLUSDT/00000001792249066273-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000072.parquet",
+      "sha256": "e9393b0ab2840b20dca505fddd742a138daf8b8c4480b727b992132b2862eea6"
+    },
+    {
+      "bytes": 92243,
+      "path": "recordings/SOLUSDT/00000001792249068523-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000073.parquet",
+      "sha256": "887b1e8b9e2ec294ff39d8f9b1a603731f6557f1886a222d163943064864d1b3"
+    },
+    {
+      "bytes": 92436,
+      "path": "recordings/SOLUSDT/00000001792249069915-386f7cf7-e789-4001-9a68-f15ac6ffcf46-00000000000000000074.parquet",
+      "sha256": "fdb341d1a9ea3714b6164c06eda61e739689931510054551246c551f85452ab8"
+    },
+    {
+      "bytes": 8993,
+      "path": "recordings/USD1USDT/00000001792248902854-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000001.parquet",
+      "sha256": "e7fdb86e3db1ccd3a1de39f07ba9f0843ab61749545ee6f51344d89be065a233"
+    },
+    {
+      "bytes": 4739,
+      "path": "recordings/USD1USDT/00000001792248905109-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000002.parquet",
+      "sha256": "074a7df5cddd9d8cee872032c27c9af5743caa58496da483d1584179cb67d0b3"
+    },
+    {
+      "bytes": 3745,
+      "path": "recordings/USD1USDT/00000001792248907113-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000003.parquet",
+      "sha256": "67c03b1d05b34eed87ed39e4326faf4cae690b6f7ddc62432e95879a53b75c63"
+    },
+    {
+      "bytes": 3734,
+      "path": "recordings/USD1USDT/00000001792248909353-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000004.parquet",
+      "sha256": "d405aea5189eb823d7e3d9d3ae1a57d84cd8e99256deaa8278f84766764f6898"
+    },
+    {
+      "bytes": 4332,
+      "path": "recordings/USD1USDT/00000001792248911615-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000005.parquet",
+      "sha256": "b279353eb31ca0dd02a999370980bb71be327edbf53179a39187cae077b9bdb7"
+    },
+    {
+      "bytes": 4407,
+      "path": "recordings/USD1USDT/00000001792248913854-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000006.parquet",
+      "sha256": "2f10a1cd60bc274cd4534568e797b8bd6e64f9c3792d594e60212c12626f2091"
+    },
+    {
+      "bytes": 5055,
+      "path": "recordings/USD1USDT/00000001792248916106-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000007.parquet",
+      "sha256": "9fe5454a19eb7052c167779bbf15595928549a9332a6cd033a26fd8c8e18f3d4"
+    },
+    {
+      "bytes": 4606,
+      "path": "recordings/USD1USDT/00000001792248918112-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000008.parquet",
+      "sha256": "d0907f62258ff3c55c6ed401f58b3027e6bd6e10bdf306f4c05c99fcc33d7dec"
+    },
+    {
+      "bytes": 3921,
+      "path": "recordings/USD1USDT/00000001792248920355-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000009.parquet",
+      "sha256": "2c999886dda872e0b9e5c233e75c6e665997a7cf7ea1b13c30ce3cfd8494bae2"
+    },
+    {
+      "bytes": 4514,
+      "path": "recordings/USD1USDT/00000001792248922604-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000010.parquet",
+      "sha256": "6d52dbbb92ba2cbc77a1fd119e459dfe432cb10a6cacc6d2910a2f6ced19d9ec"
+    },
+    {
+      "bytes": 4202,
+      "path": "recordings/USD1USDT/00000001792248924854-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000011.parquet",
+      "sha256": "06ad5c369b1d6062a0283071307e65929d05ded4121ec49d4ebdb9fd7aa9f0dd"
+    },
+    {
+      "bytes": 3934,
+      "path": "recordings/USD1USDT/00000001792248927109-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000012.parquet",
+      "sha256": "fa8b1c088a11ab12b6ce70a9a9aea5f9d91b0ac44d6d2de2a0195f452b17a649"
+    },
+    {
+      "bytes": 3822,
+      "path": "recordings/USD1USDT/00000001792248929354-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000013.parquet",
+      "sha256": "8488c710ac337bda0444df4a2e8a82265c646e6ca5970f60829d7be05c730728"
+    },
+    {
+      "bytes": 4326,
+      "path": "recordings/USD1USDT/00000001792248931607-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000014.parquet",
+      "sha256": "0d5f248cd7ea765523e924b6babd8303bccfec5c854eb1919d8881f084216b35"
+    },
+    {
+      "bytes": 5306,
+      "path": "recordings/USD1USDT/00000001792248933854-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000015.parquet",
+      "sha256": "0d9ddc35228f3c126b50f09fffd6799d2dd74bd0b30f54177f2fe0aa6460086e"
+    },
+    {
+      "bytes": 5572,
+      "path": "recordings/USD1USDT/00000001792248936108-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000016.parquet",
+      "sha256": "bf065160ad5a45a454649758a17a72161fe082ccc5944d9833c6bfd853b073d1"
+    },
+    {
+      "bytes": 4647,
+      "path": "recordings/USD1USDT/00000001792248938354-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000017.parquet",
+      "sha256": "e1597a125a421d442c97eed57ad551399dc53c37d413a6490cc26381f0d78783"
+    },
+    {
+      "bytes": 5223,
+      "path": "recordings/USD1USDT/00000001792248940604-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000018.parquet",
+      "sha256": "a2d23fbdb90c2f940ebc4c9c5828bdf2a07d14db1adfc4d967a421af7a558335"
+    },
+    {
+      "bytes": 4847,
+      "path": "recordings/USD1USDT/00000001792248942855-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000019.parquet",
+      "sha256": "821c817fdaf24aab2ca15f826fe2a44fbc614dd575a58a8832bddcc42f3cca95"
+    },
+    {
+      "bytes": 4513,
+      "path": "recordings/USD1USDT/00000001792248945122-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000020.parquet",
+      "sha256": "abc47142b5c8c8dd3777e64bcac1aa33060cc43999ae5f85f0edf5f714e627b5"
+    },
+    {
+      "bytes": 4327,
+      "path": "recordings/USD1USDT/00000001792248947354-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000021.parquet",
+      "sha256": "e9dce80c47d48d6a7e3a18480c843bf6519cbbe4c6c0cc764f00817f1584e3d1"
+    },
+    {
+      "bytes": 4351,
+      "path": "recordings/USD1USDT/00000001792248949604-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000022.parquet",
+      "sha256": "7642c1213563f6a29dcb6c1fb56f97870923aa149f23a11972949c59359895d0"
+    },
+    {
+      "bytes": 4189,
+      "path": "recordings/USD1USDT/00000001792248951855-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000023.parquet",
+      "sha256": "f026ae5dc7909da37532b4ca711732a96c4a2062083bd6cfa449de195b110a72"
+    },
+    {
+      "bytes": 4291,
+      "path": "recordings/USD1USDT/00000001792248954109-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000024.parquet",
+      "sha256": "11060a92bbb32a0fdf0b37f1ae719fe32172d12f1c8a77cceb162cb5beaa9c32"
+    },
+    {
+      "bytes": 4218,
+      "path": "recordings/USD1USDT/00000001792248956355-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000025.parquet",
+      "sha256": "b7bd7a6faad0d83e4256279f497cc7a04f2c45999357cee7df9d58ac26924911"
+    },
+    {
+      "bytes": 3948,
+      "path": "recordings/USD1USDT/00000001792248958607-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000026.parquet",
+      "sha256": "78bf475c33eb7d840e46465a376518ffd32bd9270eb90da888ef85faa66bd381"
+    },
+    {
+      "bytes": 4381,
+      "path": "recordings/USD1USDT/00000001792248960854-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000027.parquet",
+      "sha256": "2576c0b6443889e83283d75489c24c4c91cb374c7f5d9a1f3d36534d8c5ee179"
+    },
+    {
+      "bytes": 5228,
+      "path": "recordings/USD1USDT/00000001792248963108-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000028.parquet",
+      "sha256": "dbacec8aadefec5ad32d0836884c5cdddc24eaae3f0e8239eb2335976f2a1c94"
+    },
+    {
+      "bytes": 4578,
+      "path": "recordings/USD1USDT/00000001792248965354-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000029.parquet",
+      "sha256": "223a3ba60343757a3e9a507f2ea9d788aad4807e9182a00b19a8ea6e41caf7d4"
+    },
+    {
+      "bytes": 4329,
+      "path": "recordings/USD1USDT/00000001792248969604-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000030.parquet",
+      "sha256": "64726d3ce87cf6ad01050aafb1f66b02d2753059d70dcf7063032791be8c2c8f"
+    },
+    {
+      "bytes": 4611,
+      "path": "recordings/USD1USDT/00000001792248971855-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000031.parquet",
+      "sha256": "a40d94ea1e1b901b54cb1ab8405864dac943cc5db0bf6c1910c0f9cb86b9dd1b"
+    },
+    {
+      "bytes": 4089,
+      "path": "recordings/USD1USDT/00000001792248974104-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000032.parquet",
+      "sha256": "315c493ce3f1f78e7faecbf0d427f79f012d728fac073bdf938ed3ae04df9146"
+    },
+    {
+      "bytes": 4999,
+      "path": "recordings/USD1USDT/00000001792248976108-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000033.parquet",
+      "sha256": "2c10fd7344e2a08989392a543bfc692ddeb0a1c0e6357e3ebf0a5305f0fda936"
+    },
+    {
+      "bytes": 3818,
+      "path": "recordings/USD1USDT/00000001792248980606-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000034.parquet",
+      "sha256": "beedf1132451d00b15c4a37d8ce4b75de97e8f299fcab08d1b0ee7fc989db3ec"
+    },
+    {
+      "bytes": 4017,
+      "path": "recordings/USD1USDT/00000001792248982854-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000035.parquet",
+      "sha256": "bb7a851567efaf53fdd00a73f4d2b68ecf2ce9dbde3c21b536aa62e137861b54"
+    },
+    {
+      "bytes": 4891,
+      "path": "recordings/USD1USDT/00000001792248985111-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000036.parquet",
+      "sha256": "6270ed8e8d40c4a893ae986f501c9fad73044e7d5fa646c1ba64c2f55dbed179"
+    },
+    {
+      "bytes": 3868,
+      "path": "recordings/USD1USDT/00000001792248987356-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000037.parquet",
+      "sha256": "2dfc3d33c05fb2ce98583604565b23f419045a7bdfddcc278c2ae0c43a01864e"
+    },
+    {
+      "bytes": 4641,
+      "path": "recordings/USD1USDT/00000001792248989606-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000038.parquet",
+      "sha256": "f61f0aa9fa8f83f0063aa7cf15518bd8b2b1d1e759c2520dca2fa68bd0770cd2"
+    },
+    {
+      "bytes": 4571,
+      "path": "recordings/USD1USDT/00000001792248991856-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000039.parquet",
+      "sha256": "588456aca1ae22b6a96e2c2d864a3f16d9e2395ec551ad97ee7573fef2c405c1"
+    },
+    {
+      "bytes": 4751,
+      "path": "recordings/USD1USDT/00000001792248994110-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000040.parquet",
+      "sha256": "ea293bd42bb4651347d4a968bedbd72aae11c8bcc2a56614eea736009574e01f"
+    },
+    {
+      "bytes": 5183,
+      "path": "recordings/USD1USDT/00000001792248996355-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000041.parquet",
+      "sha256": "48a5fed7f06a014222ea573acac63ac0684040dba21ce38ae4c9e3704035b760"
+    },
+    {
+      "bytes": 4303,
+      "path": "recordings/USD1USDT/00000001792248998605-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000042.parquet",
+      "sha256": "ca8f490075b265c1c614bd2a8621f172ad2606657462f954cd44e0b2f4a7fcc7"
+    },
+    {
+      "bytes": 4096,
+      "path": "recordings/USD1USDT/00000001792249000855-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000043.parquet",
+      "sha256": "139072021ad1226dd45b984159cc2e75d8bd4eac32f6f722e572ea77ea48ea07"
+    },
+    {
+      "bytes": 5119,
+      "path": "recordings/USD1USDT/00000001792249003106-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000044.parquet",
+      "sha256": "16aa766980a803e07112db0dba11ccccb49765a7c769d4e32f01cf44b572a21e"
+    },
+    {
+      "bytes": 5180,
+      "path": "recordings/USD1USDT/00000001792249005355-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000045.parquet",
+      "sha256": "a4f82b42ac983ded662e6eb1a4af36ef4f6f583ed99302b20f259b7264fd72c3"
+    },
+    {
+      "bytes": 3924,
+      "path": "recordings/USD1USDT/00000001792249007607-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000046.parquet",
+      "sha256": "59f66972242b9eaccb5d5e12078826b90913ee3005ff2a603ff5dd88c11f2cc0"
+    },
+    {
+      "bytes": 3826,
+      "path": "recordings/USD1USDT/00000001792249009855-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000047.parquet",
+      "sha256": "9972e485865a8ae5acec06e2d44d311d92ffaf637c7382e00c5feae6af94e77b"
+    },
+    {
+      "bytes": 3995,
+      "path": "recordings/USD1USDT/00000001792249012109-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000048.parquet",
+      "sha256": "cbe12642e172726ed04304aa0e9522cd1592ca2927312f94d07f583d6360c3ae"
+    },
+    {
+      "bytes": 5303,
+      "path": "recordings/USD1USDT/00000001792249014356-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000049.parquet",
+      "sha256": "38652b42495a6193bb16fc21f6b26e0d6a14f151621a17a27d7b1378f686f332"
+    },
+    {
+      "bytes": 5263,
+      "path": "recordings/USD1USDT/00000001792249016607-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000050.parquet",
+      "sha256": "1cb15416f7ab0f0a11a77e90c9b08a518c68434f714c513f14c1c6104ed97a41"
+    },
+    {
+      "bytes": 8770,
+      "path": "recordings/USD1USDT/00000001792249018855-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000051.parquet",
+      "sha256": "fd1a327149746eae9db84b06468a06f6cd7644d8570003efaff64e5749920e3e"
+    },
+    {
+      "bytes": 7538,
+      "path": "recordings/USD1USDT/00000001792249021111-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000052.parquet",
+      "sha256": "826369ab3a08ab2668398d3ac1ff5d8f4aef51ba790251c260bc7f1cb1db0b99"
+    },
+    {
+      "bytes": 5689,
+      "path": "recordings/USD1USDT/00000001792249023355-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000053.parquet",
+      "sha256": "26f4c6390e7c7c0da7d92c9c1412eb6d71f163286010d2db049da69c4a4ee31c"
+    },
+    {
+      "bytes": 4809,
+      "path": "recordings/USD1USDT/00000001792249025605-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000054.parquet",
+      "sha256": "8a09a9e21f5d4c4a80269a72af36d856fde6f36ae4f3b08676d47bc471cb686f"
+    },
+    {
+      "bytes": 5497,
+      "path": "recordings/USD1USDT/00000001792249027855-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000055.parquet",
+      "sha256": "ffa760ed509403007c2e9ca6d22228914de55ece38a82b099a1a3375576e256e"
+    },
+    {
+      "bytes": 4437,
+      "path": "recordings/USD1USDT/00000001792249030106-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000056.parquet",
+      "sha256": "961a5050b4d6e6dd365e613703fd62a5c4cd0bbce4c867a74829e8b71b7dbe64"
+    },
+    {
+      "bytes": 4584,
+      "path": "recordings/USD1USDT/00000001792249032355-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000057.parquet",
+      "sha256": "818882ba6ef308a525de7cf580e1e22112f1c56cd5edb3bbfb9f8bd2c20b7455"
+    },
+    {
+      "bytes": 4973,
+      "path": "recordings/USD1USDT/00000001792249034607-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000058.parquet",
+      "sha256": "f57222dc1768b633bc6c1e7cc840f600f8c188b6b1907f3c0c4aa79c20fae617"
+    },
+    {
+      "bytes": 5053,
+      "path": "recordings/USD1USDT/00000001792249036855-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000059.parquet",
+      "sha256": "42568f9148808840aa7898fd5686717488ce59344203965be6dcc505b0c1aad4"
+    },
+    {
+      "bytes": 4175,
+      "path": "recordings/USD1USDT/00000001792249041110-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000060.parquet",
+      "sha256": "56fff2cf59e6228487c98290864e674e9b4d2b8cbb4e813ed196c27f5e4ffdcb"
+    },
+    {
+      "bytes": 4140,
+      "path": "recordings/USD1USDT/00000001792249043355-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000061.parquet",
+      "sha256": "62a613c0ba49f94d571e59de7f01a24faa23dcef9b14afaab748872dfce888f7"
+    },
+    {
+      "bytes": 4996,
+      "path": "recordings/USD1USDT/00000001792249045606-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000062.parquet",
+      "sha256": "e0fda13541ac70cc62ad6a8ea3565ea9c9786e2896df893d410dda1d36aa483d"
+    },
+    {
+      "bytes": 4103,
+      "path": "recordings/USD1USDT/00000001792249047855-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000063.parquet",
+      "sha256": "7dbf71368796bbf46e1d0bbe2b56da4957c9a859022eff014801a580c4426f5c"
+    },
+    {
+      "bytes": 5240,
+      "path": "recordings/USD1USDT/00000001792249050109-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000064.parquet",
+      "sha256": "4b8d229f87813d10efd8b00563fb6444c9a4d604e894292505fd027b43dd73c2"
+    },
+    {
+      "bytes": 4899,
+      "path": "recordings/USD1USDT/00000001792249052354-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000065.parquet",
+      "sha256": "c49774d375ea14e0fd12cc129d5ff30ead0fe3eb13eaa194438994eb1cb3b584"
+    },
+    {
+      "bytes": 4215,
+      "path": "recordings/USD1USDT/00000001792249054604-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000066.parquet",
+      "sha256": "d62a89ea72fcc7fe0e252ad43b89d79a5e6dcb76e31c95a29d0cb447cf3d54e9"
+    },
+    {
+      "bytes": 4362,
+      "path": "recordings/USD1USDT/00000001792249056855-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000067.parquet",
+      "sha256": "2de4dab955a1688ba31490b15acaca61398e427297def3b746ad0fae2d8cc4f6"
+    },
+    {
+      "bytes": 4579,
+      "path": "recordings/USD1USDT/00000001792249059108-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000068.parquet",
+      "sha256": "0b09a948b386a67e07b99db282428e52c905c2aa9fae6d949c2412f2c05996bd"
+    },
+    {
+      "bytes": 4036,
+      "path": "recordings/USD1USDT/00000001792249061356-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000069.parquet",
+      "sha256": "d799c162dfe9c88188c449b21d84eee61322a1dd9eceea7ef09bb063fa6ea2db"
+    },
+    {
+      "bytes": 4460,
+      "path": "recordings/USD1USDT/00000001792249063605-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000070.parquet",
+      "sha256": "fd742894c2e71b59393c5e3c62ce557b3fc99967c5d33cfc1118958461e9cded"
+    },
+    {
+      "bytes": 4711,
+      "path": "recordings/USD1USDT/00000001792249065855-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000071.parquet",
+      "sha256": "c834c682b025c26d90a9dfda60813cd61c4569adcbf09d91fc367f35ce9d109b"
+    },
+    {
+      "bytes": 4460,
+      "path": "recordings/USD1USDT/00000001792249069907-08e7c4bf-636b-4ca9-947e-4e6b10f2b765-00000000000000000072.parquet",
+      "sha256": "d4f90ee72a89a8efd79d5027f8e12e1a26308905674144b5eafc05186b9aaf84"
+    },
+    {
+      "bytes": 42563,
+      "path": "recordings/USDCUSDT/00000001792248894302-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000001.parquet",
+      "sha256": "0d3ec36e9e4689b630503ca99d8358843e9481bf20f311a0ea2d4639bd5063e5"
+    },
+    {
+      "bytes": 12185,
+      "path": "recordings/USDCUSDT/00000001792248896552-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000002.parquet",
+      "sha256": "e9c59aa00a9723a0c2ee334f8696181eff628bc35e998e1b1f870d39ff465ea4"
+    },
+    {
+      "bytes": 13372,
+      "path": "recordings/USDCUSDT/00000001792248898802-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000003.parquet",
+      "sha256": "e2c19d958f5151e798e882841d5c72b08620f055fe3932805ae8012dde8b4e99"
+    },
+    {
+      "bytes": 12957,
+      "path": "recordings/USDCUSDT/00000001792248901052-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000004.parquet",
+      "sha256": "6520d3bb44810c26d5b4e377fbc385d2e8f6c853d90524e61555bc19b2048052"
+    },
+    {
+      "bytes": 13785,
+      "path": "recordings/USDCUSDT/00000001792248903302-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000005.parquet",
+      "sha256": "c118c02413cfec0f7d5bc27895c19c931910557ffb9cd9eb0fccf23731d75f93"
+    },
+    {
+      "bytes": 14122,
+      "path": "recordings/USDCUSDT/00000001792248905552-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000006.parquet",
+      "sha256": "2791cf7d82994260fc85c93d991ff3956730f98b1c95118e94f05bed3713ddab"
+    },
+    {
+      "bytes": 12564,
+      "path": "recordings/USDCUSDT/00000001792248907802-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000007.parquet",
+      "sha256": "af3631bb2d5be4c2a009ca1c3e8b1b1a1874ff9833d5cd00f5cc95aa5000f881"
+    },
+    {
+      "bytes": 12827,
+      "path": "recordings/USDCUSDT/00000001792248910052-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000008.parquet",
+      "sha256": "8c448ff702a8c1e308387d02070c9fdffb683e08064b2edad2e5ffa977c2d240"
+    },
+    {
+      "bytes": 14053,
+      "path": "recordings/USDCUSDT/00000001792248912302-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000009.parquet",
+      "sha256": "27aaea07809f276dfd1f9435b08931ce6aa8dc703db0dbcec0688ea2aedc9a0c"
+    },
+    {
+      "bytes": 13841,
+      "path": "recordings/USDCUSDT/00000001792248914552-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000010.parquet",
+      "sha256": "35c0f7f7bf72e080d36568d970b5f69e9b2e0e2d9cc97d8c543c910f0b7dc084"
+    },
+    {
+      "bytes": 12921,
+      "path": "recordings/USDCUSDT/00000001792248916802-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000011.parquet",
+      "sha256": "48fddd93edb7b4dc10bc8968869c2f66dadd58951d99b9be1ceeaad22b3f2d17"
+    },
+    {
+      "bytes": 13068,
+      "path": "recordings/USDCUSDT/00000001792248919052-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000012.parquet",
+      "sha256": "4851385c797c72d739a1eec91b3391ede9f87b2b36c4e58154336cad728572a2"
+    },
+    {
+      "bytes": 13503,
+      "path": "recordings/USDCUSDT/00000001792248921305-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000013.parquet",
+      "sha256": "2f3c8264f12b7c92e619878ce197d40f5733434d1a192e01c04c39b677997fdb"
+    },
+    {
+      "bytes": 12981,
+      "path": "recordings/USDCUSDT/00000001792248923552-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000014.parquet",
+      "sha256": "b1b32b919b959677d1ed3fcd3d85d554fd6816f15e08b0582eb40c4c954453ef"
+    },
+    {
+      "bytes": 13895,
+      "path": "recordings/USDCUSDT/00000001792248925805-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000015.parquet",
+      "sha256": "ba9b080549a86fbc5ddc7c881a95df60d019054d9ee939ab8935552114a6a4ca"
+    },
+    {
+      "bytes": 13401,
+      "path": "recordings/USDCUSDT/00000001792248928052-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000016.parquet",
+      "sha256": "7b81671acbef2dea033d86f5e74a6a9da45e561ad1c4e294c0ab5a730af65d13"
+    },
+    {
+      "bytes": 13047,
+      "path": "recordings/USDCUSDT/00000001792248930302-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000017.parquet",
+      "sha256": "35ac64e9a5058e5196c811757f1347815b97e62bcf75a2f977b81209edd2b0f3"
+    },
+    {
+      "bytes": 13684,
+      "path": "recordings/USDCUSDT/00000001792248932552-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000018.parquet",
+      "sha256": "2e1eaeb6ae027aac99ce03a74008f045a745251469f86488e732694d7f8408d5"
+    },
+    {
+      "bytes": 14213,
+      "path": "recordings/USDCUSDT/00000001792248934802-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000019.parquet",
+      "sha256": "9efc2be1bfdcc6bdab395fa44dfea3981b9354757f287f4fe22e071a7485d539"
+    },
+    {
+      "bytes": 13174,
+      "path": "recordings/USDCUSDT/00000001792248937052-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000020.parquet",
+      "sha256": "8b20d22dd5a09bc56cb01443bdb9a242165a6b0073123a67d068d9dd0069bd24"
+    },
+    {
+      "bytes": 14601,
+      "path": "recordings/USDCUSDT/00000001792248939302-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000021.parquet",
+      "sha256": "18a3445d6d9b1ab6b41b7506df296eae70cf02ddbedcbbcaf143cf703058e596"
+    },
+    {
+      "bytes": 13977,
+      "path": "recordings/USDCUSDT/00000001792248941311-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000022.parquet",
+      "sha256": "c6b70c21f73fe7245507ca70dbb8aa4e1d662cfe332c1466123b3b75c31a238c"
+    },
+    {
+      "bytes": 13886,
+      "path": "recordings/USDCUSDT/00000001792248943553-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000023.parquet",
+      "sha256": "c5edbc5be507486257ded57bca37df416e92ebab47fab922d04629ad50cf37c0"
+    },
+    {
+      "bytes": 13860,
+      "path": "recordings/USDCUSDT/00000001792248945804-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000024.parquet",
+      "sha256": "6996a28887a6f565d67e35dce21a813fe989f0640ee6f6bd2976590032e80c9e"
+    },
+    {
+      "bytes": 12583,
+      "path": "recordings/USDCUSDT/00000001792248948052-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000025.parquet",
+      "sha256": "2767997bc3cd6742bb7e92658fd16e790aed0af2e2486c9ccacd29256f84078b"
+    },
+    {
+      "bytes": 12719,
+      "path": "recordings/USDCUSDT/00000001792248950307-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000026.parquet",
+      "sha256": "714b8106e608cdaa6674f84ff04a86bf9286596a9ba968eb2843249cd87d25b1"
+    },
+    {
+      "bytes": 13487,
+      "path": "recordings/USDCUSDT/00000001792248952552-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000027.parquet",
+      "sha256": "d07aa9929974e6ea4304c2d43036f93857bce0c0564c170d682cdee752ed9e1c"
+    },
+    {
+      "bytes": 13534,
+      "path": "recordings/USDCUSDT/00000001792248954806-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000028.parquet",
+      "sha256": "4c3f16b5707fa905df89affde55e3a6376fa3a1b50475103d8b7aee70423ff35"
+    },
+    {
+      "bytes": 12930,
+      "path": "recordings/USDCUSDT/00000001792248957052-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000029.parquet",
+      "sha256": "52f9b7624be9a874258d7087205d6a650b844d8f969ff5e213a5d25f2e394855"
+    },
+    {
+      "bytes": 13107,
+      "path": "recordings/USDCUSDT/00000001792248959303-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000030.parquet",
+      "sha256": "99a51ced9a8981522c31f5c8f9ab51b810cd1a1870d84aaa63a9bc48246e4d96"
+    },
+    {
+      "bytes": 13823,
+      "path": "recordings/USDCUSDT/00000001792248961553-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000031.parquet",
+      "sha256": "c81d9a39c870f66392a992297159e0569d4ed4c6c4ad306f160a82c860e6c13b"
+    },
+    {
+      "bytes": 13100,
+      "path": "recordings/USDCUSDT/00000001792248963802-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000032.parquet",
+      "sha256": "e090244b14145d157c1cbc99386cd0e26a67c0b4e5a7f9bcf8f4d523e3ade5f4"
+    },
+    {
+      "bytes": 14102,
+      "path": "recordings/USDCUSDT/00000001792248966052-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000033.parquet",
+      "sha256": "529fc22909e88b7aed575e4cc9ce78a944f96ec6f78adeaf7fd3004f6664a85c"
+    },
+    {
+      "bytes": 13004,
+      "path": "recordings/USDCUSDT/00000001792248968303-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000034.parquet",
+      "sha256": "51f63730d89f671f3392c3f6ec3d2e25225396beb6bfe7edd35d0c99e26705a1"
+    },
+    {
+      "bytes": 13785,
+      "path": "recordings/USDCUSDT/00000001792248970552-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000035.parquet",
+      "sha256": "c9966f3502e3cd8c0021133329d86e77e04a2b255f95f2e0a6d38b018a529180"
+    },
+    {
+      "bytes": 13027,
+      "path": "recordings/USDCUSDT/00000001792248972803-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000036.parquet",
+      "sha256": "b1740f17fd7d573aa04530a4aabe35dcd866d99cfd8f8e7155e0b46050ac48db"
+    },
+    {
+      "bytes": 13906,
+      "path": "recordings/USDCUSDT/00000001792248975053-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000037.parquet",
+      "sha256": "646119f89d82db6ff844586dec4aa52ae04706a775ebd675f456388580fcd211"
+    },
+    {
+      "bytes": 13538,
+      "path": "recordings/USDCUSDT/00000001792248977303-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000038.parquet",
+      "sha256": "cbae09428f824f62ef8e756259bb86dc8082baedd0b7ccf66b088e904497c79a"
+    },
+    {
+      "bytes": 15019,
+      "path": "recordings/USDCUSDT/00000001792248979552-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000039.parquet",
+      "sha256": "d7302a57af165a05fa5c2995a27d8f3f8a6a6c69bc4615501df7930c41201cba"
+    },
+    {
+      "bytes": 12446,
+      "path": "recordings/USDCUSDT/00000001792248981803-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000040.parquet",
+      "sha256": "ba7e388cb45de7bc51995a9c11fc3ca8a1f35a1bc575aba8f1a5741f704b45e6"
+    },
+    {
+      "bytes": 13693,
+      "path": "recordings/USDCUSDT/00000001792248984053-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000041.parquet",
+      "sha256": "52174cd4374e079ebeae3b1b0edc40017026f2ec27c44011204e4d668b28b5ee"
+    },
+    {
+      "bytes": 13517,
+      "path": "recordings/USDCUSDT/00000001792248986306-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000042.parquet",
+      "sha256": "26f44f182c3aa3a6ca62286c5ee2f81876e495fc9ffbf7a81384088fa4be1ae8"
+    },
+    {
+      "bytes": 14144,
+      "path": "recordings/USDCUSDT/00000001792248988554-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000043.parquet",
+      "sha256": "5d5454e0093312d941ff6fd1e03b977717789b366911c9f108ae07e28d5d4132"
+    },
+    {
+      "bytes": 13057,
+      "path": "recordings/USDCUSDT/00000001792248990592-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000044.parquet",
+      "sha256": "151612ec8bcd95aebab6ebbb0aa88b65979919f9b41754a98081f08e9db72062"
+    },
+    {
+      "bytes": 13841,
+      "path": "recordings/USDCUSDT/00000001792248992802-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000045.parquet",
+      "sha256": "796c092b202c8eda9dde29606fc68adce1e668ac8dfe274df20d6fa43b6c9497"
+    },
+    {
+      "bytes": 14641,
+      "path": "recordings/USDCUSDT/00000001792248995052-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000046.parquet",
+      "sha256": "2b8a61e69d1b3592d40d54a83ca6bf73f63d4e0b88f52a6d868d9e5f83f2e3a1"
+    },
+    {
+      "bytes": 13515,
+      "path": "recordings/USDCUSDT/00000001792248997062-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000047.parquet",
+      "sha256": "52ad770b62001a2413ab510bc0b92ced76ed4709855216b43b70d122a04744c6"
+    },
+    {
+      "bytes": 13891,
+      "path": "recordings/USDCUSDT/00000001792248999303-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000048.parquet",
+      "sha256": "39f038026dca00761fb51c95bb05276f95c771dd1e6a2ccac9cfe27f8c932773"
+    },
+    {
+      "bytes": 13754,
+      "path": "recordings/USDCUSDT/00000001792249001566-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000049.parquet",
+      "sha256": "4a9b706cff06b0aa91094d5038fff46f9d94af01663dfac517573a09d75c9cd2"
+    },
+    {
+      "bytes": 13170,
+      "path": "recordings/USDCUSDT/00000001792249003803-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000050.parquet",
+      "sha256": "c4be18e956db747617aa81cb2b4a7cab7a00f3e81699c53dd370083fe2cd7af0"
+    },
+    {
+      "bytes": 13007,
+      "path": "recordings/USDCUSDT/00000001792249006061-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000051.parquet",
+      "sha256": "2bc5c7ee2b52e733b99561bf8e8955f2569afbcb7b14935d4c236ae9f6b0efd8"
+    },
+    {
+      "bytes": 13073,
+      "path": "recordings/USDCUSDT/00000001792249008303-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000052.parquet",
+      "sha256": "025c1b76a26a0e9dfb097e57abd772f39535a8270046ec11ef64a07367c21cdf"
+    },
+    {
+      "bytes": 13120,
+      "path": "recordings/USDCUSDT/00000001792249010563-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000053.parquet",
+      "sha256": "6724568793ef95f6738bca1b563561f853a76ef9a176ea382c116a68cc8a82bc"
+    },
+    {
+      "bytes": 13549,
+      "path": "recordings/USDCUSDT/00000001792249012804-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000054.parquet",
+      "sha256": "de36b82d0960149dd9cb49e472a5c4e84b50796c2b5ce13d74e30b947e215746"
+    },
+    {
+      "bytes": 15050,
+      "path": "recordings/USDCUSDT/00000001792249015065-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000055.parquet",
+      "sha256": "7d3129d41c41424cc2cf6965fa4cd96b292b3ec11362ca31b625c0561ac77bca"
+    },
+    {
+      "bytes": 14467,
+      "path": "recordings/USDCUSDT/00000001792249017303-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000056.parquet",
+      "sha256": "dd287b0f86e9dd1690e66d7da547e0ece2feabcc42f25ec706d61c51ef4d3619"
+    },
+    {
+      "bytes": 13906,
+      "path": "recordings/USDCUSDT/00000001792249019563-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000057.parquet",
+      "sha256": "2d3132df3b0a3b48be7d96f0f8dcb971eaaacc3bf73ec7b7e80924d191651c9e"
+    },
+    {
+      "bytes": 14314,
+      "path": "recordings/USDCUSDT/00000001792249021804-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000058.parquet",
+      "sha256": "23be86f32f702c19f30a90e2c827a8afaa3964c50f33add64085df2d1ca6edb1"
+    },
+    {
+      "bytes": 14888,
+      "path": "recordings/USDCUSDT/00000001792249024062-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000059.parquet",
+      "sha256": "6f424d12f27cd4bbc3e761c36a3a4dc50676bad0c01cc94fed8e6bd4988fed30"
+    },
+    {
+      "bytes": 14462,
+      "path": "recordings/USDCUSDT/00000001792249026303-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000060.parquet",
+      "sha256": "cefc5b5e47a8fa458d80b096ba10db1564fe87c12d257eb7e49b656cf77dc3f9"
+    },
+    {
+      "bytes": 13637,
+      "path": "recordings/USDCUSDT/00000001792249028563-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000061.parquet",
+      "sha256": "8fa16c68394429168a3b0595069246858546b211c67bd5babda2940ddd4b2c78"
+    },
+    {
+      "bytes": 13851,
+      "path": "recordings/USDCUSDT/00000001792249030804-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000062.parquet",
+      "sha256": "89943324aeeb3c6a5b0fa573e3673e42ea302cb5fddef0b583067abd6f0b9e55"
+    },
+    {
+      "bytes": 12978,
+      "path": "recordings/USDCUSDT/00000001792249033063-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000063.parquet",
+      "sha256": "3dd969bb9eba1a9d7ec6b1d87b34aff192f5773a15b5997f45905801d2cd9384"
+    },
+    {
+      "bytes": 13814,
+      "path": "recordings/USDCUSDT/00000001792249035079-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000064.parquet",
+      "sha256": "695eec69d1c96ad5bb14a4e1cdb6421ede2b1aa071b7e761f5a5c3c93b005e80"
+    },
+    {
+      "bytes": 14239,
+      "path": "recordings/USDCUSDT/00000001792249037305-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000065.parquet",
+      "sha256": "8132cbf4c9c09aa732c1620c37f73639d815aec653cf979fe56a5ca389026fea"
+    },
+    {
+      "bytes": 12901,
+      "path": "recordings/USDCUSDT/00000001792249039574-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000066.parquet",
+      "sha256": "bb6c5f917254a95cf13e62aac4375ce5806ea06e7b794dbbd4952fd7c02ee98d"
+    },
+    {
+      "bytes": 14612,
+      "path": "recordings/USDCUSDT/00000001792249041804-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000067.parquet",
+      "sha256": "20c988c93db9c729bebce6d50201b3ef445c4bdf4d0b0eb9666cbbea63ea3fe8"
+    },
+    {
+      "bytes": 13259,
+      "path": "recordings/USDCUSDT/00000001792249044063-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000068.parquet",
+      "sha256": "aabfa8646057cbe24b8c128d7c8c0d9f79f75b9f6ad652e8faada89975ba6804"
+    },
+    {
+      "bytes": 13493,
+      "path": "recordings/USDCUSDT/00000001792249046316-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000069.parquet",
+      "sha256": "4b7b62c5e713f8922f955a288a6d316115dd7d10c65d175fe1bb98b6f1e43700"
+    },
+    {
+      "bytes": 14064,
+      "path": "recordings/USDCUSDT/00000001792249048570-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000070.parquet",
+      "sha256": "ccb5833d07ed3c1146006811d1db0761561ed339b64dbd261b226ce5adae801a"
+    },
+    {
+      "bytes": 15211,
+      "path": "recordings/USDCUSDT/00000001792249050803-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000071.parquet",
+      "sha256": "bb0ad8d183a0ac42ca65275e476b0eb5b7074769393358e8f71ed71c02f185fe"
+    },
+    {
+      "bytes": 13145,
+      "path": "recordings/USDCUSDT/00000001792249052809-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000072.parquet",
+      "sha256": "40f119858100fa34e5ac2831c372e39ed7b8ed6e7b8ad8179a987dde69721355"
+    },
+    {
+      "bytes": 13870,
+      "path": "recordings/USDCUSDT/00000001792249055053-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000073.parquet",
+      "sha256": "4718353543570f0894bb53e52d793b02ed9b13bec63d3d244e341b21b0de2f86"
+    },
+    {
+      "bytes": 12834,
+      "path": "recordings/USDCUSDT/00000001792249057303-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000074.parquet",
+      "sha256": "8645e61473c0ed5580c0b106b537f55f59be2fd7aaac2289919dc4e59eabd119"
+    },
+    {
+      "bytes": 12742,
+      "path": "recordings/USDCUSDT/00000001792249059553-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000075.parquet",
+      "sha256": "c271aef51fb7eaf2911261382fda90321ce88c7b4c992754209ac49a4d16ac23"
+    },
+    {
+      "bytes": 13328,
+      "path": "recordings/USDCUSDT/00000001792249061803-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000076.parquet",
+      "sha256": "d8ab1e193e2ceca7b52aa2d34cc2c5c81daf6fc0397ba1c794c92c9d3460117e"
+    },
+    {
+      "bytes": 12907,
+      "path": "recordings/USDCUSDT/00000001792249064053-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000077.parquet",
+      "sha256": "af409368478a08542542d0d3d5418e2611a4b14d3ac5e1a704e8eee24837bcdc"
+    },
+    {
+      "bytes": 13407,
+      "path": "recordings/USDCUSDT/00000001792249066303-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000078.parquet",
+      "sha256": "236286360062f9ddde70d110bff1d48db6890558a70a615950e250e858c97c54"
+    },
+    {
+      "bytes": 13231,
+      "path": "recordings/USDCUSDT/00000001792249068553-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000079.parquet",
+      "sha256": "3157d2c78aa1ebef656d3c9deebf7c8aa5fb3a6d8ae80b5c6f372082532fc893"
+    },
+    {
+      "bytes": 12330,
+      "path": "recordings/USDCUSDT/00000001792249069909-0404bc59-3318-4c40-8d62-89c8a5dff18b-00000000000000000080.parquet",
+      "sha256": "6bb17c5bf192497c123dd0115cfa0ba47f60bb87e1c56ac8ac45b169682a5566"
+    },
+    {
+      "bytes": 303384,
+      "path": "recordings/ZECUSDT/00000001792248909241-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000001.parquet",
+      "sha256": "8c13536a63c11dd3ccbdd24308528fa48747cc4ec10364bd927201a3349167b0"
+    },
+    {
+      "bytes": 85366,
+      "path": "recordings/ZECUSDT/00000001792248911491-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000002.parquet",
+      "sha256": "0708efc8a87ff64295d2d3313189eec56dddd7909c7258e107bf88c10516b1ab"
+    },
+    {
+      "bytes": 83991,
+      "path": "recordings/ZECUSDT/00000001792248913741-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000003.parquet",
+      "sha256": "a1c19944b6f5acbd5390247637531786f0257b8e36d5e19922f2fb2dfb396b37"
+    },
+    {
+      "bytes": 82059,
+      "path": "recordings/ZECUSDT/00000001792248915991-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000004.parquet",
+      "sha256": "b98aedb9747fd850747e14c37c0f18fd06b17b9ca272d6c699ca1df168478c6d"
+    },
+    {
+      "bytes": 82386,
+      "path": "recordings/ZECUSDT/00000001792248918241-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000005.parquet",
+      "sha256": "14210ee91140357f688012fe385d57cf387ec2c87acd430e2f2d004a1200c729"
+    },
+    {
+      "bytes": 87413,
+      "path": "recordings/ZECUSDT/00000001792248920491-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000006.parquet",
+      "sha256": "12ad724a1d1b9b42931e6db0e26a379a332da225d48a0da55770b2443ed02648"
+    },
+    {
+      "bytes": 85684,
+      "path": "recordings/ZECUSDT/00000001792248922741-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000007.parquet",
+      "sha256": "361c36e2c58fb0b54995748be50296f0547868dc1c898957d4590deabaef9970"
+    },
+    {
+      "bytes": 89234,
+      "path": "recordings/ZECUSDT/00000001792248924992-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000008.parquet",
+      "sha256": "516c98d1b25d05e4d9a2844669db02951a9a58bbd34bedc83bbbfd8365d795d0"
+    },
+    {
+      "bytes": 85438,
+      "path": "recordings/ZECUSDT/00000001792248927241-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000009.parquet",
+      "sha256": "71f5c917d42c5a44f7638c8e0d2b0c58e2965faa113c552d102bea067cd1a71a"
+    },
+    {
+      "bytes": 83487,
+      "path": "recordings/ZECUSDT/00000001792248929491-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000010.parquet",
+      "sha256": "1205cc121a2725238fcf21fb9cfb74fa7a18cfd18cd86d624c08777e10f7461d"
+    },
+    {
+      "bytes": 80890,
+      "path": "recordings/ZECUSDT/00000001792248931741-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000011.parquet",
+      "sha256": "c26cf6bae2720765d0d33a4f5cd84c22ae05f4f40b3ce2e71e18cdf918ac8861"
+    },
+    {
+      "bytes": 79737,
+      "path": "recordings/ZECUSDT/00000001792248933991-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000012.parquet",
+      "sha256": "7dec46cecdca1ad42e915c85ca2a0ca9ce97fae85c97dd248c485f83da522020"
+    },
+    {
+      "bytes": 83399,
+      "path": "recordings/ZECUSDT/00000001792248936241-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000013.parquet",
+      "sha256": "982dac733a727c02ab8260e169406b19e9dac341b0c66a0609fc8b3926f36777"
+    },
+    {
+      "bytes": 90833,
+      "path": "recordings/ZECUSDT/00000001792248938491-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000014.parquet",
+      "sha256": "023c52a8bebd27b8430060db0f1279a2a87a0da186af9a238f0b9e11b31e76f5"
+    },
+    {
+      "bytes": 81198,
+      "path": "recordings/ZECUSDT/00000001792248940741-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000015.parquet",
+      "sha256": "66bde342a0aaf6fc0a9a9b128df2720ddbcabc72de13b529297ab879e431c015"
+    },
+    {
+      "bytes": 100544,
+      "path": "recordings/ZECUSDT/00000001792248942991-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000016.parquet",
+      "sha256": "8bc8784fc3805fd30a7d78e67fe120bf478e35a03e2828006454f73573f92505"
+    },
+    {
+      "bytes": 84985,
+      "path": "recordings/ZECUSDT/00000001792248945242-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000017.parquet",
+      "sha256": "897ccbca2080a71b89481febd7b855dc6c63e0ad420ec0a7f1819af3d1f4095f"
+    },
+    {
+      "bytes": 85288,
+      "path": "recordings/ZECUSDT/00000001792248947491-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000018.parquet",
+      "sha256": "7716983d9d8e526b28068913d261ded8e81ed3a040d70ce4539871b04169163e"
+    },
+    {
+      "bytes": 86173,
+      "path": "recordings/ZECUSDT/00000001792248949741-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000019.parquet",
+      "sha256": "7f5a144edd56b702150b6d3518171c19eb48384c7180ad2bbe2ab3db1879eab1"
+    },
+    {
+      "bytes": 83894,
+      "path": "recordings/ZECUSDT/00000001792248951991-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000020.parquet",
+      "sha256": "2437898f819d85050d5dc93c001a8d2765014b077b8fbd0d538528839dee93e3"
+    },
+    {
+      "bytes": 78910,
+      "path": "recordings/ZECUSDT/00000001792248954241-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000021.parquet",
+      "sha256": "eea17b1445ec0b3f419de436536e0c9d02333f7ee18ebd356bff2ce3da2dd49a"
+    },
+    {
+      "bytes": 80346,
+      "path": "recordings/ZECUSDT/00000001792248956491-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000022.parquet",
+      "sha256": "b09c3d3d9775e142e065bcc0b2ef3971999d5a3fe67648d372be298c2cd30268"
+    },
+    {
+      "bytes": 80112,
+      "path": "recordings/ZECUSDT/00000001792248958742-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000023.parquet",
+      "sha256": "e92b6ee7d22fccf1650757c125e1f4ed4c0189a1e889a98b217eecf2ebbb9bd2"
+    },
+    {
+      "bytes": 79723,
+      "path": "recordings/ZECUSDT/00000001792248960991-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000024.parquet",
+      "sha256": "99205dc4f1125d0e385d18a5d9f1396566ce64bd8537e42661d3f38c83346c51"
+    },
+    {
+      "bytes": 82837,
+      "path": "recordings/ZECUSDT/00000001792248963241-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000025.parquet",
+      "sha256": "2949494a5dd5135d985cd57c0c217672f48734a5a2e1f35a815ce733dd88ee57"
+    },
+    {
+      "bytes": 91168,
+      "path": "recordings/ZECUSDT/00000001792248965491-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000026.parquet",
+      "sha256": "b09fb39cdbeb7efbf79c80260e17fe888a930764b40b46164adda83560abcb7a"
+    },
+    {
+      "bytes": 83856,
+      "path": "recordings/ZECUSDT/00000001792248967741-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000027.parquet",
+      "sha256": "0c9c59873a4febff9a2b7b5c3d0c4775929cb216cff383f665b884703db3545e"
+    },
+    {
+      "bytes": 87106,
+      "path": "recordings/ZECUSDT/00000001792248969992-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000028.parquet",
+      "sha256": "186be607d97b40c762d246f0c61f60f58fbe1a2a2df22031a03016c2717f3402"
+    },
+    {
+      "bytes": 82955,
+      "path": "recordings/ZECUSDT/00000001792248972241-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000029.parquet",
+      "sha256": "be738171550041e562b971e8a68cc170ccca5e979cbf466f9c59d1c8abc41d30"
+    },
+    {
+      "bytes": 80817,
+      "path": "recordings/ZECUSDT/00000001792248974492-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000030.parquet",
+      "sha256": "b9135f7df025aac054105644e2b365b8fbe20bee6a22e72cbbab176f4d4d55de"
+    },
+    {
+      "bytes": 84106,
+      "path": "recordings/ZECUSDT/00000001792248976741-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000031.parquet",
+      "sha256": "e6c5be1c31c70d9ccf633a995a9697279f831c605021fbc391aa2b3f8bdbe1a6"
+    },
+    {
+      "bytes": 81765,
+      "path": "recordings/ZECUSDT/00000001792248978991-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000032.parquet",
+      "sha256": "52c6513c6393943e4b0b52b7b6462ba8a930124179457e08e78a4e695c857436"
+    },
+    {
+      "bytes": 88224,
+      "path": "recordings/ZECUSDT/00000001792248981241-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000033.parquet",
+      "sha256": "29dca0bec51ad099900b15b1534e5025df5a41cf9a57c60efd434194e8d31ffd"
+    },
+    {
+      "bytes": 79803,
+      "path": "recordings/ZECUSDT/00000001792248983492-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000034.parquet",
+      "sha256": "005b57d46e6212868f0dea3cef0c09d2f726376e946e89a3b12e655399f35dfb"
+    },
+    {
+      "bytes": 84277,
+      "path": "recordings/ZECUSDT/00000001792248985743-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000035.parquet",
+      "sha256": "360bf7b07757350e4b8892a76efea6fc02547a8561a1851381bc69cc982f62f3"
+    },
+    {
+      "bytes": 81948,
+      "path": "recordings/ZECUSDT/00000001792248987993-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000036.parquet",
+      "sha256": "7719e131005bc38c1d180970a8819475a2e970e40a71c739648bb1d341317fce"
+    },
+    {
+      "bytes": 80815,
+      "path": "recordings/ZECUSDT/00000001792248990243-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000037.parquet",
+      "sha256": "f6fc4f4703a554070dce615d6860af61aa1bd78946f344047b03efc2c13d43ed"
+    },
+    {
+      "bytes": 85927,
+      "path": "recordings/ZECUSDT/00000001792248992491-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000038.parquet",
+      "sha256": "ae894b19c8e35b90717b80ed421572f401e1f510e9890d3ce5b10b3ff215e709"
+    },
+    {
+      "bytes": 95338,
+      "path": "recordings/ZECUSDT/00000001792248994743-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000039.parquet",
+      "sha256": "fe3b4c02059cf1d45b5eb8f7c214f2a5cf9a649e0902a28f075f624bbdbf9997"
+    },
+    {
+      "bytes": 85907,
+      "path": "recordings/ZECUSDT/00000001792248996991-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000040.parquet",
+      "sha256": "c5feeb6b376a2d8d3203a59e8216a856c700126f573d3e5914d1fadb953e0f65"
+    },
+    {
+      "bytes": 82936,
+      "path": "recordings/ZECUSDT/00000001792248999244-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000041.parquet",
+      "sha256": "5be53ea5b40642a1c8ef300c78ea81cd8f68a3f15c8c652a23a6ff71d28165fa"
+    },
+    {
+      "bytes": 86110,
+      "path": "recordings/ZECUSDT/00000001792249001492-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000042.parquet",
+      "sha256": "38a9dff9bdd6a4a963eddb3b5c969a326b063583fec901da42395fd11677b703"
+    },
+    {
+      "bytes": 85705,
+      "path": "recordings/ZECUSDT/00000001792249003742-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000043.parquet",
+      "sha256": "db7d6a59e634b0765c0c906c2167e00cd3d94f069235fe34fd803cbf32dc2bf6"
+    },
+    {
+      "bytes": 91227,
+      "path": "recordings/ZECUSDT/00000001792249005991-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000044.parquet",
+      "sha256": "7f29de9e7149614c493bbec672f61152025085b73625cbe18930f0008cf15755"
+    },
+    {
+      "bytes": 89181,
+      "path": "recordings/ZECUSDT/00000001792249008243-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000045.parquet",
+      "sha256": "46ac5ea3dec6bff5dc8d71836c219cad1ffcc72968960f5cc954eecab5a154a8"
+    },
+    {
+      "bytes": 83673,
+      "path": "recordings/ZECUSDT/00000001792249010491-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000046.parquet",
+      "sha256": "e2713dcb1985e7a7f1b98452ac070905ca96aa0ed5ee1df55367cf131ad6c8e1"
+    },
+    {
+      "bytes": 89539,
+      "path": "recordings/ZECUSDT/00000001792249012781-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000047.parquet",
+      "sha256": "e09f20d1c1334d3db88fab5f8011ea33c4625ed1dfab8819a9592007a623c4de"
+    },
+    {
+      "bytes": 99582,
+      "path": "recordings/ZECUSDT/00000001792249014991-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000048.parquet",
+      "sha256": "24184abe61f24889db7a6928187fc8c9a0c43737db3974a5d6843e30a3d15c51"
+    },
+    {
+      "bytes": 88649,
+      "path": "recordings/ZECUSDT/00000001792249017241-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000049.parquet",
+      "sha256": "cc24474d604647a16c15e6d669dfbb8b45cbf8a26804acf7122931e03756e78a"
+    },
+    {
+      "bytes": 81085,
+      "path": "recordings/ZECUSDT/00000001792249019492-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000050.parquet",
+      "sha256": "97155af0a3b16ff39b1d0cb9c796580380f9e76e32cf7be03daf3e6f95de0275"
+    },
+    {
+      "bytes": 81387,
+      "path": "recordings/ZECUSDT/00000001792249021741-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000051.parquet",
+      "sha256": "b68436852e052ea05d6d10df11080074b3a1478f79dc1f385ea3ba7fc543c77d"
+    },
+    {
+      "bytes": 82315,
+      "path": "recordings/ZECUSDT/00000001792249023991-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000052.parquet",
+      "sha256": "2186110c3595fc68d8a143e956580ceadc5b73d35b1806189fc474e5a5dadd6f"
+    },
+    {
+      "bytes": 87723,
+      "path": "recordings/ZECUSDT/00000001792249026242-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000053.parquet",
+      "sha256": "953ebb3199d6ba905b9697a1b6e8b58e8f2f56d0d8169bd4758b5c1ca82d0692"
+    },
+    {
+      "bytes": 88171,
+      "path": "recordings/ZECUSDT/00000001792249028492-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000054.parquet",
+      "sha256": "c9f27d7765fbf29c1a1c20cdd340aa3bd141c062145efd48b25dc5f5487e502f"
+    },
+    {
+      "bytes": 86483,
+      "path": "recordings/ZECUSDT/00000001792249030742-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000055.parquet",
+      "sha256": "997179e4ee40f5dd890765c22b74e6974c4481e8f59923b354b00a589f3d8e6c"
+    },
+    {
+      "bytes": 82350,
+      "path": "recordings/ZECUSDT/00000001792249032992-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000056.parquet",
+      "sha256": "8a9e09b478e240daf2eb18c758597f1292ebe25545e3edcef5806df411a4b67f"
+    },
+    {
+      "bytes": 78293,
+      "path": "recordings/ZECUSDT/00000001792249035242-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000057.parquet",
+      "sha256": "6baed4bc4297e872053321ad55f49d98a8e6b33a404e7eb632add173a9bb69bc"
+    },
+    {
+      "bytes": 79191,
+      "path": "recordings/ZECUSDT/00000001792249037492-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000058.parquet",
+      "sha256": "c8a36042f0f9b78aa15064ffb1b21247aa080916c0322324935dc529e3f03be7"
+    },
+    {
+      "bytes": 79599,
+      "path": "recordings/ZECUSDT/00000001792249039742-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000059.parquet",
+      "sha256": "e9dcab8845e29fee01bcf4d905c3901774b52a6b95017787d82ec7cec6304f46"
+    },
+    {
+      "bytes": 87030,
+      "path": "recordings/ZECUSDT/00000001792249041991-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000060.parquet",
+      "sha256": "1b4974d1e589544fc37814b923a49e63e3c90de083d27dcb2aacfd8ebc82b3ce"
+    },
+    {
+      "bytes": 87108,
+      "path": "recordings/ZECUSDT/00000001792249044242-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000061.parquet",
+      "sha256": "b109c618d3c5a048e757e5fa2db7e6ccafbb7b60c963cea1383adb2b98d4b83c"
+    },
+    {
+      "bytes": 78917,
+      "path": "recordings/ZECUSDT/00000001792249046492-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000062.parquet",
+      "sha256": "fb43574bc125b566f5ae278c72d7f0897aaa7bed2000f5667152b5edd9d51f61"
+    },
+    {
+      "bytes": 84449,
+      "path": "recordings/ZECUSDT/00000001792249048741-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000063.parquet",
+      "sha256": "12c79d99c554db7bab3984eb378d3a6af9adc52fa21351207fe399db35e9949f"
+    },
+    {
+      "bytes": 94380,
+      "path": "recordings/ZECUSDT/00000001792249050992-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000064.parquet",
+      "sha256": "6479bac94e10b8e371d1df051ffbd23538fbee23cc7c848f3ddca949d8c720b2"
+    },
+    {
+      "bytes": 84779,
+      "path": "recordings/ZECUSDT/00000001792249053242-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000065.parquet",
+      "sha256": "e57f36f8432edfe85a9e6e321956c7b41563cb095bd0d06a37f9f8dc210d9aab"
+    },
+    {
+      "bytes": 82911,
+      "path": "recordings/ZECUSDT/00000001792249055491-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000066.parquet",
+      "sha256": "60c76d34c19e63c0e5b003d7795cfcb54a91bd0a08f1b4d040b5a21ab4ce9573"
+    },
+    {
+      "bytes": 82026,
+      "path": "recordings/ZECUSDT/00000001792249057742-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000067.parquet",
+      "sha256": "36a05b364de342aaa510947667bf95f38e39b26ac99832d95de6bcd243529320"
+    },
+    {
+      "bytes": 82884,
+      "path": "recordings/ZECUSDT/00000001792249059992-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000068.parquet",
+      "sha256": "965b05f3c92fc4e0b14b81b39ae92eb4b75029378700b177caf4d666b51f0679"
+    },
+    {
+      "bytes": 80123,
+      "path": "recordings/ZECUSDT/00000001792249062242-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000069.parquet",
+      "sha256": "1e54190862d67ccf574d072508b0fd5379168af4d462ee47c62d59b15cdc7ba7"
+    },
+    {
+      "bytes": 83742,
+      "path": "recordings/ZECUSDT/00000001792249064492-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000070.parquet",
+      "sha256": "bb860b01ba3530697acfa9d6a2debe44b9af4c757e5c3677d523c402c7e10b0e"
+    },
+    {
+      "bytes": 92468,
+      "path": "recordings/ZECUSDT/00000001792249066742-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000071.parquet",
+      "sha256": "1e904c247ba4be77874c605cf587f55616d576268e6ab97942b6b1c46355e254"
+    },
+    {
+      "bytes": 83679,
+      "path": "recordings/ZECUSDT/00000001792249068992-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000072.parquet",
+      "sha256": "0d0ed0a11efcee08b3b4199078785eb7734a03f1a9e1ab2672f552c58625f7c7"
+    },
+    {
+      "bytes": 80115,
+      "path": "recordings/ZECUSDT/00000001792249069917-566359c1-a7cc-4082-b9a1-f0e3f562ac11-00000000000000000073.parquet",
+      "sha256": "a9a3d6a81aea9a858f2156d577caf4f9cb792e9f93780f9b0f24458258278b83"
+    }
+  ],
+  "source": "Binance Spot public WebSocket depth and aggregate trades, REST snapshots and discovery",
+  "total_parquet_bytes": 29063084
+}

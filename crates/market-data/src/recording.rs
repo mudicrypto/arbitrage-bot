@@ -1,7 +1,7 @@
 //! Bounded, checksummed Parquet segments. Each starts with a replay checkpoint.
 use crate::{
     book::Book,
-    model::{Depth, Snapshot},
+    model::{Depth, Snapshot, Trade},
 };
 use anyhow::{Context, Result, ensure};
 use fs2::FileExt;
@@ -29,6 +29,7 @@ pub const MAX_RECORD_BYTES: usize = 2 * 1024 * 1024;
 pub enum Event {
     Checkpoint { book: Book },
     Connected,
+    Trade { trade: Trade },
     ReceivedDepth { depth: Depth },
     ReceivedSnapshot { snapshot: Snapshot },
     Snapshot { snapshot: Snapshot },
@@ -77,10 +78,7 @@ pub struct Recorder {
 }
 impl Recorder {
     pub fn open(root: &Path, symbol: &str, limits: Limits) -> Result<Self> {
-        ensure!(
-            crate::model::SYMBOLS.contains(&symbol),
-            "unsupported symbol"
-        );
+        ensure!(crate::model::valid_symbol(symbol), "unsupported symbol");
         ensure!(
             limits.segment_records >= 2
                 && limits.segment_bytes > 0
@@ -329,6 +327,15 @@ pub struct ReplayResult {
     pub book: Book,
 }
 pub fn replay(path: &Path, max_levels: usize, max_file_bytes: u64) -> Result<ReplayResult> {
+    replay_visit(path, max_levels, max_file_bytes, |_, _| Ok(()))
+}
+/// Shares M2 checksum, sequencing and application logic with research analytics.
+pub fn replay_visit(
+    path: &Path,
+    max_levels: usize,
+    max_file_bytes: u64,
+    mut visit: impl FnMut(&Record, &Book) -> Result<()>,
+) -> Result<ReplayResult> {
     ensure!(
         fs::metadata(path)?.len() <= max_file_bytes,
         "replay file too large"
@@ -365,7 +372,7 @@ pub fn replay(path: &Path, max_levels: usize, max_file_bytes: u64) -> Result<Rep
                 "unexpected checkpoint"
             );
         }
-        match record.event {
+        match record.event.clone() {
             Event::Checkpoint { book: saved } => {
                 if saved.last_id.is_some() {
                     saved.validate(max_levels)?;
@@ -379,6 +386,7 @@ pub fn replay(path: &Path, max_levels: usize, max_file_bytes: u64) -> Result<Rep
             Event::Invalidated { .. } => book.invalidate(),
             _ => (),
         }
+        visit(&record, &book)?;
         sequence = record.sequence;
         records += 1;
     }

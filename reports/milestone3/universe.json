@@ -1,0 +1,206 @@
+{
+  "config": {
+    "duration_seconds": 180,
+    "universe_limit": 6,
+    "policy": {
+      "capital_usdt": 5000,
+      "clip_usdt": 100,
+      "min_quote_volume_24h": 5000000,
+      "min_trades_24h": 20000,
+      "max_tick_bps": 10.0,
+      "max_min_order_usdt": 50,
+      "max_level_concentration": 0.85,
+      "min_depth_10bps_usdt": 1000.0,
+      "min_uptime": 0.85
+    },
+    "economics": {
+      "inventory_bps": 2.0,
+      "rebalance_fraction": 0.1,
+      "rebalance_slippage_bps": 1.0,
+      "safety_bps": 2.0,
+      "adverse_floors_bps": [
+        0.0,
+        1.0,
+        3.0,
+        10.0
+      ]
+    },
+    "fees": [
+      {
+        "name": "manual_standard",
+        "account_verified": false,
+        "description": "Unverified conservative manual assumption: 10bps maker and 10bps taker each side; no rebate or promotion.",
+        "periods": [
+          {
+            "from_ms": 0,
+            "until_ms": null,
+            "symbol": null,
+            "standard_maker_microbps": 10000000,
+            "standard_taker_microbps": 10000000,
+            "buy_extra_microbps": 0,
+            "sell_extra_microbps": 0,
+            "bnb_discount_ppm": 0,
+            "asset": "quote",
+            "bnb_quote_price_units": null
+          }
+        ]
+      },
+      {
+        "name": "hypothetical_bnb_discount",
+        "account_verified": false,
+        "description": "Unverified 25% standard-commission discount, fees in BNB; conversion assumes 1000 USDT/BNB solely for fee-asset arithmetic, not a market observation.",
+        "periods": [
+          {
+            "from_ms": 0,
+            "until_ms": null,
+            "symbol": null,
+            "standard_maker_microbps": 10000000,
+            "standard_taker_microbps": 10000000,
+            "buy_extra_microbps": 0,
+            "sell_extra_microbps": 0,
+            "bnb_discount_ppm": 250000,
+            "asset": "bnb",
+            "bnb_quote_price_units": 100000000000
+          }
+        ]
+      },
+      {
+        "name": "hypothetical_zero_maker",
+        "account_verified": false,
+        "description": "Hypothetical promotional maker-zero scenario only; eligibility is NOT asserted; taker remains 10bps.",
+        "periods": [
+          {
+            "from_ms": 0,
+            "until_ms": null,
+            "symbol": null,
+            "standard_maker_microbps": 0,
+            "standard_taker_microbps": 10000000,
+            "buy_extra_microbps": 0,
+            "sell_extra_microbps": 0,
+            "bnb_discount_ppm": 0,
+            "asset": "quote",
+            "bnb_quote_price_units": null
+          }
+        ]
+      }
+    ]
+  },
+  "instruments": [
+    {
+      "symbol": "USDCUSDT",
+      "base_asset": "USDC",
+      "price_units": 100115000,
+      "tick_units": 1000,
+      "step_units": 100000000,
+      "min_qty_units": 100000000,
+      "max_qty_units": 1000000000000000,
+      "min_notional_units": 500000000,
+      "max_notional_units": 900000000000000,
+      "clip_quantity_units": 9900000000,
+      "clip_notional_units": 9911385000,
+      "volume_24h_usdt": 2793846206.89908,
+      "trades_24h": 542917
+    },
+    {
+      "symbol": "BTCUSDT",
+      "base_asset": "BTC",
+      "price_units": 8157223000000,
+      "tick_units": 1000000,
+      "step_units": 1000,
+      "min_qty_units": 1000,
+      "max_qty_units": 900000000000,
+      "min_notional_units": 500000000,
+      "max_notional_units": 900000000000000,
+      "clip_quantity_units": 122000,
+      "clip_notional_units": 9951812060,
+      "volume_24h_usdt": 810259191.26908,
+      "trades_24h": 1897669
+    },
+    {
+      "symbol": "ETHUSDT",
+      "base_asset": "ETH",
+      "price_units": 242818000000,
+      "tick_units": 1000000,
+      "step_units": 10000,
+      "min_qty_units": 10000,
+      "max_qty_units": 900000000000,
+      "min_notional_units": 500000000,
+      "max_notional_units": 900000000000000,
+      "clip_quantity_units": 4110000,
+      "clip_notional_units": 9979819800,
+      "volume_24h_usdt": 371787751.436766,
+      "trades_24h": 2368404
+    },
+    {
+      "symbol": "USD1USDT",
+      "base_asset": "USD1",
+      "price_units": 100019000,
+      "tick_units": 1000,
+      "step_units": 100000000,
+      "min_qty_units": 100000000,
+      "max_qty_units": 1000000000000000,
+      "min_notional_units": 500000000,
+      "max_notional_units": 900000000000000,
+      "clip_quantity_units": 9900000000,
+      "clip_notional_units": 9901881000,
+      "volume_24h_usdt": 129216424.02448,
+      "trades_24h": 227159
+    },
+    {
+      "symbol": "SOLUSDT",
+      "base_asset": "SOL",
+      "price_units": 10437000000,
+      "tick_units": 1000000,
+      "step_units": 100000,
+      "min_qty_units": 100000,
+      "max_qty_units": 9000000000000,
+      "min_notional_units": 500000000,
+      "max_notional_units": 900000000000000,
+      "clip_quantity_units": 95800000,
+      "clip_notional_units": 9998646000,
+      "volume_24h_usdt": 128674629.74055,
+      "trades_24h": 447221
+    },
+    {
+      "symbol": "ZECUSDT",
+      "base_asset": "ZEC",
+      "price_units": 116332000000,
+      "tick_units": 1000000,
+      "step_units": 100000,
+      "min_qty_units": 100000,
+      "max_qty_units": 9000000000000,
+      "min_notional_units": 500000000,
+      "max_notional_units": 900000000000000,
+      "clip_quantity_units": 8500000,
+      "clip_notional_units": 9888220000,
+      "volume_24h_usdt": 124370327.04303,
+      "trades_24h": 401814
+    }
+  ],
+  "bounds": {
+    "BTCUSDT": [
+      1792248892917,
+      1792249069904
+    ],
+    "ETHUSDT": [
+      1792248895919,
+      1792249069904
+    ],
+    "SOLUSDT": [
+      1792248901922,
+      1792249069904
+    ],
+    "USD1USDT": [
+      1792248898921,
+      1792249069904
+    ],
+    "USDCUSDT": [
+      1792248889916,
+      1792249069904
+    ],
+    "ZECUSDT": [
+      1792248904922,
+      1792249069904
+    ]
+  }
+}

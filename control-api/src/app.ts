@@ -5,6 +5,7 @@ import {
   symbols,
   type SymbolName,
 } from "./market-status.js";
+import { isResearchRoute, researchResponse } from "./research.js";
 export type TradingMode = "simulation" | "paper";
 export function parseMode(value: string = "simulation"): TradingMode {
   if (value !== "simulation" && value !== "paper")
@@ -13,7 +14,11 @@ export function parseMode(value: string = "simulation"): TradingMode {
 }
 export function createApp(
   mode: TradingMode,
-  options: { statusFile?: string; now?: () => number } = {},
+  options: {
+    statusFile?: string;
+    researchDir?: string;
+    now?: () => number;
+  } = {},
 ) {
   // Validate at runtime as callers may be JavaScript.
   parseMode(mode);
@@ -57,6 +62,21 @@ export function createApp(
       } catch {
         res.statusCode = 503;
         res.end(JSON.stringify({ error: "market_data_unavailable" }));
+      }
+    } else if (req.method === "GET" && req.url && isResearchRoute(req.url)) {
+      res.setHeader("Cache-Control", "no-store");
+      try {
+        const { body, contentType } = await researchResponse(
+          options.researchDir ??
+            process.env.RESEARCH_REPORT_DIR ??
+            "../reports/milestone3",
+          req.url,
+        );
+        res.setHeader("Content-Type", contentType);
+        res.end(body);
+      } catch {
+        res.statusCode = 503;
+        res.end(JSON.stringify({ error: "research_unavailable" }));
       }
     } else {
       res.statusCode = 404;

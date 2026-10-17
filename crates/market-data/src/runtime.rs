@@ -1,6 +1,6 @@
 use crate::{
     book::{Applied, Book},
-    model::{Depth, SYMBOLS, Snapshot, decimal},
+    model::{Depth, SYMBOLS, Snapshot, Trade, decimal},
     recording::{Event, Limits, Recorder},
 };
 use anyhow::{Context, Result, bail, ensure};
@@ -44,6 +44,10 @@ impl DepthProtocol for BinanceSpot {
         Depth::parse(raw, symbol)
     }
 }
+pub trait Observer: Send + Sync {
+    fn book(&self, symbol: &str, book: &Book, received_ms: u64, exchange_ms: u64);
+    fn trade(&self, trade: &Trade, received_ms: u64);
+}
 #[derive(Clone)]
 pub struct Config {
     pub rest_base: String,
@@ -60,6 +64,9 @@ pub struct Config {
     pub snapshot_interval_ms: u64,
     pub proxy: Option<String>,
     pub recording: Limits,
+    pub include_trades: bool,
+    pub observer: Option<Arc<dyn Observer>>,
+    pub snapshot_budget: Option<Arc<tokio::sync::Mutex<Instant>>>,
 }
 impl Default for Config {
     fn default() -> Self {
@@ -80,6 +87,9 @@ impl Default for Config {
                 .or_else(|_| std::env::var("https_proxy"))
                 .ok(),
             recording: Limits::default(),
+            include_trades: false,
+            observer: None,
+            snapshot_budget: None,
         }
     }
 }
@@ -284,6 +294,15 @@ async fn connect(config: &Config, symbol: &str) -> Result<Socket> {
         config.ws_base.trim_end_matches('/'),
         symbol.to_lowercase()
     );
+    let endpoint = if config.include_trades {
+        let lower = symbol.to_lowercase();
+        format!(
+            "{}/stream?streams={lower}@depth@100ms/{lower}@aggTrade",
+            config.ws_base.trim_end_matches('/')
+        )
+    } else {
+        endpoint
+    };
     let url = reqwest::Url::parse(&endpoint)?;
     let host = url.host_str().context("missing stream host")?;
     let port = url.port_or_known_default().context("missing stream port")?;
@@ -367,6 +386,11 @@ async fn snapshot(
     tokio::time::sleep_until(*next).await;
     *next = Instant::now() + Duration::from_millis(config.snapshot_interval_ms);
     drop(next);
+    if let Some(budget) = &config.snapshot_budget {
+        let mut next = budget.lock().await;
+        tokio::time::sleep_until(*next).await;
+        *next = Instant::now() + Duration::from_secs(3);
+    }
     let url = format!(
         "{}/api/v3/depth?symbol={symbol}&limit=5000",
         config.rest_base.trim_end_matches('/')
@@ -412,8 +436,32 @@ impl Session<'_> {
         }
         Ok(())
     }
-    fn decode(&mut self, incoming: Incoming) -> Result<(Depth, u64)> {
-        let depth = match BinanceSpot::depth(&incoming.raw, self.symbol) {
+    fn decode(&mut self, incoming: Incoming) -> Result<Option<(Depth, u64)>> {
+        let value: serde_json::Value =
+            serde_json::from_str(&incoming.raw).unwrap_or(serde_json::Value::Null);
+        let payload = value.get("data").unwrap_or(&value);
+        let raw = serde_json::to_string(payload)?;
+        if self.config.include_trades
+            && payload.get("e").and_then(|v| v.as_str()) == Some("aggTrade")
+        {
+            let trade = Trade::parse(&raw, self.symbol)?;
+            ensure!(
+                incoming.received_ms.abs_diff(trade.exchange_ms) <= self.config.max_lag_ms,
+                "stale trade timestamp"
+            );
+            self.record(
+                incoming.received_ms,
+                Some(incoming.raw),
+                Event::Trade {
+                    trade: trade.clone(),
+                },
+            )?;
+            if let Some(observer) = &self.config.observer {
+                observer.trade(&trade, incoming.received_ms);
+            }
+            return Ok(None);
+        }
+        let depth = match BinanceSpot::depth(&raw, self.symbol) {
             Ok(depth) => depth,
             Err(error) => {
                 self.status.metrics.invalid_messages += 1;
@@ -447,7 +495,7 @@ impl Session<'_> {
             now_ms().saturating_sub(incoming.received_ms) <= self.config.stale_ms,
             "buffered event stale"
         );
-        Ok((depth, incoming.received_ms))
+        Ok(Some((depth, incoming.received_ms)))
     }
     fn apply(&mut self, depth: Depth, ms: u64) -> Result<bool> {
         let before = self.book.clone();
@@ -470,6 +518,9 @@ impl Session<'_> {
                 self.status.metrics.updates += 1;
                 self.status.update(self.book, ms, depth.exchange_ms);
                 publish(self.shared, self.status);
+                if let Some(observer) = &self.config.observer {
+                    observer.book(self.symbol, self.book, ms, depth.exchange_ms);
+                }
                 Ok(true)
             }
             Err(error) => {
@@ -487,12 +538,18 @@ impl Session<'_> {
         reader: &mut JoinHandle<Result<()>>,
     ) -> Result<()> {
         let mut buffered = VecDeque::new();
-        let first = tokio::select! {
-            biased;
-            result = &mut *reader => return reader_result(result),
-            incoming = timeout(Duration::from_millis(self.config.stale_ms), rx.recv()) => incoming?.context("stream disconnected")?,
-        };
-        buffered.push_back(self.decode(first)?);
+        let initial_deadline = Instant::now() + Duration::from_millis(self.config.stale_ms);
+        loop {
+            let first = tokio::select! {
+                biased;
+                result = &mut *reader => return reader_result(result),
+                incoming = tokio::time::timeout_at(initial_deadline, rx.recv()) => incoming?.context("stream disconnected")?,
+            };
+            if let Some(depth) = self.decode(first)? {
+                buffered.push_back(depth);
+                break;
+            }
+        }
         let mut accepted = None;
         for _ in 0..3 {
             let future = snapshot(client, self.config, self.symbol, self.snapshot_gate);
@@ -507,7 +564,7 @@ impl Session<'_> {
                     result = &mut future => break result?,
                     incoming = rx.recv() => {
                         ensure!(buffered.len() < self.config.buffer_events, "synchronization buffer overflow");
-                        buffered.push_back(self.decode(incoming.context("stream disconnected")?)?);
+                        if let Some(depth)=self.decode(incoming.context("stream disconnected")?)? { buffered.push_back(depth); }
                     }
                 }
             };
@@ -579,8 +636,7 @@ impl Session<'_> {
                     }
                 }
                 incoming = rx.recv() => {
-                    let (depth, ms) = self.decode(incoming.context("stream disconnected")?)?;
-                    if self.apply(depth, ms)? { last_applied = Instant::now(); }
+                    if let Some((depth, ms))=self.decode(incoming.context("stream disconnected")?)? && self.apply(depth, ms)? { last_applied = Instant::now(); }
                 }
             }
         }
@@ -591,7 +647,7 @@ fn reader_result(result: Result<Result<()>, tokio::task::JoinError>) -> Result<(
     bail!("stream reader stopped")
 }
 
-pub async fn run_symbol(config: Config, symbol: &'static str, shared: SharedStatus) -> Result<()> {
+pub async fn run_symbol(config: Config, symbol: &str, shared: SharedStatus) -> Result<()> {
     config.validate()?;
     let mut status = MarketStatus::new(symbol);
     let mut recorder = match Recorder::open(&config.data_dir, symbol, config.recording.clone()) {

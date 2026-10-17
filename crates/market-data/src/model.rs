@@ -119,3 +119,59 @@ impl Depth {
         })
     }
 }
+
+/// Safe filesystem/stream identifier for a public Binance Spot symbol.
+pub fn valid_symbol(symbol: &str) -> bool {
+    symbol.len() >= 5
+        && symbol.len() <= 30
+        && symbol.ends_with("USDT")
+        && symbol
+            .bytes()
+            .all(|c| c.is_ascii_uppercase() || c.is_ascii_digit())
+}
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
+pub struct Trade {
+    pub symbol: String,
+    pub aggregate_id: u64,
+    pub first_id: u64,
+    pub last_id: u64,
+    pub exchange_ms: u64,
+    pub price: u64,
+    pub quantity: u64,
+    pub buyer_is_maker: bool,
+}
+impl Trade {
+    pub fn parse(raw: &str, expected: &str) -> Result<Self> {
+        #[derive(Deserialize)]
+        struct Wire {
+            s: String,
+            a: u64,
+            f: u64,
+            l: u64,
+            #[serde(rename = "T")]
+            time: u64,
+            p: String,
+            q: String,
+            m: bool,
+        }
+        let w: Wire = serde_json::from_str(raw)?;
+        let trade = Self {
+            symbol: w.s,
+            aggregate_id: w.a,
+            first_id: w.f,
+            last_id: w.l,
+            exchange_ms: w.time,
+            price: units(&w.p)?,
+            quantity: units(&w.q)?,
+            buyer_is_maker: w.m,
+        };
+        ensure!(
+            trade.symbol == expected
+                && trade.first_id <= trade.last_id
+                && trade.price > 0
+                && trade.quantity > 0,
+            "invalid aggregate trade"
+        );
+        Ok(trade)
+    }
+}

@@ -813,6 +813,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "mm-research"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "mm-market-data",
+ "proptest",
+ "reqwest",
+ "serde",
+ "serde_json",
+ "sha2",
+ "tempfile",
+ "tokio",
+]
+
+[[package]]
 name = "num"
 version = "0.4.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"

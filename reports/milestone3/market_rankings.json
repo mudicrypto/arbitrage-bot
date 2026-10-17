@@ -1,0 +1,4773 @@
+{
+  "schema_version": 1,
+  "preliminary": true,
+  "generated_at_ms": 1792249773017,
+  "started_at_ms": 1792248889904,
+  "ended_at_ms": 1792249069904,
+  "collection_duration_seconds": 180.0,
+  "capital_assumption_usdt": 5000,
+  "observations_are_real": true,
+  "fee_assumptions": [
+    {
+      "name": "manual_standard",
+      "account_verified": false,
+      "description": "Unverified conservative manual assumption: 10bps maker and 10bps taker each side; no rebate or promotion.",
+      "periods": [
+        {
+          "from_ms": 0,
+          "until_ms": null,
+          "symbol": null,
+          "standard_maker_microbps": 10000000,
+          "standard_taker_microbps": 10000000,
+          "standard_buy_microbps": 0,
+          "standard_sell_microbps": 0,
+          "buy_asset": null,
+          "sell_asset": null,
+          "buy_extra_microbps": 0,
+          "sell_extra_microbps": 0,
+          "bnb_discount_ppm": 0,
+          "asset": "quote",
+          "bnb_quote_price_units": null
+        }
+      ]
+    },
+    {
+      "name": "hypothetical_bnb_discount",
+      "account_verified": false,
+      "description": "Unverified 25% standard-commission discount, fees in BNB; conversion assumes 1000 USDT/BNB solely for fee-asset arithmetic, not a market observation.",
+      "periods": [
+        {
+          "from_ms": 0,
+          "until_ms": null,
+          "symbol": null,
+          "standard_maker_microbps": 10000000,
+          "standard_taker_microbps": 10000000,
+          "standard_buy_microbps": 0,
+          "standard_sell_microbps": 0,
+          "buy_asset": null,
+          "sell_asset": null,
+          "buy_extra_microbps": 0,
+          "sell_extra_microbps": 0,
+          "bnb_discount_ppm": 250000,
+          "asset": "bnb",
+          "bnb_quote_price_units": 100000000000
+        }
+      ]
+    },
+    {
+      "name": "hypothetical_zero_maker",
+      "account_verified": false,
+      "description": "Hypothetical promotional maker-zero scenario only; eligibility is NOT asserted; taker remains 10bps.",
+      "periods": [
+        {
+          "from_ms": 0,
+          "until_ms": null,
+          "symbol": null,
+          "standard_maker_microbps": 0,
+          "standard_taker_microbps": 10000000,
+          "standard_buy_microbps": 0,
+          "standard_sell_microbps": 0,
+          "buy_asset": null,
+          "sell_asset": null,
+          "buy_extra_microbps": 0,
+          "sell_extra_microbps": 0,
+          "bnb_discount_ppm": 0,
+          "asset": "quote",
+          "bnb_quote_price_units": null
+        }
+      ]
+    }
+  ],
+  "policy": {
+    "capital_usdt": 5000,
+    "clip_usdt": 100,
+    "min_quote_volume_24h": 5000000,
+    "min_trades_24h": 20000,
+    "max_tick_bps": 10.0,
+    "max_min_order_usdt": 50,
+    "max_level_concentration": 0.85,
+    "min_depth_10bps_usdt": 1000.0,
+    "min_uptime": 0.85
+  },
+  "economics": {
+    "inventory_bps": 2.0,
+    "rebalance_fraction": 0.1,
+    "rebalance_slippage_bps": 1.0,
+    "safety_bps": 2.0,
+    "adverse_floors_bps": [
+      0.0,
+      1.0,
+      3.0,
+      10.0
+    ]
+  },
+  "conclusion": "No pair has a plausible positive edge under the baseline manual fees and conservative risk assumptions. No winning candidate is manufactured.",
+  "rankings": [
+    {
+      "rank": 1,
+      "symbol": "SOLUSDT",
+      "eligible_for_further_research": true,
+      "plausible_positive_edge": false,
+      "executable_edge_validated": false,
+      "explanation": "167 synchronized samples; quality 99.4%; median spread 0.9580bps; baseline net -27.1420bps; conservative window floor -27.1422bps; two-sided 10bps quoted depth $518503.17; clip $99.99; one-second volatility 0.2029bps. Passed bounded research data/liquidity screens. Quoted liquidity is not a fill guarantee; queue position, latency and fill-conditioned selection are unmodeled.",
+      "exclusions": [],
+      "sample_count": 167,
+      "trade_bins": 89,
+      "aggregate_gaps": 0,
+      "data_quality": 0.9941541355621436,
+      "gross_theoretical_bps": 0.9579920486659961,
+      "baseline_net_bps": -27.142007951334005,
+      "worst_window_net_bps": -27.14219146592596,
+      "risk_adjusted_score": -27.92970019164487,
+      "capital_efficiency": 1.0,
+      "clip_usdt": 99.98646,
+      "quoted_clip_liquidity_usdt": 99.98646,
+      "windows": [
+        {
+          "seconds": 30,
+          "observed_duration_seconds": 30.0,
+          "window_start_ms": 1792249039904,
+          "window_end_ms": 1792249069904,
+          "requested_window_complete": true,
+          "spread_p10_bps": 0.9579920486659961,
+          "spread_p50_bps": 0.9580838323353293,
+          "spread_p90_bps": 0.9580838323353293,
+          "samples": 30,
+          "depth_median_usdt": [
+            [
+              179466.47246,
+              188546.88474
+            ],
+            [
+              615423.29131,
+              513317.04027
+            ],
+            [
+              1706838.86488,
+              1556688.79555
+            ],
+            [
+              2489236.29026,
+              2322925.01246
+            ]
+          ],
+          "median_imbalance": 0.09910035820614395,
+          "concentration_p90": 0.1484872553822182,
+          "quote_stability_fraction": 0.9285714285714286,
+          "realized_volatility_bps": 0.26173190651153555,
+          "reference_move_bps": -0.9579920486659961,
+          "trade_quote_volume_usdt": 19631.26998,
+          "underlying_trade_count": 60,
+          "trade_frequency_per_second": 2.0,
+          "aggregate_trade_messages": 25,
+          "usable_fraction": 1.0
+        },
+        {
+          "seconds": 60,
+          "observed_duration_seconds": 60.0,
+          "window_start_ms": 1792249009904,
+          "window_end_ms": 1792249069904,
+          "requested_window_complete": true,
+          "spread_p10_bps": 0.9579002825805834,
+          "spread_p50_bps": 0.9579920486659961,
+          "spread_p90_bps": 0.9580838323353293,
+          "samples": 60,
+          "depth_median_usdt": [
+            [
+              173771.37465,
+              174147.88909
+            ],
+            [
+              532043.25188,
+              513317.04027
+            ],
+            [
+              1695667.19169,
+              1542025.99154
+            ],
+            [
+              2489236.29026,
+              2191095.54817
+            ]
+          ],
+          "median_imbalance": 0.08963019934128866,
+          "concentration_p90": 0.1669523103466857,
+          "quote_stability_fraction": 0.9310344827586207,
+          "realized_volatility_bps": 0.2543778984965963,
+          "reference_move_bps": -2.8734256022221154,
+          "trade_quote_volume_usdt": 24518.435960000006,
+          "underlying_trade_count": 106,
+          "trade_frequency_per_second": 1.7666666666666666,
+          "aggregate_trade_messages": 42,
+          "usable_fraction": 1.0
+        },
+        {
+          "seconds": 180,
+          "observed_duration_seconds": 167.982,
+          "window_start_ms": 1792248901922,
+          "window_end_ms": 1792249069904,
+          "requested_window_complete": false,
+          "spread_p10_bps": 0.9578085340740387,
+          "spread_p50_bps": 0.9579920486659961,
+          "spread_p90_bps": 0.9580838323353293,
+          "samples": 167,
+          "depth_median_usdt": [
+            [
+              196076.90662,
+              180051.2457
+            ],
+            [
+              544415.88012,
+              518503.17142
+            ],
+            [
+              1697570.92021,
+              1541119.66316
+            ],
+            [
+              2506692.61767,
+              2187845.67869
+            ]
+          ],
+          "median_imbalance": 0.08500586561055444,
+          "concentration_p90": 0.18439256518105307,
+          "quote_stability_fraction": 0.95625,
+          "realized_volatility_bps": 0.20292228193326908,
+          "reference_move_bps": -1.9158005651611667,
+          "trade_quote_volume_usdt": 84828.88858999996,
+          "underlying_trade_count": 307,
+          "trade_frequency_per_second": 1.8275767641771141,
+          "aggregate_trade_messages": 151,
+          "usable_fraction": 0.9941541355621436
+        },
+        {
+          "seconds": 600,
+          "observed_duration_seconds": 167.982,
+          "window_start_ms": 1792248901922,
+          "window_end_ms": 1792249069904,
+          "requested_window_complete": false,
+          "spread_p10_bps": 0.9578085340740387,
+          "spread_p50_bps": 0.9579920486659961,
+          "spread_p90_bps": 0.9580838323353293,
+          "samples": 167,
+          "depth_median_usdt": [
+            [
+              196076.90662,
+              180051.2457
+            ],
+            [
+              544415.88012,
+              518503.17142
+            ],
+            [
+              1697570.92021,
+              1541119.66316
+            ],
+            [
+              2506692.61767,
+              2187845.67869
+            ]
+          ],
+          "median_imbalance": 0.08500586561055444,
+          "concentration_p90": 0.18439256518105307,
+          "quote_stability_fraction": 0.95625,
+          "realized_volatility_bps": 0.20292228193326908,
+          "reference_move_bps": -1.9158005651611667,
+          "trade_quote_volume_usdt": 84828.88858999996,
+          "underlying_trade_count": 307,
+          "trade_frequency_per_second": 1.8275767641771141,
+          "aggregate_trade_messages": 151,
+          "usable_fraction": 0.9941541355621436
+        }
+      ],
+      "markouts": [
+        {
+          "seconds": 1,
+          "bins": 88,
+          "mean_passive_adverse_bps": -0.3912899724373559,
+          "p90_positive_bps": 0.0
+        },
+        {
+          "seconds": 5,
+          "bins": 85,
+          "mean_passive_adverse_bps": -0.5371522999500041,
+          "p90_positive_bps": 0.0
+        },
+        {
+          "seconds": 15,
+          "bins": 79,
+          "mean_passive_adverse_bps": -0.5410402719677256,
+          "p90_positive_bps": 1.201474965348363
+        }
+      ],
+      "sensitivity": [
+        {
+          "fee_scenario": "manual_standard",
+          "adverse_floor_bps": 0.0,
+          "assumed_adverse_bps": 0.0,
+          "maker_roundtrip_bps": 20.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -24.142007951334005
+        },
+        {
+          "fee_scenario": "manual_standard",
+          "adverse_floor_bps": 1.0,
+          "assumed_adverse_bps": 1.0,
+          "maker_roundtrip_bps": 20.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -25.142007951334005
+        },
+        {
+          "fee_scenario": "manual_standard",
+          "adverse_floor_bps": 3.0,
+          "assumed_adverse_bps": 3.0,
+          "maker_roundtrip_bps": 20.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -27.142007951334005
+        },
+        {
+          "fee_scenario": "manual_standard",
+          "adverse_floor_bps": 10.0,
+          "assumed_adverse_bps": 10.0,
+          "maker_roundtrip_bps": 20.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -34.142007951334
+        },
+        {
+          "fee_scenario": "hypothetical_bnb_discount",
+          "adverse_floor_bps": 0.0,
+          "assumed_adverse_bps": 0.0,
+          "maker_roundtrip_bps": 15.0,
+          "rebalancing_bps": 0.8500000000000001,
+          "net_theoretical_bps": -18.892007951334005
+        },
+        {
+          "fee_scenario": "hypothetical_bnb_discount",
+          "adverse_floor_bps": 1.0,
+          "assumed_adverse_bps": 1.0,
+          "maker_roundtrip_bps": 15.0,
+          "rebalancing_bps": 0.8500000000000001,
+          "net_theoretical_bps": -19.892007951334005
+        },
+        {
+          "fee_scenario": "hypothetical_bnb_discount",
+          "adverse_floor_bps": 3.0,
+          "assumed_adverse_bps": 3.0,
+          "maker_roundtrip_bps": 15.0,
+          "rebalancing_bps": 0.8500000000000001,
+          "net_theoretical_bps": -21.892007951334005
+        },
+        {
+          "fee_scenario": "hypothetical_bnb_discount",
+          "adverse_floor_bps": 10.0,
+          "assumed_adverse_bps": 10.0,
+          "maker_roundtrip_bps": 15.0,
+          "rebalancing_bps": 0.8500000000000001,
+          "net_theoretical_bps": -28.892007951334005
+        },
+        {
+          "fee_scenario": "hypothetical_zero_maker",
+          "adverse_floor_bps": 0.0,
+          "assumed_adverse_bps": 0.0,
+          "maker_roundtrip_bps": 0.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -4.142007951334004
+        },
+        {
+          "fee_scenario": "hypothetical_zero_maker",
+          "adverse_floor_bps": 1.0,
+          "assumed_adverse_bps": 1.0,
+          "maker_roundtrip_bps": 0.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -5.142007951334004
+        },
+        {
+          "fee_scenario": "hypothetical_zero_maker",
+          "adverse_floor_bps": 3.0,
+          "assumed_adverse_bps": 3.0,
+          "maker_roundtrip_bps": 0.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -7.142007951334003
+        },
+        {
+          "fee_scenario": "hypothetical_zero_maker",
+          "adverse_floor_bps": 10.0,
+          "assumed_adverse_bps": 10.0,
+          "maker_roundtrip_bps": 0.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -14.142007951334003
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "symbol": "ETHUSDT",
+      "eligible_for_further_research": true,
+      "plausible_positive_edge": false,
+      "executable_edge_validated": false,
+      "explanation": "173 synchronized samples; quality 99.4%; median spread 0.0412bps; baseline net -28.0588bps; conservative window floor -28.0588bps; two-sided 10bps quoted depth $2414237.25; clip $99.80; one-second volatility 0.1475bps. Passed bounded research data/liquidity screens. Quoted liquidity is not a fill guarantee; queue position, latency and fill-conditioned selection are unmodeled.",
+      "exclusions": [],
+      "sample_count": 173,
+      "trade_bins": 82,
+      "aggregate_gaps": 0,
+      "data_quality": 0.9943385924073913,
+      "gross_theoretical_bps": 0.041183532352753426,
+      "baseline_net_bps": -28.058816467647247,
+      "worst_window_net_bps": -28.058824776778824,
+      "risk_adjusted_score": -28.772434960554154,
+      "capital_efficiency": 1.0,
+      "clip_usdt": 99.798198,
+      "quoted_clip_liquidity_usdt": 99.798198,
+      "windows": [
+        {
+          "seconds": 30,
+          "observed_duration_seconds": 30.0,
+          "window_start_ms": 1792249039904,
+          "window_end_ms": 1792249069904,
+          "requested_window_complete": true,
+          "spread_p10_bps": 0.041183532352753426,
+          "spread_p50_bps": 0.0411857373791456,
+          "spread_p90_bps": 0.0411857373791456,
+          "samples": 30,
+          "depth_median_usdt": [
+            [
+              1096673.62421,
+              1256529.417319
+            ],
+            [
+              2456749.644141,
+              2801472.230756
+            ],
+            [
+              6004611.422217,
+              7207432.179353
+            ],
+            [
+              7454873.439398,
+              8616637.147022
+            ]
+          ],
+          "median_imbalance": -0.06831975122018366,
+          "concentration_p90": 0.05575189560565295,
+          "quote_stability_fraction": 0.9655172413793104,
+          "realized_volatility_bps": 0.09941866957841136,
+          "reference_move_bps": -0.5353859205857946,
+          "trade_quote_volume_usdt": 29635.310761999997,
+          "underlying_trade_count": 157,
+          "trade_frequency_per_second": 5.233333333333333,
+          "aggregate_trade_messages": 38,
+          "usable_fraction": 1.0
+        },
+        {
+          "seconds": 60,
+          "observed_duration_seconds": 60.0,
+          "window_start_ms": 1792249009904,
+          "window_end_ms": 1792249069904,
+          "requested_window_complete": true,
+          "spread_p10_bps": 0.041180649212934836,
+          "spread_p50_bps": 0.041183532352753426,
+          "spread_p90_bps": 0.0411857373791456,
+          "samples": 60,
+          "depth_median_usdt": [
+            [
+              991476.39492,
+              1341462.741021
+            ],
+            [
+              2403880.890422,
+              2907461.86742
+            ],
+            [
+              5992890.678293,
+              7174833.108237
+            ],
+            [
+              7433792.618353,
+              8572050.466335
+            ]
+          ],
+          "median_imbalance": -0.1041685994571474,
+          "concentration_p90": 0.05515184822135455,
+          "quote_stability_fraction": 0.9491525423728814,
+          "realized_volatility_bps": 0.1465286680406334,
+          "reference_move_bps": -1.935355024408121,
+          "trade_quote_volume_usdt": 53192.022546999986,
+          "underlying_trade_count": 425,
+          "trade_frequency_per_second": 7.083333333333333,
+          "aggregate_trade_messages": 83,
+          "usable_fraction": 1.0
+        },
+        {
+          "seconds": 180,
+          "observed_duration_seconds": 173.985,
+          "window_start_ms": 1792248895919,
+          "window_end_ms": 1792249069904,
+          "requested_window_complete": false,
+          "spread_p10_bps": 0.041175223221178885,
+          "spread_p50_bps": 0.041183532352753426,
+          "spread_p90_bps": 0.0411857373791456,
+          "samples": 173,
+          "depth_median_usdt": [
+            [
+              1002856.66435,
+              1421275.770028
+            ],
+            [
+              2414237.245557,
+              2909942.723297
+            ],
+            [
+              5951566.084709,
+              7004253.078321
+            ],
+            [
+              7432966.753368,
+              8421502.81641
+            ]
+          ],
+          "median_imbalance": -0.0948889297169653,
+          "concentration_p90": 0.05320202433095208,
+          "quote_stability_fraction": 0.9593023255813954,
+          "realized_volatility_bps": 0.1474694245144634,
+          "reference_move_bps": -2.552863839713091,
+          "trade_quote_volume_usdt": 184338.29748700003,
+          "underlying_trade_count": 1057,
+          "trade_frequency_per_second": 6.075236370951519,
+          "aggregate_trade_messages": 204,
+          "usable_fraction": 0.9943385924073913
+        },
+        {
+          "seconds": 600,
+          "observed_duration_seconds": 173.985,
+          "window_start_ms": 1792248895919,
+          "window_end_ms": 1792249069904,
+          "requested_window_complete": false,
+          "spread_p10_bps": 0.041175223221178885,
+          "spread_p50_bps": 0.041183532352753426,
+          "spread_p90_bps": 0.0411857373791456,
+          "samples": 173,
+          "depth_median_usdt": [
+            [
+              1002856.66435,
+              1421275.770028
+            ],
+            [
+              2414237.245557,
+              2909942.723297
+            ],
+            [
+              5951566.084709,
+              7004253.078321
+            ],
+            [
+              7432966.753368,
+              8421502.81641
+            ]
+          ],
+          "median_imbalance": -0.0948889297169653,
+          "concentration_p90": 0.05320202433095208,
+          "quote_stability_fraction": 0.9593023255813954,
+          "realized_volatility_bps": 0.1474694245144634,
+          "reference_move_bps": -2.552863839713091,
+          "trade_quote_volume_usdt": 184338.29748700003,
+          "underlying_trade_count": 1057,
+          "trade_frequency_per_second": 6.075236370951519,
+          "aggregate_trade_messages": 204,
+          "usable_fraction": 0.9943385924073913
+        }
+      ],
+      "markouts": [
+        {
+          "seconds": 1,
+          "bins": 80,
+          "mean_passive_adverse_bps": 0.04341068179019082,
+          "p90_positive_bps": 0.0
+        },
+        {
+          "seconds": 5,
+          "bins": 78,
+          "mean_passive_adverse_bps": 0.044524742824216354,
+          "p90_positive_bps": 0.4030924189847038
+        },
+        {
+          "seconds": 15,
+          "bins": 75,
+          "mean_passive_adverse_bps": -0.04144150304957986,
+          "p90_positive_bps": 1.1336950866236957
+        }
+      ],
+      "sensitivity": [
+        {
+          "fee_scenario": "manual_standard",
+          "adverse_floor_bps": 0.0,
+          "assumed_adverse_bps": 0.044524742824216354,
+          "maker_roundtrip_bps": 20.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -25.103341210471463
+        },
+        {
+          "fee_scenario": "manual_standard",
+          "adverse_floor_bps": 1.0,
+          "assumed_adverse_bps": 1.0,
+          "maker_roundtrip_bps": 20.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -26.058816467647247
+        },
+        {
+          "fee_scenario": "manual_standard",
+          "adverse_floor_bps": 3.0,
+          "assumed_adverse_bps": 3.0,
+          "maker_roundtrip_bps": 20.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -28.058816467647247
+        },
+        {
+          "fee_scenario": "manual_standard",
+          "adverse_floor_bps": 10.0,
+          "assumed_adverse_bps": 10.0,
+          "maker_roundtrip_bps": 20.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -35.05881646764725
+        },
+        {
+          "fee_scenario": "hypothetical_bnb_discount",
+          "adverse_floor_bps": 0.0,
+          "assumed_adverse_bps": 0.044524742824216354,
+          "maker_roundtrip_bps": 15.0,
+          "rebalancing_bps": 0.8500000000000001,
+          "net_theoretical_bps": -19.853341210471463
+        },
+        {
+          "fee_scenario": "hypothetical_bnb_discount",
+          "adverse_floor_bps": 1.0,
+          "assumed_adverse_bps": 1.0,
+          "maker_roundtrip_bps": 15.0,
+          "rebalancing_bps": 0.8500000000000001,
+          "net_theoretical_bps": -20.808816467647247
+        },
+        {
+          "fee_scenario": "hypothetical_bnb_discount",
+          "adverse_floor_bps": 3.0,
+          "assumed_adverse_bps": 3.0,
+          "maker_roundtrip_bps": 15.0,
+          "rebalancing_bps": 0.8500000000000001,
+          "net_theoretical_bps": -22.808816467647247
+        },
+        {
+          "fee_scenario": "hypothetical_bnb_discount",
+          "adverse_floor_bps": 10.0,
+          "assumed_adverse_bps": 10.0,
+          "maker_roundtrip_bps": 15.0,
+          "rebalancing_bps": 0.8500000000000001,
+          "net_theoretical_bps": -29.808816467647247
+        },
+        {
+          "fee_scenario": "hypothetical_zero_maker",
+          "adverse_floor_bps": 0.0,
+          "assumed_adverse_bps": 0.044524742824216354,
+          "maker_roundtrip_bps": 0.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -5.103341210471463
+        },
+        {
+          "fee_scenario": "hypothetical_zero_maker",
+          "adverse_floor_bps": 1.0,
+          "assumed_adverse_bps": 1.0,
+          "maker_roundtrip_bps": 0.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -6.058816467647247
+        },
+        {
+          "fee_scenario": "hypothetical_zero_maker",
+          "adverse_floor_bps": 3.0,
+          "assumed_adverse_bps": 3.0,
+          "maker_roundtrip_bps": 0.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -8.058816467647246
+        },
+        {
+          "fee_scenario": "hypothetical_zero_maker",
+          "adverse_floor_bps": 10.0,
+          "assumed_adverse_bps": 10.0,
+          "maker_roundtrip_bps": 0.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -15.058816467647246
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "symbol": "BTCUSDT",
+      "eligible_for_further_research": true,
+      "plausible_positive_edge": false,
+      "executable_edge_validated": false,
+      "explanation": "176 synchronized samples; quality 99.4%; median spread 0.0012bps; baseline net -28.0988bps; conservative window floor -28.0988bps; two-sided 10bps quoted depth $6104575.68; clip $99.52; one-second volatility 0.1613bps. Passed bounded research data/liquidity screens. Quoted liquidity is not a fill guarantee; queue position, latency and fill-conditioned selection are unmodeled.",
+      "exclusions": [],
+      "sample_count": 176,
+      "trade_bins": 141,
+      "aggregate_gaps": 0,
+      "data_quality": 0.9944233192268359,
+      "gross_theoretical_bps": 0.0012258300784990937,
+      "baseline_net_bps": -28.0987741699215,
+      "worst_window_net_bps": -28.0987745399148,
+      "risk_adjusted_score": -28.817789748766693,
+      "capital_efficiency": 1.0,
+      "clip_usdt": 99.5181206,
+      "quoted_clip_liquidity_usdt": 99.5181206,
+      "windows": [
+        {
+          "seconds": 30,
+          "observed_duration_seconds": 30.0,
+          "window_start_ms": 1792249039904,
+          "window_end_ms": 1792249069904,
+          "requested_window_complete": true,
+          "spread_p10_bps": 0.001225758556085839,
+          "spread_p50_bps": 0.001225758556085839,
+          "spread_p90_bps": 0.0012258106944995975,
+          "samples": 30,
+          "depth_median_usdt": [
+            [
+              2915202.0851291,
+              3757869.5063297
+            ],
+            [
+              5696997.0085722,
+              6940780.923506
+            ],
+            [
+              10286474.1455898,
+              11676086.8996909
+            ],
+            [
+              14294173.9227416,
+              17022909.728099
+            ]
+          ],
+          "median_imbalance": -0.09853297280994434,
+          "concentration_p90": 0.07760093630781381,
+          "quote_stability_fraction": 0.9655172413793104,
+          "realized_volatility_bps": 0.07898332440973382,
+          "reference_move_bps": -0.4253382189617862,
+          "trade_quote_volume_usdt": 32116.3983055,
+          "underlying_trade_count": 212,
+          "trade_frequency_per_second": 7.066666666666666,
+          "aggregate_trade_messages": 90,
+          "usable_fraction": 1.0
+        },
+        {
+          "seconds": 60,
+          "observed_duration_seconds": 60.0,
+          "window_start_ms": 1792249009904,
+          "window_end_ms": 1792249069904,
+          "requested_window_complete": true,
+          "spread_p10_bps": 0.0012255701735438005,
+          "spread_p50_bps": 0.001225758556085839,
+          "spread_p90_bps": 0.001225758556085839,
+          "samples": 60,
+          "depth_median_usdt": [
+            [
+              2999690.0865263,
+              3769426.2717208
+            ],
+            [
+              5704428.6009581,
+              6914733.7905916
+            ],
+            [
+              10275224.9181119,
+              11690639.9836631
+            ],
+            [
+              14301949.818115,
+              17028751.6047809
+            ]
+          ],
+          "median_imbalance": -0.09787123903661124,
+          "concentration_p90": 0.0928252848584691,
+          "quote_stability_fraction": 0.9322033898305084,
+          "realized_volatility_bps": 0.19126566942208442,
+          "reference_move_bps": -2.8602238388627828,
+          "trade_quote_volume_usdt": 239325.97327270012,
+          "underlying_trade_count": 792,
+          "trade_frequency_per_second": 13.2,
+          "aggregate_trade_messages": 287,
+          "usable_fraction": 1.0
+        },
+        {
+          "seconds": 180,
+          "observed_duration_seconds": 176.987,
+          "window_start_ms": 1792248892917,
+          "window_end_ms": 1792249069904,
+          "requested_window_complete": false,
+          "spread_p10_bps": 0.0012254600852025634,
+          "spread_p50_bps": 0.0012258300784990937,
+          "spread_p90_bps": 0.001225851266362586,
+          "samples": 176,
+          "depth_median_usdt": [
+            [
+              3160212.1599876,
+              3409309.4519128
+            ],
+            [
+              6104575.6843276,
+              6385016.4448219
+            ],
+            [
+              11195801.576178,
+              11345465.5999084
+            ],
+            [
+              15234535.4947554,
+              16451180.9788465
+            ]
+          ],
+          "median_imbalance": -0.015041948159925987,
+          "concentration_p90": 0.08028890958755956,
+          "quote_stability_fraction": 0.9482758620689655,
+          "realized_volatility_bps": 0.16134713153548394,
+          "reference_move_bps": 0.33097984191789825,
+          "trade_quote_volume_usdt": 1128999.4949464,
+          "underlying_trade_count": 1877,
+          "trade_frequency_per_second": 10.605298694254381,
+          "aggregate_trade_messages": 743,
+          "usable_fraction": 0.9944233192268359
+        },
+        {
+          "seconds": 600,
+          "observed_duration_seconds": 176.987,
+          "window_start_ms": 1792248892917,
+          "window_end_ms": 1792249069904,
+          "requested_window_complete": false,
+          "spread_p10_bps": 0.0012254600852025634,
+          "spread_p50_bps": 0.0012258300784990937,
+          "spread_p90_bps": 0.001225851266362586,
+          "samples": 176,
+          "depth_median_usdt": [
+            [
+              3160212.1599876,
+              3409309.4519128
+            ],
+            [
+              6104575.6843276,
+              6385016.4448219
+            ],
+            [
+              11195801.576178,
+              11345465.5999084
+            ],
+            [
+              15234535.4947554,
+              16451180.9788465
+            ]
+          ],
+          "median_imbalance": -0.015041948159925987,
+          "concentration_p90": 0.08028890958755956,
+          "quote_stability_fraction": 0.9482758620689655,
+          "realized_volatility_bps": 0.16134713153548394,
+          "reference_move_bps": 0.33097984191789825,
+          "trade_quote_volume_usdt": 1128999.4949464,
+          "underlying_trade_count": 1877,
+          "trade_frequency_per_second": 10.605298694254381,
+          "aggregate_trade_messages": 743,
+          "usable_fraction": 0.9944233192268359
+        }
+      ],
+      "markouts": [
+        {
+          "seconds": 1,
+          "bins": 140,
+          "mean_passive_adverse_bps": 0.05583078653258419,
+          "p90_positive_bps": 0.0
+        },
+        {
+          "seconds": 5,
+          "bins": 136,
+          "mean_passive_adverse_bps": 0.08772788242370594,
+          "p90_positive_bps": 0.4247253657153673
+        },
+        {
+          "seconds": 15,
+          "bins": 128,
+          "mean_passive_adverse_bps": 0.056888630912679865,
+          "p90_positive_bps": 1.1232815263392393
+        }
+      ],
+      "sensitivity": [
+        {
+          "fee_scenario": "manual_standard",
+          "adverse_floor_bps": 0.0,
+          "assumed_adverse_bps": 0.08772788242370594,
+          "maker_roundtrip_bps": 20.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -25.186502052345208
+        },
+        {
+          "fee_scenario": "manual_standard",
+          "adverse_floor_bps": 1.0,
+          "assumed_adverse_bps": 1.0,
+          "maker_roundtrip_bps": 20.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -26.0987741699215
+        },
+        {
+          "fee_scenario": "manual_standard",
+          "adverse_floor_bps": 3.0,
+          "assumed_adverse_bps": 3.0,
+          "maker_roundtrip_bps": 20.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -28.0987741699215
+        },
+        {
+          "fee_scenario": "manual_standard",
+          "adverse_floor_bps": 10.0,
+          "assumed_adverse_bps": 10.0,
+          "maker_roundtrip_bps": 20.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -35.0987741699215
+        },
+        {
+          "fee_scenario": "hypothetical_bnb_discount",
+          "adverse_floor_bps": 0.0,
+          "assumed_adverse_bps": 0.08772788242370594,
+          "maker_roundtrip_bps": 15.0,
+          "rebalancing_bps": 0.8500000000000001,
+          "net_theoretical_bps": -19.936502052345208
+        },
+        {
+          "fee_scenario": "hypothetical_bnb_discount",
+          "adverse_floor_bps": 1.0,
+          "assumed_adverse_bps": 1.0,
+          "maker_roundtrip_bps": 15.0,
+          "rebalancing_bps": 0.8500000000000001,
+          "net_theoretical_bps": -20.8487741699215
+        },
+        {
+          "fee_scenario": "hypothetical_bnb_discount",
+          "adverse_floor_bps": 3.0,
+          "assumed_adverse_bps": 3.0,
+          "maker_roundtrip_bps": 15.0,
+          "rebalancing_bps": 0.8500000000000001,
+          "net_theoretical_bps": -22.8487741699215
+        },
+        {
+          "fee_scenario": "hypothetical_bnb_discount",
+          "adverse_floor_bps": 10.0,
+          "assumed_adverse_bps": 10.0,
+          "maker_roundtrip_bps": 15.0,
+          "rebalancing_bps": 0.8500000000000001,
+          "net_theoretical_bps": -29.8487741699215
+        },
+        {
+          "fee_scenario": "hypothetical_zero_maker",
+          "adverse_floor_bps": 0.0,
+          "assumed_adverse_bps": 0.08772788242370594,
+          "maker_roundtrip_bps": 0.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -5.186502052345206
+        },
+        {
+          "fee_scenario": "hypothetical_zero_maker",
+          "adverse_floor_bps": 1.0,
+          "assumed_adverse_bps": 1.0,
+          "maker_roundtrip_bps": 0.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -6.0987741699215015
+        },
+        {
+          "fee_scenario": "hypothetical_zero_maker",
+          "adverse_floor_bps": 3.0,
+          "assumed_adverse_bps": 3.0,
+          "maker_roundtrip_bps": 0.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -8.098774169921501
+        },
+        {
+          "fee_scenario": "hypothetical_zero_maker",
+          "adverse_floor_bps": 10.0,
+          "assumed_adverse_bps": 10.0,
+          "maker_roundtrip_bps": 0.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -15.0987741699215
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "symbol": "USDCUSDT",
+      "eligible_for_further_research": true,
+      "plausible_positive_edge": false,
+      "executable_edge_validated": false,
+      "explanation": "178 synchronized samples; quality 98.9%; median spread 0.0999bps; baseline net -28.0001bps; conservative window floor -28.0001bps; two-sided 10bps quoted depth $9776468.60; clip $99.11; one-second volatility 0.0000bps. Passed bounded research data/liquidity screens. Quoted liquidity is not a fill guarantee; queue position, latency and fill-conditioned selection are unmodeled.",
+      "exclusions": [],
+      "sample_count": 178,
+      "trade_bins": 160,
+      "aggregate_gaps": 0,
+      "data_quality": 0.9889548192101696,
+      "gross_theoretical_bps": 0.09988563095255933,
+      "baseline_net_bps": -28.00011436904744,
+      "worst_window_net_bps": -28.00011436904744,
+      "risk_adjusted_score": -29.104632448030483,
+      "capital_efficiency": 1.0,
+      "clip_usdt": 99.11385,
+      "quoted_clip_liquidity_usdt": 99.11385,
+      "windows": [
+        {
+          "seconds": 30,
+          "observed_duration_seconds": 30.0,
+          "window_start_ms": 1792249039904,
+          "window_end_ms": 1792249069904,
+          "requested_window_complete": true,
+          "spread_p10_bps": 0.09988563095255933,
+          "spread_p50_bps": 0.09988563095255933,
+          "spread_p90_bps": 0.09988563095255933,
+          "samples": 30,
+          "depth_median_usdt": [
+            [
+              63012280.30022,
+              9169488.92179
+            ],
+            [
+              71617119.58813,
+              9246674.05431
+            ],
+            [
+              80107905.0639,
+              9282336.01123
+            ],
+            [
+              80229826.56972,
+              9334737.08572
+            ]
+          ],
+          "median_imbalance": 0.7713051453411592,
+          "concentration_p90": 0.49835568436717637,
+          "quote_stability_fraction": 1.0,
+          "realized_volatility_bps": 0.0,
+          "reference_move_bps": 0.0,
+          "trade_quote_volume_usdt": 26686.489110000002,
+          "underlying_trade_count": 93,
+          "trade_frequency_per_second": 3.1,
+          "aggregate_trade_messages": 92,
+          "usable_fraction": 1.0
+        },
+        {
+          "seconds": 60,
+          "observed_duration_seconds": 60.0,
+          "window_start_ms": 1792249009904,
+          "window_end_ms": 1792249069904,
+          "requested_window_complete": true,
+          "spread_p10_bps": 0.09988563095255933,
+          "spread_p50_bps": 0.09988563095255933,
+          "spread_p90_bps": 0.09988563095255933,
+          "samples": 60,
+          "depth_median_usdt": [
+            [
+              63012630.69922,
+              9170524.11089
+            ],
+            [
+              71618581.54263,
+              9247709.24341
+            ],
+            [
+              80109367.0184,
+              9283371.20033
+            ],
+            [
+              80231288.52422,
+              9335772.27482
+            ]
+          ],
+          "median_imbalance": 0.771306440761789,
+          "concentration_p90": 0.49834028663607194,
+          "quote_stability_fraction": 1.0,
+          "realized_volatility_bps": 0.0,
+          "reference_move_bps": 0.0,
+          "trade_quote_volume_usdt": 178416.71402999997,
+          "underlying_trade_count": 231,
+          "trade_frequency_per_second": 3.85,
+          "aggregate_trade_messages": 211,
+          "usable_fraction": 1.0
+        },
+        {
+          "seconds": 180,
+          "observed_duration_seconds": 179.988,
+          "window_start_ms": 1792248889916,
+          "window_end_ms": 1792249069904,
+          "requested_window_complete": false,
+          "spread_p10_bps": 0.09988563095255933,
+          "spread_p50_bps": 0.09988563095255933,
+          "spread_p90_bps": 0.09988563095255933,
+          "samples": 178,
+          "depth_median_usdt": [
+            [
+              63017209.40768,
+              9699283.47223
+            ],
+            [
+              71626660.95109,
+              9776468.60475
+            ],
+            [
+              80117446.42686,
+              9812130.56167
+            ],
+            [
+              80239367.93268,
+              9864531.63616
+            ]
+          ],
+          "median_imbalance": 0.7597440430437008,
+          "concentration_p90": 0.4982934259584261,
+          "quote_stability_fraction": 1.0,
+          "realized_volatility_bps": 0.0,
+          "reference_move_bps": 0.0,
+          "trade_quote_volume_usdt": 982925.40535,
+          "underlying_trade_count": 568,
+          "trade_frequency_per_second": 3.1557659399515523,
+          "aggregate_trade_messages": 548,
+          "usable_fraction": 0.9889548192101696
+        },
+        {
+          "seconds": 600,
+          "observed_duration_seconds": 179.988,
+          "window_start_ms": 1792248889916,
+          "window_end_ms": 1792249069904,
+          "requested_window_complete": false,
+          "spread_p10_bps": 0.09988563095255933,
+          "spread_p50_bps": 0.09988563095255933,
+          "spread_p90_bps": 0.09988563095255933,
+          "samples": 178,
+          "depth_median_usdt": [
+            [
+              63017209.40768,
+              9699283.47223
+            ],
+            [
+              71626660.95109,
+              9776468.60475
+            ],
+            [
+              80117446.42686,
+              9812130.56167
+            ],
+            [
+              80239367.93268,
+              9864531.63616
+            ]
+          ],
+          "median_imbalance": 0.7597440430437008,
+          "concentration_p90": 0.4982934259584261,
+          "quote_stability_fraction": 1.0,
+          "realized_volatility_bps": 0.0,
+          "reference_move_bps": 0.0,
+          "trade_quote_volume_usdt": 982925.40535,
+          "underlying_trade_count": 568,
+          "trade_frequency_per_second": 3.1557659399515523,
+          "aggregate_trade_messages": 548,
+          "usable_fraction": 0.9889548192101696
+        }
+      ],
+      "markouts": [
+        {
+          "seconds": 1,
+          "bins": 159,
+          "mean_passive_adverse_bps": -0.049942778689530454,
+          "p90_positive_bps": 0.0
+        },
+        {
+          "seconds": 5,
+          "bins": 155,
+          "mean_passive_adverse_bps": -0.04994277718984363,
+          "p90_positive_bps": 0.0
+        },
+        {
+          "seconds": 15,
+          "bins": 146,
+          "mean_passive_adverse_bps": -0.049942783485907194,
+          "p90_positive_bps": 0.0
+        }
+      ],
+      "sensitivity": [
+        {
+          "fee_scenario": "manual_standard",
+          "adverse_floor_bps": 0.0,
+          "assumed_adverse_bps": 0.0,
+          "maker_roundtrip_bps": 20.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -25.00011436904744
+        },
+        {
+          "fee_scenario": "manual_standard",
+          "adverse_floor_bps": 1.0,
+          "assumed_adverse_bps": 1.0,
+          "maker_roundtrip_bps": 20.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -26.00011436904744
+        },
+        {
+          "fee_scenario": "manual_standard",
+          "adverse_floor_bps": 3.0,
+          "assumed_adverse_bps": 3.0,
+          "maker_roundtrip_bps": 20.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -28.00011436904744
+        },
+        {
+          "fee_scenario": "manual_standard",
+          "adverse_floor_bps": 10.0,
+          "assumed_adverse_bps": 10.0,
+          "maker_roundtrip_bps": 20.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -35.00011436904744
+        },
+        {
+          "fee_scenario": "hypothetical_bnb_discount",
+          "adverse_floor_bps": 0.0,
+          "assumed_adverse_bps": 0.0,
+          "maker_roundtrip_bps": 15.0,
+          "rebalancing_bps": 0.8500000000000001,
+          "net_theoretical_bps": -19.75011436904744
+        },
+        {
+          "fee_scenario": "hypothetical_bnb_discount",
+          "adverse_floor_bps": 1.0,
+          "assumed_adverse_bps": 1.0,
+          "maker_roundtrip_bps": 15.0,
+          "rebalancing_bps": 0.8500000000000001,
+          "net_theoretical_bps": -20.75011436904744
+        },
+        {
+          "fee_scenario": "hypothetical_bnb_discount",
+          "adverse_floor_bps": 3.0,
+          "assumed_adverse_bps": 3.0,
+          "maker_roundtrip_bps": 15.0,
+          "rebalancing_bps": 0.8500000000000001,
+          "net_theoretical_bps": -22.75011436904744
+        },
+        {
+          "fee_scenario": "hypothetical_bnb_discount",
+          "adverse_floor_bps": 10.0,
+          "assumed_adverse_bps": 10.0,
+          "maker_roundtrip_bps": 15.0,
+          "rebalancing_bps": 0.8500000000000001,
+          "net_theoretical_bps": -29.75011436904744
+        },
+        {
+          "fee_scenario": "hypothetical_zero_maker",
+          "adverse_floor_bps": 0.0,
+          "assumed_adverse_bps": 0.0,
+          "maker_roundtrip_bps": 0.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -5.0001143690474406
+        },
+        {
+          "fee_scenario": "hypothetical_zero_maker",
+          "adverse_floor_bps": 1.0,
+          "assumed_adverse_bps": 1.0,
+          "maker_roundtrip_bps": 0.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -6.000114369047441
+        },
+        {
+          "fee_scenario": "hypothetical_zero_maker",
+          "adverse_floor_bps": 3.0,
+          "assumed_adverse_bps": 3.0,
+          "maker_roundtrip_bps": 0.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -8.00011436904744
+        },
+        {
+          "fee_scenario": "hypothetical_zero_maker",
+          "adverse_floor_bps": 10.0,
+          "assumed_adverse_bps": 10.0,
+          "maker_roundtrip_bps": 0.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -15.00011436904744
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "symbol": "ZECUSDT",
+      "eligible_for_further_research": true,
+      "plausible_positive_edge": false,
+      "executable_edge_validated": false,
+      "explanation": "164 synchronized samples; quality 99.4%; median spread 0.0859bps; baseline net -28.0141bps; conservative window floor -28.0141bps; two-sided 10bps quoted depth $94899.31; clip $98.88; one-second volatility 0.9656bps. Passed bounded research data/liquidity screens. Quoted liquidity is not a fill guarantee; queue position, latency and fill-conditioned selection are unmodeled.",
+      "exclusions": [],
+      "sample_count": 164,
+      "trade_bins": 89,
+      "aggregate_gaps": 0,
+      "data_quality": 0.9940478355214508,
+      "gross_theoretical_bps": 0.085922094436974,
+      "baseline_net_bps": -28.014077905563028,
+      "worst_window_net_bps": -28.014133976756067,
+      "risk_adjusted_score": -29.574980323395792,
+      "capital_efficiency": 1.0,
+      "clip_usdt": 98.8822,
+      "quoted_clip_liquidity_usdt": 98.8822,
+      "windows": [
+        {
+          "seconds": 30,
+          "observed_duration_seconds": 30.0,
+          "window_start_ms": 1792249039904,
+          "window_end_ms": 1792249069904,
+          "requested_window_complete": true,
+          "spread_p10_bps": 0.08587929664856044,
+          "spread_p50_bps": 0.0858903609542419,
+          "spread_p90_bps": 0.08590733176122917,
+          "samples": 30,
+          "depth_median_usdt": [
+            [
+              19616.78088,
+              114976.86408
+            ],
+            [
+              123297.19424,
+              281946.67292
+            ],
+            [
+              581710.54596,
+              723514.70956
+            ],
+            [
+              984939.86346,
+              1562658.46023
+            ]
+          ],
+          "median_imbalance": -0.3954540654470636,
+          "concentration_p90": 0.0856567056077614,
+          "quote_stability_fraction": 0.27586206896551724,
+          "realized_volatility_bps": 0.6406686931358457,
+          "reference_move_bps": 6.014029872545525,
+          "trade_quote_volume_usdt": 58157.19494999999,
+          "underlying_trade_count": 108,
+          "trade_frequency_per_second": 3.6,
+          "aggregate_trade_messages": 98,
+          "usable_fraction": 1.0
+        },
+        {
+          "seconds": 60,
+          "observed_duration_seconds": 60.0,
+          "window_start_ms": 1792249009904,
+          "window_end_ms": 1792249069904,
+          "requested_window_complete": true,
+          "spread_p10_bps": 0.08587929664856044,
+          "spread_p50_bps": 0.08590733176122917,
+          "spread_p90_bps": 0.08592504758099509,
+          "samples": 60,
+          "depth_median_usdt": [
+            [
+              18946.38198,
+              112239.37814
+            ],
+            [
+              114701.94502,
+              279457.34984
+            ],
+            [
+              559747.774,
+              723867.87772
+            ],
+            [
+              1020564.60805,
+              1570615.94009
+            ]
+          ],
+          "median_imbalance": -0.4198076361904308,
+          "concentration_p90": 0.0856567056077614,
+          "quote_stability_fraction": 0.4067796610169492,
+          "realized_volatility_bps": 0.6107310897458852,
+          "reference_move_bps": 0.34346409297573,
+          "trade_quote_volume_usdt": 82587.421,
+          "underlying_trade_count": 206,
+          "trade_frequency_per_second": 3.433333333333333,
+          "aggregate_trade_messages": 180,
+          "usable_fraction": 1.0
+        },
+        {
+          "seconds": 180,
+          "observed_duration_seconds": 164.982,
+          "window_start_ms": 1792248904922,
+          "window_end_ms": 1792249069904,
+          "requested_window_complete": false,
+          "spread_p10_bps": 0.0858660232439325,
+          "spread_p50_bps": 0.085922094436974,
+          "spread_p90_bps": 0.0859605011497217,
+          "samples": 164,
+          "depth_median_usdt": [
+            [
+              19644.44056,
+              115758.91591
+            ],
+            [
+              94899.31251,
+              275043.90274
+            ],
+            [
+              520725.81988,
+              696932.25271
+            ],
+            [
+              937032.75742,
+              1473953.91967
+            ]
+          ],
+          "median_imbalance": -0.47326279677849964,
+          "concentration_p90": 0.11641641521149626,
+          "quote_stability_fraction": 0.3888888888888889,
+          "realized_volatility_bps": 0.9656298987848092,
+          "reference_move_bps": 9.970046885004963,
+          "trade_quote_volume_usdt": 204979.09337999995,
+          "underlying_trade_count": 480,
+          "trade_frequency_per_second": 2.9094082990871732,
+          "aggregate_trade_messages": 403,
+          "usable_fraction": 0.9940478355214508
+        },
+        {
+          "seconds": 600,
+          "observed_duration_seconds": 164.982,
+          "window_start_ms": 1792248904922,
+          "window_end_ms": 1792249069904,
+          "requested_window_complete": false,
+          "spread_p10_bps": 0.0858660232439325,
+          "spread_p50_bps": 0.085922094436974,
+          "spread_p90_bps": 0.0859605011497217,
+          "samples": 164,
+          "depth_median_usdt": [
+            [
+              19644.44056,
+              115758.91591
+            ],
+            [
+              94899.31251,
+              275043.90274
+            ],
+            [
+              520725.81988,
+              696932.25271
+            ],
+            [
+              937032.75742,
+              1473953.91967
+            ]
+          ],
+          "median_imbalance": -0.47326279677849964,
+          "concentration_p90": 0.11641641521149626,
+          "quote_stability_fraction": 0.3888888888888889,
+          "realized_volatility_bps": 0.9656298987848092,
+          "reference_move_bps": 9.970046885004963,
+          "trade_quote_volume_usdt": 204979.09337999995,
+          "underlying_trade_count": 480,
+          "trade_frequency_per_second": 2.9094082990871732,
+          "aggregate_trade_messages": 403,
+          "usable_fraction": 0.9940478355214508
+        }
+      ],
+      "markouts": [
+        {
+          "seconds": 1,
+          "bins": 88,
+          "mean_passive_adverse_bps": 0.7946697600566627,
+          "p90_positive_bps": 2.189354183702817
+        },
+        {
+          "seconds": 5,
+          "bins": 84,
+          "mean_passive_adverse_bps": 0.9399274924594297,
+          "p90_positive_bps": 4.336964383699424
+        },
+        {
+          "seconds": 15,
+          "bins": 81,
+          "mean_passive_adverse_bps": 1.6358437492486722,
+          "p90_positive_bps": 7.599980138876512
+        }
+      ],
+      "sensitivity": [
+        {
+          "fee_scenario": "manual_standard",
+          "adverse_floor_bps": 0.0,
+          "assumed_adverse_bps": 1.6358437492486722,
+          "maker_roundtrip_bps": 20.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -26.6499216548117
+        },
+        {
+          "fee_scenario": "manual_standard",
+          "adverse_floor_bps": 1.0,
+          "assumed_adverse_bps": 1.6358437492486722,
+          "maker_roundtrip_bps": 20.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -26.6499216548117
+        },
+        {
+          "fee_scenario": "manual_standard",
+          "adverse_floor_bps": 3.0,
+          "assumed_adverse_bps": 3.0,
+          "maker_roundtrip_bps": 20.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -28.014077905563028
+        },
+        {
+          "fee_scenario": "manual_standard",
+          "adverse_floor_bps": 10.0,
+          "assumed_adverse_bps": 10.0,
+          "maker_roundtrip_bps": 20.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -35.01407790556303
+        },
+        {
+          "fee_scenario": "hypothetical_bnb_discount",
+          "adverse_floor_bps": 0.0,
+          "assumed_adverse_bps": 1.6358437492486722,
+          "maker_roundtrip_bps": 15.0,
+          "rebalancing_bps": 0.8500000000000001,
+          "net_theoretical_bps": -21.3999216548117
+        },
+        {
+          "fee_scenario": "hypothetical_bnb_discount",
+          "adverse_floor_bps": 1.0,
+          "assumed_adverse_bps": 1.6358437492486722,
+          "maker_roundtrip_bps": 15.0,
+          "rebalancing_bps": 0.8500000000000001,
+          "net_theoretical_bps": -21.3999216548117
+        },
+        {
+          "fee_scenario": "hypothetical_bnb_discount",
+          "adverse_floor_bps": 3.0,
+          "assumed_adverse_bps": 3.0,
+          "maker_roundtrip_bps": 15.0,
+          "rebalancing_bps": 0.8500000000000001,
+          "net_theoretical_bps": -22.764077905563028
+        },
+        {
+          "fee_scenario": "hypothetical_bnb_discount",
+          "adverse_floor_bps": 10.0,
+          "assumed_adverse_bps": 10.0,
+          "maker_roundtrip_bps": 15.0,
+          "rebalancing_bps": 0.8500000000000001,
+          "net_theoretical_bps": -29.764077905563028
+        },
+        {
+          "fee_scenario": "hypothetical_zero_maker",
+          "adverse_floor_bps": 0.0,
+          "assumed_adverse_bps": 1.6358437492486722,
+          "maker_roundtrip_bps": 0.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -6.649921654811698
+        },
+        {
+          "fee_scenario": "hypothetical_zero_maker",
+          "adverse_floor_bps": 1.0,
+          "assumed_adverse_bps": 1.6358437492486722,
+          "maker_roundtrip_bps": 0.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -6.649921654811698
+        },
+        {
+          "fee_scenario": "hypothetical_zero_maker",
+          "adverse_floor_bps": 3.0,
+          "assumed_adverse_bps": 3.0,
+          "maker_roundtrip_bps": 0.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -8.014077905563026
+        },
+        {
+          "fee_scenario": "hypothetical_zero_maker",
+          "adverse_floor_bps": 10.0,
+          "assumed_adverse_bps": 10.0,
+          "maker_roundtrip_bps": 0.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -15.014077905563026
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "symbol": "USD1USDT",
+      "eligible_for_further_research": true,
+      "plausible_positive_edge": false,
+      "executable_edge_validated": false,
+      "explanation": "146 synchronized samples; quality 85.4%; median spread 0.1000bps; baseline net -28.0000bps; conservative window floor -28.0000bps; two-sided 10bps quoted depth $5779559.77; clip $99.02; one-second volatility 0.0122bps. Passed bounded research data/liquidity screens. Quoted liquidity is not a fill guarantee; queue position, latency and fill-conditioned selection are unmodeled.",
+      "exclusions": [],
+      "sample_count": 146,
+      "trade_bins": 72,
+      "aggregate_gaps": 0,
+      "data_quality": 0.8538860588479557,
+      "gross_theoretical_bps": 0.09998150342186696,
+      "baseline_net_bps": -28.000018496578136,
+      "worst_window_net_bps": -28.00001949619824,
+      "risk_adjusted_score": -42.623597953179875,
+      "capital_efficiency": 1.0,
+      "clip_usdt": 99.01881,
+      "quoted_clip_liquidity_usdt": 99.01881,
+      "windows": [
+        {
+          "seconds": 30,
+          "observed_duration_seconds": 30.0,
+          "window_start_ms": 1792249039904,
+          "window_end_ms": 1792249069904,
+          "requested_window_complete": true,
+          "spread_p10_bps": 0.09998050380175866,
+          "spread_p50_bps": 0.09998050380175866,
+          "spread_p90_bps": 0.09998050380175866,
+          "samples": 25,
+          "depth_median_usdt": [
+            [
+              6402381.82113,
+              2977235.77566
+            ],
+            [
+              6731503.1648,
+              5746742.46074
+            ],
+            [
+              18104291.76845,
+              10487712.75652
+            ],
+            [
+              18104291.76845,
+              10518205.19202
+            ]
+          ],
+          "median_imbalance": 0.07891691548252529,
+          "concentration_p90": 0.08775819254334205,
+          "quote_stability_fraction": 1.0,
+          "realized_volatility_bps": 0.0,
+          "reference_move_bps": 0.0,
+          "trade_quote_volume_usdt": 19093.812879999998,
+          "underlying_trade_count": 34,
+          "trade_frequency_per_second": 1.1333333333333333,
+          "aggregate_trade_messages": 19,
+          "usable_fraction": 0.8333333333333334
+        },
+        {
+          "seconds": 60,
+          "observed_duration_seconds": 60.0,
+          "window_start_ms": 1792249009904,
+          "window_end_ms": 1792249069904,
+          "requested_window_complete": true,
+          "spread_p10_bps": 0.09998050380175866,
+          "spread_p50_bps": 0.09998050380175866,
+          "spread_p90_bps": 0.09998150342186696,
+          "samples": 53,
+          "depth_median_usdt": [
+            [
+              6394966.41247,
+              2986400.30795
+            ],
+            [
+              6724087.75614,
+              5755906.99303
+            ],
+            [
+              18096876.35979,
+              10496877.28881
+            ],
+            [
+              18096876.35979,
+              10527369.72431
+            ]
+          ],
+          "median_imbalance": 0.07757861942805633,
+          "concentration_p90": 0.08782695018783414,
+          "quote_stability_fraction": 0.8571428571428571,
+          "realized_volatility_bps": 0.018894617927874655,
+          "reference_move_bps": 0.09998150342186696,
+          "trade_quote_volume_usdt": 56933.14767999998,
+          "underlying_trade_count": 126,
+          "trade_frequency_per_second": 2.1,
+          "aggregate_trade_messages": 92,
+          "usable_fraction": 0.8833333333333333
+        },
+        {
+          "seconds": 180,
+          "observed_duration_seconds": 170.983,
+          "window_start_ms": 1792248898921,
+          "window_end_ms": 1792249069904,
+          "requested_window_complete": false,
+          "spread_p10_bps": 0.09998050380175866,
+          "spread_p50_bps": 0.09998150342186696,
+          "spread_p90_bps": 0.09998150342186696,
+          "samples": 146,
+          "depth_median_usdt": [
+            [
+              6352802.76169,
+              3010053.08849
+            ],
+            [
+              6681194.33166,
+              5779559.77357
+            ],
+            [
+              18053982.93531,
+              10520530.06935
+            ],
+            [
+              18053982.93531,
+              10551022.50485
+            ]
+          ],
+          "median_imbalance": 0.07292045391737802,
+          "concentration_p90": 0.08782850042172581,
+          "quote_stability_fraction": 0.9405940594059405,
+          "realized_volatility_bps": 0.01218434177719572,
+          "reference_move_bps": 0.09998150342186696,
+          "trade_quote_volume_usdt": 145175.77131999994,
+          "underlying_trade_count": 223,
+          "trade_frequency_per_second": 1.3042232268705076,
+          "aggregate_trade_messages": 154,
+          "usable_fraction": 0.8538860588479557
+        },
+        {
+          "seconds": 600,
+          "observed_duration_seconds": 170.983,
+          "window_start_ms": 1792248898921,
+          "window_end_ms": 1792249069904,
+          "requested_window_complete": false,
+          "spread_p10_bps": 0.09998050380175866,
+          "spread_p50_bps": 0.09998150342186696,
+          "spread_p90_bps": 0.09998150342186696,
+          "samples": 146,
+          "depth_median_usdt": [
+            [
+              6352802.76169,
+              3010053.08849
+            ],
+            [
+              6681194.33166,
+              5779559.77357
+            ],
+            [
+              18053982.93531,
+              10520530.06935
+            ],
+            [
+              18053982.93531,
+              10551022.50485
+            ]
+          ],
+          "median_imbalance": 0.07292045391737802,
+          "concentration_p90": 0.08782850042172581,
+          "quote_stability_fraction": 0.9405940594059405,
+          "realized_volatility_bps": 0.01218434177719572,
+          "reference_move_bps": 0.09998150342186696,
+          "trade_quote_volume_usdt": 145175.77131999994,
+          "underlying_trade_count": 223,
+          "trade_frequency_per_second": 1.3042232268705076,
+          "aggregate_trade_messages": 154,
+          "usable_fraction": 0.8538860588479557
+        }
+      ],
+      "markouts": [
+        {
+          "seconds": 1,
+          "bins": 66,
+          "mean_passive_adverse_bps": -0.048459158954955554,
+          "p90_positive_bps": 0.0
+        },
+        {
+          "seconds": 5,
+          "bins": 54,
+          "mean_passive_adverse_bps": -0.04392178644451031,
+          "p90_positive_bps": 0.0
+        },
+        {
+          "seconds": 15,
+          "bins": 30,
+          "mean_passive_adverse_bps": -0.03297137643705351,
+          "p90_positive_bps": 0.04999050180373332
+        }
+      ],
+      "sensitivity": [
+        {
+          "fee_scenario": "manual_standard",
+          "adverse_floor_bps": 0.0,
+          "assumed_adverse_bps": 0.0,
+          "maker_roundtrip_bps": 20.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -25.000018496578136
+        },
+        {
+          "fee_scenario": "manual_standard",
+          "adverse_floor_bps": 1.0,
+          "assumed_adverse_bps": 1.0,
+          "maker_roundtrip_bps": 20.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -26.000018496578136
+        },
+        {
+          "fee_scenario": "manual_standard",
+          "adverse_floor_bps": 3.0,
+          "assumed_adverse_bps": 3.0,
+          "maker_roundtrip_bps": 20.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -28.000018496578136
+        },
+        {
+          "fee_scenario": "manual_standard",
+          "adverse_floor_bps": 10.0,
+          "assumed_adverse_bps": 10.0,
+          "maker_roundtrip_bps": 20.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -35.000018496578136
+        },
+        {
+          "fee_scenario": "hypothetical_bnb_discount",
+          "adverse_floor_bps": 0.0,
+          "assumed_adverse_bps": 0.0,
+          "maker_roundtrip_bps": 15.0,
+          "rebalancing_bps": 0.8500000000000001,
+          "net_theoretical_bps": -19.750018496578136
+        },
+        {
+          "fee_scenario": "hypothetical_bnb_discount",
+          "adverse_floor_bps": 1.0,
+          "assumed_adverse_bps": 1.0,
+          "maker_roundtrip_bps": 15.0,
+          "rebalancing_bps": 0.8500000000000001,
+          "net_theoretical_bps": -20.750018496578136
+        },
+        {
+          "fee_scenario": "hypothetical_bnb_discount",
+          "adverse_floor_bps": 3.0,
+          "assumed_adverse_bps": 3.0,
+          "maker_roundtrip_bps": 15.0,
+          "rebalancing_bps": 0.8500000000000001,
+          "net_theoretical_bps": -22.750018496578136
+        },
+        {
+          "fee_scenario": "hypothetical_bnb_discount",
+          "adverse_floor_bps": 10.0,
+          "assumed_adverse_bps": 10.0,
+          "maker_roundtrip_bps": 15.0,
+          "rebalancing_bps": 0.8500000000000001,
+          "net_theoretical_bps": -29.750018496578136
+        },
+        {
+          "fee_scenario": "hypothetical_zero_maker",
+          "adverse_floor_bps": 0.0,
+          "assumed_adverse_bps": 0.0,
+          "maker_roundtrip_bps": 0.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -5.000018496578133
+        },
+        {
+          "fee_scenario": "hypothetical_zero_maker",
+          "adverse_floor_bps": 1.0,
+          "assumed_adverse_bps": 1.0,
+          "maker_roundtrip_bps": 0.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -6.000018496578133
+        },
+        {
+          "fee_scenario": "hypothetical_zero_maker",
+          "adverse_floor_bps": 3.0,
+          "assumed_adverse_bps": 3.0,
+          "maker_roundtrip_bps": 0.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -8.000018496578132
+        },
+        {
+          "fee_scenario": "hypothetical_zero_maker",
+          "adverse_floor_bps": 10.0,
+          "assumed_adverse_bps": 10.0,
+          "maker_roundtrip_bps": 0.0,
+          "rebalancing_bps": 1.1,
+          "net_theoretical_bps": -15.000018496578132
+        }
+      ]
+    }
+  ],
+  "discovery_exclusions": [
+    {
+      "symbol": "BCCUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "NEOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "QTUMUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "EOSUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "TUSDUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "IOTAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ONTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ETCUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ICXUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "VENUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "NULSUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "VETUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "PAXUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "BCHABCUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "BCHSVUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "WAVESUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "BTTUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "USDSOLDUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "ONGUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "HOTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ZRXUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "XMRUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "IOSTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "CELRUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "DASHUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "NANOUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "OMGUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "THETAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ENJUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "MITHUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "MATICUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "TFUELUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ONEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "FTMUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "ALGOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "USDSBUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "GTOUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "ERDUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "DUSKUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ANKRUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "WINUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "COSUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "NPXSUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "COCOSUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "MTLUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "TOMOUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "PERLUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "DENTUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "MFTUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "KEYUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "STORMUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "DOCKUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "WANUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "FUNUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "CVCUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "CHZUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BANDUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BUSDUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "BEAMUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "XTZUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "RENUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "RVNUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "HCUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "NKNUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "STXUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "KAVAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ARPAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "IOTXUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "RLCUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "MCOUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "CTXCUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "TROYUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "VITEUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "FTTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "EURUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "OGNUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "DREPUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "BULLUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "BEARUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "ETHBULLUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "ETHBEARUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "TCTUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "WRXUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "BTSUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "LSKUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BNTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "LTOUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "EOSBULLUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "EOSBEARUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "XRPBULLUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "XRPBEARUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "STRATUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "AIONUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "MBLUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "COTIUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BNBBULLUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "BNBBEARUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "STPTUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "WTCUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "DATAUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "XZCUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "CTSIUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "HIVEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "CHRUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "GXSUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "ARDRUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "LENDUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "MDTUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "STMXUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "KNCUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "REPUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "LRCUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "PNTUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "COMPUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BKRWUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "SCUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ZENUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SNXUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "VTHOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "DGBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "GBPUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "SXPUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "MKRUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "DAIUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "DCRUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "STORJUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "MANAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "AUDUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "YFIUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BALUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "BLZUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "IRISUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "KMDUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "JSTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SRMUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "ANTUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "CRVUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "OCEANUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "NMRUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "LUNAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "RSRUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "WNXMUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "TRBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BZRXUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "SUSHIUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "YFIIUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "KSMUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "EGLDUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "DIAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "RUNEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "FIOUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "UMAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BELUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "WINGUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "NBSUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "OXTUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "SUNUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "HNTUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "FLMUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "ORNUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "UTKUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "XVSUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ALPHAUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "AUDIOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "CTKUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "AKROUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "AXSUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "HARDUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "DNTUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "STRAXUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "UNFIUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "ROSEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "AVAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "XEMUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "SKLUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SUSDUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "GRTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "JUVUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "PSGUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "1INCHUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "REEFUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "OGUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ATMUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ASRUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "CELOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "RIFUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BTCSTUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "TRUUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "CKBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "TWTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "FIROUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "LITUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "SFPUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "DODOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ACMUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BADGERUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "FISUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "OMUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "PONDUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "DEGOUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "ALICEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "LINAUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "PERPUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "RAMPUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "SUPERUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "CFXUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "EPSUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "AUTOUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "TKOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "PUNDIXUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "TLMUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BTGUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "MIRUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "BARUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "FORTHUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "BAKEUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "BURGERUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "SLPUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SHIBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ICPUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ARUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "POLSUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "MDXUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "MASKUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "LPTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "NUUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "XVGUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ATAUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "TORNUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "KEEPUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "ERNUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "KLAYUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "PHAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BONDUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "MLNUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "DEXEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "C98USDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "CLVUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "FLOWUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "TVKUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "MINAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "RAYUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "FARMUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "ALPACAUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "QUICKUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "MBOXUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "FORUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "REQUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "GHSTUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "WAXPUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "TRIBEUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "GNOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "XECUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ELFUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "DYDXUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "POLYUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "IDEXUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "VIDTUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "USDPUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "GALAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ILVUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "YGGUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SYSUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "DFUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "FIDAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "FRONTUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "CVPUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "AGLDUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "RADUSDT",
+      "reason": "tick size unsuitable"
+    },
+    {
+      "symbol": "BETAUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "RAREUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "LAZIOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "CHESSUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "ADXUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "AUCTIONUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "DARUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "BNXUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "RGTUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "MOVRUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "CITYUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ENSUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "KP3RUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "QIUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "PORTOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "POWRUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "VGXUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "JASMYUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "AMPUSDT",
+      "reason": "tick size unsuitable"
+    },
+    {
+      "symbol": "PLAUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "PYRUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "RNDRUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "ALCXUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "SANTOSUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "MCUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "ANYUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "BICOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "FLUXUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "FXSUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "VOXELUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "HIGHUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "CVXUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "PEOPLEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "OOKIUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "SPELLUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "USTUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "JOEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ACHUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "IMXUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "GLMRUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "LOKAUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "SCRTUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "API3USDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BTTCUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ACAUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "ANCUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "XNOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "WOOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ALPINEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "TUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ASTRUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "GMTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "KDAUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "APEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BSWUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "BIFIUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "MULTIUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "STEEMUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "MOBUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "NEXOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "REIUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "GALUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "LDOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "EPXUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "LEVERUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "STGUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "LUNCUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "GMXUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "NEBLUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "POLYXUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "OSMOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "HFTUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "PHBUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "HOOKUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "MAGICUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "HIFIUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "RPLUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "PROSUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "AGIXUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "GNSUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SYNUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "VIBUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "SSVUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "LQTYUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "AMBUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "BETHUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "USTCUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "GASUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "GLMUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "QKCUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "UFTUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "IDUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "LOOMUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "OAXUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "RDNTUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "WBTCUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "EDUUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "AERGOUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "reason": "tick size unsuitable"
+    },
+    {
+      "symbol": "FLOKIUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ASTUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "SNTUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "COMBOUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "MAVUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "PENDLEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ARKMUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "WBETHUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "FDUSDUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "CYBERUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ARKUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "CREAMUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "GFTUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "IQUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "NTRNUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "MEMEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ORDIUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BEAMXUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "PIVXUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "VICUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "BLURUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "VANRYUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "AEURUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "JTOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "1000SATSUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BONKUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ACEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "NFPUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "AIUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "XAIUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "MANTAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ALTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "JUPUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "RONINUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "DYMUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "PIXELUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "PORTALUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "PDAUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "AXLUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "WIFUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "METISUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "AEVOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BOMEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ETHFIUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "WUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "TNSRUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SAGAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "OMNIUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "REZUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "NOTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "IOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "LISTAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "GUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BANANAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "TONUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "DOGSUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "EURIUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SLFUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "POLUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "NEIROUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "TURBOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "1MBABYDOGEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "CATIUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "HMSTRUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SCRUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BNSOLUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "LUMIAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "KAIAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "COWUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "CETUSUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "PNUTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ACTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "USUALUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "THEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ACXUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "ORCAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "MOVEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "MEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "VELODROMEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "VANAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "1000CATUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "PENGUUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BIOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "DUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "AIXBTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "CGPTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "COOKIEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SOLVUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ANIMEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BERAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "1000CHEEMSUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "TSTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "LAYERUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "HEIUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "KAITOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SHELLUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "REDUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "GPSUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BMTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "FORMUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "XUSDUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "NILUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "PARTIUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "MUBARAKUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "TUTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BROCCOLI714USDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BANANAS31USDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "GUNUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BABYUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BIGTIMEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "VIRTUALUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "KERNELUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "WCTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "HYPERUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "INITUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SIGNUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "STOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SYRUPUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "KMNOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SXTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "NXPCUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "AWEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "HAEDALUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "HUMAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SOPHUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "RESOLVUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "HOMEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SPKUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "NEWTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SAHARAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "LAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ERAUSDT",
+      "reason": "tick size unsuitable"
+    },
+    {
+      "symbol": "CUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "TREEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "A2ZUSDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "TOWNSUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "PROVEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BFUSDUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "PLUMEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "DOLOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "MITOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "WLFIUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SOMIUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "OPENUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "USDEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "LINEAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "HOLOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "AVNTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ZKCUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SKYUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BARDUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "0GUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "HEMIUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "XPLUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "MIRAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "FFUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "EDENUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "NOMUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "2ZUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "MORPHOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "WALUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "EULUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ENSOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "YBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ZBTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "TURTLEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "GIGGLEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "FUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "KITEUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "MMTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SAPIENUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ALLOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BANKUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "METUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ATUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "KGSTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BREVUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "币安人生USDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "ZKPUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "UUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "FRAXUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "FOGOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "RLUSDUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SENTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ZAMAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ESPUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "MANTRAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ROBOUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "OPNUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "NIGHTUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "CFGUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "KATUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "USDSUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "CHIPUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "MEGAUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "AIGENSYNUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "GENIUSUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "OPGUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "NVDABUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "REUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "AMDBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "EWYBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "INTCBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "LITEBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "METABUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "MSFTBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "PLTRBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "GRAMUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "CBRSBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "COINBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "DRAMBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "GLWBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "GOOGLBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "NBISBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "QCOMBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SPYBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "WDCBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SKHYBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "AAOIBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ARMBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "AVGOBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BABABUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "HOODBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "IBMBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "MRVLBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "NOKBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "TSMBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "RKLBBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "AEROUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "AXTIBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "CRWVBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "INTWBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "KORUBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "MUUBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "MVLLBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ORCLBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "QNTBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SNXXBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "TQQQBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "AAPLBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "AMATBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "AMZNBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BEBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "DELLBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "FLNCBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "GSBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "PYPLBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SMHBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SOXSBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ASMLBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ASTSBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BMNRBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "COHRBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "CRDOBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "IRENBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "NFLXBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SMCIBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "USARBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ALABBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "GMEBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "DJTBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "CRWDBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "MRNABUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SQQQBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "STXBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "MARSCOINUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "CRMBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "HIMSBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "牛来USDT",
+      "reason": "inactive/non-USDT/non-spot symbol"
+    },
+    {
+      "symbol": "BNCBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "GPROBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "RDDTBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "AGPUBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "AMCBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "CYPHBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ADBEBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "FWDIBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "HPEBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "PDDBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SHAZBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "WENBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "ZMBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "USDEBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "SECZBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "LLYBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "JPMBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "RWUSDUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "BBBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "MDBBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "PENGBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "UVXYBUSDT",
+      "reason": "insufficient 24h trading activity"
+    },
+    {
+      "symbol": "NEARUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "XRPUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "BNBUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "WLDUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "TIAUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "SUIUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "HYPEUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "SNDKBUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "UNIUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "INJUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "STRKUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "TRXUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "SOXLBUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "ENAUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "FILUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "SPCXBUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "TAOUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "PUMPUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "LINKUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "ZROUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "LTCUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "APTUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "ADAUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "FETUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "SANDUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "QNTUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "CRCLBUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "MSTRBUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "EPICUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "DOTUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "GTCUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "PAXGUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "QQQBUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "XLMUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "HBARUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "PROMUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "SEIUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "ARBUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "OPUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "TRUMPUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "TSLABUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "MUBUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "ASTERUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "EIGENUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "PYTHUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "BCHUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "ZILUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "BATUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "CAKEUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "AUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    },
+    {
+      "symbol": "ZKUSDT",
+      "reason": "eligible but outside bounded collection universe (24h activity priority, not profitability ranking)"
+    }
+  ],
+  "limitations": [
+    "PRELIMINARY: a short, single-session sample cannot establish profitability, regime robustness or statistical significance.",
+    "No fills or queue position modeled; displayed/quoted depth is cancellable and not a guarantee of executable liquidity. No capital was allocated.",
+    "Manual fee assumptions are unverified; account-specific commissions, promotions, rebates and tax/special components require independent verification before any later execution.",
+    "Passive-counterparty aggregate-trade markouts are proxies, not adverse selection conditional on this strategy's executions. Aggregate trades and one-second samples omit microstructure detail.",
+    "Volatility is robust one-second RMS return in bps (6-MAD winsorization with 1bps floor); rare extreme returns remain in raw recordings and can be understated by this statistic.",
+    "Observation coverage approximates synchronization uptime from occupied one-second bins, not continuous-time uptime. The universe is prioritized by 24h activity for collection, not economic ranking.",
+    "Auditable raw inputs, manifest and online observations: .local/research/run-1792248889904. Fixed bounded recorder retention can invalidate full-run replay for long/high-activity runs; such reports exclude every candidate.",
+    "Requested 30/60/180/600-second statistics include actual observed duration and an explicit requested_window_complete flag. Truncated horizons do not imply longer historical coverage.",
+    "Depth statistics sum known reconstructed levels only. Bands extending beyond the finite snapshot coverage can be understated; displayed depth is a quoted lower bound, not guaranteed executable liquidity."
+  ],
+  "replay_consistency_verified": true
+}
