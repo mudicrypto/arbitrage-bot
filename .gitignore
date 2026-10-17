@@ -1,0 +1,4 @@
+/target/
+/control-api/node_modules/
+/control-api/dist/
+.env
