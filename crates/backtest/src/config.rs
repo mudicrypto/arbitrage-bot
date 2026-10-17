@@ -7,6 +7,10 @@ pub enum QueueModel {
     TradeDepletion,
     ProportionalCancellation,
 }
+fn default_max_quote_spread_bps() -> u64 {
+    1000
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Strategy {
     pub spread_bps: u64,
@@ -18,6 +22,8 @@ pub struct Strategy {
     pub refresh_ticks: u64,
     pub required_edge_bps: u64,
     pub max_spread_bps: u64,
+    #[serde(default = "default_max_quote_spread_bps")]
+    pub max_quote_spread_bps: u64,
     pub stale_ms: u64,
     pub drawdown_stop_usdt: u64,
 }
@@ -83,6 +89,8 @@ impl Scenario {
                 && self.strategy.inventory_skew_bps <= 1000
                 && self.strategy.required_edge_bps <= 1000
                 && self.strategy.max_spread_bps <= 1000
+                && self.strategy.max_quote_spread_bps > 0
+                && self.strategy.max_quote_spread_bps <= 1000
                 && self.strategy.stale_ms > 0
                 && self.strategy.stale_ms <= 5000
                 && self.strategy.refresh_ms >= 100

@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "result_type": "synthetic_test_assertions_not_historical_or_exchange_executions",
+  "command": "bash scripts/check.sh; cargo build --workspace --locked; npm --prefix control-api run build",
+  "rust_tests_passed": 73,
+  "typescript_tests_passed": 7,
+  "controlled_scenarios": [
+    {
+      "scenario": "A",
+      "test": "controlled_a_buy_complete_only_against_sell_aggressor",
+      "status": "passed",
+      "source": "crates/backtest/tests/execution.rs"
+    },
+    {
+      "scenario": "B",
+      "test": "controlled_b_sell_complete_only_against_buy_aggressor",
+      "status": "passed",
+      "source": "crates/backtest/tests/execution.rs"
+    },
+    {
+      "scenario": "C",
+      "test": "controlled_c_partial_fills_across_trades_conserve_quantity",
+      "status": "passed",
+      "source": "crates/backtest/tests/execution.rs"
+    },
+    {
+      "scenario": "D",
+      "test": "controlled_d_queue_blocks_fill_and_has_machine_readable_reason",
+      "status": "passed",
+      "source": "crates/backtest/tests/execution.rs"
+    },
+    {
+      "scenario": "E",
+      "test": "controlled_e_pending_cancel_allows_fill_but_effective_cancel_blocks_it",
+      "status": "passed",
+      "source": "crates/backtest/tests/execution.rs"
+    },
+    {
+      "scenario": "F",
+      "test": "controlled_f_fee_constraints_can_prevent_quote_placement",
+      "status": "passed",
+      "source": "crates/backtest/tests/execution.rs"
+    },
+    {
+      "scenario": "G",
+      "test": "controlled_g_pending_inventory_limit_rejects_new_quote",
+      "status": "passed",
+      "source": "crates/backtest/tests/execution.rs"
+    },
+    {
+      "scenario": "H",
+      "test": "controlled_h_stale_market_suspends_strategy",
+      "status": "passed",
+      "source": "crates/backtest/tests/execution.rs"
+    },
+    {
+      "scenario": "I",
+      "test": "controlled_i_invalid_book_sequence_prevents_execution",
+      "status": "passed",
+      "source": "crates/backtest/tests/execution.rs"
+    },
+    {
+      "scenario": "J",
+      "test": "controlled_j_replay_includes_exactly_identical_diagnostics",
+      "status": "passed",
+      "source": "crates/backtest/tests/execution.rs"
+    }
+  ],
+  "historical_simulated_fills_in_original_54_runs": 0,
+  "actual_exchange_executions": 0,
+  "interpretation": "Synthetic successful/failed executions verify model invariants; they do not validate net trading expectancy."
+}

@@ -122,6 +122,13 @@ pub struct Summary {
     pub warnings: Vec<String>,
 }
 pub struct Engine {
+    pub diagnostics: crate::diagnostics::Funnel,
+    pub decisions: Vec<crate::diagnostics::Decision>,
+    pub execution_evidence: BTreeMap<u64, crate::diagnostics::ExecutionEvidence>,
+    pub entry_deadlines: BTreeMap<u64, u64>,
+    pub initial_queue_ahead: BTreeMap<u64, u128>,
+    last_trade_id: Option<u64>,
+    pub cancel_deadlines: BTreeMap<u64, u64>,
     pub scenario: Scenario,
     pub instrument: Instrument,
     pub orders: Vec<Order>,
@@ -175,6 +182,13 @@ impl Engine {
         ensure!(capital_usdt == 5000, "simulation capital must be $5000");
         let capital = i128::from(capital_usdt) * i128::from(S);
         let mut e = Self {
+            diagnostics: Default::default(),
+            decisions: vec![],
+            execution_evidence: BTreeMap::new(),
+            entry_deadlines: BTreeMap::new(),
+            initial_queue_ahead: BTreeMap::new(),
+            last_trade_id: None,
+            cancel_deadlines: BTreeMap::new(),
             rng: scenario.seed,
             scenario,
             instrument,
@@ -384,6 +398,7 @@ impl Engine {
         ))
     }
     pub fn submit(&mut self, buy: bool, price: u64, qty: u64) -> Result<bool> {
+        self.diagnostics.generated_quote_intents += 1;
         if self.stopped
             || self.settling
             || self.view.is_none()
@@ -391,10 +406,30 @@ impl Engine {
                 .last_book_ms
                 .is_none_or(|t| self.clock.saturating_sub(t) > self.scenario.strategy.stale_ms)
         {
+            if self.stopped || self.settling {
+                self.diagnostics.rejected_risk_limits += 1;
+            } else {
+                self.diagnostics.rejected_market_data += 1;
+            }
+            self.diagnostic_decision(
+                buy,
+                price,
+                qty,
+                "rejected",
+                if self.stopped {
+                    "drawdown_stopped"
+                } else if self.settling {
+                    "settling"
+                } else {
+                    "missing_or_stale_book"
+                },
+            )?;
             return Ok(false);
         }
         if self.limits(price, qty).is_err() {
             self.rejected += 1;
+            self.diagnostics.rejected_exchange_filters += 1;
+            self.diagnostic_decision(buy, price, qty, "rejected", "tick_lot_or_notional_filter")?;
             return Ok(false);
         }
         let (rq, rb, rn) = self.reserve(buy, price, qty)?;
@@ -413,8 +448,23 @@ impl Engine {
                 && inventory + pending_buys + notional(price, qty)?
                     > u128::from(self.scenario.strategy.inventory_limit_usdt) * u128::from(S)
         {
+            self.diagnostics.rejected_risk_limits += 1;
+            let reason = if cash < rq as i128 {
+                "insufficient_available_quote"
+            } else if base < rb as i128 {
+                "insufficient_available_base"
+            } else if bnb < rn as i128 {
+                "insufficient_available_bnb"
+            } else {
+                "position_limit_including_pending_buys"
+            };
+            self.diagnostic_decision(buy, price, qty, "rejected", reason)?;
             return Ok(false);
         }
+        ensure!(
+            self.entry_deadlines.len() < 100_000,
+            "bounded diagnostic order limit exceeded"
+        );
         let due = self.clock + self.scenario.entry_latency_ms + self.jitter();
         let order = Order {
             id: self.next_id,
@@ -430,6 +480,9 @@ impl Engine {
             reserved_base: rb,
             reserved_bnb: rn,
         };
+        self.entry_deadlines.insert(order.id, due);
+        self.diagnostics.submitted_to_simulated_execution += 1;
+        self.diagnostic_decision(buy, price, qty, "submitted", "passed_all_intent_gates")?;
         self.next_id += 1;
         self.submitted += 1;
         self.submitted_quantity += u128::from(qty);
@@ -446,6 +499,7 @@ impl Engine {
             .position(|o| o.id == id && o.cancel_due.is_none())
         {
             self.orders[index].cancel_due = Some(due);
+            self.cancel_deadlines.insert(id, due);
             self.log(
                 "cancel_request",
                 &self.orders[index].clone(),
@@ -485,6 +539,15 @@ impl Engine {
             let mut order = self.orders[index].clone();
             if action == 1 {
                 order.cancel_effective_logged = true;
+                for later in &mut self.orders {
+                    if later.active
+                        && later.buy == order.buy
+                        && later.price == order.price
+                        && (later.entry_due, later.id) > (order.entry_due, order.id)
+                    {
+                        later.ahead = later.ahead.saturating_sub(u128::from(order.remaining));
+                    }
+                }
                 self.cancelled += 1;
                 self.log(
                     "cancel_effective",
@@ -523,6 +586,19 @@ impl Engine {
             order.ahead = u128::from(self.view.as_ref().unwrap().quantity(order.buy, order.price))
                 * u128::from(self.scenario.queue_multiplier_ppm)
                 / 1_000_000;
+            // Queue ahead is a cumulative position, including earlier own orders.
+            // Shared public volume must not be consumed independently a second time.
+            for earlier in self.orders.iter().filter(|o| {
+                o.active
+                    && !o.cancel_effective_logged
+                    && o.buy == order.buy
+                    && o.price == order.price
+            }) {
+                order.ahead = order
+                    .ahead
+                    .max(earlier.ahead + u128::from(earlier.remaining));
+            }
+            self.initial_queue_ahead.insert(order.id, order.ahead);
             order.active = true;
             self.accepted += 1;
             self.log("accept", &order, 0, "visible_queue_joined_at_tail")?;
@@ -532,6 +608,11 @@ impl Engine {
         self.reconcile()
     }
     fn invalidate(&mut self, reason: &str) -> Result<()> {
+        *self
+            .diagnostics
+            .dependency_failures
+            .entry(reason.into())
+            .or_default() += 1;
         if self.last_mid.is_some() && self.view.is_some() {
             self.data_ok = false;
             self.interruptions += 1;
@@ -649,6 +730,10 @@ impl Engine {
         self.gross += capture;
         self.turnover += notional(o.price, qty)?;
         self.filled_quantity += u128::from(qty);
+        self.execution_evidence
+            .entry(o.id)
+            .or_default()
+            .filled_quantity += u128::from(qty);
         self.fills.push(Fill {
             observed_at_ms: self.clock,
             epoch: self.epoch,
@@ -681,6 +766,19 @@ impl Engine {
         self.reconcile()
     }
     pub fn on_trade(&mut self, t: &mm_market_data::model::Trade) -> Result<()> {
+        if t.symbol != self.instrument.symbol || t.price == 0 || t.quantity == 0 {
+            self.invalidate("invalid_trade_dependency")?;
+            return Ok(());
+        }
+        if self.last_trade_id.is_some_and(|id| t.aggregate_id <= id) {
+            *self
+                .diagnostics
+                .dependency_failures
+                .entry("duplicate_or_old_trade_ignored".into())
+                .or_default() += 1;
+            return Ok(());
+        }
+        self.last_trade_id = Some(t.aggregate_id);
         if self.view.is_none()
             || self
                 .last_book_ms
@@ -703,29 +801,73 @@ impl Engine {
         else {
             return Ok(());
         };
-        let mut remaining =
+        if t.exchange_ms < self.clock
+            && self.orders.iter().any(|o| {
+                o.cancel_effective_logged
+                    && o.price == t.price
+                    && o.buy == t.buyer_is_maker
+                    && o.cancel_due.is_some_and(|c| t.exchange_ms <= c)
+            })
+            && self
+                .orders
+                .iter()
+                .filter(|o| o.price == t.price && o.buy == t.buyer_is_maker)
+                .count()
+                > 1
+        {
+            self.invalidate("late_multi_order_cancel_priority_ambiguous")?;
+            return Ok(());
+        }
+        let eligible =
             u128::from(t.quantity) * u128::from(self.scenario.trade_participation_ppm) / 1_000_000;
+        let mut fill_budget = eligible;
+        self.orders.sort_by_key(|o| (o.entry_due, o.id));
         let mut i = 0;
-        while i < self.orders.len() && remaining > 0 {
+        while i < self.orders.len() {
             if !self.orders[i].active
                 || t.exchange_ms <= self.orders[i].entry_due
                 || self.orders[i]
                     .cancel_due
                     .is_some_and(|due| t.exchange_ms > due)
                 || self.orders[i].buy != t.buyer_is_maker
-                || self.orders[i].price != t.price
             {
                 i += 1;
                 continue;
             }
-            let consume = self.orders[i].ahead.min(remaining);
+            if self.orders[i].price != t.price {
+                if (self.orders[i].buy && t.price < self.orders[i].price)
+                    || (!self.orders[i].buy && t.price > self.orders[i].price)
+                {
+                    self.execution_evidence
+                        .entry(self.orders[i].id)
+                        .or_default()
+                        .trade_through_valid_window_events += 1;
+                }
+                i += 1;
+                continue;
+            }
+            let evidence = self
+                .execution_evidence
+                .entry(self.orders[i].id)
+                .or_default();
+            evidence.exact_price_eligible_trade_events += 1;
+            evidence.observed_eligible_quantity += eligible;
+            evidence.queue_blocked_trade_events += u64::from(self.orders[i].ahead >= eligible);
+            let consume = self.orders[i].ahead.min(eligible);
+            evidence.queue_consumed_quantity += consume;
             self.orders[i].ahead -= consume;
-            remaining -= consume;
+            let remaining = (eligible - consume).min(fill_budget);
             let fill = remaining.min(u128::from(self.orders[i].remaining)) as u64
                 / self.instrument.step_units
                 * self.instrument.step_units;
+            if fill == 0 && remaining > 0 {
+                self.execution_evidence
+                    .entry(self.orders[i].id)
+                    .or_default()
+                    .quantity_blocked_by_lot_rounding += remaining;
+            }
             if fill > 0 {
-                remaining -= u128::from(fill);
+                fill_budget -= u128::from(fill);
                 let id = self.orders[i].id;
                 self.fill(i, fill, t.exchange_ms, reference_mid)?;
                 if self.orders.get(i).is_some_and(|o| o.id == id) {
@@ -747,6 +889,7 @@ impl Engine {
         let Some(view) = self.view.clone() else {
             return Ok(());
         };
+        self.diagnostics.quote_opportunities += 2;
         let mid = view.mid();
         let observed_spread = u128::from(view.ask() - view.bid()) * 10_000 / u128::from(mid);
         if observed_spread > self.scenario.strategy.max_spread_bps.into() {
@@ -769,6 +912,41 @@ impl Engine {
             .spread_bps
             .max(fee_bps + self.scenario.strategy.required_edge_bps)
             .max(self.vol_bps * self.scenario.strategy.volatility_multiplier);
+        if spread > self.scenario.strategy.spread_bps {
+            self.diagnostics.fee_widened_opportunities += u64::from(
+                fee_bps + self.scenario.strategy.required_edge_bps
+                    > self.scenario.strategy.spread_bps,
+            ) * 2;
+        }
+        if spread > self.scenario.strategy.max_quote_spread_bps {
+            for buy in [true, false] {
+                self.diagnostics.generated_quote_intents += 1;
+                let fee_reject = fee_bps + self.scenario.strategy.required_edge_bps
+                    > self.scenario.strategy.max_quote_spread_bps;
+                if fee_reject {
+                    self.diagnostics.rejected_fee_constraints += 1;
+                } else {
+                    self.diagnostics.rejected_risk_limits += 1;
+                }
+                self.diagnostic_decision(
+                    buy,
+                    mid,
+                    0,
+                    "rejected",
+                    if fee_reject {
+                        "fee_aware_width_exceeds_max_quote_spread"
+                    } else {
+                        "volatility_or_fixed_width_exceeds_quote_cap"
+                    },
+                )?;
+            }
+            let ids: Vec<_> = self.orders.iter().map(|o| o.id).collect();
+            for id in ids {
+                self.cancel(id)?;
+            }
+            self.last_refresh = self.clock;
+            return Ok(());
+        }
         let inventory = notional(mid, u64::try_from(self.base)?)?;
         let skew = inventory * u128::from(self.scenario.strategy.inventory_skew_bps)
             / (u128::from(self.scenario.strategy.inventory_limit_usdt) * u128::from(S));
@@ -783,6 +961,14 @@ impl Engine {
             * u128::from(self.instrument.step_units)) as u64;
         for (buy, p) in [(true, bid), (false, ask)] {
             if self.orders.iter().any(|o| o.buy == buy) {
+                self.diagnostics.existing_quote_retained_or_canceling += 1;
+                self.diagnostic_decision(
+                    buy,
+                    p,
+                    qty,
+                    "retained",
+                    "existing_order_or_cancel_grace",
+                )?;
                 let ids: Vec<_> = self
                     .orders
                     .iter()
@@ -854,6 +1040,18 @@ impl Engine {
                             o.ahead = o.ahead * u128::from(after) / u128::from(before);
                         }
                     }
+                }
+                // Public cancellation credit cannot move a later own order ahead of FIFO.
+                self.orders.sort_by_key(|o| (o.entry_due, o.id));
+                let mut tails: BTreeMap<(bool, u64), u128> = BTreeMap::new();
+                for o in self
+                    .orders
+                    .iter_mut()
+                    .filter(|o| o.active && !o.cancel_effective_logged)
+                {
+                    let tail = tails.entry((o.buy, o.price)).or_default();
+                    o.ahead = o.ahead.max(*tail);
+                    *tail = o.ahead + u128::from(o.remaining);
                 }
                 let mid = view.mid();
                 if let Some(old) = self.last_mid {

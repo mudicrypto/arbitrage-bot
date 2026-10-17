@@ -113,3 +113,14 @@ cargo build --workspace --locked
 Raw captures are local/ignored and required for historical reproduction. Long capture needs a continuously running environment and disk headroom. Default retention is 1 GiB per symbol plus bounded temporary/checksum files, so active markets can evict the beginning before 24 hours. Check status/quality and archive deliberately. Existing complete-prefix research replay rejects evicted history. Backtest tape/trace caps also reject overly large inputs; multi-day evaluation requires bounded chronological blocks with explicit boundary treatment or a future streaming report runner. Never present retained fragments as continuous multi-day validation.
 
 Final test execution is disabled by default; `--include-final-test` is a deliberate evaluation action only after strategy/configuration freeze and sufficient untouched observations. Current embargoed validation/test intervals are empty and are not validation. Stop after M4; M5 needs explicit approval.
+
+## Execution diagnostics and data readiness (Milestone 4.1)
+
+The original 54 preliminary simulations are preserved. Diagnostics explain each quote gate and no-fill outcome, without selecting parameters or claiming that zero fills prove absence of an edge. See [M4.1 results](docs/MILESTONE_4_1.md) and [machine-readable diagnostics](reports/milestone4_1/execution_diagnostics.json).
+
+```sh
+./target/debug/mm-backtest diagnose .local/research/run-1792248889904 config/backtest.json reports/milestone4/backtest_results.json reports/milestone4_1
+./target/debug/mm-backtest readiness .local/long-captures/session-1792251264110 reports/milestone4_1/data_readiness.json
+```
+
+`diagnose` requires the original source and frozen configuration, evaluates only previously evaluated partitions, and writes a separate output directory. `readiness` freezes a list of finalized files and streams two checksum/sequence/book replays; it neither runs a strategy nor waits for a capture to finish. New files and the unflushed tail are outside that audit. Both commands have bounded file/event/report resources and fail explicitly on missing data. `max_quote_spread_bps` is an optional strategy width cap (default 1000bps); fees plus the required edge exceeding it reject quotes. This adds an explicit fee-feasibility guard without changing the frozen M4 experiment. Queue position remains an estimate and exact-price fills still omit trade-through activity, now reported explicitly. Stop after M4.1; do not start M5 without approval.

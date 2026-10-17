@@ -7,4 +7,6 @@
 5. **Forward paper trading:** real public feeds and simulated execution, monitoring/Next.js dashboard, reconciliation and kill switches. Acceptance: sustained forward evidence, bounded inventory and operational recovery exercises.
 6. **Separately approved live pilot:** only after proven risk controls and credible net-expectancy evidence; fresh official API/filter review, LIMIT_MAKER behavior, scoped permissions and a strict small-capital budget. No leverage, borrowing or futures. Scale only after pilot evidence.
 
-M1–M4 are approved. Stop after M4; M5 requires explicit approval. Each milestone ends with functionality, executed checks, limitations, safety review, documentation, commit and proposed next step. Multi-exchange coordination/hedging stays an extension point until justified.
+M1–M4 and M4.1 are approved. Stop after M4.1; M5 requires explicit approval. Each milestone ends with functionality, executed checks, limitations, safety review, documentation, commit and proposed next step. Multi-exchange coordination/hedging stays an extension point until justified.
+
+**M4.1 (implemented):** auditable quote/intent/reach diagnostics, corrected multi-order FIFO, controlled synthetic execution tests, and streaming live-capture integrity/readiness audit. The original zero-fill history is unchanged; long-session profitability validation remains incomplete. No M5 work is authorized.

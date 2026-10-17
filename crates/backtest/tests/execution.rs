@@ -369,3 +369,299 @@ fn stale_terminal_reference_cannot_qualify_an_experiment() {
     assert!(!stale.data_quality_ok);
     assert!(!stale.net_positive_after_costs_and_without_favorable_inventory);
 }
+
+// M4.1 controlled scenarios. These are synthetic executions, never market findings.
+#[test]
+fn controlled_a_buy_complete_only_against_sell_aggressor() {
+    let mut e = engine();
+    e.submit(true, p("100"), p("1")).unwrap();
+    e.step(&book(1011, "100", "100.02")).unwrap();
+    e.step(&trade(1020, 1020, "100", "10", false)).unwrap();
+    assert!(e.fills.is_empty());
+    e.step(&trade(1030, 1030, "100", "3", true)).unwrap();
+    assert_eq!(e.base, p("1") as i128);
+    assert_eq!(e.fills[0].quantity, p("1"));
+    e.reconcile().unwrap();
+}
+#[test]
+fn controlled_b_sell_complete_only_against_buy_aggressor() {
+    let mut e = engine();
+    e.submit(true, p("100"), p("1")).unwrap();
+    e.step(&book(1011, "100", "100.02")).unwrap();
+    e.step(&trade(1020, 1020, "100", "3", true)).unwrap();
+    e.submit(false, p("100.02"), p("1")).unwrap();
+    e.step(&book(1031, "100", "100.02")).unwrap();
+    e.step(&trade(1040, 1040, "100.02", "10", true)).unwrap();
+    assert_eq!(e.fills.len(), 1);
+    e.step(&trade(1050, 1050, "100.02", "3", false)).unwrap();
+    assert_eq!(e.fills.len(), 2);
+    assert!(!e.fills[1].buy);
+    assert_eq!(e.base, 0);
+    assert_eq!(e.cash, p("5000.02") as i128);
+    e.reconcile().unwrap();
+}
+#[test]
+fn controlled_c_partial_fills_across_trades_conserve_quantity() {
+    let mut e = engine();
+    e.submit(true, p("100"), p("1")).unwrap();
+    e.step(&book(1011, "100", "100.02")).unwrap();
+    for (time, q) in [(1020, "2.25"), (1030, "0.35"), (1040, "0.40")] {
+        e.step(&trade(time, time, "100", q, true)).unwrap();
+        e.reconcile().unwrap();
+    }
+    assert_eq!(e.fills.iter().map(|f| f.quantity).sum::<u64>(), p("1"));
+    assert_eq!(e.fills.len(), 3);
+    assert!(e.orders.is_empty());
+}
+#[test]
+fn controlled_d_queue_blocks_fill_and_has_machine_readable_reason() {
+    let mut e = engine();
+    e.submit(true, p("100"), p("1")).unwrap();
+    e.step(&book(1011, "100", "100.02")).unwrap();
+    let t = trade(1020, 1020, "100", "1", true);
+    e.step(&t).unwrap();
+    let d = e.diagnostic_report(&[t], "synthetic", 1000, 1030).unwrap();
+    assert_eq!(
+        d.orders[0].primary_explanation,
+        "reached_queue_not_depleted"
+    );
+    assert_eq!(d.quotes_reached_but_queue_blocked, 1);
+    assert_eq!(
+        d.orders[0].initial_queue_ahead_estimate,
+        Some(p("2") as u128)
+    );
+    assert!(e.fills.is_empty());
+}
+#[test]
+fn controlled_e_pending_cancel_allows_fill_but_effective_cancel_blocks_it() {
+    let mut e = engine();
+    e.submit(true, p("100"), p("1")).unwrap();
+    e.step(&book(1011, "100", "100.02")).unwrap();
+    e.cancel(1).unwrap();
+    e.step(&trade(1020, 1020, "100", "2.4", true)).unwrap();
+    assert_eq!(e.fills[0].quantity, p("0.4"));
+    assert!(!e.orders[0].cancel_effective_logged);
+    e.step(&trade(1040, 1040, "100", "10", true)).unwrap();
+    assert_eq!(e.fills.len(), 1);
+    e.reconcile().unwrap();
+}
+#[test]
+fn controlled_f_fee_constraints_can_prevent_quote_placement() {
+    let mut s = scenario();
+    s.strategy.refresh_ms = 100;
+    s.strategy.max_quote_spread_bps = 10;
+    s.fees.periods[0].standard_maker_microbps = 10_000_000;
+    let mut e = Engine::new(s, instrument(), 5000).unwrap();
+    e.step(&book(1000, "100", "100.02")).unwrap();
+    assert!(e.orders.is_empty());
+    assert_eq!(e.diagnostics.rejected_fee_constraints, 2);
+    assert_eq!(
+        e.diagnostics.rejection_reasons["fee_aware_width_exceeds_max_quote_spread"],
+        2
+    );
+    e.diagnostic_report(&[], "synthetic", 1000, 1001).unwrap();
+}
+#[test]
+fn controlled_g_pending_inventory_limit_rejects_new_quote() {
+    let mut e = engine();
+    assert!(e.submit(true, p("100"), p("5")).unwrap());
+    assert!(!e.submit(true, p("100"), p("1")).unwrap());
+    assert_eq!(e.diagnostics.rejected_risk_limits, 1);
+    assert_eq!(
+        e.diagnostics.rejection_reasons["position_limit_including_pending_buys"],
+        1
+    );
+    e.reconcile().unwrap();
+}
+#[test]
+fn controlled_h_stale_market_suspends_strategy() {
+    let mut e = engine();
+    e.submit(true, p("100"), p("1")).unwrap();
+    e.step(&trade(4000, 4000, "100", "100", true)).unwrap();
+    assert!(e.fills.is_empty() && e.orders.is_empty());
+    assert!(!e.submit(true, p("100"), p("1")).unwrap());
+    assert!(
+        e.diagnostics
+            .dependency_failures
+            .contains_key("stale_feed_unknown_fills_invalidates_experiment")
+    );
+}
+#[test]
+fn controlled_i_invalid_book_sequence_prevents_execution() {
+    let mut e = engine();
+    e.submit(true, p("100"), p("1")).unwrap();
+    e.step(&book(1011, "100", "100.02")).unwrap();
+    e.step(&Tick {
+        time_ms: 1015,
+        sequence: 1015,
+        input: Input::Invalid {
+            reason: "missing_depth_sequence_range".into(),
+        },
+    })
+    .unwrap();
+    e.step(&trade(1020, 1020, "100", "100", true)).unwrap();
+    assert!(e.fills.is_empty());
+    assert!(!e.data_ok);
+}
+#[test]
+fn controlled_j_replay_includes_exactly_identical_diagnostics() {
+    let tape = vec![
+        book(100000, "100", "100.02"),
+        book(100100, "100", "100.02"),
+        trade(100200, 100200, "99.99", "3", true),
+    ];
+    let a = simulate(
+        &tape,
+        &instrument(),
+        &scenario(),
+        "synthetic",
+        100000,
+        101000,
+    )
+    .unwrap();
+    let b = simulate(
+        &tape,
+        &instrument(),
+        &scenario(),
+        "synthetic",
+        100000,
+        101000,
+    )
+    .unwrap();
+    assert!(!a.fills.is_empty());
+    assert_eq!(a.decisions, b.decisions);
+    assert_eq!(
+        serde_json::to_vec(
+            &a.diagnostic_report(&tape, "synthetic", 100000, 101000)
+                .unwrap()
+        )
+        .unwrap(),
+        serde_json::to_vec(
+            &b.diagnostic_report(&tape, "synthetic", 100000, 101000)
+                .unwrap()
+        )
+        .unwrap()
+    );
+}
+#[test]
+fn fifo_shared_public_queue_is_not_depleted_twice_for_own_orders() {
+    let mut e = engine();
+    e.submit(true, p("100"), p("1")).unwrap();
+    e.submit(true, p("100"), p("1")).unwrap();
+    e.step(&book(1011, "100", "100.02")).unwrap();
+    assert_eq!(e.orders[0].ahead, p("2") as u128);
+    assert_eq!(e.orders[1].ahead, p("3") as u128);
+    e.step(&trade(1020, 1020, "100", "2.5", true)).unwrap();
+    assert_eq!(e.fills.len(), 1);
+    assert_eq!(e.fills[0].order_id, 1);
+    assert_eq!(e.fills[0].quantity, p("0.5"));
+    e.step(&trade(1030, 1030, "100", "1", true)).unwrap();
+    assert_eq!(e.fills[1].order_id, 1);
+    assert_eq!(e.fills[2].order_id, 2);
+    assert_eq!(e.fills[2].quantity, p("0.5"));
+    assert_eq!(e.base, p("1.5") as i128);
+    e.reconcile().unwrap();
+}
+#[test]
+fn duplicate_trade_never_creates_additional_fill_volume() {
+    let mut e = engine();
+    e.submit(true, p("100"), p("1")).unwrap();
+    e.step(&book(1011, "100", "100.02")).unwrap();
+    let t = trade(1020, 1020, "100", "2.5", true);
+    e.step(&t).unwrap();
+    e.step(&t).unwrap();
+    assert_eq!(e.fills.len(), 1);
+    assert_eq!(e.base, p("0.5") as i128);
+    e.reconcile().unwrap();
+}
+proptest! {
+    #[test]
+    fn fifo_fills_never_exceed_observed_eligible_volume(q in 1u64..6000) {
+        let mut e=engine();e.submit(true,p("100"),p("1")).unwrap();e.submit(true,p("100"),p("1")).unwrap();e.step(&book(1011,"100","100.02")).unwrap();
+        let qty=q*p("0.001");let mut t=trade(1020,1020,"100","1",true);if let Input::Trade {trade}=&mut t.input {trade.quantity=qty;}
+        e.step(&t).unwrap();let filled=e.fills.iter().map(|f|f.quantity).sum::<u64>();
+        prop_assert!(filled<=qty.saturating_sub(p("2")) && filled<=p("2"));
+        prop_assert_eq!(filled,qty.saturating_sub(p("2")).min(p("2")));
+        e.reconcile().unwrap();
+    }
+}
+#[test]
+fn cancellation_credit_preserves_fifo_between_own_orders() {
+    let mut s = scenario();
+    s.queue = QueueModel::ProportionalCancellation;
+    let mut e = Engine::new(s, instrument(), 5000).unwrap();
+    e.step(&book(1000, "100", "100.02")).unwrap();
+    e.submit(true, p("100"), p("1")).unwrap();
+    e.submit(true, p("100"), p("1")).unwrap();
+    e.step(&book(1011, "100", "100.02")).unwrap();
+    let mut update = book(1020, "100", "100.02");
+    if let Input::Book { view, .. } = &mut update.input {
+        view.bids[0].1 = p("1");
+    }
+    e.step(&update).unwrap();
+    assert!(e.orders[1].ahead >= e.orders[0].ahead + u128::from(e.orders[0].remaining));
+    e.step(&trade(1030, 1030, "100", "1.5", true)).unwrap();
+    assert_eq!(e.fills.len(), 1);
+    assert_eq!(e.fills[0].order_id, 1);
+    assert_eq!(e.fills[0].quantity, p("0.5"));
+}
+#[test]
+fn live_trade_through_is_reported_as_a_fill_model_limitation() {
+    let mut e = engine();
+    e.submit(true, p("100"), p("1")).unwrap();
+    e.step(&book(1011, "100", "100.02")).unwrap();
+    let t = trade(1020, 1020, "99.99", "100", true);
+    e.step(&t).unwrap();
+    assert!(e.fills.is_empty());
+    let d = e.diagnostic_report(&[t], "synthetic", 1000, 1030).unwrap();
+    assert_eq!(d.quotes_with_live_trade_through_omitted_by_fill_model, 1);
+    assert_eq!(
+        d.orders[0].primary_explanation,
+        "trade_through_evidence_omitted_by_exact_price_fill_model"
+    );
+}
+#[test]
+fn official_aggregate_trade_m_semantics_drive_both_sides() {
+    // Binance: m = "Is the buyer the market maker?". True means sell aggressor.
+    let mut e = engine();
+    e.submit(true, p("100"), p("1")).unwrap();
+    e.step(&book(1011, "100", "100.02")).unwrap();
+    let raw = r#"{"e":"aggTrade","E":1020,"s":"TESTUSDT","a":1,"p":"100","q":"3","f":1,"l":2,"T":1020,"m":true,"M":true}"#;
+    let parsed = Trade::parse(raw, "TESTUSDT").unwrap();
+    assert!(parsed.buyer_is_maker);
+    e.step(&Tick {
+        time_ms: 1020,
+        sequence: 1020,
+        input: Input::Trade { trade: parsed },
+    })
+    .unwrap();
+    assert_eq!(e.base, p("1") as i128);
+    e.submit(false, p("100.02"), p("1")).unwrap();
+    e.step(&book(1031, "100", "100.02")).unwrap();
+    let raw = r#"{"e":"aggTrade","E":1040,"s":"TESTUSDT","a":2,"p":"100.02","q":"3","f":3,"l":4,"T":1040,"m":false,"M":true}"#;
+    let parsed = Trade::parse(raw, "TESTUSDT").unwrap();
+    assert!(!parsed.buyer_is_maker);
+    e.step(&Tick {
+        time_ms: 1040,
+        sequence: 1040,
+        input: Input::Trade { trade: parsed },
+    })
+    .unwrap();
+    assert_eq!(e.base, 0);
+    assert_eq!(e.fills.len(), 2);
+    e.reconcile().unwrap();
+}
+#[test]
+fn sell_post_only_rejects_at_bid_even_with_sufficient_inventory() {
+    let mut e = engine();
+    e.submit(true, p("100"), p("1")).unwrap();
+    e.step(&book(1011, "100", "100.02")).unwrap();
+    e.step(&trade(1020, 1020, "100", "3", true)).unwrap();
+    assert!(e.submit(false, p("100"), p("1")).unwrap());
+    e.step(&book(1031, "100", "100.02")).unwrap();
+    assert_eq!(e.rejected, 1);
+    assert!(e.orders.is_empty());
+    assert_eq!(e.fills.len(), 1);
+    assert_eq!(e.base, p("1") as i128);
+    e.reconcile().unwrap();
+}
