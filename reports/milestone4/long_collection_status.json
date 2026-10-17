@@ -1,0 +1,51 @@
+{
+  "result_type": "observed_collection_status_not_backtest",
+  "captured_at_ms": 1792251828118,
+  "run": ".local/long-captures/session-1792251264110",
+  "target_seconds": 86400,
+  "elapsed_seconds": 564,
+  "completion": "ongoing; no completed 24-hour claim",
+  "markets": {
+    "BTCUSDT": {
+      "state": "synchronized",
+      "session": "9b1b5115-4bbf-49d5-909a-1b91fb98f09f",
+      "last_received_ms": 1792251828099,
+      "metrics": {
+        "connection_attempts": 1,
+        "reconnections": 0,
+        "synchronization_failures": 0,
+        "data_gaps": 0,
+        "duplicates": 9,
+        "invalid_messages": 0,
+        "stale_events": 0,
+        "disconnections": 0,
+        "buffer_overflows": 0,
+        "recording_failures": 0,
+        "updates": 5615,
+        "last_lag_ms": 85,
+        "max_lag_ms": 273
+      }
+    },
+    "ETHUSDT": {
+      "state": "synchronized",
+      "session": "7d9815ee-faa8-48cc-9e72-27b0728664a0",
+      "last_received_ms": 1792251828103,
+      "metrics": {
+        "connection_attempts": 1,
+        "reconnections": 0,
+        "synchronization_failures": 0,
+        "data_gaps": 0,
+        "duplicates": 7,
+        "invalid_messages": 0,
+        "stale_events": 0,
+        "disconnections": 0,
+        "buffer_overflows": 0,
+        "recording_failures": 0,
+        "updates": 5461,
+        "last_lag_ms": 88,
+        "max_lag_ms": 338
+      }
+    }
+  },
+  "held_out_policy": "No strategy evaluation on new collection; do not inspect future test outcomes during development."
+}

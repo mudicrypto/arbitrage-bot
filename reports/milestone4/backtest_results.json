@@ -1,0 +1,4283 @@
+{
+  "schema_version": 1,
+  "label": "PRELIMINARY_SIMULATED_ON_SHORT_OBSERVED_DATA",
+  "source": ".local/research/run-1792248889904",
+  "config_sha256": "38887de25287f3556e2e422f0d7f95cfb817f48c77e1fe7fdc7049bb8eb9c21b",
+  "selection_policy": "Predeclared scenario grid; no optimization or selection based on held-out test outcomes. Final test is disabled by default; split embargo is 60 seconds or longer.",
+  "final_test_evaluated": false,
+  "summaries": [
+    {
+      "symbol": "USDCUSDT",
+      "scenario": "standard_conservative",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": false,
+      "account_access_verified": false,
+      "start_ms": 1792248889916,
+      "end_ms": 1792248979910,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 1,
+      "accepted_orders": 1,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 1,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "USDCUSDT",
+      "scenario": "standard_cancel_credit",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": false,
+      "account_access_verified": false,
+      "start_ms": 1792248889916,
+      "end_ms": 1792248979910,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 1,
+      "accepted_orders": 1,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 1,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "USDCUSDT",
+      "scenario": "discounted_hypothetical",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248889916,
+      "end_ms": 1792248979910,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 1,
+      "accepted_orders": 1,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 1,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "USDCUSDT",
+      "scenario": "zero_maker_hypothetical",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248889916,
+      "end_ms": 1792248979910,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 1,
+      "accepted_orders": 1,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 1,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "USDCUSDT",
+      "scenario": "maker_rebate_hypothetical",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248889916,
+      "end_ms": 1792248979910,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 1,
+      "accepted_orders": 1,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 1,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "USDCUSDT",
+      "scenario": "stress_cost_latency",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248889916,
+      "end_ms": 1792248979910,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 1,
+      "accepted_orders": 1,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 1,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "USDCUSDT",
+      "scenario": "interrupted_feed",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248889916,
+      "end_ms": 1792248979910,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 4,
+      "accepted_orders": 4,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 0.25,
+      "rejected_orders": 0,
+      "cancelled_orders": 1,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": false,
+      "coverage_interruptions": 3,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "USDCUSDT",
+      "scenario": "volatility_adjusted",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": false,
+      "account_access_verified": false,
+      "start_ms": 1792248889916,
+      "end_ms": 1792248979910,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 1,
+      "accepted_orders": 1,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 1,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "USDCUSDT",
+      "scenario": "wider_lower_inventory",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": false,
+      "account_access_verified": false,
+      "start_ms": 1792248889916,
+      "end_ms": 1792248979910,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 1,
+      "accepted_orders": 1,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 1,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "BTCUSDT",
+      "scenario": "standard_conservative",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": false,
+      "account_access_verified": false,
+      "start_ms": 1792248892917,
+      "end_ms": 1792248981410,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 2,
+      "accepted_orders": 2,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 2,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "BTCUSDT",
+      "scenario": "standard_cancel_credit",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": false,
+      "account_access_verified": false,
+      "start_ms": 1792248892917,
+      "end_ms": 1792248981410,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 2,
+      "accepted_orders": 2,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 2,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "BTCUSDT",
+      "scenario": "discounted_hypothetical",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248892917,
+      "end_ms": 1792248981410,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 2,
+      "accepted_orders": 2,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 2,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "BTCUSDT",
+      "scenario": "zero_maker_hypothetical",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248892917,
+      "end_ms": 1792248981410,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 2,
+      "accepted_orders": 2,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 2,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "BTCUSDT",
+      "scenario": "maker_rebate_hypothetical",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248892917,
+      "end_ms": 1792248981410,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 2,
+      "accepted_orders": 2,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 2,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "BTCUSDT",
+      "scenario": "stress_cost_latency",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248892917,
+      "end_ms": 1792248981410,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 2,
+      "accepted_orders": 2,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 2,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "BTCUSDT",
+      "scenario": "interrupted_feed",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248892917,
+      "end_ms": 1792248981410,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 4,
+      "accepted_orders": 4,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 0.5,
+      "rejected_orders": 0,
+      "cancelled_orders": 2,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": false,
+      "coverage_interruptions": 3,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "BTCUSDT",
+      "scenario": "volatility_adjusted",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": false,
+      "account_access_verified": false,
+      "start_ms": 1792248892917,
+      "end_ms": 1792248981410,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 2,
+      "accepted_orders": 2,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 2,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "BTCUSDT",
+      "scenario": "wider_lower_inventory",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": false,
+      "account_access_verified": false,
+      "start_ms": 1792248892917,
+      "end_ms": 1792248981410,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 2,
+      "accepted_orders": 2,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 2,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "ETHUSDT",
+      "scenario": "standard_conservative",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": false,
+      "account_access_verified": false,
+      "start_ms": 1792248895919,
+      "end_ms": 1792248982911,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 3,
+      "accepted_orders": 3,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 3,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "ETHUSDT",
+      "scenario": "standard_cancel_credit",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": false,
+      "account_access_verified": false,
+      "start_ms": 1792248895919,
+      "end_ms": 1792248982911,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 3,
+      "accepted_orders": 3,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 3,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "ETHUSDT",
+      "scenario": "discounted_hypothetical",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248895919,
+      "end_ms": 1792248982911,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 3,
+      "accepted_orders": 3,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 3,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "ETHUSDT",
+      "scenario": "zero_maker_hypothetical",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248895919,
+      "end_ms": 1792248982911,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 3,
+      "accepted_orders": 3,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 3,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "ETHUSDT",
+      "scenario": "maker_rebate_hypothetical",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248895919,
+      "end_ms": 1792248982911,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 3,
+      "accepted_orders": 3,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 3,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "ETHUSDT",
+      "scenario": "stress_cost_latency",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248895919,
+      "end_ms": 1792248982911,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 3,
+      "accepted_orders": 3,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 3,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "ETHUSDT",
+      "scenario": "interrupted_feed",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248895919,
+      "end_ms": 1792248982911,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 5,
+      "accepted_orders": 5,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 0.4,
+      "rejected_orders": 0,
+      "cancelled_orders": 2,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": false,
+      "coverage_interruptions": 3,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "ETHUSDT",
+      "scenario": "volatility_adjusted",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": false,
+      "account_access_verified": false,
+      "start_ms": 1792248895919,
+      "end_ms": 1792248982911,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 3,
+      "accepted_orders": 3,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 3,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "ETHUSDT",
+      "scenario": "wider_lower_inventory",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": false,
+      "account_access_verified": false,
+      "start_ms": 1792248895919,
+      "end_ms": 1792248982911,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 3,
+      "accepted_orders": 3,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 3,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "USD1USDT",
+      "scenario": "standard_conservative",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": false,
+      "account_access_verified": false,
+      "start_ms": 1792248898921,
+      "end_ms": 1792248984412,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 6,
+      "accepted_orders": 6,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 0.16666666666666666,
+      "rejected_orders": 0,
+      "cancelled_orders": 1,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": false,
+      "coverage_interruptions": 5,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "USD1USDT",
+      "scenario": "standard_cancel_credit",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": false,
+      "account_access_verified": false,
+      "start_ms": 1792248898921,
+      "end_ms": 1792248984412,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 6,
+      "accepted_orders": 6,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 0.16666666666666666,
+      "rejected_orders": 0,
+      "cancelled_orders": 1,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": false,
+      "coverage_interruptions": 5,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "USD1USDT",
+      "scenario": "discounted_hypothetical",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248898921,
+      "end_ms": 1792248984412,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 6,
+      "accepted_orders": 6,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 0.16666666666666666,
+      "rejected_orders": 0,
+      "cancelled_orders": 1,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": false,
+      "coverage_interruptions": 5,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "USD1USDT",
+      "scenario": "zero_maker_hypothetical",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248898921,
+      "end_ms": 1792248984412,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 6,
+      "accepted_orders": 6,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 0.16666666666666666,
+      "rejected_orders": 0,
+      "cancelled_orders": 1,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": false,
+      "coverage_interruptions": 5,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "USD1USDT",
+      "scenario": "maker_rebate_hypothetical",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248898921,
+      "end_ms": 1792248984412,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 6,
+      "accepted_orders": 6,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 0.16666666666666666,
+      "rejected_orders": 0,
+      "cancelled_orders": 1,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": false,
+      "coverage_interruptions": 5,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "USD1USDT",
+      "scenario": "stress_cost_latency",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248898921,
+      "end_ms": 1792248984412,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 6,
+      "accepted_orders": 6,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 0.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 0,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": false,
+      "coverage_interruptions": 5,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "USD1USDT",
+      "scenario": "interrupted_feed",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248898921,
+      "end_ms": 1792248984412,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 8,
+      "accepted_orders": 7,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 0.125,
+      "rejected_orders": 0,
+      "cancelled_orders": 1,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": false,
+      "coverage_interruptions": 7,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "USD1USDT",
+      "scenario": "volatility_adjusted",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": false,
+      "account_access_verified": false,
+      "start_ms": 1792248898921,
+      "end_ms": 1792248984412,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 6,
+      "accepted_orders": 6,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 0.16666666666666666,
+      "rejected_orders": 0,
+      "cancelled_orders": 1,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": false,
+      "coverage_interruptions": 5,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "USD1USDT",
+      "scenario": "wider_lower_inventory",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": false,
+      "account_access_verified": false,
+      "start_ms": 1792248898921,
+      "end_ms": 1792248984412,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 6,
+      "accepted_orders": 6,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 0.16666666666666666,
+      "rejected_orders": 0,
+      "cancelled_orders": 1,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": false,
+      "coverage_interruptions": 5,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "SOLUSDT",
+      "scenario": "standard_conservative",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": false,
+      "account_access_verified": false,
+      "start_ms": 1792248901922,
+      "end_ms": 1792248985913,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 2,
+      "accepted_orders": 2,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 0.5,
+      "rejected_orders": 0,
+      "cancelled_orders": 1,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "SOLUSDT",
+      "scenario": "standard_cancel_credit",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": false,
+      "account_access_verified": false,
+      "start_ms": 1792248901922,
+      "end_ms": 1792248985913,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 2,
+      "accepted_orders": 2,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 0.5,
+      "rejected_orders": 0,
+      "cancelled_orders": 1,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "SOLUSDT",
+      "scenario": "discounted_hypothetical",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248901922,
+      "end_ms": 1792248985913,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 2,
+      "accepted_orders": 2,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 0.5,
+      "rejected_orders": 0,
+      "cancelled_orders": 1,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "SOLUSDT",
+      "scenario": "zero_maker_hypothetical",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248901922,
+      "end_ms": 1792248985913,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 2,
+      "accepted_orders": 2,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 0.5,
+      "rejected_orders": 0,
+      "cancelled_orders": 1,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "SOLUSDT",
+      "scenario": "maker_rebate_hypothetical",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248901922,
+      "end_ms": 1792248985913,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 2,
+      "accepted_orders": 2,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 0.5,
+      "rejected_orders": 0,
+      "cancelled_orders": 1,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "SOLUSDT",
+      "scenario": "stress_cost_latency",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248901922,
+      "end_ms": 1792248985913,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 2,
+      "accepted_orders": 2,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 2,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "SOLUSDT",
+      "scenario": "interrupted_feed",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248901922,
+      "end_ms": 1792248985913,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 4,
+      "accepted_orders": 4,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 0.25,
+      "rejected_orders": 0,
+      "cancelled_orders": 1,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": false,
+      "coverage_interruptions": 2,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "SOLUSDT",
+      "scenario": "volatility_adjusted",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": false,
+      "account_access_verified": false,
+      "start_ms": 1792248901922,
+      "end_ms": 1792248985913,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 2,
+      "accepted_orders": 2,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 0.5,
+      "rejected_orders": 0,
+      "cancelled_orders": 1,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "SOLUSDT",
+      "scenario": "wider_lower_inventory",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": false,
+      "account_access_verified": false,
+      "start_ms": 1792248901922,
+      "end_ms": 1792248985913,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 2,
+      "accepted_orders": 2,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 0.5,
+      "rejected_orders": 0,
+      "cancelled_orders": 1,
+      "open_orders_at_end": 1,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "ZECUSDT",
+      "scenario": "standard_conservative",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": false,
+      "account_access_verified": false,
+      "start_ms": 1792248904922,
+      "end_ms": 1792248987413,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 19,
+      "accepted_orders": 19,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 19,
+      "open_orders_at_end": 0,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "ZECUSDT",
+      "scenario": "standard_cancel_credit",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": false,
+      "account_access_verified": false,
+      "start_ms": 1792248904922,
+      "end_ms": 1792248987413,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 19,
+      "accepted_orders": 19,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 19,
+      "open_orders_at_end": 0,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "ZECUSDT",
+      "scenario": "discounted_hypothetical",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248904922,
+      "end_ms": 1792248987413,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 19,
+      "accepted_orders": 19,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 19,
+      "open_orders_at_end": 0,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "ZECUSDT",
+      "scenario": "zero_maker_hypothetical",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248904922,
+      "end_ms": 1792248987413,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 19,
+      "accepted_orders": 19,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 19,
+      "open_orders_at_end": 0,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "ZECUSDT",
+      "scenario": "maker_rebate_hypothetical",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248904922,
+      "end_ms": 1792248987413,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 19,
+      "accepted_orders": 19,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 19,
+      "open_orders_at_end": 0,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "ZECUSDT",
+      "scenario": "stress_cost_latency",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248904922,
+      "end_ms": 1792248987413,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 19,
+      "accepted_orders": 19,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 19,
+      "open_orders_at_end": 0,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "ZECUSDT",
+      "scenario": "interrupted_feed",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": true,
+      "account_access_verified": false,
+      "start_ms": 1792248904922,
+      "end_ms": 1792248987413,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 16,
+      "accepted_orders": 16,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 0.875,
+      "rejected_orders": 0,
+      "cancelled_orders": 14,
+      "open_orders_at_end": 0,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": false,
+      "coverage_interruptions": 2,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "ZECUSDT",
+      "scenario": "volatility_adjusted",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": false,
+      "account_access_verified": false,
+      "start_ms": 1792248904922,
+      "end_ms": 1792248987413,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 19,
+      "accepted_orders": 19,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 19,
+      "open_orders_at_end": 0,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    },
+    {
+      "symbol": "ZECUSDT",
+      "scenario": "wider_lower_inventory",
+      "split": "train",
+      "result_type": "simulated",
+      "hypothetical": false,
+      "account_access_verified": false,
+      "start_ms": 1792248904922,
+      "end_ms": 1792248987413,
+      "gross_spread_capture_atoms": 0,
+      "maker_fees_atoms": 0,
+      "rebate_atoms": 0,
+      "closeout_spread_cost_atoms": 0,
+      "slippage_stress_cost_atoms": 0,
+      "estimated_taker_fee_atoms": 0,
+      "inventory_pnl_atoms": 0,
+      "net_pnl_atoms": 0,
+      "estimated_closeout_cost_atoms": 0,
+      "closeout_adjusted_pnl_atoms": 0,
+      "pnl_per_million_usdt": null,
+      "executed_notional_atoms": 0,
+      "turnover": 0.0,
+      "max_drawdown_atoms": 0,
+      "fill_count": 0,
+      "submitted_orders": 19,
+      "accepted_orders": 19,
+      "fill_ratio": 0.0,
+      "filled_quantity_ratio": 0.0,
+      "cancellation_ratio": 1.0,
+      "rejected_orders": 0,
+      "cancelled_orders": 19,
+      "open_orders_at_end": 0,
+      "exposure_utilization": 0.0,
+      "max_inventory_notional_atoms": 0,
+      "markouts": [
+        {
+          "seconds": 1,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 5,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 30,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        },
+        {
+          "seconds": 60,
+          "completed": 0,
+          "mean_bps": null,
+          "adverse_quote_atoms": null
+        }
+      ],
+      "data_quality_ok": true,
+      "coverage_interruptions": 0,
+      "drawdown_stopped": false,
+      "net_positive_after_costs_and_without_favorable_inventory": false,
+      "no_trade_pnl_atoms": 0,
+      "no_trade_drawdown_atoms": 0,
+      "daily_pnl_atoms": {
+        "2026-10-17": 0
+      },
+      "daily_max_drawdown_atoms": {
+        "2026-10-17": 0
+      },
+      "fee_assets": {},
+      "warnings": [
+        "Queue position and fills are model assumptions, never observed own executions. Exact-price trade evidence only; no fill from a touch or depth cancellation.",
+        "Unknown data intervals invalidate profitability conclusions; outstanding orders are not assumed reconciled at dataset end.",
+        "Markout costs are attribution diagnostics already reflected in inventory P&L; do not subtract them again."
+      ]
+    }
+  ],
+  "limitations": [
+    "Short M3 history is not representative; empty validation/test intervals after embargo cannot establish out-of-sample performance.",
+    "Independent $5000 one-market simulations, not simultaneously funded multi-market portfolios.",
+    "MBP and aggregate trades cannot identify exact queues, hidden priority or individual counterparties. Results are modeled, never observed own fills.",
+    "No-trade benchmark is $5000 cash, zero exposure/fees. Inventory is acquired only through evidence-based modeled fills, never invented initial stock.",
+    "No account-eligible promotion or rebate has been verified. Hypothetical fees must not be presented as accessible tiers."
+  ]
+}

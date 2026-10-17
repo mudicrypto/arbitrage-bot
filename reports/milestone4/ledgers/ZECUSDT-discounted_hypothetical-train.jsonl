@@ -1,0 +1,3 @@
+{"asset":"USDT","delta":500000000000,"order_id":null,"reason":"simulated_initial_capital","result_type":"simulated","time_ms":0}
+{"asset":"USDT","delta":-2500000000,"order_id":null,"reason":"hypothetical_BNB_endowment","result_type":"simulated","time_ms":0}
+{"asset":"BNB","delta":2500000,"order_id":null,"reason":"hypothetical_BNB_endowment","result_type":"simulated","time_ms":0}

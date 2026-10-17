@@ -1,0 +1,476 @@
+{
+  "capital_usdt": 5000,
+  "train_fraction_ppm": 500000,
+  "validation_fraction_ppm": 250000,
+  "split_embargo_ms": 60000,
+  "scenarios": [
+    {
+      "name": "standard_conservative",
+      "queue": "trade_depletion",
+      "queue_multiplier_ppm": 1000000,
+      "trade_participation_ppm": 1000000,
+      "entry_latency_ms": 50,
+      "cancel_latency_ms": 100,
+      "report_latency_ms": 500,
+      "latency_jitter_ms": 10,
+      "seed": 42,
+      "strategy": {
+        "spread_bps": 4,
+        "volatility_multiplier": 0,
+        "inventory_skew_bps": 10,
+        "clip_usdt": 100,
+        "inventory_limit_usdt": 500,
+        "refresh_ms": 2000,
+        "refresh_ticks": 2,
+        "required_edge_bps": 2,
+        "max_spread_bps": 50,
+        "stale_ms": 2000,
+        "drawdown_stop_usdt": 50
+      },
+      "fees": {
+        "name": "manual_standard",
+        "account_verified": false,
+        "description": "Unverified conservative manual assumption: 10bps maker and 10bps taker each side; no rebate or promotion.",
+        "periods": [
+          {
+            "from_ms": 0,
+            "until_ms": null,
+            "symbol": null,
+            "standard_maker_microbps": 10000000,
+            "standard_taker_microbps": 10000000,
+            "buy_extra_microbps": 0,
+            "sell_extra_microbps": 0,
+            "bnb_discount_ppm": 0,
+            "asset": "quote",
+            "bnb_quote_price_units": null
+          }
+        ]
+      },
+      "maker_rebate_microbps": 0,
+      "hypothetical": false,
+      "promotion_verified": false,
+      "verification_reference": null,
+      "account_access_verified": false,
+      "closeout_slippage_bps": 2,
+      "adverse_terminal_shock_bps": 0,
+      "outage_every_ms": null,
+      "outage_duration_ms": 0
+    },
+    {
+      "name": "standard_cancel_credit",
+      "queue": "proportional_cancellation",
+      "queue_multiplier_ppm": 1000000,
+      "trade_participation_ppm": 1000000,
+      "entry_latency_ms": 50,
+      "cancel_latency_ms": 100,
+      "report_latency_ms": 500,
+      "latency_jitter_ms": 10,
+      "seed": 42,
+      "strategy": {
+        "spread_bps": 4,
+        "volatility_multiplier": 0,
+        "inventory_skew_bps": 10,
+        "clip_usdt": 100,
+        "inventory_limit_usdt": 500,
+        "refresh_ms": 2000,
+        "refresh_ticks": 2,
+        "required_edge_bps": 2,
+        "max_spread_bps": 50,
+        "stale_ms": 2000,
+        "drawdown_stop_usdt": 50
+      },
+      "fees": {
+        "name": "manual_standard",
+        "account_verified": false,
+        "description": "Unverified conservative manual assumption: 10bps maker and 10bps taker each side; no rebate or promotion.",
+        "periods": [
+          {
+            "from_ms": 0,
+            "until_ms": null,
+            "symbol": null,
+            "standard_maker_microbps": 10000000,
+            "standard_taker_microbps": 10000000,
+            "buy_extra_microbps": 0,
+            "sell_extra_microbps": 0,
+            "bnb_discount_ppm": 0,
+            "asset": "quote",
+            "bnb_quote_price_units": null
+          }
+        ]
+      },
+      "maker_rebate_microbps": 0,
+      "hypothetical": false,
+      "promotion_verified": false,
+      "verification_reference": null,
+      "account_access_verified": false,
+      "closeout_slippage_bps": 2,
+      "adverse_terminal_shock_bps": 0,
+      "outage_every_ms": null,
+      "outage_duration_ms": 0
+    },
+    {
+      "name": "discounted_hypothetical",
+      "queue": "trade_depletion",
+      "queue_multiplier_ppm": 1000000,
+      "trade_participation_ppm": 1000000,
+      "entry_latency_ms": 50,
+      "cancel_latency_ms": 100,
+      "report_latency_ms": 500,
+      "latency_jitter_ms": 10,
+      "seed": 42,
+      "strategy": {
+        "spread_bps": 4,
+        "volatility_multiplier": 0,
+        "inventory_skew_bps": 10,
+        "clip_usdt": 100,
+        "inventory_limit_usdt": 500,
+        "refresh_ms": 2000,
+        "refresh_ticks": 2,
+        "required_edge_bps": 2,
+        "max_spread_bps": 50,
+        "stale_ms": 2000,
+        "drawdown_stop_usdt": 50
+      },
+      "fees": {
+        "name": "hypothetical_bnb_discount",
+        "account_verified": false,
+        "description": "Unverified 25% standard-commission discount, fees in BNB; conversion assumes 1000 USDT/BNB solely for fee-asset arithmetic, not a market observation.",
+        "periods": [
+          {
+            "from_ms": 0,
+            "until_ms": null,
+            "symbol": null,
+            "standard_maker_microbps": 10000000,
+            "standard_taker_microbps": 10000000,
+            "buy_extra_microbps": 0,
+            "sell_extra_microbps": 0,
+            "bnb_discount_ppm": 250000,
+            "asset": "bnb",
+            "bnb_quote_price_units": 100000000000
+          }
+        ]
+      },
+      "maker_rebate_microbps": 0,
+      "hypothetical": true,
+      "promotion_verified": false,
+      "verification_reference": null,
+      "account_access_verified": false,
+      "closeout_slippage_bps": 2,
+      "adverse_terminal_shock_bps": 0,
+      "outage_every_ms": null,
+      "outage_duration_ms": 0
+    },
+    {
+      "name": "zero_maker_hypothetical",
+      "queue": "trade_depletion",
+      "queue_multiplier_ppm": 1000000,
+      "trade_participation_ppm": 1000000,
+      "entry_latency_ms": 50,
+      "cancel_latency_ms": 100,
+      "report_latency_ms": 500,
+      "latency_jitter_ms": 10,
+      "seed": 42,
+      "strategy": {
+        "spread_bps": 4,
+        "volatility_multiplier": 0,
+        "inventory_skew_bps": 10,
+        "clip_usdt": 100,
+        "inventory_limit_usdt": 500,
+        "refresh_ms": 2000,
+        "refresh_ticks": 2,
+        "required_edge_bps": 2,
+        "max_spread_bps": 50,
+        "stale_ms": 2000,
+        "drawdown_stop_usdt": 50
+      },
+      "fees": {
+        "name": "hypothetical_zero_maker",
+        "account_verified": false,
+        "description": "Hypothetical promotional maker-zero scenario only; eligibility is NOT asserted; taker remains 10bps.",
+        "periods": [
+          {
+            "from_ms": 0,
+            "until_ms": null,
+            "symbol": null,
+            "standard_maker_microbps": 0,
+            "standard_taker_microbps": 10000000,
+            "buy_extra_microbps": 0,
+            "sell_extra_microbps": 0,
+            "bnb_discount_ppm": 0,
+            "asset": "quote",
+            "bnb_quote_price_units": null
+          }
+        ]
+      },
+      "maker_rebate_microbps": 0,
+      "hypothetical": true,
+      "promotion_verified": false,
+      "verification_reference": null,
+      "account_access_verified": false,
+      "closeout_slippage_bps": 2,
+      "adverse_terminal_shock_bps": 0,
+      "outage_every_ms": null,
+      "outage_duration_ms": 0
+    },
+    {
+      "name": "maker_rebate_hypothetical",
+      "queue": "trade_depletion",
+      "queue_multiplier_ppm": 1000000,
+      "trade_participation_ppm": 1000000,
+      "entry_latency_ms": 50,
+      "cancel_latency_ms": 100,
+      "report_latency_ms": 500,
+      "latency_jitter_ms": 10,
+      "seed": 42,
+      "strategy": {
+        "spread_bps": 4,
+        "volatility_multiplier": 0,
+        "inventory_skew_bps": 10,
+        "clip_usdt": 100,
+        "inventory_limit_usdt": 500,
+        "refresh_ms": 2000,
+        "refresh_ticks": 2,
+        "required_edge_bps": 2,
+        "max_spread_bps": 50,
+        "stale_ms": 2000,
+        "drawdown_stop_usdt": 50
+      },
+      "fees": {
+        "name": "hypothetical_zero_maker",
+        "account_verified": false,
+        "description": "Hypothetical promotional maker-zero scenario only; eligibility is NOT asserted; taker remains 10bps.",
+        "periods": [
+          {
+            "from_ms": 0,
+            "until_ms": null,
+            "symbol": null,
+            "standard_maker_microbps": 0,
+            "standard_taker_microbps": 10000000,
+            "buy_extra_microbps": 0,
+            "sell_extra_microbps": 0,
+            "bnb_discount_ppm": 0,
+            "asset": "quote",
+            "bnb_quote_price_units": null
+          }
+        ]
+      },
+      "maker_rebate_microbps": 1000000,
+      "hypothetical": true,
+      "promotion_verified": false,
+      "verification_reference": null,
+      "account_access_verified": false,
+      "closeout_slippage_bps": 2,
+      "adverse_terminal_shock_bps": 0,
+      "outage_every_ms": null,
+      "outage_duration_ms": 0
+    },
+    {
+      "name": "stress_cost_latency",
+      "queue": "trade_depletion",
+      "queue_multiplier_ppm": 2000000,
+      "trade_participation_ppm": 500000,
+      "entry_latency_ms": 500,
+      "cancel_latency_ms": 500,
+      "report_latency_ms": 500,
+      "latency_jitter_ms": 10,
+      "seed": 42,
+      "strategy": {
+        "spread_bps": 4,
+        "volatility_multiplier": 0,
+        "inventory_skew_bps": 10,
+        "clip_usdt": 100,
+        "inventory_limit_usdt": 500,
+        "refresh_ms": 2000,
+        "refresh_ticks": 2,
+        "required_edge_bps": 2,
+        "max_spread_bps": 50,
+        "stale_ms": 2000,
+        "drawdown_stop_usdt": 50
+      },
+      "fees": {
+        "name": "manual_standard",
+        "account_verified": false,
+        "description": "Unverified conservative manual assumption: 10bps maker and 10bps taker each side; no rebate or promotion.",
+        "periods": [
+          {
+            "from_ms": 0,
+            "until_ms": null,
+            "symbol": null,
+            "standard_maker_microbps": 10000000,
+            "standard_taker_microbps": 10000000,
+            "buy_extra_microbps": 0,
+            "sell_extra_microbps": 0,
+            "bnb_discount_ppm": 0,
+            "asset": "quote",
+            "bnb_quote_price_units": null
+          }
+        ]
+      },
+      "maker_rebate_microbps": 0,
+      "hypothetical": true,
+      "promotion_verified": false,
+      "verification_reference": null,
+      "account_access_verified": false,
+      "closeout_slippage_bps": 10,
+      "adverse_terminal_shock_bps": 50,
+      "outage_every_ms": null,
+      "outage_duration_ms": 0
+    },
+    {
+      "name": "interrupted_feed",
+      "queue": "trade_depletion",
+      "queue_multiplier_ppm": 1000000,
+      "trade_participation_ppm": 1000000,
+      "entry_latency_ms": 50,
+      "cancel_latency_ms": 100,
+      "report_latency_ms": 500,
+      "latency_jitter_ms": 10,
+      "seed": 42,
+      "strategy": {
+        "spread_bps": 4,
+        "volatility_multiplier": 0,
+        "inventory_skew_bps": 10,
+        "clip_usdt": 100,
+        "inventory_limit_usdt": 500,
+        "refresh_ms": 2000,
+        "refresh_ticks": 2,
+        "required_edge_bps": 2,
+        "max_spread_bps": 50,
+        "stale_ms": 2000,
+        "drawdown_stop_usdt": 50
+      },
+      "fees": {
+        "name": "manual_standard",
+        "account_verified": false,
+        "description": "Unverified conservative manual assumption: 10bps maker and 10bps taker each side; no rebate or promotion.",
+        "periods": [
+          {
+            "from_ms": 0,
+            "until_ms": null,
+            "symbol": null,
+            "standard_maker_microbps": 10000000,
+            "standard_taker_microbps": 10000000,
+            "buy_extra_microbps": 0,
+            "sell_extra_microbps": 0,
+            "bnb_discount_ppm": 0,
+            "asset": "quote",
+            "bnb_quote_price_units": null
+          }
+        ]
+      },
+      "maker_rebate_microbps": 0,
+      "hypothetical": true,
+      "promotion_verified": false,
+      "verification_reference": null,
+      "account_access_verified": false,
+      "closeout_slippage_bps": 2,
+      "adverse_terminal_shock_bps": 0,
+      "outage_every_ms": 30000,
+      "outage_duration_ms": 5000
+    },
+    {
+      "name": "volatility_adjusted",
+      "queue": "trade_depletion",
+      "queue_multiplier_ppm": 1000000,
+      "trade_participation_ppm": 1000000,
+      "entry_latency_ms": 50,
+      "cancel_latency_ms": 100,
+      "report_latency_ms": 500,
+      "latency_jitter_ms": 10,
+      "seed": 42,
+      "strategy": {
+        "spread_bps": 4,
+        "volatility_multiplier": 4,
+        "inventory_skew_bps": 10,
+        "clip_usdt": 100,
+        "inventory_limit_usdt": 500,
+        "refresh_ms": 2000,
+        "refresh_ticks": 2,
+        "required_edge_bps": 2,
+        "max_spread_bps": 50,
+        "stale_ms": 2000,
+        "drawdown_stop_usdt": 50
+      },
+      "fees": {
+        "name": "manual_standard",
+        "account_verified": false,
+        "description": "Unverified conservative manual assumption: 10bps maker and 10bps taker each side; no rebate or promotion.",
+        "periods": [
+          {
+            "from_ms": 0,
+            "until_ms": null,
+            "symbol": null,
+            "standard_maker_microbps": 10000000,
+            "standard_taker_microbps": 10000000,
+            "buy_extra_microbps": 0,
+            "sell_extra_microbps": 0,
+            "bnb_discount_ppm": 0,
+            "asset": "quote",
+            "bnb_quote_price_units": null
+          }
+        ]
+      },
+      "maker_rebate_microbps": 0,
+      "hypothetical": false,
+      "promotion_verified": false,
+      "verification_reference": null,
+      "account_access_verified": false,
+      "closeout_slippage_bps": 2,
+      "adverse_terminal_shock_bps": 0,
+      "outage_every_ms": null,
+      "outage_duration_ms": 0
+    },
+    {
+      "name": "wider_lower_inventory",
+      "queue": "trade_depletion",
+      "queue_multiplier_ppm": 1000000,
+      "trade_participation_ppm": 1000000,
+      "entry_latency_ms": 50,
+      "cancel_latency_ms": 100,
+      "report_latency_ms": 500,
+      "latency_jitter_ms": 10,
+      "seed": 42,
+      "strategy": {
+        "spread_bps": 30,
+        "volatility_multiplier": 0,
+        "inventory_skew_bps": 10,
+        "clip_usdt": 100,
+        "inventory_limit_usdt": 200,
+        "refresh_ms": 2000,
+        "refresh_ticks": 2,
+        "required_edge_bps": 2,
+        "max_spread_bps": 50,
+        "stale_ms": 2000,
+        "drawdown_stop_usdt": 50
+      },
+      "fees": {
+        "name": "manual_standard",
+        "account_verified": false,
+        "description": "Unverified conservative manual assumption: 10bps maker and 10bps taker each side; no rebate or promotion.",
+        "periods": [
+          {
+            "from_ms": 0,
+            "until_ms": null,
+            "symbol": null,
+            "standard_maker_microbps": 10000000,
+            "standard_taker_microbps": 10000000,
+            "buy_extra_microbps": 0,
+            "sell_extra_microbps": 0,
+            "bnb_discount_ppm": 0,
+            "asset": "quote",
+            "bnb_quote_price_units": null
+          }
+        ]
+      },
+      "maker_rebate_microbps": 0,
+      "hypothetical": false,
+      "promotion_verified": false,
+      "verification_reference": null,
+      "account_access_verified": false,
+      "closeout_slippage_bps": 2,
+      "adverse_terminal_shock_bps": 0,
+      "outage_every_ms": null,
+      "outage_duration_ms": 0
+    }
+  ]
+}

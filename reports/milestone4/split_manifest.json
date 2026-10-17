@@ -1,0 +1,104 @@
+{
+  "BTCUSDT": {
+    "embargo_ms": 60000,
+    "final_test_held_out": true,
+    "short_sample_empty_splits_are_not_validation": true,
+    "test": [
+      1792249069904,
+      1792249069904
+    ],
+    "train": [
+      1792248892917,
+      1792248981410
+    ],
+    "validation": [
+      1792249025656,
+      1792249025656
+    ]
+  },
+  "ETHUSDT": {
+    "embargo_ms": 60000,
+    "final_test_held_out": true,
+    "short_sample_empty_splits_are_not_validation": true,
+    "test": [
+      1792249069904,
+      1792249069904
+    ],
+    "train": [
+      1792248895919,
+      1792248982911
+    ],
+    "validation": [
+      1792249026407,
+      1792249026407
+    ]
+  },
+  "SOLUSDT": {
+    "embargo_ms": 60000,
+    "final_test_held_out": true,
+    "short_sample_empty_splits_are_not_validation": true,
+    "test": [
+      1792249069904,
+      1792249069904
+    ],
+    "train": [
+      1792248901922,
+      1792248985913
+    ],
+    "validation": [
+      1792249027908,
+      1792249027908
+    ]
+  },
+  "USD1USDT": {
+    "embargo_ms": 60000,
+    "final_test_held_out": true,
+    "short_sample_empty_splits_are_not_validation": true,
+    "test": [
+      1792249069904,
+      1792249069904
+    ],
+    "train": [
+      1792248898921,
+      1792248984412
+    ],
+    "validation": [
+      1792249027157,
+      1792249027157
+    ]
+  },
+  "USDCUSDT": {
+    "embargo_ms": 60000,
+    "final_test_held_out": true,
+    "short_sample_empty_splits_are_not_validation": true,
+    "test": [
+      1792249069904,
+      1792249069904
+    ],
+    "train": [
+      1792248889916,
+      1792248979910
+    ],
+    "validation": [
+      1792249024907,
+      1792249024907
+    ]
+  },
+  "ZECUSDT": {
+    "embargo_ms": 60000,
+    "final_test_held_out": true,
+    "short_sample_empty_splits_are_not_validation": true,
+    "test": [
+      1792249069904,
+      1792249069904
+    ],
+    "train": [
+      1792248904922,
+      1792248987413
+    ],
+    "validation": [
+      1792249028658,
+      1792249028658
+    ]
+  }
+}

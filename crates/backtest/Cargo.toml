@@ -1,0 +1,20 @@
+[package]
+name = "mm-backtest"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+[dependencies]
+anyhow = "1"
+mm-market-data = { path = "../market-data" }
+mm-research = { path = "../research" }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["float_roundtrip"] }
+sha2 = "0.10"
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls-native-roots", "stream"] }
+chrono = "0.4"
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "time", "signal", "sync"] }
+fs2 = "0.4"
+[dev-dependencies]
+proptest = "1"
+tempfile = "3"

@@ -64,6 +64,7 @@ pub struct Config {
     pub snapshot_interval_ms: u64,
     pub proxy: Option<String>,
     pub recording: Limits,
+    pub flush_interval_ms: u64,
     pub include_trades: bool,
     pub observer: Option<Arc<dyn Observer>>,
     pub snapshot_budget: Option<Arc<tokio::sync::Mutex<Instant>>>,
@@ -87,6 +88,7 @@ impl Default for Config {
                 .or_else(|_| std::env::var("https_proxy"))
                 .ok(),
             recording: Limits::default(),
+            flush_interval_ms: 2000,
             include_trades: false,
             observer: None,
             snapshot_budget: None,
@@ -95,6 +97,10 @@ impl Default for Config {
 }
 impl Config {
     pub fn validate(&self) -> Result<()> {
+        ensure!(
+            (1..=30_000).contains(&self.flush_interval_ms),
+            "invalid recording flush interval"
+        );
         ensure!(
             self.stale_ms > 0
                 && self.max_lag_ms > 0
@@ -630,7 +636,7 @@ impl Session<'_> {
                     ensure!(self.status.last_received_ms.is_none_or(|t| now_ms().saturating_sub(t) <= self.config.stale_ms), "feed stale");
                     // Rotate before Binance's 24-hour connection expiry.
                     ensure!(started.elapsed() < Duration::from_secs(23 * 3600), "scheduled connection rotation");
-                    if last_flush.elapsed() >= Duration::from_secs(2) {
+                    if last_flush.elapsed() >= Duration::from_millis(self.config.flush_interval_ms) {
                         self.recorder.flush().inspect_err(|_| self.status.metrics.recording_failures += 1)?;
                         last_flush = Instant::now();
                     }

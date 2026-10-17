@@ -1,6 +1,6 @@
 # Crypto Market Maker
 
-Research-first Binance Spot market-making foundation. Initial research capital assumption: USD 5,000; no funds are connected. Profitability is unproven. Milestones 1–2 provide domain/exchange contracts, Binance Spot public market data, deterministic replay, a read-only control API, and PostgreSQL infrastructure. There is no trading strategy or execution engine.
+Research-first Binance Spot market-making foundation. Initial research capital assumption: USD 5,000; no funds are connected. Profitability is unproven. Milestones 1–2 provide domain/exchange contracts, Binance Spot public market data, deterministic replay, a read-only control API, and PostgreSQL infrastructure. Milestone 4 adds a local-only baseline strategy simulator; no exchange order transport exists.
 
 ## Development
 
@@ -22,7 +22,7 @@ Database credentials in Compose are public local-development defaults. Database 
 
 Cloud Rust activation: export `CARGO_HOME=/workspace/.tools/cargo`, `RUSTUP_HOME=/workspace/.tools/rustup`, and prepend `$CARGO_HOME/bin` to `PATH`.
 
-See [architecture](ARCHITECTURE.md), [roadmap](ROADMAP.md), [risk policy](RISK_POLICY.md), and [decisions](docs/DECISIONS.md). Next.js dashboard, strategy execution, realistic fills, and accounting logic are later milestones.
+See [architecture](ARCHITECTURE.md), [roadmap](ROADMAP.md), [risk policy](RISK_POLICY.md), and [decisions](docs/DECISIONS.md). Next.js, forward paper execution, durable OMS and live execution remain future separately approved work.
 
 
 ## Binance public market data (Milestone 2)
@@ -66,7 +66,7 @@ Each symbol has a 64-message transport queue and 64-event snapshot buffer, 1 MiB
 
 Every finalized segment is flushed, fsynced, renamed atomically and checked with SHA-256 on replay. A process crash can lose the unflushed tail (normally up to 2 seconds; slow storage can increase this). Shutdown attempts to flush buffered data. Disk-full/write errors clear the affected book and halt its collector; free space/fix permissions and restart to recover. Overflow means coverage is lost: pending frames may be discarded and a new session begins. The invalidation reason is recorded when storage is writable. The API never treats the last quote as usable after a failure. Fixed-size status output is atomically replaced every 250 ms; metrics are process-local and reset on restart.
 
-Stop after M2; Milestone 3 requires explicit approval. No order submission, private exchange transport, simulated fills, strategy or live trading is implemented.
+M2 itself implements public data only. M3/M4 additions below remain research; order submission and live trading are unavailable.
 
 ## Market scanner and profitability research (Milestone 3)
 
@@ -94,4 +94,22 @@ Additional read-only TypeScript routes: `/research/rankings` (JSON), `/research/
 
 Research memory is capped at 7,200 sampled book observations and one-second trade bins per symbol; inputs retain M2 frame/book bounds. Research recording uses the same recorder with up to 128 segments/symbol, at most 8 MiB each (1 GiB/symbol), a 2 MiB target, 4,096-row target, and normal two-second flush. Free storage must exceed the worst-case per-symbol reservation plus 1 GiB; memory must exceed 256 MiB per symbol plus reserve. Long/high-activity runs may evict early segments; a missing prefix, segment gap or replay mismatch disqualifies candidates. Completed runs are retained for audit rather than silently deleted; explicitly archive/remove old captures if the next resource check refuses to start. Public request rate limits remain per process, so avoid running many scanners at once on a shared IP.
 
-See [M3 findings and limitations](docs/MILESTONE_3.md). Stop after M3; M4 needs explicit approval. There are still no trading strategies, fill simulator, orders, capital allocation or private API credentials.
+See [M3 findings and limitations](docs/MILESTONE_3.md). M3 provides preliminary screening only; M4 offline simulation is described below. No live orders, capital allocation or private API credentials are available.
+
+## Execution backtesting (Milestone 4)
+
+`mm-backtest` reuses checksum-verified M2/M3 raw books and aggregate trades. All orders, fills, fees and P&L are local simulations; public price touch alone never fills an order. See [M4 assumptions and findings](docs/MILESTONE_4.md) and [preliminary results](reports/milestone4/summary.md). The short sample produced no fills or demonstrated edge. No account fees or promotional eligibility have been verified.
+
+```sh
+cargo build --workspace --locked
+./target/debug/mm-backtest audit .local reports/milestone4/all_recordings_audit.json
+./target/debug/mm-backtest run .local/research/run-1792248889904 config/backtest.json reports/milestone4
+# Public-only 24-hour target, configurable to 72 hours, two markets by default:
+./target/debug/mm-backtest collect config/long_collection.json
+# Optional connectivity smoke test (not a completed long-horizon study):
+./target/debug/mm-backtest collect config/long_collection.json --smoke-seconds 15
+```
+
+Raw captures are local/ignored and required for historical reproduction. Long capture needs a continuously running environment and disk headroom. Default retention is 1 GiB per symbol plus bounded temporary/checksum files, so active markets can evict the beginning before 24 hours. Check status/quality and archive deliberately. Existing complete-prefix research replay rejects evicted history. Backtest tape/trace caps also reject overly large inputs; multi-day evaluation requires bounded chronological blocks with explicit boundary treatment or a future streaming report runner. Never present retained fragments as continuous multi-day validation.
+
+Final test execution is disabled by default; `--include-final-test` is a deliberate evaluation action only after strategy/configuration freeze and sufficient untouched observations. Current embargoed validation/test intervals are empty and are not validation. Stop after M4; M5 needs explicit approval.

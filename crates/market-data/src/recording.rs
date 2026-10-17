@@ -54,6 +54,7 @@ pub struct Limits {
     pub segment_records: usize,
     pub max_segments: usize,
     pub max_file_bytes: u64,
+    pub max_total_bytes: Option<u64>,
 }
 impl Default for Limits {
     fn default() -> Self {
@@ -62,6 +63,7 @@ impl Default for Limits {
             segment_records: 64,
             max_segments: 32,
             max_file_bytes: 8 * 1024 * 1024,
+            max_total_bytes: None,
         }
     }
 }
@@ -83,7 +85,10 @@ impl Recorder {
             limits.segment_records >= 2
                 && limits.segment_bytes > 0
                 && limits.max_segments > 0
-                && limits.max_file_bytes > 0,
+                && limits.max_file_bytes > 0
+                && limits
+                    .max_total_bytes
+                    .is_none_or(|b| b >= limits.max_file_bytes),
             "invalid recording limits"
         );
         let dir = root.join(symbol);
@@ -187,8 +192,20 @@ impl Recorder {
     }
     fn prune(&mut self, reserve: usize) -> Result<()> {
         let mut paths = self.segments()?;
-        while paths.len() + reserve > self.limits.max_segments {
+        let mut bytes = paths
+            .iter()
+            .map(|p| fs::metadata(p).map(|m| m.len()))
+            .collect::<std::io::Result<Vec<_>>>()?
+            .into_iter()
+            .sum::<u64>();
+        while paths.len() + reserve > self.limits.max_segments
+            || self.limits.max_total_bytes.is_some_and(|cap| {
+                bytes.saturating_add(reserve as u64 * self.limits.max_file_bytes) > cap
+            })
+        {
+            ensure!(!paths.is_empty(), "recording budget cannot fit one segment");
             let oldest = paths.remove(0);
+            bytes = bytes.saturating_sub(fs::metadata(&oldest)?.len());
             fs::remove_file(oldest.with_extension("sha256"))?;
             fs::remove_file(oldest)?;
         }

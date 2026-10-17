@@ -1,0 +1,10 @@
+{
+  "duration_seconds": 86400,
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT"
+  ],
+  "bytes_per_symbol": 1073741824,
+  "flush_interval_ms": 30000,
+  "root": ".local/long-captures"
+}
