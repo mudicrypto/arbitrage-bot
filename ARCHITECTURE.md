@@ -31,3 +31,12 @@ Order identity is (session_id, client_order_id); events additionally have sessio
 Target lifecycle: pending -> open/partially_filled -> filled/cancelled, with rejection or unknown states as appropriate. Real fill evidence, never a price touch, drives transitions. Risk gates precede every order and cancellation races require reconciliation. All live transport and credential handling are absent in M1.
 
 Future profitability gates require out-of-sample historical tests, realistic queue and latency assumptions, forward paper results and stress scenarios. Report net expectancy after maker/taker fees in their actual assets, adverse selection, slippage, inventory mark-to-market and operating costs. No profitability threshold is asserted yet.
+
+
+## Milestone 2 implementation
+
+`mm-market-data` contains a Binance protocol decoder/transport, interval-sequenced local book, bounded recorder, and deterministic replay. Two independent symbol tasks connect to public streams first and buffer while REST snapshots are in flight. Normalized data uses exact 1e-8 integers and explicit deletion quantities. Books are synchronized only after a bridging update. Any invalidation clears public quotes and rebuilds from a new connection/session. The transport queue and synchronization buffer are separately bounded; event-loop overload is a gap, never silent dropping while keeping a valid book.
+
+The collector writes schema-versioned status via atomic rename every 250 ms. The TypeScript API validates this document and independently recomputes both heartbeat and feed freshness. Books, top 20 levels, known depth counts, spread, lag and lifecycle counters are exposed read-only. This filesystem contract replaces the need for another internal network server; it requires the two processes to share a local filesystem. The existing M1 API/DB/domain capabilities are preserved.
+
+Each symbol owns one recorder lock and independent bounded Snappy Parquet segments with checkpoint, raw/normalized records, connection IDs and SHA-256 sidecars. Receive records are distinct from successfully applied updates. Replay applies only snapshot/apply/invalidation events in recorded order. Default bounds, retention and failure behavior are documented in README.md. No database migration was needed for market-data storage; PostgreSQL remains the M1 durable trading foundation. M2 contains no order transport or strategy.

@@ -1,0 +1,26 @@
+{
+  "source": "Verified live Binance Spot public feed via local TypeScript API",
+  "generated_at_ms": 1792247802270,
+  "markets": {
+    "BTCUSDT": {
+      "state": "synchronized",
+      "last_update_id": "101564479612",
+      "best_bid": "81600.57000000",
+      "best_ask": "81600.58000000",
+      "spread": "0.01000000",
+      "bid_levels": 5009,
+      "ask_levels": 4976,
+      "age_ms": 89
+    },
+    "ETHUSDT": {
+      "state": "synchronized",
+      "last_update_id": "82170147659",
+      "best_bid": "2427.62000000",
+      "best_ask": "2427.63000000",
+      "spread": "0.01000000",
+      "bid_levels": 4957,
+      "ask_levels": 5049,
+      "age_ms": 83
+    }
+  }
+}

@@ -1,7 +1,7 @@
 name: checks
 on: [push, pull_request]
 jobs:
-  foundation:
+  validation:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -12,6 +12,7 @@ jobs:
           cache-dependency-path: control-api/package-lock.json
       - run: rustup show
       - run: npm ci --prefix control-api
+      - run: cargo build --workspace --locked
       - run: bash scripts/check.sh
       - run: docker compose up -d --wait postgres
       - run: docker compose exec -T postgres psql -U marketmaker -d marketmaker -v ON_ERROR_STOP=1 < migrations/001_foundation.sql

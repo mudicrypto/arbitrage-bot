@@ -3,12 +3,20 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "typecheck": "tsc --noEmit",
     "build": "tsc",
     "test": "npm run build && node --test test/*.test.mjs",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "format:check": "prettier --check src test package.json tsconfig.json",
+    "format": "prettier --write src test package.json tsconfig.json"
   },
-  "devDependencies": { "@types/node": "22.18.6", "typescript": "5.9.3" }
+  "devDependencies": {
+    "@types/node": "22.18.6",
+    "prettier": "3.6.2",
+    "typescript": "5.9.3"
+  }
 }
