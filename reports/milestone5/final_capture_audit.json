@@ -1,0 +1,17 @@
+[
+  {
+    "aggregate_trades": 71,
+    "book_updates": 315,
+    "checksum_or_read_errors": [],
+    "path": ".local/paper/m5-final/market-data/BTCUSDT",
+    "prefix_complete": true,
+    "raw_messages": 399,
+    "records": 735,
+    "segments": 17,
+    "supports_aggressor_classification": true,
+    "supports_exact_queue": false,
+    "supports_long_horizon_statistics": false,
+    "supports_trade_evidence_partial_fill_model": true,
+    "symbol": "BTCUSDT"
+  }
+]

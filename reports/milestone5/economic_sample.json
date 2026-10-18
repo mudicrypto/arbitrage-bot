@@ -1,0 +1,107 @@
+{
+  "balances": {
+    "base_available": 2928000,
+    "base_reserved": 122000,
+    "base_total": 3050000,
+    "bnb_available": 0,
+    "bnb_reserved": 0,
+    "bnb_total": 0,
+    "quote_available": 240040329879,
+    "quote_reserved": 9993153371,
+    "quote_total": 250033483250
+  },
+  "books": 341,
+  "coverage_interruptions": 0,
+  "diagnostics": {
+    "dependency_failures": {},
+    "existing_quote_retained_or_canceling": 116,
+    "fee_widened_opportunities": 0,
+    "generated_quote_intents": 10,
+    "quote_opportunities": 126,
+    "rejected_exchange_filters": 0,
+    "rejected_fee_constraints": 0,
+    "rejected_market_data": 0,
+    "rejected_risk_limits": 0,
+    "rejection_reasons": {},
+    "submitted_to_simulated_execution": 10
+  },
+  "fee_assets": {},
+  "fee_assumptions": {
+    "account_verified": false,
+    "description": "Unverified conservative manual assumption: 10bps maker and 10bps taker each side; no rebate or promotion.",
+    "name": "manual_standard",
+    "periods": [
+      {
+        "asset": "quote",
+        "bnb_discount_ppm": 0,
+        "bnb_quote_price_units": null,
+        "buy_asset": null,
+        "buy_extra_microbps": 0,
+        "from_ms": 0,
+        "sell_asset": null,
+        "sell_extra_microbps": 0,
+        "standard_buy_microbps": 0,
+        "standard_maker_microbps": 10000000,
+        "standard_sell_microbps": 0,
+        "standard_taker_microbps": 10000000,
+        "symbol": null,
+        "until_ms": null
+      }
+    ]
+  },
+  "fill_count": 0,
+  "initial_allocation": {
+    "base_cost_basis_atoms": 249966516750,
+    "bnb_cost_basis_atoms": 0,
+    "initial_base_units": 3050000,
+    "initial_bnb_units": 0,
+    "initial_equity_atoms": 500000000000,
+    "initial_quote_atoms": 250033483250,
+    "initial_valuation_price": 8195623500000,
+    "initial_valuation_time_ms": 1792328589302,
+    "realized_gross_atoms": 0
+  },
+  "last_mark_units": 8194401500000,
+  "live_trading_enabled": false,
+  "market_price_units": 8194401500000,
+  "max_drawdown_atoms": 37271000,
+  "mode": "paper",
+  "orders": [
+    {
+      "active": true,
+      "cancel_pending": false,
+      "id": 10,
+      "price_units": 8206694000000,
+      "remaining_units": 122000,
+      "side": "sell"
+    },
+    {
+      "active": true,
+      "cancel_pending": false,
+      "id": 9,
+      "price_units": 8182109000000,
+      "remaining_units": 122000,
+      "side": "buy"
+    }
+  ],
+  "pnl": {
+    "cost_basis": "moving average; fee-asset disposals recognize their valuation less allocated cost basis; fees deducted once",
+    "fees_atoms": 0,
+    "net_pnl_atoms": -37271000,
+    "realized_gross_atoms": 0,
+    "rebates_atoms": 0,
+    "reconciled": true,
+    "unrealized_gross_atoms": -37271000
+  },
+  "profile": "economic",
+  "profitability_validated": false,
+  "recent_simulated_fills": [],
+  "research_only": false,
+  "scale": 100000000,
+  "sequence": 462,
+  "status": "running",
+  "symbol": "BTCUSDT",
+  "time_ms": 1792328623650,
+  "total_equity_atoms": 499962729000,
+  "trades": 121
+}

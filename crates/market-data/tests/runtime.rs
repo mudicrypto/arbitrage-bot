@@ -420,3 +420,32 @@ async fn both_required_symbols_produce_independent_books() {
     assert_ne!(states["BTCUSDT"].session, states["ETHUSDT"].session);
     assert_eq!(states["ETHUSDT"].best_bid.as_deref(), Some("100.00000000"));
 }
+
+#[tokio::test]
+async fn observer_is_invalidated_before_transport_recovery() {
+    use mm_market_data::{book::Book, model::Trade, runtime::Observer};
+    struct Watch(AtomicUsize);
+    impl Observer for Watch {
+        fn book(&self, _: &str, _: &Book, _: u64, _: u64) {}
+        fn trade(&self, _: &Trade, _: u64) {}
+        fn invalidated(&self, _: &str, _: &str, _: u64) {
+            self.0.fetch_add(1, Ordering::SeqCst);
+        }
+    }
+    let mut h = harness(Fault::Interrupt, false).await;
+    let observer = Arc::new(Watch(AtomicUsize::new(0)));
+    h.config.observer = Some(observer.clone());
+    let config = h.config.clone();
+    let shared = h.shared.clone();
+    h.tasks.push(tokio::spawn(async move {
+        let _ = run_symbol(config, "BTCUSDT", shared).await;
+    }));
+    tokio::time::timeout(Duration::from_secs(5), async {
+        while observer.0.load(Ordering::SeqCst) == 0 {
+            tokio::time::sleep(Duration::from_millis(10)).await;
+        }
+    })
+    .await
+    .unwrap();
+    assert!(observer.0.load(Ordering::SeqCst) > 0);
+}

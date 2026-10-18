@@ -184,7 +184,7 @@ async fn collect_inner(
     )?;
     Ok(root)
 }
-fn reqwest_client() -> Result<reqwest::Client> {
+pub(crate) fn reqwest_client() -> Result<reqwest::Client> {
     Ok(reqwest::Client::builder()
         .timeout(Duration::from_secs(30))
         .redirect(reqwest::redirect::Policy::none())

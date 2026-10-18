@@ -1,0 +1,20 @@
+{
+  "type": "actual_public_data_paper_restart_check",
+  "exit_code": 0,
+  "before_sequence": 355,
+  "after_sequence": 388,
+  "original_valuation_preserved": true,
+  "initial_equity_atoms": 500000000000,
+  "after_status": "stopped",
+  "orders_after_stop": [],
+  "before_balances": [
+    250060862385,
+    3049000
+  ],
+  "after_balances": [
+    250060862385,
+    3049000
+  ],
+  "before_fills": 0,
+  "after_fills": 0
+}

@@ -9,3 +9,5 @@ pub mod engine;
 pub mod experiment;
 pub mod portfolio;
 pub mod readiness;
+
+pub mod paper;

@@ -1,0 +1,3 @@
+verified aggregate_trade_id=4092413100 price=8195961000000 public_quantity=192233000 simulated_quantity=122000 buyer_is_maker=false session=9a85db86-b8e8-438b-9b0e-70948505a50d received_ms=1792328690998
+source=.local/paper/m5-verified-research/market-data/BTCUSDT/00000001792328692406-f37207c7-8725-4ec7-9f8b-e221da89810e-00000000000000000002.parquet sha256=ba80e604ffddf944b41552d78531c7c5a8494475a96907ee890bd89be19b1ceb
+raw_public_message={"stream":"btcusdt@aggTrade","data":{"e":"aggTrade","E":1792328690914,"s":"BTCUSDT","a":4092413100,"p":"81959.61000000","q":"1.92233000","f":6771942673,"l":6771942740,"T":1792328690914,"m":false,"M":true}}

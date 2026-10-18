@@ -38,3 +38,10 @@
 - ADR-030 (M4.2): Conservative through debits entry-known intervening depth and queue ahead against eligible aggressive volume; alternative through assumes public priority cleared. Retain activation, continuity, latency, cancellation, quantity and post-only gates; fill at the own limit. One own order per side in through modes avoids unsupported multi-price counterfactual attribution. No MBP model is asserted to reconstruct exact FIFO.
 - ADR-031 (M4.2): Reuse one source normalization visitor for bounded tapes and streaming batch trials. Reject affected session-symbols on integrity/coverage failures or missing tails. Persist complete traces externally and compact internal history without new ledger deposits. No aggregation of independently initialized sessions as a continuous funded portfolio; no final OOS evaluation.
 - ADR-032 (M4.2): Preserve the running collector. Campaign resumption creates new immutable completed-session candidates under separate locks/roots, with count/byte budgets; never automatically take over an unfinished capture. Verify recording durations and replay scopes separately from target/elapsed wall time.
+
+
+## M5: reuse the simulator for forward paper execution
+
+Use BTCUSDT, a terminal view and the existing Engine/Observer/recorder rather than adding frontend services or another execution model. Research bypasses only the fee-derived minimum width and clamps proposed prices to the public BBA; actual configured fees and every funding/risk/execution guard remain. Economic retains fee widening but caps width at the requested setting, so insufficient settings refuse quotes. Both use conservative through execution and manual 10bps/side quote-asset fees.
+
+Persist one isolated wallet per state directory; initialize only once from a causal book. Restart preserves balances and risk, voids virtual quotes and models no offline fills. Use an authoritative atomic checkpoint plus bounded sequenced audit journal; this engineering checkpoint does not claim an archival production OMS. No exchange execution or further milestone is authorized.

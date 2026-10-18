@@ -45,6 +45,8 @@ impl DepthProtocol for BinanceSpot {
     }
 }
 pub trait Observer: Send + Sync {
+    /// Called before reconnection, including recording and transport failures.
+    fn invalidated(&self, _symbol: &str, _reason: &str, _received_ms: u64) {}
     fn book(&self, symbol: &str, book: &Book, received_ms: u64, exchange_ms: u64);
     fn trade(&self, trade: &Trade, received_ms: u64);
 }
@@ -733,6 +735,9 @@ pub async fn run_symbol(config: Config, symbol: &str, shared: SharedStatus) -> R
             status.metrics.stale_events += 1;
         }
         status.metrics.disconnections += 1;
+        if let Some(observer) = &config.observer {
+            observer.invalidated(symbol, &error, now_ms());
+        }
         let recording_result = recorder
             .append(
                 &session,

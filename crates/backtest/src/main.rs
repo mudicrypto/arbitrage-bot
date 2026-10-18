@@ -4,6 +4,7 @@ use std::path::Path;
 async fn main() -> Result<()> {
     let args: Vec<String> = std::env::args().skip(1).collect();
     match args.first().map(String::as_str) {
+        Some("paper") => mm_backtest::paper::run(&args[1..]).await,
         Some("case-audit") if args.len() == 4 => mm_backtest::cases::export(
             Path::new(&args[1]),
             Path::new(&args[2]),

@@ -48,7 +48,7 @@ pub struct Fill {
     pub reference_mid: u64,
     pub order_id: u64,
 }
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Order {
     pub id: u64,
     pub buy: bool,
@@ -62,6 +62,7 @@ pub struct Order {
     pub reserved_quote: u128,
     pub reserved_base: u128,
     pub reserved_bnb: u128,
+    #[serde(skip)]
     pub entry_book: Option<std::sync::Arc<View>>,
 }
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
@@ -126,7 +127,10 @@ pub struct Summary {
     pub fee_assets: BTreeMap<String, i128>,
     pub warnings: Vec<String>,
 }
+#[derive(Serialize, Deserialize)]
 pub struct Engine {
+    #[serde(default)]
+    pub research_quotes: bool,
     pub automatic_quoting: bool,
     pub price_bounds: Option<(u64, u64)>,
     pub portfolio: crate::portfolio::PortfolioState,
@@ -164,6 +168,7 @@ pub struct Engine {
     pub settling: bool,
     pub clock: u64,
     pub last_book_ms: Option<u64>,
+    #[serde(skip)]
     pub view: Option<View>,
     epoch: u64,
     capital: i128,
@@ -206,6 +211,7 @@ impl Engine {
         );
         let capital = i128::from(capital_usdt) * i128::from(S);
         let mut e = Self {
+            research_quotes: false,
             automatic_quoting: true,
             price_bounds: None,
             portfolio: Default::default(),
@@ -1074,7 +1080,11 @@ impl Engine {
             .scenario
             .strategy
             .spread_bps
-            .max(fee_bps + self.scenario.strategy.required_edge_bps)
+            .max(if self.research_quotes {
+                0
+            } else {
+                fee_bps + self.scenario.strategy.required_edge_bps
+            })
             .max(self.vol_bps * self.scenario.strategy.volatility_multiplier);
         if spread > self.scenario.strategy.spread_bps {
             self.diagnostics.fee_widened_opportunities += u64::from(
@@ -1120,7 +1130,17 @@ impl Engine {
         let half = u128::from(mid) * u128::from(spread) / (2 * 10_000);
         let tick = u128::from(self.instrument.tick_units);
         let bid = (center.saturating_sub(half) / tick * tick) as u64;
+        let bid = if self.research_quotes {
+            bid.min(view.bid())
+        } else {
+            bid
+        };
         let ask = (ceil_div(center + half, tick)? * tick) as u64;
+        let ask = if self.research_quotes {
+            ask.max(view.ask())
+        } else {
+            ask
+        };
         let qty = (u128::from(self.scenario.strategy.clip_usdt) * u128::from(S) * u128::from(S)
             / u128::from(mid)
             / u128::from(self.instrument.step_units)

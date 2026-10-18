@@ -1,6 +1,6 @@
 # Crypto Market Maker
 
-Research-first Binance Spot market-making foundation. Initial research capital assumption: USD 5,000; no funds are connected. Profitability is unproven. Milestones 1–2 provide domain/exchange contracts, Binance Spot public market data, deterministic replay, a read-only control API, and PostgreSQL infrastructure. Milestone 4 adds a local-only baseline strategy simulator; no exchange order transport exists.
+Research-first Binance Spot market-making foundation. Initial research capital assumption: USD 5,000; no funds are connected. Profitability is unproven. Milestones 1–2 provide domain/exchange contracts, Binance Spot public market data, deterministic replay, a read-only control API, and PostgreSQL infrastructure. Milestones 4–5 provide funded simulation and a functional forward paper bot; no exchange order transport exists.
 
 ## Development
 
@@ -22,7 +22,7 @@ Database credentials in Compose are public local-development defaults. Database 
 
 Cloud Rust activation: export `CARGO_HOME=/workspace/.tools/cargo`, `RUSTUP_HOME=/workspace/.tools/rustup`, and prepend `$CARGO_HOME/bin` to `PATH`.
 
-See [architecture](ARCHITECTURE.md), [roadmap](ROADMAP.md), [risk policy](RISK_POLICY.md), and [decisions](docs/DECISIONS.md). Next.js, forward paper execution, durable OMS and live execution remain future separately approved work.
+See [architecture](ARCHITECTURE.md), [roadmap](ROADMAP.md), [risk policy](RISK_POLICY.md), and [decisions](docs/DECISIONS.md). Forward paper execution uses the terminal interface below. Next.js, a production OMS and live execution remain future separately approved work.
 
 
 ## Binance public market data (Milestone 2)
@@ -144,3 +144,26 @@ cargo build --workspace --locked
 The batch runner streams source events and external traces instead of retaining a full-depth tape. It rejects incomplete captures, corrupt/fragmented/gapped session-symbols and missing tails; the whole affected session-symbol is excluded. It never fills across unknown intervals. Output must be new/empty, has a trace byte budget, and remains `INCOMPLETE` until `batch_complete.json` exists. Research remains chronological training-only, with no final OOS evaluation or optimization. Legacy `run`/`diagnose` retain their finite tape caps.
 
 Campaign resume creates new immutable session directories, bounded by session count, per-symbol bytes, campaign total bytes and free-disk checks. It does not reopen old sessions or automatically take over an unfinished directory. Reconcile unclean sessions explicitly; do not point campaign configuration at an existing capture. The current 24-hour-target collector has been preserved, not restarted; its current observed status and audit windows are in the report. No complete 24-hour dataset or profitable strategy is claimed. Stop after M4.2; M5 needs explicit approval.
+
+## Functional paper bot (Milestone 5)
+
+From the repository root, launch with one command (Rust 1.90 required):
+
+```sh
+bash scripts/paper.sh
+# Economic fee/risk guard, still entirely simulated:
+bash scripts/paper.sh economic
+```
+
+Both use public BTCUSDT feeds and initialize an isolated $5,000 paper wallet at the first valid book: 50% BTC / 50% USDT, lot-rounded with quote residue. Terminal output updates every second with market price, bid/ask, order state, recent simulated fills, total/available/reserved balances, fees, realized/unrealized P&L, equity, drawdown and status. No database/API process or keys are needed. Stop with **Ctrl-C**; repeat the same command to resume balances, fees, risk state and initial valuation. Virtual orders are voided across stop/restart/disconnection; offline fills are never invented.
+
+Research defaults to 0bps requested width, clamped to public best bid/ask, and still charges manual 10bps maker fees per side. It is deliberately allowed to be uneconomic. Economic defaults to 30bps width and requires fees plus a 7bps cost/margin allowance; negative-edge settings refuse quotes. These are estimates, never a claim of executable edge. To compare widths, explicitly use separate isolated experiment wallets:
+
+```sh
+bash scripts/paper.sh research --spread-bps 2 --state-dir .local/paper/research-wide
+bash scripts/paper.sh economic --spread-bps 1 --state-dir .local/paper/economic-narrow
+# Optional finite smoke run:
+bash scripts/paper.sh research --seconds 60
+```
+
+Each state directory is a separate $5,000 simulated alternative; never add their funds or P&L together. Configuration changes on an existing wallet fail closed. Defaults persist under `.local/paper/research/` or `economic/`. `status.json` is a local machine-readable view; freshness requires a recent `time_ms`, `status=running` and non-null market price. `wallet.json` is the authoritative atomic checkpoint. Do not edit it while running. Public raw data and paper event journals have bounded retention. See [M5 launch, observed results and limitations](MILESTONE_5.md). Trading on the actual exchange remains disabled.
