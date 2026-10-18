@@ -1,0 +1,18 @@
+{
+  "result_type": "engineering_checks_and_synthetic_test_results_not_profitability",
+  "rust_tests_passed": 93,
+  "rust_failed": 0,
+  "typescript_tests_passed": 7,
+  "typescript_failed": 0,
+  "checks": [
+    "cargo fmt --all --check",
+    "cargo clippy --workspace --all-targets --locked -- -D warnings",
+    "cargo test --workspace --locked",
+    "TypeScript prettier/typecheck/tests/build",
+    "cargo build --workspace --locked",
+    "PostgreSQL healthy/idempotent migration/db-test.sql"
+  ],
+  "actual_exchange_executions": 0,
+  "synthetic_data_used_only_for_tests": true,
+  "recorded_case_test": "recorded_zec_trade_through_regression_is_deterministic_and_volume_bounded"
+}

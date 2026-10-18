@@ -1,0 +1,94 @@
+{
+  "actual_exchange_executions": 0,
+  "comparisons": [
+    {
+      "actual_exchange_executions": 0,
+      "balances": {
+        "base_available": 0,
+        "base_reserved": 0,
+        "base_total": 0,
+        "bnb_available": 0,
+        "bnb_reserved": 0,
+        "bnb_total": 0,
+        "quote_available": 500000000000,
+        "quote_reserved": 0,
+        "quote_total": 500000000000
+      },
+      "fee_atoms": 0,
+      "fills": [],
+      "model": "exact_price",
+      "strategy_profitability_result": false,
+      "valid_data": true
+    },
+    {
+      "actual_exchange_executions": 0,
+      "balances": {
+        "base_available": 600000,
+        "base_reserved": 0,
+        "base_total": 600000,
+        "bnb_available": 0,
+        "bnb_reserved": 0,
+        "bnb_total": 0,
+        "quote_available": 499301141840,
+        "quote_reserved": 0,
+        "quote_total": 499301141840
+      },
+      "fee_atoms": 698160,
+      "fills": [
+        {
+          "aggregate_trade_id": 240303953,
+          "buy": true,
+          "epoch": 0,
+          "evidence_kind": "conservative_trade_through_after_depth_and_queue",
+          "observed_at_ms": 1792248923451,
+          "observed_trade_price": 116358000000,
+          "observed_trade_quantity": 600000,
+          "order_id": 1,
+          "price": 116360000000,
+          "quantity": 600000,
+          "reference_mid": 116358500000,
+          "time_ms": 1792248923370
+        }
+      ],
+      "model": "conservative_through",
+      "strategy_profitability_result": false,
+      "valid_data": true
+    },
+    {
+      "actual_exchange_executions": 0,
+      "balances": {
+        "base_available": 600000,
+        "base_reserved": 0,
+        "base_total": 600000,
+        "bnb_available": 0,
+        "bnb_reserved": 0,
+        "bnb_total": 0,
+        "quote_available": 499301141840,
+        "quote_reserved": 0,
+        "quote_total": 499301141840
+      },
+      "fee_atoms": 698160,
+      "fills": [
+        {
+          "aggregate_trade_id": 240303953,
+          "buy": true,
+          "epoch": 0,
+          "evidence_kind": "alternative_trade_through_assumes_priority_cleared",
+          "observed_at_ms": 1792248923451,
+          "observed_trade_price": 116358000000,
+          "observed_trade_quantity": 600000,
+          "order_id": 1,
+          "price": 116360000000,
+          "quantity": 600000,
+          "reference_mid": 116358500000,
+          "time_ms": 1792248923370
+        }
+      ],
+      "model": "alternative_through",
+      "strategy_profitability_result": false,
+      "valid_data": true
+    }
+  ],
+  "independent_market_case_count": 1,
+  "result_type": "historical_order_execution_model_regression"
+}

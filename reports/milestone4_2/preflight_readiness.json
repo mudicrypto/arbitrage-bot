@@ -1,0 +1,2239 @@
+{
+  "captured_at_ms": 1792255948927,
+  "completion": null,
+  "completion_marker_present": false,
+  "configured_payload_budget_bytes": 2147483648,
+  "continuous_complete_target_ready": false,
+  "final_oos_evaluated": false,
+  "finalized_payload_bytes": 94027043,
+  "first_replay": {
+    "errors": [],
+    "replay_digest": "8be2aab530cda5af4c7fd57251f539957b69dcb1ff01150af8d69e3a3cdac7b1",
+    "symbols": {
+      "BTCUSDT": {
+        "aggregate_trades": 35995,
+        "book_exchange_time_reversals": 0,
+        "book_intervals_over_2s": [
+          [
+            1792252299096,
+            1792252305345
+          ],
+          [
+            1792252456898,
+            1792252462215
+          ],
+          [
+            1792252898394,
+            1792252904062
+          ],
+          [
+            1792253980604,
+            1792253986226
+          ],
+          [
+            1792254009798,
+            1792254015153
+          ],
+          [
+            1792254642897,
+            1792254648571
+          ],
+          [
+            1792255002804,
+            1792255008230
+          ],
+          [
+            1792255746797,
+            1792255752192
+          ],
+          [
+            1792255904194,
+            1792255910156
+          ]
+        ],
+        "book_updates": 46259,
+        "causal_clock_clamps": 91,
+        "first_book_ms": 1792251266625,
+        "first_received_ms": 1792251264892,
+        "first_trade_ms": 1792251265073,
+        "invalidations": {
+          "buffer overflow or receiver closed": 9
+        },
+        "last_book_ms": 1792255940193,
+        "last_received_ms": 1792255940193,
+        "last_trade_ms": 1792255940166,
+        "max_book_interval_ms": 6249,
+        "prefix_complete": true,
+        "raw_messages": 82351,
+        "raw_receive_time_reversals": 10,
+        "record_sequence_gaps": 0,
+        "records": 128811,
+        "session_changes": [
+          1792252303511,
+          1792252460787,
+          1792252902501,
+          1792253984693,
+          1792254013686,
+          1792254647058,
+          1792255006667,
+          1792255750701,
+          1792255908343
+        ],
+        "trade_exchange_time_reversals": 0,
+        "trade_id_gaps": 9
+      },
+      "ETHUSDT": {
+        "aggregate_trades": 33312,
+        "book_exchange_time_reversals": 0,
+        "book_intervals_over_2s": [
+          [
+            1792252981821,
+            1792252987195
+          ],
+          [
+            1792253079612,
+            1792253084964
+          ],
+          [
+            1792253594604,
+            1792253600226
+          ],
+          [
+            1792254009809,
+            1792254018172
+          ],
+          [
+            1792255032283,
+            1792255037922
+          ]
+        ],
+        "book_updates": 45399,
+        "causal_clock_clamps": 39,
+        "first_book_ms": 1792251270404,
+        "first_received_ms": 1792251268931,
+        "first_trade_ms": 1792251269222,
+        "invalidations": {
+          "buffer overflow or receiver closed": 5
+        },
+        "last_book_ms": 1792255945199,
+        "last_received_ms": 1792255945199,
+        "last_trade_ms": 1792255945043,
+        "max_book_interval_ms": 8363,
+        "prefix_complete": true,
+        "raw_messages": 78794,
+        "raw_receive_time_reversals": 6,
+        "record_sequence_gaps": 0,
+        "records": 124375,
+        "session_changes": [
+          1792252985742,
+          1792253083483,
+          1792253598561,
+          1792254013754,
+          1792255036330
+        ],
+        "trade_exchange_time_reversals": 0,
+        "trade_id_gaps": 5
+      }
+    }
+  },
+  "free_disk_bytes_at_audit": 19043885056,
+  "frozen_finalized_files": [
+    {
+      "bytes": 446817,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792251293399-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000001.parquet",
+      "sha256_sidecar": "6370be5f64ca24675fdffd0d98191b6eb63cef323561076604f0d687162bbadd"
+    },
+    {
+      "bytes": 111000,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792251296688-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000002.parquet",
+      "sha256_sidecar": "5f5ad99aba057837772f180bfb5c60160454dd5072d2f774c83215a989d504a7"
+    },
+    {
+      "bytes": 318979,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792251326938-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000003.parquet",
+      "sha256_sidecar": "11ab1cfa3efdf6dccec71968a4f067b5411d92a27a1bf0b5992dac3517c9f096"
+    },
+    {
+      "bytes": 225958,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792251357187-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000004.parquet",
+      "sha256_sidecar": "327e95788b7d13eab3c73d0d9109625c9294178fddd5a791d759263b95b831b2"
+    },
+    {
+      "bytes": 366398,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792251387437-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000005.parquet",
+      "sha256_sidecar": "5a824f3cfbae1f1dbf53838dc10b149515f599bfa2238f190bc66d6b88784b88"
+    },
+    {
+      "bytes": 310627,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792251417688-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000006.parquet",
+      "sha256_sidecar": "04b609ab45eda999bb5fe9e246733edc2e29a688b0043799a600de07f5ea3089"
+    },
+    {
+      "bytes": 288574,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792251447937-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000007.parquet",
+      "sha256_sidecar": "2493f7cbb22dfeb78d79891b8576c210d13d772d994df8e4d4e8cebbe6f217a4"
+    },
+    {
+      "bytes": 301217,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792251478189-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000008.parquet",
+      "sha256_sidecar": "a5e53204e93d9f8c50d9cb2734e79362c0aff4762f58010cc28b88547bde7a47"
+    },
+    {
+      "bytes": 258066,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792251508437-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000009.parquet",
+      "sha256_sidecar": "1922026860065404938ecde3129b07309826a876c342dd3f8e3a807856e9c9cd"
+    },
+    {
+      "bytes": 225751,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792251538687-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000010.parquet",
+      "sha256_sidecar": "88f1736c27adba08a195ae82aec6c96209ac0c5e0126ca0a0c7d70cfe09619f7"
+    },
+    {
+      "bytes": 301389,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792251568938-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000011.parquet",
+      "sha256_sidecar": "9327aadaf407975553803743d5e79f0a910a4cc79ac768e8d0f0c431deaa6406"
+    },
+    {
+      "bytes": 210472,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792251599188-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000012.parquet",
+      "sha256_sidecar": "6a656d44ca27e43b6276fdab3a209ed34a34b257793040249d2feee3e9b84eb1"
+    },
+    {
+      "bytes": 265066,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792251629438-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000013.parquet",
+      "sha256_sidecar": "becd90ea9a57fa602ada8c9b28f16c3b64abcb7182edc4de197f5d9f2c8a1dac"
+    },
+    {
+      "bytes": 241839,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792251659688-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000014.parquet",
+      "sha256_sidecar": "372a9abcd27823595af33666625162f484948dc3184a829c934bddb6f14d4b37"
+    },
+    {
+      "bytes": 259783,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792251689938-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000015.parquet",
+      "sha256_sidecar": "75160feda67650dd8e4f06ecb96ae56960223f762e54156d7c15b6c3dabe6755"
+    },
+    {
+      "bytes": 245253,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792251720189-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000016.parquet",
+      "sha256_sidecar": "c77f8ca4f90b27ac9bcf8e1bf4a188b24b00eed800cc11cf72c4bd34548f6a21"
+    },
+    {
+      "bytes": 219918,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792251750438-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000017.parquet",
+      "sha256_sidecar": "45e77e9ebecf78bf41037638e2e5cfbd41fe02cc511a52119779d570f3a387c2"
+    },
+    {
+      "bytes": 211324,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792251780688-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000018.parquet",
+      "sha256_sidecar": "7456e7a2e66afbfb80721d53a5b8ca548693d3348424adf815d8c4e0db711b2c"
+    },
+    {
+      "bytes": 301445,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792251810940-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000019.parquet",
+      "sha256_sidecar": "9978b925d98d97d1813c396b95bfb93232685b3320a915535a0ec66285a8f724"
+    },
+    {
+      "bytes": 218904,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792251841188-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000020.parquet",
+      "sha256_sidecar": "61e831621bce7e756405358262f9e1b6348e62c76d86a26ce571123b82a06213"
+    },
+    {
+      "bytes": 207506,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792251871438-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000021.parquet",
+      "sha256_sidecar": "1bb821592cbad58c4c77fb76fc23f42974c9903dfb085b093db6f2bce304b3c2"
+    },
+    {
+      "bytes": 262483,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792251901688-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000022.parquet",
+      "sha256_sidecar": "6c3933cdd1020882eafa18fdb6ca7e2a7180f9efa6bae5c5c200455e97763b65"
+    },
+    {
+      "bytes": 278573,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792251931938-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000023.parquet",
+      "sha256_sidecar": "fd8747775c16181211e9ea176e8845855672dfb12442e9310ccfd466d0d88ceb"
+    },
+    {
+      "bytes": 332889,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792251962196-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000024.parquet",
+      "sha256_sidecar": "4555532ee8b86b011f8718d48de74006f1fd061b6b1a9ec3efbdd5a31a24b6a8"
+    },
+    {
+      "bytes": 337861,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792251992439-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000025.parquet",
+      "sha256_sidecar": "597fd7079dd86056471d959ddca6783390cd295c4db4419d161b0883a7fe8138"
+    },
+    {
+      "bytes": 245226,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252022688-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000026.parquet",
+      "sha256_sidecar": "4046218182945f2cd0d014ad43be6f26d7a1da25db8851b77ba2872bc9f0589c"
+    },
+    {
+      "bytes": 225889,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252052939-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000027.parquet",
+      "sha256_sidecar": "f15b513e8762f4fe78107c35552b681232f238f5058a20adbf217a828a27be03"
+    },
+    {
+      "bytes": 256016,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252083188-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000028.parquet",
+      "sha256_sidecar": "d794774a168065e7211f1b575efe117f2bc05b9c30799d31fff2c1c11415641c"
+    },
+    {
+      "bytes": 235233,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252113438-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000029.parquet",
+      "sha256_sidecar": "b10d1984608e9e2bbd8645c4bfd6465d7a9c31d3ae0dbc56fbb0066abe27a315"
+    },
+    {
+      "bytes": 238365,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252143688-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000030.parquet",
+      "sha256_sidecar": "5bada7e8ef692da2458214d218a67b58dd781d575a7332b93286a03043f15715"
+    },
+    {
+      "bytes": 278043,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252173938-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000031.parquet",
+      "sha256_sidecar": "e05cdc55255c3e37deca1c98557c8f48d83e2c25fa9c7c63748d728457c65e92"
+    },
+    {
+      "bytes": 227760,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252204188-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000032.parquet",
+      "sha256_sidecar": "8124d25a2223f41fd86c2fcba244b9fc4cf9199c98d520ac20ce7e08a4ef6183"
+    },
+    {
+      "bytes": 246999,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252234438-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000033.parquet",
+      "sha256_sidecar": "1d768b47bf2097899c8b90db1c17ddabbe52b8ae12953b2fcc3d720672cdf148"
+    },
+    {
+      "bytes": 198878,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252264688-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000034.parquet",
+      "sha256_sidecar": "f77421371317391ee0e084d43635fd8c8eb30fcae41f0463883d7110e57a1333"
+    },
+    {
+      "bytes": 212090,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252294939-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000035.parquet",
+      "sha256_sidecar": "0a85d906f88e396e240dee562b24d134f8349b397f6a23c01d8942fa3cb49c0f"
+    },
+    {
+      "bytes": 108750,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252299173-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000036.parquet",
+      "sha256_sidecar": "4dc9802657d2ed82a11c463082f0b55abc552f73806d31f0bea154c5c929119b"
+    },
+    {
+      "bytes": 457389,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252323902-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000037.parquet",
+      "sha256_sidecar": "ea8b9b32b5655f92a8ccd7d32b50f482404df4a35e3f5e75296510434e66503c"
+    },
+    {
+      "bytes": 153861,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252335477-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000038.parquet",
+      "sha256_sidecar": "dce11c5b8d04855b45bda143aabf221c931eae81517352e0347e6518a28cf447"
+    },
+    {
+      "bytes": 276539,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252365668-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000039.parquet",
+      "sha256_sidecar": "ebee11fda3837e5767163ff021b810c5d23e1f3ec8d78a62d0a97472b1aea7b4"
+    },
+    {
+      "bytes": 284737,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252395916-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000040.parquet",
+      "sha256_sidecar": "e6e44a57f57dda8711b89a87ab74346501e10eb35282af702de1d6eef31dc92a"
+    },
+    {
+      "bytes": 206688,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252426167-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000041.parquet",
+      "sha256_sidecar": "a1ab7bd72c6255d7519c771a8efe14130449d51a9c284f5458f4c0f51249cba5"
+    },
+    {
+      "bytes": 304293,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252456417-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000042.parquet",
+      "sha256_sidecar": "1246b8217c2d7703b8e410f11b8935357a03e0105c5a489e69f32b86739c77d3"
+    },
+    {
+      "bytes": 104774,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252456957-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000043.parquet",
+      "sha256_sidecar": "b0d702e8326f71c3e43ef8950a309e64882e3e226157ceae7082b65262d4c7bd"
+    },
+    {
+      "bytes": 447466,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252491695-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000044.parquet",
+      "sha256_sidecar": "50c9270407051060af0c20366e66d5f539f8709938d4eb16c5900ceed926dfb9"
+    },
+    {
+      "bytes": 81187,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252492275-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000045.parquet",
+      "sha256_sidecar": "a818c7f029f3e462c1c8dfe1b3dbf54f7a2e0e3975adc21f0977f95537be4249"
+    },
+    {
+      "bytes": 350259,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252522524-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000046.parquet",
+      "sha256_sidecar": "eabfaa117fdeb7e1d8e33c18d009845f683c6ff3e0944735a2f2d5ff5c2c2fd4"
+    },
+    {
+      "bytes": 422446,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252547496-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000047.parquet",
+      "sha256_sidecar": "2e54a603b1baba3edd324ca7bca50b34efe43716aa5ae17c6c9beb3ad4b62949"
+    },
+    {
+      "bytes": 150394,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252552774-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000048.parquet",
+      "sha256_sidecar": "a6ba828056aafb6d54dbc52706b4e9b8ebcad1e8ca9de9330a2a086a1fda57ee"
+    },
+    {
+      "bytes": 417883,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252580198-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000049.parquet",
+      "sha256_sidecar": "4022adf5c19a07c888ad52a67291d9f7cb3b01f183a75d5a3160e5417dfaf96b"
+    },
+    {
+      "bytes": 91765,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252583024-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000050.parquet",
+      "sha256_sidecar": "3bd3085d2b8bd10611a76a9f8fe161ceabe503e4f16b4bc4e0f73447220d7c40"
+    },
+    {
+      "bytes": 183597,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252613274-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000051.parquet",
+      "sha256_sidecar": "5d13c76e5cd9c1b0ed17191da009b8b9fece4d0a264f9bedc670c827a706d3bb"
+    },
+    {
+      "bytes": 228378,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252643525-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000052.parquet",
+      "sha256_sidecar": "7857b901f66fa405c7c928e5f5e8bdaa3cf0802aa72f4ae4562736d02d576311"
+    },
+    {
+      "bytes": 278116,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252673775-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000053.parquet",
+      "sha256_sidecar": "a5f02dc1b7ea1e3128048405734534a29cc7fd63fa33579551f118de20683fba"
+    },
+    {
+      "bytes": 233437,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252704024-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000054.parquet",
+      "sha256_sidecar": "f597375ee4ed12762e385944a80254ecbb08659b0d49b313dc16b0437e009052"
+    },
+    {
+      "bytes": 215116,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252734275-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000055.parquet",
+      "sha256_sidecar": "96c40dfedd28449f51814881dcb55fe91aa573aad4170a63148b311f0911b5eb"
+    },
+    {
+      "bytes": 186413,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252764525-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000056.parquet",
+      "sha256_sidecar": "760e855d42da92d21c4cdc623c3f7e681583c0725263b1eb0880a3becfac648c"
+    },
+    {
+      "bytes": 180683,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252794774-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000057.parquet",
+      "sha256_sidecar": "0a133834cfa9f989c9235ede4a86e1ffa32303ab134dea546c376f087faeb295"
+    },
+    {
+      "bytes": 421486,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252817343-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000058.parquet",
+      "sha256_sidecar": "3e4843b4fdc6389fb48322731dc3e6a13d6b7e9224f42c93df013e8189e35d8b"
+    },
+    {
+      "bytes": 154501,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252825026-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000059.parquet",
+      "sha256_sidecar": "23d3cb9a88b4aa0726570e5d648bdac3c0cbbd8b39687b0ccd90baab1a35247b"
+    },
+    {
+      "bytes": 353329,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252855275-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000060.parquet",
+      "sha256_sidecar": "c20c740a7b22138f23ab83043f9dd13ad796afe6b3c149df725cfcf9829d1a4f"
+    },
+    {
+      "bytes": 290709,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252885524-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000061.parquet",
+      "sha256_sidecar": "ca7e5ab96b9922cda3d3c890d1de17378378c2ce0bd106456ea4cbe4b3a60709"
+    },
+    {
+      "bytes": 217923,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252898667-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000062.parquet",
+      "sha256_sidecar": "43d1de2aac30043a03de0446bc146680a8fbe154a3db2403f5d2d31c7c81d7c0"
+    },
+    {
+      "bytes": 463297,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252919003-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000063.parquet",
+      "sha256_sidecar": "62064a72c872ce2f39768f712f12a28296c89fc0f237802e2e3669d8a15cf49f"
+    },
+    {
+      "bytes": 144695,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252934124-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000064.parquet",
+      "sha256_sidecar": "ce26ec3c626efbe5cbecf5940e215bb8c4586e9c4c35d94a9ddc99972367a928"
+    },
+    {
+      "bytes": 246941,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252964374-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000065.parquet",
+      "sha256_sidecar": "79be67540278599e41b84e99bc56a51000d9dbb05d8b46fb0cd9ba0a88ef6608"
+    },
+    {
+      "bytes": 308370,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792252994624-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000066.parquet",
+      "sha256_sidecar": "22d71051adc6a0438f93327f8a91c0022a9f75e6306cbbad9a1512c30832d00b"
+    },
+    {
+      "bytes": 228055,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253024874-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000067.parquet",
+      "sha256_sidecar": "cfa659742aacc01d1759c6933bf71f35c3f257c707543993cefae0a9fc61840b"
+    },
+    {
+      "bytes": 328284,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253055124-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000068.parquet",
+      "sha256_sidecar": "bcae9db404d3c29ea963068a6fa577a0b51380e6cb82d8e505d851aa139f65fe"
+    },
+    {
+      "bytes": 389090,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253085375-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000069.parquet",
+      "sha256_sidecar": "27180bf766445d3f5eadfb389639ce46c39d9ad55aeee95c8c448aecbda016d7"
+    },
+    {
+      "bytes": 273302,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253115624-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000070.parquet",
+      "sha256_sidecar": "17b204c4db555ab486be814ee9403ca1e87544288f43eb50cc333b0570322cd7"
+    },
+    {
+      "bytes": 288337,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253145875-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000071.parquet",
+      "sha256_sidecar": "3ac5241df2243935ee2c66505ed5cb557a88fcee5244028689618d167a1a0340"
+    },
+    {
+      "bytes": 351052,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253176125-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000072.parquet",
+      "sha256_sidecar": "c719af25abe95404aceef5a134f2cd7854e4d86a039a8b48026fc9ddca12486e"
+    },
+    {
+      "bytes": 236843,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253206374-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000073.parquet",
+      "sha256_sidecar": "90e16f39157c23e53e540485d28526a7d3af40085b18842609fc052316fd6d66"
+    },
+    {
+      "bytes": 225440,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253236625-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000074.parquet",
+      "sha256_sidecar": "e289d9ee85001a2746518aa28d1e3602b77ea7b926ab69386752c82cfd0d2e1a"
+    },
+    {
+      "bytes": 243796,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253266875-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000075.parquet",
+      "sha256_sidecar": "1d5ff110faef416a996b0753b2feb04d37cc81303eb36c2e9e06165eeb8ec794"
+    },
+    {
+      "bytes": 202975,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253297124-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000076.parquet",
+      "sha256_sidecar": "34ce75654937be4a09567b8ad79a9cce3b086b88214700a3472cc3444ddc4eea"
+    },
+    {
+      "bytes": 192057,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253327375-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000077.parquet",
+      "sha256_sidecar": "d48dacda757153f78e41bf3f53751f3d6dac50e728483d33ad5df7121943dd30"
+    },
+    {
+      "bytes": 252598,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253357625-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000078.parquet",
+      "sha256_sidecar": "128e7d102c2810d2350b14df51aa36e0359804d52418e63b0e973b130a2b58ca"
+    },
+    {
+      "bytes": 253698,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253387875-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000079.parquet",
+      "sha256_sidecar": "9ca93740ca3355bb0b9c537373a9ba8fac39b50f237b339ec82c475b9407d268"
+    },
+    {
+      "bytes": 224232,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253418125-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000080.parquet",
+      "sha256_sidecar": "c39e9e056570df1c52772d03a17c9e7534edfbcc934f8efd931598e968eeabe3"
+    },
+    {
+      "bytes": 194795,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253448375-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000081.parquet",
+      "sha256_sidecar": "69e154ddc01cc996fdab1b7cf8b84f021e5db5feb0d79813fb994f572c59ef74"
+    },
+    {
+      "bytes": 219995,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253478625-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000082.parquet",
+      "sha256_sidecar": "415bad13a93c6076b79a79868af137c0981b84fe2f598a11e55618220999ccca"
+    },
+    {
+      "bytes": 180155,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253508875-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000083.parquet",
+      "sha256_sidecar": "daafe6d1f90cc70bd4c47f3ccce8fab132d8bc2855cbf0f4b9ce2da721427f72"
+    },
+    {
+      "bytes": 199714,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253539125-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000084.parquet",
+      "sha256_sidecar": "006b199858853a6e3ab40278ec879c973919273d3b78f734c0172ad453c46713"
+    },
+    {
+      "bytes": 208157,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253569376-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000085.parquet",
+      "sha256_sidecar": "b63551ed5dcb776b238c36d496d87f12c0b899b3e93f820321bd742a3bb4f727"
+    },
+    {
+      "bytes": 172192,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253599625-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000086.parquet",
+      "sha256_sidecar": "efacf7bea6fdf53bf30f0db111727f9e72feec7f814c9bc153240cc06ef5d053"
+    },
+    {
+      "bytes": 214707,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253629875-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000087.parquet",
+      "sha256_sidecar": "64201ebd90503a87fe609e10c3c09c53be1b8d0d493e1d20a72e4c8e43e37125"
+    },
+    {
+      "bytes": 267461,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253660125-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000088.parquet",
+      "sha256_sidecar": "a379c2627f8a9f94d75791a432c8eacfa19e851490c2f8f162143c27ddfa9cf3"
+    },
+    {
+      "bytes": 230434,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253690374-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000089.parquet",
+      "sha256_sidecar": "abcd604d959f2f8b0d11d79dae2815ed273e054d876008c48335a7cc1c2756d9"
+    },
+    {
+      "bytes": 419439,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253720625-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000090.parquet",
+      "sha256_sidecar": "9c4d66f549583b9e0f575d6ef59f3a14cacac80b7df7d12997277d7e25ea6268"
+    },
+    {
+      "bytes": 291076,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253750875-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000091.parquet",
+      "sha256_sidecar": "f01404da9f38246a65d1d20e7baad999fd5aff1d0fb6573943eabdf6d9221a18"
+    },
+    {
+      "bytes": 215801,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253781125-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000092.parquet",
+      "sha256_sidecar": "5dcc39bcf7d9c0832b46f058fe66b9b6421b929472ea62e874552c2f1ed54893"
+    },
+    {
+      "bytes": 325919,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253811375-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000093.parquet",
+      "sha256_sidecar": "0be39de79fb92947ce55657e7745a01d6e0e62fde810ae34e5999610deb650ee"
+    },
+    {
+      "bytes": 332550,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253841625-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000094.parquet",
+      "sha256_sidecar": "c7f81806983b3fec902f952ec6eb91807d590032903fbb9c6d8d013241c5fcaa"
+    },
+    {
+      "bytes": 324518,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253871880-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000095.parquet",
+      "sha256_sidecar": "fe154e07c80e7a3c059e7fa1ce1948c48a59a4c4ca63ec0c3f9ce314f98363c7"
+    },
+    {
+      "bytes": 300669,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253902125-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000096.parquet",
+      "sha256_sidecar": "aecb74b864336939dff858ce3a3d774372e401e76aa17513e732f651100c283a"
+    },
+    {
+      "bytes": 296827,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253932375-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000097.parquet",
+      "sha256_sidecar": "237f21928feef75953d443f608d6f4fd929f4253dc7bce2cd8f42669deca8f1b"
+    },
+    {
+      "bytes": 311894,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253962625-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000098.parquet",
+      "sha256_sidecar": "098a28d58f4c31cf591af94a27ee2ff2b1bd73f8939481f10fafda0c7c1a5212"
+    },
+    {
+      "bytes": 206333,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792253980698-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000099.parquet",
+      "sha256_sidecar": "aaaeb0bfb84cd88add29a5a5daa561e60baccfc47273c1c0497ad0db023efad5"
+    },
+    {
+      "bytes": 456142,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254003100-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000100.parquet",
+      "sha256_sidecar": "aa9e8271800174af3c23b60d8de14754a31ccdc69fd5faba226a1cd57248198e"
+    },
+    {
+      "bytes": 157580,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254009829-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000101.parquet",
+      "sha256_sidecar": "14b0c9c1265e3615ab3e82c98b1c27f0d837c2cf1121d72f4cc0341ab71c5bba"
+    },
+    {
+      "bytes": 459697,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254029955-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000102.parquet",
+      "sha256_sidecar": "d31243124de1c719a6d01fe6ba819ae4d6ccb39a746d89771768a8b6eecd0eda"
+    },
+    {
+      "bytes": 285925,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254045216-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000103.parquet",
+      "sha256_sidecar": "6f2b0a9df0129493a7caf2528730dade31263d4f55a525f88637f30e3ca71305"
+    },
+    {
+      "bytes": 384151,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254075461-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000104.parquet",
+      "sha256_sidecar": "1deb1b415ecd6011732fea6d4ed8c6825f93288279abdc210d96bcc74fa43219"
+    },
+    {
+      "bytes": 305419,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254105712-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000105.parquet",
+      "sha256_sidecar": "01abdbfb7b0e6c35b51564db5b51c8aa84e6289dcd3ed9d9faa719fa63ba0d0d"
+    },
+    {
+      "bytes": 332324,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254135962-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000106.parquet",
+      "sha256_sidecar": "587658729d39d76e19bb122e75fd4247f4206d856a6c0014865650791fb2d1fa"
+    },
+    {
+      "bytes": 313388,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254166212-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000107.parquet",
+      "sha256_sidecar": "fd319b54f23beeb91356770a88e2fcd33ab199b0d38b45b2140dfc8a36313f6e"
+    },
+    {
+      "bytes": 225818,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254196462-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000108.parquet",
+      "sha256_sidecar": "fa5d2a374a1d3c8c3cec9603ce650d0b00f29e3667782a4973724b3432c134fb"
+    },
+    {
+      "bytes": 216761,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254226713-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000109.parquet",
+      "sha256_sidecar": "cb422b93a46df7e6add7040362972e175c1abe379a6817d062f06b2b7c7faa45"
+    },
+    {
+      "bytes": 291469,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254256962-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000110.parquet",
+      "sha256_sidecar": "ed1c78b1a87c550ead1cb8ac3891ac0e5a96cb7289e85257bef59da18e0b6fb5"
+    },
+    {
+      "bytes": 271291,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254287211-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000111.parquet",
+      "sha256_sidecar": "ccbf86d8df33bc8f0d8adc6392d8c01d1fc77cbf169b204a088a07f9cd470d6c"
+    },
+    {
+      "bytes": 305343,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254317462-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000112.parquet",
+      "sha256_sidecar": "dd3063a92498b33509a62d250f3ac0f7b5e203a2b52a7cfedbe3c88ef51e5ded"
+    },
+    {
+      "bytes": 382548,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254347711-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000113.parquet",
+      "sha256_sidecar": "8673bd27cbbe9cff9c93d42272198377cc90d3d134625b6a35e7bd174d32b132"
+    },
+    {
+      "bytes": 276860,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254377961-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000114.parquet",
+      "sha256_sidecar": "e568103f4c5c756430d60f54ad5d0e4678eecc623c210ef91c4b04b1b49c0640"
+    },
+    {
+      "bytes": 357434,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254408212-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000115.parquet",
+      "sha256_sidecar": "8744d8d313d19b30f07ff58a5d9ee518f5ba83c94ac94df95df6fe9524af248c"
+    },
+    {
+      "bytes": 282073,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254438461-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000116.parquet",
+      "sha256_sidecar": "f35d69d4e6b460e2f0c9257219c5ef91a3e6fc5534c93a7bbf9059a3b8864b98"
+    },
+    {
+      "bytes": 236008,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254468711-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000117.parquet",
+      "sha256_sidecar": "6701b948e42b2d6c65dd40f25dbc72595c97a712077aebfb08ccf7c36ee66447"
+    },
+    {
+      "bytes": 230799,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254498961-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000118.parquet",
+      "sha256_sidecar": "5632a029c26f33fdc7641db36983db18513b90dea07e663c2dedad0f6e6aaa97"
+    },
+    {
+      "bytes": 285101,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254529212-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000119.parquet",
+      "sha256_sidecar": "6627096a3e75e09ebb934a4566407c5e974ae178a397ab9dd933a129ad577e1c"
+    },
+    {
+      "bytes": 220903,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254559462-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000120.parquet",
+      "sha256_sidecar": "4eee12b9bb001aba6c4045788ae447bc38b174bcb8665acb29a747f075a37c8b"
+    },
+    {
+      "bytes": 211223,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254589712-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000121.parquet",
+      "sha256_sidecar": "d1144a9b786e08bb66437e8cb492f28c1641c1ee90e18a4cc5686991f83efa59"
+    },
+    {
+      "bytes": 290052,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254619963-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000122.parquet",
+      "sha256_sidecar": "0fda950c2407d16d195a15e4ca01df918ef67b10d94df47bd0ebecddedb0ef4d"
+    },
+    {
+      "bytes": 268020,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254643207-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000123.parquet",
+      "sha256_sidecar": "cbec0bab74130231a86c9d8b93c95a003149e5d88b724ce23252e3e4de312d1a"
+    },
+    {
+      "bytes": 458204,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254663108-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000124.parquet",
+      "sha256_sidecar": "c5ea3e89705c2c38e3ffa584da9759abb546ec7a453c64d076a668c38f7d3a64"
+    },
+    {
+      "bytes": 190096,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254678643-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000125.parquet",
+      "sha256_sidecar": "eb5cd62e19673a5980b24fc2a064741996af58c76b2721efc11ddb9d9ddf5e14"
+    },
+    {
+      "bytes": 277847,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254708894-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000126.parquet",
+      "sha256_sidecar": "be87620f3125a8fa1e5c63ace553272341891a224e1322dd2d3f5e35d70c35b8"
+    },
+    {
+      "bytes": 273155,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254739144-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000127.parquet",
+      "sha256_sidecar": "5165feb1a8e5e9cdf0979836641bb1b3c5eed5b1b4621856f55a6b2113d7e6bc"
+    },
+    {
+      "bytes": 244533,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254769400-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000128.parquet",
+      "sha256_sidecar": "5f3e993f1c6c304661758fe58b6460efdc9ab7d9d8b9636742a86837f55e8870"
+    },
+    {
+      "bytes": 314320,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254799644-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000129.parquet",
+      "sha256_sidecar": "ee9b5c4f1387bd1eb0a64d1d09b0bb0d5dd1b36a5a955b3d4e654b01d7c02099"
+    },
+    {
+      "bytes": 285609,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254829894-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000130.parquet",
+      "sha256_sidecar": "32b0297af26103f454bafda58b9e5e6fa8ca9b7604dae1dc27d71f466ad423c5"
+    },
+    {
+      "bytes": 337038,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254860144-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000131.parquet",
+      "sha256_sidecar": "278b0ae5928fc0e6a34b112534d680b52b5d518c65082eaeaf8ab0303324ab78"
+    },
+    {
+      "bytes": 317358,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254890406-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000132.parquet",
+      "sha256_sidecar": "73da038d9ac42c1fcdb04c001f827cc2d70f113330477692606bfdb5908ed0ad"
+    },
+    {
+      "bytes": 393742,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254920644-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000133.parquet",
+      "sha256_sidecar": "f38ef906e07fd028d63ea7e7a07ed1621fb7540c49f7a1e0f51c2b1c22903de8"
+    },
+    {
+      "bytes": 290214,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254950893-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000134.parquet",
+      "sha256_sidecar": "e5796f45b2628d213a5da11336378ee1be7645e2a8378dfd36fb30c0360ae477"
+    },
+    {
+      "bytes": 263303,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792254981152-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000135.parquet",
+      "sha256_sidecar": "ee4bd5263656d71dfd476ead2f99f62e919a7289acb9922642ef35519e58ba4d"
+    },
+    {
+      "bytes": 208825,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255002814-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000136.parquet",
+      "sha256_sidecar": "e238c68ac33853d79af75b52e03308cb3edaf505b5c5b337df905da24b32b345"
+    },
+    {
+      "bytes": 438243,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255029512-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000137.parquet",
+      "sha256_sidecar": "95a65c2a5ba77c26d51db2cdfd2c65b16526572fdaa090d317603e4a639ec669"
+    },
+    {
+      "bytes": 295156,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255038301-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000138.parquet",
+      "sha256_sidecar": "05d1fdfa3c236343762ba2531df8e6c9ff0d867b8abc3a5dfe8a90dea7bfb399"
+    },
+    {
+      "bytes": 419213,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255067807-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000139.parquet",
+      "sha256_sidecar": "de73deef0287e271ca3dcc107f7fe0b232b4e28ce04f4cbaed5e175617754424"
+    },
+    {
+      "bytes": 85501,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255068548-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000140.parquet",
+      "sha256_sidecar": "3ac81285ae380a097d6fd91de47e13a782e42e78f885fe25317c4fe922454690"
+    },
+    {
+      "bytes": 341601,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255098799-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000141.parquet",
+      "sha256_sidecar": "04ab11b2b1e36362a480585ae1b95c5b132f5ebfd144f1051fdcfe78df63413e"
+    },
+    {
+      "bytes": 333228,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255129048-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000142.parquet",
+      "sha256_sidecar": "88d7233f94b2849a39a539271de0cf79a1fc5c419043aaadea00dd712e15a01b"
+    },
+    {
+      "bytes": 311229,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255159299-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000143.parquet",
+      "sha256_sidecar": "17d7b99c455351a7c3637e7a5016a8431a35175db5073fb4a8466d2dde4b61b2"
+    },
+    {
+      "bytes": 243692,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255189548-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000144.parquet",
+      "sha256_sidecar": "6750b694a35d8d528e156728c879459cdea21e934b1c835525f9e21edf973432"
+    },
+    {
+      "bytes": 322342,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255219799-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000145.parquet",
+      "sha256_sidecar": "34f3eb2cfdd60ca034e9d36f1cf4766527e8d5913e3fb818264e9582bc925b22"
+    },
+    {
+      "bytes": 312657,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255250047-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000146.parquet",
+      "sha256_sidecar": "dd9974c76e963427946ff68d86ce2975ba4c32efa2f4f51b28029cdad9b22fda"
+    },
+    {
+      "bytes": 326553,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255280298-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000147.parquet",
+      "sha256_sidecar": "c6569e04e3e15f494bbe4956ad7e5ae516a17600dbbbb82cfd5365748c88ac1c"
+    },
+    {
+      "bytes": 247512,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255310548-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000148.parquet",
+      "sha256_sidecar": "2ec0ee2f6c5a93ceab8824b59e1d2758679e93bbac488cc7af2a8c6ed115b49e"
+    },
+    {
+      "bytes": 219012,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255340798-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000149.parquet",
+      "sha256_sidecar": "2612646dc5576395b0fff9575fe9e27a16e019e93d7187df047f803dfb7b8385"
+    },
+    {
+      "bytes": 226637,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255371049-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000150.parquet",
+      "sha256_sidecar": "dfba084a1dd6c6ad01577b6275a72264a9a1a5396deef5fbf72966734427caa4"
+    },
+    {
+      "bytes": 275799,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255401299-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000151.parquet",
+      "sha256_sidecar": "37c1505b70b86d1b1aa68cc638d40176ac7ff6604c98a0e08c9878a4749c188a"
+    },
+    {
+      "bytes": 221899,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255431554-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000152.parquet",
+      "sha256_sidecar": "459b9e34c49de07ef7f5989bdd22c410bdec09763ed2695b45b64b18ca4af370"
+    },
+    {
+      "bytes": 210254,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255461802-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000153.parquet",
+      "sha256_sidecar": "5f8281f6893191586c155c0e9578b43e6190a100a9cb8206fe18b8e102daa2a6"
+    },
+    {
+      "bytes": 205667,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255492048-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000154.parquet",
+      "sha256_sidecar": "7027aac0d7a9686d74fde57db255ff191a165d1819221cbbe3d536371dc1993e"
+    },
+    {
+      "bytes": 277941,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255522300-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000155.parquet",
+      "sha256_sidecar": "0ec295e5f330df08ebd74dd75b953e9a59aa652e1fd7a4b40450b04df328746c"
+    },
+    {
+      "bytes": 247392,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255552548-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000156.parquet",
+      "sha256_sidecar": "fa47dba901f10d9ad75ccb29da42a429e2f68d6895b27249314d89f65a70228a"
+    },
+    {
+      "bytes": 226520,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255582798-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000157.parquet",
+      "sha256_sidecar": "b6ac4788294bca8bbd005da01a1d4b2a276efadf063e8d58f5816b762a22b72f"
+    },
+    {
+      "bytes": 229142,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255613048-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000158.parquet",
+      "sha256_sidecar": "aa358cd50451fd2b6812effafd537d91815e0ffa02ae79f434581b2ca1c3489a"
+    },
+    {
+      "bytes": 256139,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255643299-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000159.parquet",
+      "sha256_sidecar": "53e306eee85aac37e1f576d6dfcc2756bf00200c560cc6609365d453c9fd4eae"
+    },
+    {
+      "bytes": 215042,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255673549-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000160.parquet",
+      "sha256_sidecar": "65c65e0ee3edbbd561a2f2d4281bdf0b876b7d09c68a08749039b78473611271"
+    },
+    {
+      "bytes": 274321,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255703800-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000161.parquet",
+      "sha256_sidecar": "308bc853b2be7d5a89e3d0bd763618e49a0ec23644e44d163232e94b5bb50d7c"
+    },
+    {
+      "bytes": 231472,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255734048-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000162.parquet",
+      "sha256_sidecar": "f25d05e486edeaf2b1db927deacfb7bb867cb1450470b5a851e1ff9d17b8b511"
+    },
+    {
+      "bytes": 216987,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255746851-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000163.parquet",
+      "sha256_sidecar": "6387ce972d059865b1eccfb10029da8a6afca0445e8d9f6604a57e9b2fff8918"
+    },
+    {
+      "bytes": 456754,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255772101-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000164.parquet",
+      "sha256_sidecar": "d9dd6864401fb3ce4471dd051a80f8a7ea2fb460a892dde5f0d89117127665d4"
+    },
+    {
+      "bytes": 124999,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255782254-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000165.parquet",
+      "sha256_sidecar": "a5f1d5655b3263ea55d99b1e53f130b01fcb612b609e8468a7d86aeb29f1a493"
+    },
+    {
+      "bytes": 216200,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255812506-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000166.parquet",
+      "sha256_sidecar": "503072e415efd95c58bf634a43240bc12bfdf3019c808fe1b1e2823a5a4ed99f"
+    },
+    {
+      "bytes": 319827,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255842754-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000167.parquet",
+      "sha256_sidecar": "b02833788c12e9e0a68fcf899c518a33438c324f73c46b61de4647a6bda6fb6e"
+    },
+    {
+      "bytes": 224350,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255873007-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000168.parquet",
+      "sha256_sidecar": "17963eb7caab5cb2393bc493c97e2992d46d4797b8cbf757b7e14913317a5535"
+    },
+    {
+      "bytes": 239042,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255903254-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000169.parquet",
+      "sha256_sidecar": "f13196ee67034db8d7cc627cb99432fb0ba0f81b93a8ad94db0e8b657624894c"
+    },
+    {
+      "bytes": 88206,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255904260-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000170.parquet",
+      "sha256_sidecar": "13ebb553342e240633cac8bad302fc1a4a5d5287072440eed60864d94fe4eca7"
+    },
+    {
+      "bytes": 453255,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255924507-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000171.parquet",
+      "sha256_sidecar": "27e66802b0aed7c621ae099d64319d6310d7dec52f3a998e7e3c90181e4668a9"
+    },
+    {
+      "bytes": 225060,
+      "path": ".local/long-captures/session-1792251264110/recordings/BTCUSDT/00000001792255940229-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000000172.parquet",
+      "sha256_sidecar": "6672633d0a7562102d1398d6f4ac7f53bc8fda20fcdf991866d4632764725cb5"
+    },
+    {
+      "bytes": 462281,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792251298884-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000001.parquet",
+      "sha256_sidecar": "979b9adb720486f15eead3a8320809a43ff5b53beefa725066bb89c8263fcc1d"
+    },
+    {
+      "bytes": 96338,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792251300459-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000002.parquet",
+      "sha256_sidecar": "a89e3e573f5a1002bcdbd64e752d605891777b64459e50044343ed7ac65a5ac8"
+    },
+    {
+      "bytes": 283560,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792251330710-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000003.parquet",
+      "sha256_sidecar": "180aba95b41b585ec257b902f80f067c11302e78f74e21bec0a6e7b0c8a0bd23"
+    },
+    {
+      "bytes": 319324,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792251360959-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000004.parquet",
+      "sha256_sidecar": "b4eafe84c01dc6e31ebf9da90c8fb4d9a1ec2561d8ff8360727cda91584261a0"
+    },
+    {
+      "bytes": 403052,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792251391210-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000005.parquet",
+      "sha256_sidecar": "16455e81fc5c1d1002e84344dd035f73d1843ae8195980c0a268310abea43650"
+    },
+    {
+      "bytes": 374050,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792251421460-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000006.parquet",
+      "sha256_sidecar": "f765441e92063d19b26c34029b412c00b75c8c9b204cd504ed2e757f5bc59f91"
+    },
+    {
+      "bytes": 449940,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792251444907-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000007.parquet",
+      "sha256_sidecar": "d3810e9f64cf3fb192860f126097da875994e58fd792edf73de9e86f88c5a4c6"
+    },
+    {
+      "bytes": 112426,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792251451710-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000008.parquet",
+      "sha256_sidecar": "62a7699dbc70dbd1e862d7040253abbdbdf67807906c4c9f4d94d17ac9dfbd4a"
+    },
+    {
+      "bytes": 327907,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792251482002-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000009.parquet",
+      "sha256_sidecar": "07885048fd6f4687e654fc889a50921df30ff5453bed425ff21fafc1b9ccf5bc"
+    },
+    {
+      "bytes": 367585,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792251512210-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000010.parquet",
+      "sha256_sidecar": "d76138816be0ee245fd81d358cc5b8b8a0fcb7378cf40674537257aa9175eedb"
+    },
+    {
+      "bytes": 288637,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792251542460-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000011.parquet",
+      "sha256_sidecar": "55a9f503859af022e906b10b552e235452c0926453669f63f6a6f36542273b77"
+    },
+    {
+      "bytes": 331236,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792251572710-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000012.parquet",
+      "sha256_sidecar": "1b3da713289e61d404861d42d2958aa10e4e84c7e099bdf5fe3f8ec25bde2f28"
+    },
+    {
+      "bytes": 237879,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792251602961-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000013.parquet",
+      "sha256_sidecar": "a52e785bf94fc28de3fe1945f502b6444d759ebb38662af8bb897395f876ecdb"
+    },
+    {
+      "bytes": 328771,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792251633210-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000014.parquet",
+      "sha256_sidecar": "1a2a1da530546f2bccdfc834aaa43f8cc634b8903f32c63b32bd9a0c0caefa63"
+    },
+    {
+      "bytes": 311240,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792251663460-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000015.parquet",
+      "sha256_sidecar": "8a8d6ce860a5387f6c632a9fb759f8eb4661481ce28165b4240efc6746e5fecf"
+    },
+    {
+      "bytes": 266418,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792251693717-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000016.parquet",
+      "sha256_sidecar": "dfb903bf0e0749b759cefeeb6da8211d14ed1dad3557a692484d4edd6e77843c"
+    },
+    {
+      "bytes": 296936,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792251723960-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000017.parquet",
+      "sha256_sidecar": "f470f7fa68d8edcd5c2baa8a3664cc651a938cbdda90bc182153c5a34ed3a345"
+    },
+    {
+      "bytes": 217221,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792251754210-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000018.parquet",
+      "sha256_sidecar": "cdf71d49ae4da848f038fe8622eb2aede7142b4bf653e3f460a39a04012acce4"
+    },
+    {
+      "bytes": 257253,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792251784459-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000019.parquet",
+      "sha256_sidecar": "d10a34eaa444d12aaebd5203d500c6eae4666a0c2ead6f2a9af5cb11cf59ca31"
+    },
+    {
+      "bytes": 284525,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792251814710-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000020.parquet",
+      "sha256_sidecar": "bb0ec60e1be33173a01b88ca1715b688a9a6a8020aa0b4c39ce989d1b34e26cd"
+    },
+    {
+      "bytes": 266685,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792251844960-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000021.parquet",
+      "sha256_sidecar": "c48a54816a0953c413dc55a979b333496dbd8e8b4b5e07f210b50b5ad1d39a4b"
+    },
+    {
+      "bytes": 262178,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792251875211-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000022.parquet",
+      "sha256_sidecar": "a412606556c04d3e2f05c2031a653fd0d54d1165bdd62cf08a0da397715df595"
+    },
+    {
+      "bytes": 282244,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792251905460-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000023.parquet",
+      "sha256_sidecar": "f3d2ae253b9940c53cf444ddea64bf55e5f89a11d762891f0ff690970217d363"
+    },
+    {
+      "bytes": 241173,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792251935710-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000024.parquet",
+      "sha256_sidecar": "7f72a7c9f8bcd8cf0e8f07929172949d0a9158dfd2ab5accb599b0543490d13e"
+    },
+    {
+      "bytes": 358811,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792251965960-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000025.parquet",
+      "sha256_sidecar": "3226e38a46c6b9a8495c80570e073d18ecb2a2c8d3a44553f3746f22ca1aa40c"
+    },
+    {
+      "bytes": 330178,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792251996210-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000026.parquet",
+      "sha256_sidecar": "3bd21111e2e82ab11ee862fcdd587befbbe4bd115f03578cd407a6d5680536fb"
+    },
+    {
+      "bytes": 288514,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252026463-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000027.parquet",
+      "sha256_sidecar": "1b0a8566706ba9a33f8f6b8cb616175c421ad9c7e31ee7c608282b483771bf4c"
+    },
+    {
+      "bytes": 299764,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252056711-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000028.parquet",
+      "sha256_sidecar": "424234a374982015610ddf8fc0077ba638e660fe1e305f9dd845c4c3efb11166"
+    },
+    {
+      "bytes": 272871,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252086960-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000029.parquet",
+      "sha256_sidecar": "390426f771806d04047c74726d54c02d6a16ce1cc87b23aa6c536fdec8dc586b"
+    },
+    {
+      "bytes": 250279,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252117211-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000030.parquet",
+      "sha256_sidecar": "6d499b689326a47420d1cfebaaf8c5d8a184f22e710d3d5d0e109ef7d1ff8cda"
+    },
+    {
+      "bytes": 332182,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252147460-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000031.parquet",
+      "sha256_sidecar": "3297f861749653ad7aa66ec58d836db22517c2251dfb0ca124fde550a971c743"
+    },
+    {
+      "bytes": 328131,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252177710-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000032.parquet",
+      "sha256_sidecar": "6484ebbcad3a65cb96062103bd28727e0eb2324a61b75e0cdd0a1ce27f16ed11"
+    },
+    {
+      "bytes": 239677,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252207960-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000033.parquet",
+      "sha256_sidecar": "82eece789eb53d53bc116777169e393ad83b5d67518103dd1ac89526c314b371"
+    },
+    {
+      "bytes": 224655,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252238210-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000034.parquet",
+      "sha256_sidecar": "d3adb7b55f24e23f587b847734b45a909fb47f238475aafc0f3471d805c7b39d"
+    },
+    {
+      "bytes": 198448,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252268461-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000035.parquet",
+      "sha256_sidecar": "34b67231e881923e0d599694c023d969a5c66a1f38c7e924993b864398706496"
+    },
+    {
+      "bytes": 301552,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252298710-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000036.parquet",
+      "sha256_sidecar": "bb5b9b5454ffdbb77119139827316a610941abf8defaf102dfcc421a58689e9b"
+    },
+    {
+      "bytes": 365304,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252328962-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000037.parquet",
+      "sha256_sidecar": "0b0ab45b9e56968a1c410ef1c529f446f5d510e7c4f7b58bb83d7451458a7a10"
+    },
+    {
+      "bytes": 331944,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252359211-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000038.parquet",
+      "sha256_sidecar": "d685558b5a3cfa8470173a373e75347cf01841e59799c3837a97b2681a9128df"
+    },
+    {
+      "bytes": 258906,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252389460-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000039.parquet",
+      "sha256_sidecar": "f1d86ac10bf74b1bbebcdec4384fcaae3563a05741ab945baf9f47157a0d64b5"
+    },
+    {
+      "bytes": 225484,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252419714-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000040.parquet",
+      "sha256_sidecar": "16d0203263c8daba4a2a0dda1ad2b1e8db3adfdb04888bfb47ad34b4f264fad4"
+    },
+    {
+      "bytes": 278313,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252449960-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000041.parquet",
+      "sha256_sidecar": "fc2fb4183e7e3a165ce1d4b4bd14c94a8eced60bb11c18866deb27442e44d530"
+    },
+    {
+      "bytes": 328971,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252480210-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000042.parquet",
+      "sha256_sidecar": "3c0ff3ca3aca26f64e8ea4addac61bc84e4ebb572796b54e0b6237057f139cce"
+    },
+    {
+      "bytes": 299182,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252510460-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000043.parquet",
+      "sha256_sidecar": "a0a12adfc2fa336832e7a2c001b3912e38587492052d349aa082f71c9a6ed9fb"
+    },
+    {
+      "bytes": 319769,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252540711-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000044.parquet",
+      "sha256_sidecar": "521edc080912cdbe7e9c1ba3fab21322c09ad7712cbee23727d0cc307390ea8d"
+    },
+    {
+      "bytes": 365922,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252570960-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000045.parquet",
+      "sha256_sidecar": "99f49729845a0430c981ac2fc89900d85c334d7e76061c02bdb4178474a4cae1"
+    },
+    {
+      "bytes": 260138,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252601211-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000046.parquet",
+      "sha256_sidecar": "a9d9eaaf9355ca8ddc69113ba74b5f77c03d91d994364a44af41a775f244a4f6"
+    },
+    {
+      "bytes": 244375,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252631461-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000047.parquet",
+      "sha256_sidecar": "94bc03b63b7c64a8fe273316639de1ec160df40717e3e3c7c66b2e4435d2c6dc"
+    },
+    {
+      "bytes": 244528,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252661711-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000048.parquet",
+      "sha256_sidecar": "4afc6ffc3268a4f37226c28b6b1adc191f61e4b59f989f938ced6969ca5a161f"
+    },
+    {
+      "bytes": 251796,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252691961-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000049.parquet",
+      "sha256_sidecar": "bdccc286db527c3d90f2f92bce1e13f05084803493047220b9d203aec37af125"
+    },
+    {
+      "bytes": 248538,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252722211-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000050.parquet",
+      "sha256_sidecar": "0428327efce4f61a58a6f7bae5783c987de05b538d415665b8351b365d7c3ae8"
+    },
+    {
+      "bytes": 233608,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252752461-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000051.parquet",
+      "sha256_sidecar": "9ac3a9b21c3b2d7c85d5e689450a7d6f8e85a97a0b5806fee8a6d57804112e2b"
+    },
+    {
+      "bytes": 156969,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252782710-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000052.parquet",
+      "sha256_sidecar": "19eb78dd604f1833b14d22e4ae2178c57c5d753d4f19c27bd4bf106dc55d58b5"
+    },
+    {
+      "bytes": 353128,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252812960-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000053.parquet",
+      "sha256_sidecar": "8be05b220ef15585e7e29c16f8ccdd27d225f1d9fcf25cad391a144e97d23625"
+    },
+    {
+      "bytes": 450040,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252837100-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000054.parquet",
+      "sha256_sidecar": "01e0bb85d45fd9c89be1997cf2d4c9aa3e7b654b76dea61e90f46d64a1f67f5e"
+    },
+    {
+      "bytes": 123861,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252843211-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000055.parquet",
+      "sha256_sidecar": "95234ba6fda3f179ec318c6b299affc2555c890218ccf03089df1cd1876fb434"
+    },
+    {
+      "bytes": 307105,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252873460-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000056.parquet",
+      "sha256_sidecar": "e4528989037ae15594395082dcfcb2358bc481f026c7ca2fd42523012a345d27"
+    },
+    {
+      "bytes": 356368,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252903711-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000057.parquet",
+      "sha256_sidecar": "4fa3ba503c4266f8c7e07230de72078f26e4bd45029f448f23d92b6b7d477fad"
+    },
+    {
+      "bytes": 361443,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252933960-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000058.parquet",
+      "sha256_sidecar": "a8b19448cc84a560982d73488b66c883ac11fc800ac29a2b0b8b56991e937faf"
+    },
+    {
+      "bytes": 284984,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252964210-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000059.parquet",
+      "sha256_sidecar": "c8f80b5663e65960f08f630ceced440174e8eb8243e6ba64789fdabd1a3f6906"
+    },
+    {
+      "bytes": 232658,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792252981888-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000060.parquet",
+      "sha256_sidecar": "ce6b1a2c929684fabd8047cbd3393c4a6a27b774073e8a8f81aad439e06341e7"
+    },
+    {
+      "bytes": 471020,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253016474-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000061.parquet",
+      "sha256_sidecar": "b7e02c21f2a822197d942ba78cc67b76b02a75cff47aed9a9ac7952b38716e46"
+    },
+    {
+      "bytes": 81378,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253017265-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000062.parquet",
+      "sha256_sidecar": "42e222e31a3b19d1c4a9c732322f6891b36a19774f6574c7cb1a041819b7d8d0"
+    },
+    {
+      "bytes": 301716,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253047514-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000063.parquet",
+      "sha256_sidecar": "2874006f5f9955fb12ab08f7073ae6412976287c599e882e2030c28386ae30df"
+    },
+    {
+      "bytes": 309555,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253077765-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000064.parquet",
+      "sha256_sidecar": "e49386ceb59b72a6efac8baaf282276a2c2be00f5f1429109baf6b731f8257db"
+    },
+    {
+      "bytes": 87160,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253079646-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000065.parquet",
+      "sha256_sidecar": "45906e377bab0213605622ab456c4f2e29f2bd52e229247c7f76120ee827a268"
+    },
+    {
+      "bytes": 471943,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253106898-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000066.parquet",
+      "sha256_sidecar": "dcca43c2142a81ea3787bd9bcd5d1097439864c84b0b7ac9292629351284948e"
+    },
+    {
+      "bytes": 153575,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253115031-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000067.parquet",
+      "sha256_sidecar": "5c6332d93f4b62b23187f1594e364180cf6863e5a1835b470e02f29d2ec76854"
+    },
+    {
+      "bytes": 235840,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253145281-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000068.parquet",
+      "sha256_sidecar": "5ea7bada9cb9c9dd13438f58d09391807e2be977a077ca6bef91c57d253c6dca"
+    },
+    {
+      "bytes": 332888,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253175531-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000069.parquet",
+      "sha256_sidecar": "33693a8cb70b28117edbbbaa21548b28e3aa79be47cddfb920067a1bd6181b9e"
+    },
+    {
+      "bytes": 275209,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253205783-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000070.parquet",
+      "sha256_sidecar": "fddaaf5d1cef7934f05724b6f8b63355afdbf36d907e97b0282c6c8473fd1011"
+    },
+    {
+      "bytes": 246348,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253236032-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000071.parquet",
+      "sha256_sidecar": "b1d6ae8c8cac395ff3277f94c3625fa1209cb0e5b94ed0c88ac2dea081023383"
+    },
+    {
+      "bytes": 253248,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253266284-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000072.parquet",
+      "sha256_sidecar": "05b000b2c7ece409ab273d896b57aefb4cf3bec85e82a4c0b515124acd4965b1"
+    },
+    {
+      "bytes": 247969,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253296532-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000073.parquet",
+      "sha256_sidecar": "748f411cb221277e0f46d1498d8a77a5302ab8ef7d425990126efc5b12b497e4"
+    },
+    {
+      "bytes": 225356,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253326783-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000074.parquet",
+      "sha256_sidecar": "e63031777377fee1b67572e900f89f7604e99a1168f9b8e3ce3713d139ac326b"
+    },
+    {
+      "bytes": 257631,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253357032-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000075.parquet",
+      "sha256_sidecar": "f04f884ecf1c26e3a0bbf59296c887437b1dc6b5b848ded7bf55d0f44e9c95d3"
+    },
+    {
+      "bytes": 244366,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253387282-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000076.parquet",
+      "sha256_sidecar": "ebc9bf3d369f039d0c62a846ac12b8ab7a0be1d326f52ff51eda3dd21d9ac944"
+    },
+    {
+      "bytes": 238237,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253417532-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000077.parquet",
+      "sha256_sidecar": "771f1942e2141ef5346294a3d7ab38c2500d054872e61c5bfdbaf08821ae05b8"
+    },
+    {
+      "bytes": 237935,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253447782-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000078.parquet",
+      "sha256_sidecar": "e539dfeb21acac1cd4601ad8d8afb88dde8f27fd8b6097eecf761296b74c421e"
+    },
+    {
+      "bytes": 230544,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253478032-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000079.parquet",
+      "sha256_sidecar": "dac37a9b9cf7fd0dae6168c9756ded633a4b7934144c3cee9b2f286919cf637b"
+    },
+    {
+      "bytes": 188368,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253508282-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000080.parquet",
+      "sha256_sidecar": "958fb140ace18d8f4349f2aceacd63dcaf5eb683607f417fc290bcfa5c04b6ec"
+    },
+    {
+      "bytes": 210890,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253538532-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000081.parquet",
+      "sha256_sidecar": "1186495db4932028753ab8500bdf012bd3efd25cab8807f422aa2a7f899c8422"
+    },
+    {
+      "bytes": 247438,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253568784-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000082.parquet",
+      "sha256_sidecar": "3b4ca6672731743ee0f9d2ebc5c0eee3b78cb41bb4129e5817871c51188657ce"
+    },
+    {
+      "bytes": 179399,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253594684-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000083.parquet",
+      "sha256_sidecar": "e08af9d5cbd671f790dfcaa63472d753cb5e2cb79d9d544aaa3c3089e2265f24"
+    },
+    {
+      "bytes": 448242,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253630289-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000084.parquet",
+      "sha256_sidecar": "d9fc8a8e23725f648041a15e9543839844080b70b51b83bc1a7a07e0db940ada"
+    },
+    {
+      "bytes": 190041,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253660539-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000085.parquet",
+      "sha256_sidecar": "c6a0c7acb7e73da8657ab25185f64b667e1284ce382b31106f39c6da59dd7bfb"
+    },
+    {
+      "bytes": 212669,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253690789-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000086.parquet",
+      "sha256_sidecar": "43051f39470cf864058de35ad2668b52bf8401bfb32eba8589da31508ffce83b"
+    },
+    {
+      "bytes": 323799,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253721039-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000087.parquet",
+      "sha256_sidecar": "65d28ca7d4334daee770c4b4f617617546dcdccd95187ae67b163f54de6bec80"
+    },
+    {
+      "bytes": 274305,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253751289-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000088.parquet",
+      "sha256_sidecar": "20cd2fa6941de42262d7c776bf5beb6c1aca67ff065c1defc55766fe88193a96"
+    },
+    {
+      "bytes": 179801,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253781539-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000089.parquet",
+      "sha256_sidecar": "ed34c0339504c420222c637e8f337ea9c775c4dd859eb6c95f7805eb87973a1e"
+    },
+    {
+      "bytes": 269936,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253811789-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000090.parquet",
+      "sha256_sidecar": "a460aae98afe0ab6e21e1f93528e596f05b352e8fa9ceb149d6aeae79d3f9242"
+    },
+    {
+      "bytes": 264422,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253842039-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000091.parquet",
+      "sha256_sidecar": "68017181ee69c3fbcfd229e0d07711da8f830e5267fa3f841425372126ad9043"
+    },
+    {
+      "bytes": 295275,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253872289-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000092.parquet",
+      "sha256_sidecar": "380f417554ea0f9054a74e620f0840a96b4e4e436947204b0e63afc589ab9389"
+    },
+    {
+      "bytes": 298195,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253902789-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000093.parquet",
+      "sha256_sidecar": "1a753b3a6daedd7d7c5918255215456bf43daef8def296ddd855dd3c8248f685"
+    },
+    {
+      "bytes": 270317,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253933039-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000094.parquet",
+      "sha256_sidecar": "9e9a78da70c26dde1e10440eb7b6b94ac5a92c21f86805fa83655559c4650980"
+    },
+    {
+      "bytes": 329892,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253963289-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000095.parquet",
+      "sha256_sidecar": "587c7c1faa9776f68173ef88d354aafbad629a9663cd89a1286e84587623b089"
+    },
+    {
+      "bytes": 339939,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792253993540-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000096.parquet",
+      "sha256_sidecar": "2a32f777446d0fcc69d3e21e05b0990a9fb093860ab0e02bfa249ef7df28fd01"
+    },
+    {
+      "bytes": 318498,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254009829-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000097.parquet",
+      "sha256_sidecar": "5a418f4b08a3b98f5b3716528e1d8449f9166dd4631fb7042b28a6ea551d21dc"
+    },
+    {
+      "bytes": 489941,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254026182-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000098.parquet",
+      "sha256_sidecar": "3bea49793d62536557537754e21552d55b71308a3b2a688eebe467c0ed55ddd1"
+    },
+    {
+      "bytes": 308760,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254048280-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000099.parquet",
+      "sha256_sidecar": "85dcb2ac488e6c53f3d41a5cbbd97f8f9503d45713acfe75b835ae529b49b4fb"
+    },
+    {
+      "bytes": 444169,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254075553-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000100.parquet",
+      "sha256_sidecar": "c47dc595bc2ec8ef9d4f220d1d30bd78bcbee942550a9a0e0f792f01a1c992c2"
+    },
+    {
+      "bytes": 116824,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254078530-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000101.parquet",
+      "sha256_sidecar": "46eea65c93f3beba1f9e5306030a7541f21627af90e134244d2d87f8caa21ad8"
+    },
+    {
+      "bytes": 351610,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254108781-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000102.parquet",
+      "sha256_sidecar": "dc733c1c5ca84cdf251f7712da9ef4bfdc7863bc10eab46d065dfbf6321bc65a"
+    },
+    {
+      "bytes": 355662,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254139030-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000103.parquet",
+      "sha256_sidecar": "7cd8f72ba7e0f7cec992b61b063b4c98bb85173f57ba6b026ee8130e2ed3cf02"
+    },
+    {
+      "bytes": 342324,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254169280-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000104.parquet",
+      "sha256_sidecar": "f1f9e959224c2f556f2808b6b7eecabbb97305bed30d2e230141a295de10f5a0"
+    },
+    {
+      "bytes": 224029,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254199531-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000105.parquet",
+      "sha256_sidecar": "4955fa23dd09b0b3835a16a174a52f925a817114c542fe67825217421f3fe04a"
+    },
+    {
+      "bytes": 229260,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254229780-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000106.parquet",
+      "sha256_sidecar": "8e1899c213a1cceed10c609a4cdc589678132ffb234a6898e12693355f2105d7"
+    },
+    {
+      "bytes": 261544,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254260030-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000107.parquet",
+      "sha256_sidecar": "2a2b0c201a21695c8240a31aaa1418a82d0198cee19c1cfe1fb9d23db7c2d46a"
+    },
+    {
+      "bytes": 219748,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254290281-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000108.parquet",
+      "sha256_sidecar": "1410b70b8742868fdf9a7424c200377664cf3ed6b9e09976ce54e9fd08c5d44b"
+    },
+    {
+      "bytes": 370142,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254320531-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000109.parquet",
+      "sha256_sidecar": "042613beb0dbb749cff147975e335c7099b76a5b4c11fd23187fbb902455877c"
+    },
+    {
+      "bytes": 355428,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254350780-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000110.parquet",
+      "sha256_sidecar": "7e81a5e267255366fd58604722db58c19be55947ed21784d77de3b6a9d99cf40"
+    },
+    {
+      "bytes": 325413,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254381031-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000111.parquet",
+      "sha256_sidecar": "9138064c07e1744a93467f5b8732bf8828b42c38e0f50b403783f4e981700584"
+    },
+    {
+      "bytes": 421380,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254411281-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000112.parquet",
+      "sha256_sidecar": "f4010665edc68c323cc2973b28479d4b88f30c888e17b4995f6a9477ebc4353e"
+    },
+    {
+      "bytes": 323756,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254441530-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000113.parquet",
+      "sha256_sidecar": "cd5cf382510510e1fd5633648f7032aedefa1b11f29ebee238969f539f6e49b3"
+    },
+    {
+      "bytes": 287654,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254471784-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000114.parquet",
+      "sha256_sidecar": "a1e90ba5686a7a101d00465dbb9aaa4eb91903aaed991288cb749bf1a48e00d1"
+    },
+    {
+      "bytes": 283266,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254502033-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000115.parquet",
+      "sha256_sidecar": "e3533bf6e7668496848926aa3320387b61c6667c085b230d258e2088613433c0"
+    },
+    {
+      "bytes": 296998,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254532282-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000116.parquet",
+      "sha256_sidecar": "a636253ef1f13044fe35b0f44f03c93c5b2a444629a467d21400c62997996984"
+    },
+    {
+      "bytes": 223276,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254562531-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000117.parquet",
+      "sha256_sidecar": "93733de696a755ab1257ccc18f99f5426f73687e9ed27d225f33f81aacefdd2b"
+    },
+    {
+      "bytes": 244531,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254592780-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000118.parquet",
+      "sha256_sidecar": "8ccf454b8ccfcbc5ef0184b5ab5384d0d171a700baab1ffc2f4a1e4ac5beec53"
+    },
+    {
+      "bytes": 309820,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254623030-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000119.parquet",
+      "sha256_sidecar": "f7bea486a0c10a4bdbf81976e914608d8348b5516b52be5f6013373adb31ce24"
+    },
+    {
+      "bytes": 448179,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254651008-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000120.parquet",
+      "sha256_sidecar": "13d6e51983c47b0090ba1d0e52c526938e0b51e60f03fdc564c73867dc824fa9"
+    },
+    {
+      "bytes": 110201,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254653283-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000121.parquet",
+      "sha256_sidecar": "9c9672f7f31271cf3ffb6c3db69f53432f3078f268faa981219b39048eb07ac6"
+    },
+    {
+      "bytes": 379461,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254683530-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000122.parquet",
+      "sha256_sidecar": "6abe41104c7f3663fc9882406875d33e1a01c346b99ab8a84b416c08f35f34b1"
+    },
+    {
+      "bytes": 316908,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254713780-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000123.parquet",
+      "sha256_sidecar": "c68b839badf0b669b24b68964d3ba6e2a3754710b1dfdbf6488aa8a976fb0a8b"
+    },
+    {
+      "bytes": 307259,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254744031-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000124.parquet",
+      "sha256_sidecar": "9606cf2a14fc4bfecbcb98dd141616661b0aaa811c79c61acd572ec2b2b3b7dc"
+    },
+    {
+      "bytes": 266584,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254774281-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000125.parquet",
+      "sha256_sidecar": "a762ae9b8241451e4afe76a325e8c77a27a60a1904769a334680157b6c9b42c5"
+    },
+    {
+      "bytes": 366529,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254804532-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000126.parquet",
+      "sha256_sidecar": "42410e9ce64b3b9dc8c74172932f93f3018fbf293d7ab368e3fe601a35f3ce4b"
+    },
+    {
+      "bytes": 266094,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254834781-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000127.parquet",
+      "sha256_sidecar": "8128b8c758ce3796d7944d3be4cbb55909d02a75c8957221fbdf36cdf4180fb4"
+    },
+    {
+      "bytes": 298659,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254865031-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000128.parquet",
+      "sha256_sidecar": "73d8a3265749ebfba1c0202ebc90ed1557bb2223ab9327b96f6cb7c9d43c7001"
+    },
+    {
+      "bytes": 344425,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254895281-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000129.parquet",
+      "sha256_sidecar": "77efc128d140a1cd5f2d13ccdffced29563700876cff0254f8bf01874c180d6b"
+    },
+    {
+      "bytes": 400028,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254925531-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000130.parquet",
+      "sha256_sidecar": "6155957614c40c48c341bce910b8b32bd903756d30ddcd3275c92a598629b38a"
+    },
+    {
+      "bytes": 349070,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254955784-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000131.parquet",
+      "sha256_sidecar": "7bb6c5252c30a74a9f6177e121d846f5c49e5261c365b9b02f0e85a59aa3c9da"
+    },
+    {
+      "bytes": 217156,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792254986031-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000132.parquet",
+      "sha256_sidecar": "d71751b8b0dce4569e183eb8bb67517e70cb7137c619e596e166acc4d34163eb"
+    },
+    {
+      "bytes": 301540,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255016210-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000133.parquet",
+      "sha256_sidecar": "878e53042cfb3122200e16f807bfa5ad6e2b7504eca0690d1ffdef8764092c25"
+    },
+    {
+      "bytes": 304209,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255032302-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000134.parquet",
+      "sha256_sidecar": "db39c1b2a2d6be49c0afc4a7d3a9ab1e535f781149fc384bf30282fe72633ef5"
+    },
+    {
+      "bytes": 476706,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255048027-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000135.parquet",
+      "sha256_sidecar": "3124fbb70cf254881ce0a1701d963ab040484d2b02467d9ab508c35eb4bbb74c"
+    },
+    {
+      "bytes": 311067,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255067984-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000136.parquet",
+      "sha256_sidecar": "eb95e8ec6fcb7b58cec3742e866df34a888907a3e82d3d393e11989dd2964a03"
+    },
+    {
+      "bytes": 403833,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255098234-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000137.parquet",
+      "sha256_sidecar": "6e7b457c41dc18b94189ec5a920ded5ff61bf23daad1ec3f1ca8033336663e5f"
+    },
+    {
+      "bytes": 379052,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255128484-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000138.parquet",
+      "sha256_sidecar": "d76d4238e73cf9b4b5eec365b3eb765c1e8eb86d40a1d5064c188a10540a8a68"
+    },
+    {
+      "bytes": 386018,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255158734-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000139.parquet",
+      "sha256_sidecar": "c0c81284f71d95359d637a535257bea67454923eeb46d04b725eac4d0a6b9b75"
+    },
+    {
+      "bytes": 266142,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255188984-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000140.parquet",
+      "sha256_sidecar": "9e8bdab3109858541515a9d23a15fc8d3d7f4858a90a9920b4eb65ddd96e526a"
+    },
+    {
+      "bytes": 414900,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255219235-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000141.parquet",
+      "sha256_sidecar": "85c55e706f298a30b0c29423235af89eede9b1a4b56ff88eeffef509c7bbd23a"
+    },
+    {
+      "bytes": 268236,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255249484-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000142.parquet",
+      "sha256_sidecar": "ae74b2a1aab0d1c1866af195611e35ee9114afd4cb9f286607cfe0a56b4a3d42"
+    },
+    {
+      "bytes": 281838,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255279733-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000143.parquet",
+      "sha256_sidecar": "d237bb55decdb0fe5061dc66a0fb0fb24d55c990d609f47427ebdb6a2b450f2a"
+    },
+    {
+      "bytes": 269121,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255309984-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000144.parquet",
+      "sha256_sidecar": "25530f66ed779faece897b63ad9f049fc2395a2a9b9c25e4d69027a986ed181b"
+    },
+    {
+      "bytes": 245781,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255340233-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000145.parquet",
+      "sha256_sidecar": "4123ed9344a1b536dff7eae4f2f4b77372c00fd86fbccd37c1367735f7c2bb44"
+    },
+    {
+      "bytes": 261221,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255370484-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000146.parquet",
+      "sha256_sidecar": "0b17b3322b9164af89dc1b9169f288caf8d1a34b644f97db956b6c824c408087"
+    },
+    {
+      "bytes": 289980,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255400735-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000147.parquet",
+      "sha256_sidecar": "1259006aad28dd6053cfd117772b77fcc5bf8af80beaf07757bedcd37c18b0ed"
+    },
+    {
+      "bytes": 237714,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255430986-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000148.parquet",
+      "sha256_sidecar": "ea1b25b5e973b5c30c64f69bb1c9bcab8ef798bce4c32805f27b6bc2512ac73d"
+    },
+    {
+      "bytes": 216241,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255461237-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000149.parquet",
+      "sha256_sidecar": "354b984e62cefe77892cbb8541850c4d9e2424af76a2b04b78bb115d6498344e"
+    },
+    {
+      "bytes": 193766,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255491484-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000150.parquet",
+      "sha256_sidecar": "930128530a6e0f525f5f407b33bb8f5044e1de69536755e10f0c2cf2f97238b0"
+    },
+    {
+      "bytes": 325923,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255521734-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000151.parquet",
+      "sha256_sidecar": "330c047a4ffede9f1e63f839ade95fb5eacfdc23082eb2ba2e082f01b97ba7d4"
+    },
+    {
+      "bytes": 251254,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255551984-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000152.parquet",
+      "sha256_sidecar": "ed3c742665007647292b5b1645f11d36d85f8b80c4dbae9ee4d629e55ea4d60e"
+    },
+    {
+      "bytes": 264784,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255582234-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000153.parquet",
+      "sha256_sidecar": "df46fb1bfbace1710dc0080ed24d0071624d01fd02308f88c7a7126abb10491e"
+    },
+    {
+      "bytes": 290257,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255612484-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000154.parquet",
+      "sha256_sidecar": "a1729fab309128cfe31c3f34a0f7a43429eff4a1ebd9e5a1e4a51b045fe5330e"
+    },
+    {
+      "bytes": 283433,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255642734-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000155.parquet",
+      "sha256_sidecar": "f9e947c2bea3440872bce168cb4462b6614481a55fa3858d34a15e707f4056d2"
+    },
+    {
+      "bytes": 260980,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255672986-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000156.parquet",
+      "sha256_sidecar": "da02196d2345a6bb9caa841b06b63eae494f8332400835d6ce262d7c019cd683"
+    },
+    {
+      "bytes": 303420,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255703235-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000157.parquet",
+      "sha256_sidecar": "32a8df6b297d0dde25a7269099ce8e6cce2bf1f613231b5d6dad43fda38805aa"
+    },
+    {
+      "bytes": 306879,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255733484-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000158.parquet",
+      "sha256_sidecar": "ff3f5a131bfb44215435403e23e00a35ce297e4dbcc5c3f9477e4522cc8d0f01"
+    },
+    {
+      "bytes": 402445,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255763736-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000159.parquet",
+      "sha256_sidecar": "4b1f566e714dec5460dd05d3a908498c1d7a519f7f9954fbec0eb80c99b4e38e"
+    },
+    {
+      "bytes": 243385,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255793989-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000160.parquet",
+      "sha256_sidecar": "71baad3ef91b7e3b1c35634655e4fe79bb0577d1bb7a9ce5d90cafb3693afd5c"
+    },
+    {
+      "bytes": 346354,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255824234-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000161.parquet",
+      "sha256_sidecar": "620d834b4038f457b05b6f1480c4656a1278b9ae80d1872cea1f0ca464c71a5e"
+    },
+    {
+      "bytes": 234455,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255854484-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000162.parquet",
+      "sha256_sidecar": "8029b2a4d941481403774f332d86cf6fb6fcf37918b37fa81062487ed6e50c4a"
+    },
+    {
+      "bytes": 236537,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255884735-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000163.parquet",
+      "sha256_sidecar": "b2901bef2569e4bbb913744a31f1814af2c7ec161b508b05917d13d606c52700"
+    },
+    {
+      "bytes": 310954,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255914985-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000164.parquet",
+      "sha256_sidecar": "a5358133d86403db5792524f63944f6fa6432e47e04c315d3e448dc16f4d2938"
+    },
+    {
+      "bytes": 342106,
+      "path": ".local/long-captures/session-1792251264110/recordings/ETHUSDT/00000001792255945235-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000000165.parquet",
+      "sha256_sidecar": "1317546d74020ae0624d8518b69b3bf4e860d12e25c4d6eb1f65677620ae0225"
+    }
+  ],
+  "limitations": [
+    "Frozen finalized files only; new segments after enumeration and unflushed tails are excluded. Active retention can remove files and produces explicit read errors, never fabricated continuity.",
+    "Book intervals >2s are missing freshness coverage at the simulator threshold, not automatically proof of lost exchange messages. Session changes/invalidations and aggregate-ID gaps are separate indicators.",
+    "Raw buffered receive timestamps may reverse; causal replay clamps them forward in recorded application order. Source sequence and per-segment book checks remain authoritative.",
+    "Integrity replay counts source data only. It does not inspect strategy outcomes or authorize OOS evaluation. Exact queue rank and real own fills remain unknowable from MBP.",
+    "The offline strategy runner retains its finite tape/trace caps; completing collection alone does not supply a scalable multi-day report runner."
+  ],
+  "result_type": "observed_recording_integrity_audit_not_strategy_performance",
+  "schema_version": 1,
+  "second_replay_digest": "8be2aab530cda5af4c7fd57251f539957b69dcb1ff01150af8d69e3a3cdac7b1",
+  "second_replay_identical": true,
+  "source": ".local/long-captures/session-1792251264110",
+  "status_at_audit_start": {
+    "generated_at_ms": 1792255948117,
+    "markets": {
+      "BTCUSDT": {
+        "age_ms": 24,
+        "ask_levels": 5064,
+        "asks": [
+          [
+            "81275.71000000",
+            "2.21055000"
+          ],
+          [
+            "81275.72000000",
+            "0.00901000"
+          ],
+          [
+            "81275.73000000",
+            "0.00013000"
+          ],
+          [
+            "81276.17000000",
+            "0.00007000"
+          ],
+          [
+            "81277.01000000",
+            "0.00177000"
+          ],
+          [
+            "81277.02000000",
+            "0.01375000"
+          ],
+          [
+            "81277.42000000",
+            "0.00007000"
+          ],
+          [
+            "81277.67000000",
+            "0.00014000"
+          ],
+          [
+            "81277.68000000",
+            "0.30813000"
+          ],
+          [
+            "81278.32000000",
+            "0.01650000"
+          ],
+          [
+            "81278.48000000",
+            "0.00014000"
+          ],
+          [
+            "81278.49000000",
+            "0.13831000"
+          ],
+          [
+            "81279.62000000",
+            "0.01650000"
+          ],
+          [
+            "81279.73000000",
+            "0.00023000"
+          ],
+          [
+            "81279.77000000",
+            "0.00008000"
+          ],
+          [
+            "81279.98000000",
+            "0.00111000"
+          ],
+          [
+            "81279.99000000",
+            "5.98178000"
+          ],
+          [
+            "81280.00000000",
+            "39.40276000"
+          ],
+          [
+            "81280.26000000",
+            "0.00024000"
+          ],
+          [
+            "81280.59000000",
+            "0.33262000"
+          ]
+        ],
+        "best_ask": "81275.71000000",
+        "best_bid": "81275.70000000",
+        "bid_levels": 5054,
+        "bids": [
+          [
+            "81275.70000000",
+            "8.25148000"
+          ],
+          [
+            "81275.69000000",
+            "0.00221000"
+          ],
+          [
+            "81275.68000000",
+            "0.00022000"
+          ],
+          [
+            "81275.64000000",
+            "0.00200000"
+          ],
+          [
+            "81274.74000000",
+            "0.39863000"
+          ],
+          [
+            "81274.73000000",
+            "0.51052000"
+          ],
+          [
+            "81274.72000000",
+            "0.28215000"
+          ],
+          [
+            "81274.67000000",
+            "0.00021000"
+          ],
+          [
+            "81274.38000000",
+            "0.01963000"
+          ],
+          [
+            "81274.15000000",
+            "0.00007000"
+          ],
+          [
+            "81273.81000000",
+            "0.00615000"
+          ],
+          [
+            "81273.80000000",
+            "0.01727000"
+          ],
+          [
+            "81273.78000000",
+            "0.00024000"
+          ],
+          [
+            "81273.69000000",
+            "0.00615000"
+          ],
+          [
+            "81273.68000000",
+            "0.00007000"
+          ],
+          [
+            "81273.62000000",
+            "0.00008000"
+          ],
+          [
+            "81273.60000000",
+            "0.00865000"
+          ],
+          [
+            "81273.56000000",
+            "0.00200000"
+          ],
+          [
+            "81273.20000000",
+            "0.03075000"
+          ],
+          [
+            "81272.48000000",
+            "0.03691000"
+          ]
+        ],
+        "depth_complete": false,
+        "last_exchange_ms": 1792255948014,
+        "last_received_ms": 1792255948093,
+        "last_update_id": "101566917757",
+        "metrics": {
+          "buffer_overflows": 9,
+          "connection_attempts": 10,
+          "data_gaps": 0,
+          "disconnections": 9,
+          "duplicates": 87,
+          "invalid_messages": 0,
+          "last_lag_ms": 79,
+          "max_lag_ms": 591,
+          "reconnections": 9,
+          "recording_failures": 0,
+          "stale_events": 0,
+          "synchronization_failures": 0,
+          "updates": 46338
+        },
+        "reason": null,
+        "session": "6d11688f-e6f4-4d78-b5a0-d75ce7720f8e",
+        "spread": "0.01000000",
+        "state": "synchronized",
+        "symbol": "BTCUSDT"
+      },
+      "ETHUSDT": {
+        "age_ms": 19,
+        "ask_levels": 5132,
+        "asks": [
+          [
+            "2405.54000000",
+            "12.18660000"
+          ],
+          [
+            "2405.55000000",
+            "0.01100000"
+          ],
+          [
+            "2405.57000000",
+            "0.00220000"
+          ],
+          [
+            "2405.58000000",
+            "0.18120000"
+          ],
+          [
+            "2405.59000000",
+            "0.00420000"
+          ],
+          [
+            "2405.60000000",
+            "0.00630000"
+          ],
+          [
+            "2405.61000000",
+            "0.00210000"
+          ],
+          [
+            "2405.62000000",
+            "0.00430000"
+          ],
+          [
+            "2405.63000000",
+            "0.30420000"
+          ],
+          [
+            "2405.64000000",
+            "0.00210000"
+          ],
+          [
+            "2405.65000000",
+            "0.00430000"
+          ],
+          [
+            "2405.66000000",
+            "0.00220000"
+          ],
+          [
+            "2405.67000000",
+            "3.21630000"
+          ],
+          [
+            "2405.68000000",
+            "0.36870000"
+          ],
+          [
+            "2405.69000000",
+            "0.50210000"
+          ],
+          [
+            "2405.70000000",
+            "0.00510000"
+          ],
+          [
+            "2405.71000000",
+            "0.00210000"
+          ],
+          [
+            "2405.72000000",
+            "0.00430000"
+          ],
+          [
+            "2405.73000000",
+            "0.37100000"
+          ],
+          [
+            "2405.74000000",
+            "8.50660000"
+          ]
+        ],
+        "best_ask": "2405.54000000",
+        "best_bid": "2405.53000000",
+        "bid_levels": 5267,
+        "bids": [
+          [
+            "2405.53000000",
+            "64.63010000"
+          ],
+          [
+            "2405.52000000",
+            "0.01520000"
+          ],
+          [
+            "2405.51000000",
+            "0.19700000"
+          ],
+          [
+            "2405.50000000",
+            "0.04220000"
+          ],
+          [
+            "2405.49000000",
+            "1.62710000"
+          ],
+          [
+            "2405.48000000",
+            "4.13550000"
+          ],
+          [
+            "2405.47000000",
+            "0.00220000"
+          ],
+          [
+            "2405.46000000",
+            "0.65980000"
+          ],
+          [
+            "2405.45000000",
+            "0.00220000"
+          ],
+          [
+            "2405.44000000",
+            "0.00420000"
+          ],
+          [
+            "2405.43000000",
+            "0.00850000"
+          ],
+          [
+            "2405.42000000",
+            "0.18010000"
+          ],
+          [
+            "2405.41000000",
+            "0.38780000"
+          ],
+          [
+            "2405.40000000",
+            "1.48920000"
+          ],
+          [
+            "2405.39000000",
+            "0.34930000"
+          ],
+          [
+            "2405.38000000",
+            "0.10000000"
+          ],
+          [
+            "2405.37000000",
+            "0.00440000"
+          ],
+          [
+            "2405.36000000",
+            "0.38560000"
+          ],
+          [
+            "2405.35000000",
+            "3.66370000"
+          ],
+          [
+            "2405.33000000",
+            "0.17010000"
+          ]
+        ],
+        "depth_complete": false,
+        "last_exchange_ms": 1792255948015,
+        "last_received_ms": 1792255948098,
+        "last_update_id": "82173020784",
+        "metrics": {
+          "buffer_overflows": 5,
+          "connection_attempts": 6,
+          "data_gaps": 0,
+          "disconnections": 5,
+          "duplicates": 77,
+          "invalid_messages": 0,
+          "last_lag_ms": 83,
+          "max_lag_ms": 610,
+          "reconnections": 5,
+          "recording_failures": 0,
+          "stale_events": 0,
+          "synchronization_failures": 0,
+          "updates": 45427
+        },
+        "reason": null,
+        "session": "047be87a-08de-4730-891f-aecb125492ae",
+        "spread": "0.01000000",
+        "state": "synchronized",
+        "symbol": "ETHUSDT"
+      }
+    },
+    "schema_version": 1,
+    "stale_after_ms": 5000
+  },
+  "strategy_evaluated": false,
+  "target_completed": false,
+  "target_seconds": 86400
+}

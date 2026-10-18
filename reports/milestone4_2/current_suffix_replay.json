@@ -1,0 +1,613 @@
+{
+  "captured_at_ms": 1792308708447,
+  "completion": null,
+  "completion_marker_present": false,
+  "configured_payload_budget_bytes": 2147483648,
+  "continuous_complete_target_ready": false,
+  "final_oos_evaluated": false,
+  "finalized_payload_bytes": 5474646,
+  "first_replay": {
+    "errors": [],
+    "replay_digest": "e9496132330c9fc2aa0eb1ce209fc4b57daa6b37cb88e660286e94855c2d6787",
+    "symbols": {
+      "BTCUSDT": {
+        "aggregate_trades": 1781,
+        "book_exchange_time_reversals": 0,
+        "book_intervals_over_2s": [
+          [
+            1792308510493,
+            1792308516046
+          ],
+          [
+            1792308517800,
+            1792308532544
+          ]
+        ],
+        "book_updates": 2308,
+        "causal_clock_clamps": 16,
+        "first_book_ms": 1792308433093,
+        "first_received_ms": 1792308433093,
+        "first_trade_ms": 1792308434175,
+        "invalidations": {
+          "buffer overflow or receiver closed": 2,
+          "snapshot synchronization timeout": 1
+        },
+        "last_book_ms": 1792308683599,
+        "last_received_ms": 1792308683599,
+        "last_trade_ms": 1792308683510,
+        "max_book_interval_ms": 14744,
+        "prefix_complete": false,
+        "raw_messages": 4156,
+        "raw_receive_time_reversals": 2,
+        "record_sequence_gaps": 0,
+        "records": 6484,
+        "session_changes": [
+          1792308514414,
+          1792308521958,
+          1792308530986
+        ],
+        "trade_exchange_time_reversals": 0,
+        "trade_id_gaps": 2
+      },
+      "ETHUSDT": {
+        "aggregate_trades": 1272,
+        "book_exchange_time_reversals": 0,
+        "book_intervals_over_2s": [],
+        "book_updates": 3505,
+        "causal_clock_clamps": 0,
+        "first_book_ms": 1792308335044,
+        "first_received_ms": 1792308335044,
+        "first_trade_ms": 1792308335329,
+        "invalidations": {},
+        "last_book_ms": 1792308697895,
+        "last_received_ms": 1792308697913,
+        "last_trade_ms": 1792308697913,
+        "max_book_interval_ms": 326,
+        "prefix_complete": false,
+        "raw_messages": 4777,
+        "raw_receive_time_reversals": 0,
+        "record_sequence_gaps": 0,
+        "records": 8294,
+        "session_changes": [],
+        "trade_exchange_time_reversals": 0,
+        "trade_id_gaps": 0
+      }
+    }
+  },
+  "free_disk_bytes_at_audit": 17780822016,
+  "frozen_finalized_files": [
+    {
+      "bytes": 94425,
+      "path": ".local/audit-snapshots/m4-2-current-suffix/recordings/BTCUSDT/00000001792308438259-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000002080.parquet",
+      "sha256_sidecar": "fb8e1d3a5621f1548b12f23b51c2eb1c2bfc7d3479322038dd6779d0d546b6c1"
+    },
+    {
+      "bytes": 254815,
+      "path": ".local/audit-snapshots/m4-2-current-suffix/recordings/BTCUSDT/00000001792308468504-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000002081.parquet",
+      "sha256_sidecar": "32448e0a9815eda9aefa61349dd83df6e2b74495b679078f3e2ec2dc3d5b4222"
+    },
+    {
+      "bytes": 252808,
+      "path": ".local/audit-snapshots/m4-2-current-suffix/recordings/BTCUSDT/00000001792308498756-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000002082.parquet",
+      "sha256_sidecar": "295f62953be4489234272fa1d12fc7ae530a952ffc661ad1c9cd27b4817c5010"
+    },
+    {
+      "bytes": 113789,
+      "path": ".local/audit-snapshots/m4-2-current-suffix/recordings/BTCUSDT/00000001792308510571-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000002083.parquet",
+      "sha256_sidecar": "bcf3173d792c612262a974061b18d99b33f416ed6af3a6814f85b2beb8d92601"
+    },
+    {
+      "bytes": 304352,
+      "path": ".local/audit-snapshots/m4-2-current-suffix/recordings/BTCUSDT/00000001792308518135-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000002084.parquet",
+      "sha256_sidecar": "5b7f65ef11c4a20fdd2dc855085de19a4f979e72695cca60e5328fbf327e95eb"
+    },
+    {
+      "bytes": 78620,
+      "path": ".local/audit-snapshots/m4-2-current-suffix/recordings/BTCUSDT/00000001792308527131-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000002085.parquet",
+      "sha256_sidecar": "61a405807c8fc1050b1bfea30f965a1cdd967be1344a53b5816f6b9417cf1c3b"
+    },
+    {
+      "bytes": 452580,
+      "path": ".local/audit-snapshots/m4-2-current-suffix/recordings/BTCUSDT/00000001792308556585-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000002086.parquet",
+      "sha256_sidecar": "fedceffe30c4de908d70b561f9163ed7f03dff656c06aed630d8c7435384be2d"
+    },
+    {
+      "bytes": 119216,
+      "path": ".local/audit-snapshots/m4-2-current-suffix/recordings/BTCUSDT/00000001792308562638-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000002087.parquet",
+      "sha256_sidecar": "e2fd952f104a0d6076dcabb64c55248c7cdaa76a02be2af62a8db1596d8947c9"
+    },
+    {
+      "bytes": 268774,
+      "path": ".local/audit-snapshots/m4-2-current-suffix/recordings/BTCUSDT/00000001792308592899-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000002088.parquet",
+      "sha256_sidecar": "53fe1f1ccfb2f242fac86860fc35ed50f95f68d5dc04a36fa20274602a77e979"
+    },
+    {
+      "bytes": 182766,
+      "path": ".local/audit-snapshots/m4-2-current-suffix/recordings/BTCUSDT/00000001792308623141-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000002089.parquet",
+      "sha256_sidecar": "5874883d69641c48777ba04c50411ae8c8ff6286135bb3ee26cb48db531dc890"
+    },
+    {
+      "bytes": 193445,
+      "path": ".local/audit-snapshots/m4-2-current-suffix/recordings/BTCUSDT/00000001792308653407-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000002090.parquet",
+      "sha256_sidecar": "c1b6a4602fecb9c6a0ebb626d364f2a34b0b1a74a9e7c57263a68c6a680eaf43"
+    },
+    {
+      "bytes": 237915,
+      "path": ".local/audit-snapshots/m4-2-current-suffix/recordings/BTCUSDT/00000001792308683655-83b29518-f412-4d93-9a3a-7a6566977d0d-00000000000000002091.parquet",
+      "sha256_sidecar": "ec0c9275ec4819d39db75f56083cb51d1a2d82db93f83f81ac91bdc66390863c"
+    },
+    {
+      "bytes": 201181,
+      "path": ".local/audit-snapshots/m4-2-current-suffix/recordings/ETHUSDT/00000001792308365260-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000002011.parquet",
+      "sha256_sidecar": "bb4c8072722e1f4a79cbd0ac34eb9ca3cef5fb1705c6f9c4e52f7314ed4715d2"
+    },
+    {
+      "bytes": 302325,
+      "path": ".local/audit-snapshots/m4-2-current-suffix/recordings/ETHUSDT/00000001792308395507-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000002012.parquet",
+      "sha256_sidecar": "624cf8b052c6d27ae2395d44418b8fb98f27c601486be1dabfc9e9871926e9a2"
+    },
+    {
+      "bytes": 352926,
+      "path": ".local/audit-snapshots/m4-2-current-suffix/recordings/ETHUSDT/00000001792308425755-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000002013.parquet",
+      "sha256_sidecar": "006918aea10c07c1ac5eac9c4d1078cc9525fc2988b9abcface12c058c55c2a9"
+    },
+    {
+      "bytes": 232490,
+      "path": ".local/audit-snapshots/m4-2-current-suffix/recordings/ETHUSDT/00000001792308456010-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000002014.parquet",
+      "sha256_sidecar": "84ec02d878f26c6b7a9f8cce526d893a9fb2f786848e1fa0df49499a49dab837"
+    },
+    {
+      "bytes": 226657,
+      "path": ".local/audit-snapshots/m4-2-current-suffix/recordings/ETHUSDT/00000001792308486254-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000002015.parquet",
+      "sha256_sidecar": "74f2022663f5394d71bf655ee78c801651fc41e89ca415c4f9be65d6d8ab326d"
+    },
+    {
+      "bytes": 245333,
+      "path": ".local/audit-snapshots/m4-2-current-suffix/recordings/ETHUSDT/00000001792308516503-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000002016.parquet",
+      "sha256_sidecar": "4fcaacf878efec5ccbb4cebbe58c44c30edf2da696dc0ccd33bec4c58552cd35"
+    },
+    {
+      "bytes": 256813,
+      "path": ".local/audit-snapshots/m4-2-current-suffix/recordings/ETHUSDT/00000001792308546753-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000002017.parquet",
+      "sha256_sidecar": "243d7e79297c14299fc7c0d236af54c4df81856dae12f70256f8c0825e737d9f"
+    },
+    {
+      "bytes": 240506,
+      "path": ".local/audit-snapshots/m4-2-current-suffix/recordings/ETHUSDT/00000001792308577102-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000002018.parquet",
+      "sha256_sidecar": "a6dc7e36fe85b5aaab04627ab7348818e6a271761636606673ec5b5993a4492a"
+    },
+    {
+      "bytes": 215048,
+      "path": ".local/audit-snapshots/m4-2-current-suffix/recordings/ETHUSDT/00000001792308607253-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000002019.parquet",
+      "sha256_sidecar": "c5521c24abfc38bf6bf54a1aa5e91e6974f58847366a7924528c6f896765c6ba"
+    },
+    {
+      "bytes": 194735,
+      "path": ".local/audit-snapshots/m4-2-current-suffix/recordings/ETHUSDT/00000001792308637506-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000002020.parquet",
+      "sha256_sidecar": "b7d1fc14c4148a7e28ccd05590181e9b8475309d93f61ba231bd4ca30c0ad1d0"
+    },
+    {
+      "bytes": 173542,
+      "path": ".local/audit-snapshots/m4-2-current-suffix/recordings/ETHUSDT/00000001792308667755-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000002021.parquet",
+      "sha256_sidecar": "80ab32852cdf1fbf9a1f13997e4ce0d1d39897852718a78bcc12f7774c2cb02f"
+    },
+    {
+      "bytes": 279585,
+      "path": ".local/audit-snapshots/m4-2-current-suffix/recordings/ETHUSDT/00000001792308698010-69d20921-b8f0-4c72-b27f-ca747fc6ef18-00000000000000002022.parquet",
+      "sha256_sidecar": "ef95c6dc29762662cc450e5c86e2caab497e0fce5a1c2c512bb5aa4470744013"
+    }
+  ],
+  "limitations": [
+    "Frozen finalized files only; new segments after enumeration and unflushed tails are excluded. Active retention can remove files and produces explicit read errors, never fabricated continuity.",
+    "Book intervals >2s are missing freshness coverage at the simulator threshold, not automatically proof of lost exchange messages. Session changes/invalidations and aggregate-ID gaps are separate indicators.",
+    "Raw buffered receive timestamps may reverse; causal replay clamps them forward in recorded application order. Source sequence and per-segment book checks remain authoritative.",
+    "Integrity replay counts source data only. It does not inspect strategy outcomes or authorize OOS evaluation. Exact queue rank and real own fills remain unknowable from MBP.",
+    "The legacy run command retains tape/trace caps; the new batch command supports streaming completed valid sources with explicit output budgets."
+  ],
+  "result_type": "observed_recording_integrity_audit_not_strategy_performance",
+  "schema_version": 1,
+  "second_replay_digest": "e9496132330c9fc2aa0eb1ce209fc4b57daa6b37cb88e660286e94855c2d6787",
+  "second_replay_identical": true,
+  "source": ".local/audit-snapshots/m4-2-current-suffix",
+  "status_at_audit_start": {
+    "generated_at_ms": 1792308704117,
+    "markets": {
+      "BTCUSDT": {
+        "age_ms": 16,
+        "ask_levels": 5002,
+        "asks": [
+          [
+            "81744.01000000",
+            "0.95689000"
+          ],
+          [
+            "81744.02000000",
+            "0.00090000"
+          ],
+          [
+            "81744.03000000",
+            "0.00013000"
+          ],
+          [
+            "81744.95000000",
+            "0.00014000"
+          ],
+          [
+            "81744.96000000",
+            "0.15726000"
+          ],
+          [
+            "81744.97000000",
+            "0.50000000"
+          ],
+          [
+            "81745.71000000",
+            "0.00007000"
+          ],
+          [
+            "81746.01000000",
+            "0.02600000"
+          ],
+          [
+            "81746.56000000",
+            "0.00007000"
+          ],
+          [
+            "81746.88000000",
+            "0.00007000"
+          ],
+          [
+            "81747.99000000",
+            "0.00014000"
+          ],
+          [
+            "81748.00000000",
+            "0.06042000"
+          ],
+          [
+            "81748.01000000",
+            "0.02600000"
+          ],
+          [
+            "81748.10000000",
+            "0.00008000"
+          ],
+          [
+            "81748.44000000",
+            "0.00024000"
+          ],
+          [
+            "81749.11000000",
+            "0.00013000"
+          ],
+          [
+            "81749.51000000",
+            "0.00007000"
+          ],
+          [
+            "81750.00000000",
+            "0.01007000"
+          ],
+          [
+            "81750.01000000",
+            "0.02600000"
+          ],
+          [
+            "81750.06000000",
+            "0.00024000"
+          ]
+        ],
+        "best_ask": "81744.01000000",
+        "best_bid": "81744.00000000",
+        "bid_levels": 5102,
+        "bids": [
+          [
+            "81744.00000000",
+            "8.22022000"
+          ],
+          [
+            "81743.99000000",
+            "0.00062000"
+          ],
+          [
+            "81743.98000000",
+            "0.00013000"
+          ],
+          [
+            "81743.96000000",
+            "0.00124000"
+          ],
+          [
+            "81743.95000000",
+            "0.05000000"
+          ],
+          [
+            "81743.85000000",
+            "0.00014000"
+          ],
+          [
+            "81743.84000000",
+            "0.60624000"
+          ],
+          [
+            "81743.82000000",
+            "0.00364000"
+          ],
+          [
+            "81743.75000000",
+            "0.00400000"
+          ],
+          [
+            "81743.62000000",
+            "0.00014000"
+          ],
+          [
+            "81743.61000000",
+            "0.13764000"
+          ],
+          [
+            "81742.81000000",
+            "0.00014000"
+          ],
+          [
+            "81742.80000000",
+            "0.04229000"
+          ],
+          [
+            "81742.79000000",
+            "0.12455000"
+          ],
+          [
+            "81742.74000000",
+            "0.00007000"
+          ],
+          [
+            "81742.69000000",
+            "0.01889000"
+          ],
+          [
+            "81742.67000000",
+            "0.00008000"
+          ],
+          [
+            "81742.61000000",
+            "0.00612000"
+          ],
+          [
+            "81742.44000000",
+            "0.00007000"
+          ],
+          [
+            "81742.13000000",
+            "0.00200000"
+          ]
+        ],
+        "depth_complete": false,
+        "last_exchange_ms": 1792308704014,
+        "last_received_ms": 1792308704101,
+        "last_update_id": "101581512983",
+        "metrics": {
+          "buffer_overflows": 117,
+          "connection_attempts": 125,
+          "data_gaps": 0,
+          "disconnections": 124,
+          "duplicates": 1226,
+          "invalid_messages": 0,
+          "last_lag_ms": 87,
+          "max_lag_ms": 1476,
+          "reconnections": 124,
+          "recording_failures": 0,
+          "stale_events": 1,
+          "synchronization_failures": 8,
+          "updates": 563799
+        },
+        "reason": null,
+        "session": "78d8969b-e38c-4d76-870d-859882bed6af",
+        "spread": "0.01000000",
+        "state": "synchronized",
+        "symbol": "BTCUSDT"
+      },
+      "ETHUSDT": {
+        "age_ms": 23,
+        "ask_levels": 5091,
+        "asks": [
+          [
+            "2410.80000000",
+            "1.83930000"
+          ],
+          [
+            "2410.81000000",
+            "0.01300000"
+          ],
+          [
+            "2410.82000000",
+            "0.00420000"
+          ],
+          [
+            "2410.83000000",
+            "0.03330000"
+          ],
+          [
+            "2410.87000000",
+            "0.00850000"
+          ],
+          [
+            "2410.91000000",
+            "0.00430000"
+          ],
+          [
+            "2410.92000000",
+            "0.15560000"
+          ],
+          [
+            "2410.95000000",
+            "0.07360000"
+          ],
+          [
+            "2410.97000000",
+            "0.00210000"
+          ],
+          [
+            "2410.98000000",
+            "0.00220000"
+          ],
+          [
+            "2410.99000000",
+            "0.75610000"
+          ],
+          [
+            "2411.00000000",
+            "1.04790000"
+          ],
+          [
+            "2411.01000000",
+            "0.00220000"
+          ],
+          [
+            "2411.02000000",
+            "1.11850000"
+          ],
+          [
+            "2411.03000000",
+            "0.00430000"
+          ],
+          [
+            "2411.04000000",
+            "8.33960000"
+          ],
+          [
+            "2411.05000000",
+            "0.13910000"
+          ],
+          [
+            "2411.06000000",
+            "3.45020000"
+          ],
+          [
+            "2411.07000000",
+            "0.04900000"
+          ],
+          [
+            "2411.08000000",
+            "7.89360000"
+          ]
+        ],
+        "best_ask": "2410.80000000",
+        "best_bid": "2410.79000000",
+        "bid_levels": 6244,
+        "bids": [
+          [
+            "2410.79000000",
+            "36.71490000"
+          ],
+          [
+            "2410.78000000",
+            "0.00630000"
+          ],
+          [
+            "2410.77000000",
+            "0.00850000"
+          ],
+          [
+            "2410.76000000",
+            "1.82960000"
+          ],
+          [
+            "2410.75000000",
+            "0.41690000"
+          ],
+          [
+            "2410.74000000",
+            "0.44660000"
+          ],
+          [
+            "2410.73000000",
+            "0.00220000"
+          ],
+          [
+            "2410.70000000",
+            "0.04220000"
+          ],
+          [
+            "2410.69000000",
+            "4.62160000"
+          ],
+          [
+            "2410.68000000",
+            "0.80010000"
+          ],
+          [
+            "2410.67000000",
+            "0.00210000"
+          ],
+          [
+            "2410.66000000",
+            "0.00210000"
+          ],
+          [
+            "2410.65000000",
+            "0.56850000"
+          ],
+          [
+            "2410.64000000",
+            "0.53600000"
+          ],
+          [
+            "2410.63000000",
+            "0.00210000"
+          ],
+          [
+            "2410.60000000",
+            "0.39210000"
+          ],
+          [
+            "2410.59000000",
+            "0.00850000"
+          ],
+          [
+            "2410.58000000",
+            "0.00210000"
+          ],
+          [
+            "2410.57000000",
+            "1.30000000"
+          ],
+          [
+            "2410.56000000",
+            "0.00460000"
+          ]
+        ],
+        "depth_complete": false,
+        "last_exchange_ms": 1792308704015,
+        "last_received_ms": 1792308704094,
+        "last_update_id": "82188136723",
+        "metrics": {
+          "buffer_overflows": 37,
+          "connection_attempts": 40,
+          "data_gaps": 0,
+          "disconnections": 39,
+          "duplicates": 477,
+          "invalid_messages": 0,
+          "last_lag_ms": 79,
+          "max_lag_ms": 1458,
+          "reconnections": 39,
+          "recording_failures": 0,
+          "stale_events": 0,
+          "synchronization_failures": 3,
+          "updates": 547705
+        },
+        "reason": null,
+        "session": "2275d2b7-8bb5-4619-b40f-f7dbff9da7c9",
+        "spread": "0.01000000",
+        "state": "synchronized",
+        "symbol": "ETHUSDT"
+      }
+    },
+    "schema_version": 1,
+    "stale_after_ms": 5000
+  },
+  "strategy_evaluated": false,
+  "target_completed": false,
+  "target_seconds": 86400,
+  "audit_scope_note": "Detailed double replay of copied latest 12 finalized segments per market, not a completed collection or full 16-hour replay."
+}

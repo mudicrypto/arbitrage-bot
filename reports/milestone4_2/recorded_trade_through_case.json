@@ -1,0 +1,1368 @@
+{
+  "result_type": "recorded_order_execution_regression_not_strategy_profitability",
+  "source": ".local/research/run-1792248889904",
+  "symbol": "ZECUSDT",
+  "source_order": {
+    "accepted_ms": 1792248921730,
+    "active_lifetime_ms": 2044,
+    "buy": true,
+    "cancel_effective_ms": 1792248923774,
+    "cancel_requested_ms": 1792248923672,
+    "end_state": "cancel_ack",
+    "entry_due_ms": 1792248921730,
+    "evidence": {
+      "exact_price_eligible_trade_events": 0,
+      "filled_quantity": 0,
+      "observed_eligible_quantity": 0,
+      "quantity_blocked_by_lot_rounding": 0,
+      "queue_blocked_trade_events": 0,
+      "queue_consumed_quantity": 0,
+      "trade_through_valid_window_events": 1
+    },
+    "exact_price_directional_trade_events_after_cancel": 0,
+    "exact_price_directional_trade_events_before_entry": 0,
+    "exact_price_directional_trade_events_since_submission": 0,
+    "initial_queue_ahead_estimate": 0,
+    "lifetime_ms": 2102,
+    "lifetime_right_censored": false,
+    "order_id": 4,
+    "price": 116360000000,
+    "primary_explanation": "trade_through_evidence_omitted_by_exact_price_fill_model",
+    "quantity": 8500000,
+    "submitted_ms": 1792248921672,
+    "terminal_ms": 1792248924274,
+    "terminal_reason": "fill_report_grace_elapsed",
+    "trade_through_events_ignored_by_exact_price_model": 29
+  },
+  "source_scenarios": [
+    "zero_maker_hypothetical",
+    "maker_rebate_hypothetical"
+  ],
+  "instrument": {
+    "symbol": "ZECUSDT",
+    "base_asset": "ZEC",
+    "price_units": 116332000000,
+    "tick_units": 1000000,
+    "step_units": 100000,
+    "min_qty_units": 100000,
+    "max_qty_units": 9000000000000,
+    "min_notional_units": 500000000,
+    "max_notional_units": 900000000000000,
+    "clip_quantity_units": 8500000,
+    "clip_notional_units": 9888220000,
+    "volume_24h_usdt": 124370327.04303,
+    "trades_24h": 401814
+  },
+  "ticks": [
+    {
+      "time_ms": 1792248921572,
+      "sequence": 304,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116383000000,
+              93300000
+            ],
+            [
+              116358000000,
+              700000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116384000000,
+              199800000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248921493
+      }
+    },
+    {
+      "time_ms": 1792248921672,
+      "sequence": 306,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116383000000,
+              93300000
+            ],
+            [
+              116358000000,
+              700000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116384000000,
+              132100000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248921592
+      }
+    },
+    {
+      "time_ms": 1792248921772,
+      "sequence": 308,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116383000000,
+              93300000
+            ],
+            [
+              116358000000,
+              700000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116384000000,
+              132100000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248921692
+      }
+    },
+    {
+      "time_ms": 1792248921856,
+      "sequence": 309,
+      "input": {
+        "type": "trade",
+        "trade": {
+          "symbol": "ZECUSDT",
+          "aggregate_id": 240303951,
+          "first_id": 335890430,
+          "last_id": 335890430,
+          "exchange_ms": 1792248921775,
+          "price": 116383000000,
+          "quantity": 600000,
+          "buyer_is_maker": true
+        }
+      }
+    },
+    {
+      "time_ms": 1792248921871,
+      "sequence": 311,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116379000000,
+              56200000
+            ],
+            [
+              116358000000,
+              700000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116380000000,
+              75900000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248921792
+      }
+    },
+    {
+      "time_ms": 1792248921972,
+      "sequence": 313,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116370000000,
+              20700000
+            ],
+            [
+              116359000000,
+              56200000
+            ],
+            [
+              116358000000,
+              700000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116371000000,
+              300600000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248921892
+      }
+    },
+    {
+      "time_ms": 1792248922072,
+      "sequence": 315,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116370000000,
+              20700000
+            ],
+            [
+              116358000000,
+              56900000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116371000000,
+              300600000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248921993
+      }
+    },
+    {
+      "time_ms": 1792248922102,
+      "sequence": 316,
+      "input": {
+        "type": "trade",
+        "trade": {
+          "symbol": "ZECUSDT",
+          "aggregate_id": 240303952,
+          "first_id": 335890431,
+          "last_id": 335890432,
+          "exchange_ms": 1792248922015,
+          "price": 116370000000,
+          "quantity": 20700000,
+          "buyer_is_maker": true
+        }
+      }
+    },
+    {
+      "time_ms": 1792248922172,
+      "sequence": 318,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116358000000,
+              130100000
+            ],
+            [
+              116357000000,
+              43300000
+            ],
+            [
+              116356000000,
+              189400000
+            ],
+            [
+              116355000000,
+              20000000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116359000000,
+              191100000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248922092
+      }
+    },
+    {
+      "time_ms": 1792248922287,
+      "sequence": 320,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116358000000,
+              130100000
+            ],
+            [
+              116357000000,
+              43300000
+            ],
+            [
+              116356000000,
+              189400000
+            ],
+            [
+              116355000000,
+              20000000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116359000000,
+              191100000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248922193
+      }
+    },
+    {
+      "time_ms": 1792248922374,
+      "sequence": 322,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116358000000,
+              130100000
+            ],
+            [
+              116357000000,
+              43300000
+            ],
+            [
+              116356000000,
+              189400000
+            ],
+            [
+              116355000000,
+              20000000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116359000000,
+              191100000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248922294
+      }
+    },
+    {
+      "time_ms": 1792248922472,
+      "sequence": 324,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116358000000,
+              130100000
+            ],
+            [
+              116357000000,
+              43300000
+            ],
+            [
+              116356000000,
+              189400000
+            ],
+            [
+              116355000000,
+              20000000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116359000000,
+              202600000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248922392
+      }
+    },
+    {
+      "time_ms": 1792248922571,
+      "sequence": 326,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116358000000,
+              130100000
+            ],
+            [
+              116357000000,
+              43300000
+            ],
+            [
+              116356000000,
+              189400000
+            ],
+            [
+              116355000000,
+              20000000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116359000000,
+              202600000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248922492
+      }
+    },
+    {
+      "time_ms": 1792248922672,
+      "sequence": 328,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116358000000,
+              130100000
+            ],
+            [
+              116357000000,
+              43300000
+            ],
+            [
+              116356000000,
+              189400000
+            ],
+            [
+              116355000000,
+              20000000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116359000000,
+              191100000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248922592
+      }
+    },
+    {
+      "time_ms": 1792248922771,
+      "sequence": 331,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116358000000,
+              130100000
+            ],
+            [
+              116357000000,
+              43300000
+            ],
+            [
+              116356000000,
+              189400000
+            ],
+            [
+              116355000000,
+              20000000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116359000000,
+              191100000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248922692
+      }
+    },
+    {
+      "time_ms": 1792248922872,
+      "sequence": 333,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116358000000,
+              130100000
+            ],
+            [
+              116357000000,
+              43300000
+            ],
+            [
+              116356000000,
+              189400000
+            ],
+            [
+              116355000000,
+              20000000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116359000000,
+              191100000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248922793
+      }
+    },
+    {
+      "time_ms": 1792248922972,
+      "sequence": 335,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116358000000,
+              130100000
+            ],
+            [
+              116357000000,
+              43300000
+            ],
+            [
+              116356000000,
+              189400000
+            ],
+            [
+              116355000000,
+              20000000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116359000000,
+              191100000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248922893
+      }
+    },
+    {
+      "time_ms": 1792248923071,
+      "sequence": 337,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116358000000,
+              73900000
+            ],
+            [
+              116357000000,
+              43300000
+            ],
+            [
+              116356000000,
+              189400000
+            ],
+            [
+              116355000000,
+              20000000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116359000000,
+              217100000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248922992
+      }
+    },
+    {
+      "time_ms": 1792248923171,
+      "sequence": 339,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116358000000,
+              150100000
+            ],
+            [
+              116357000000,
+              43300000
+            ],
+            [
+              116356000000,
+              189400000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116359000000,
+              217100000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248923092
+      }
+    },
+    {
+      "time_ms": 1792248923271,
+      "sequence": 341,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116358000000,
+              150100000
+            ],
+            [
+              116357000000,
+              43300000
+            ],
+            [
+              116356000000,
+              189400000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116359000000,
+              217100000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248923192
+      }
+    },
+    {
+      "time_ms": 1792248923372,
+      "sequence": 343,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116358000000,
+              150100000
+            ],
+            [
+              116357000000,
+              43300000
+            ],
+            [
+              116356000000,
+              189400000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116359000000,
+              217100000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248923292
+      }
+    },
+    {
+      "time_ms": 1792248923451,
+      "sequence": 344,
+      "input": {
+        "type": "trade",
+        "trade": {
+          "symbol": "ZECUSDT",
+          "aggregate_id": 240303953,
+          "first_id": 335890433,
+          "last_id": 335890433,
+          "exchange_ms": 1792248923370,
+          "price": 116358000000,
+          "quantity": 600000,
+          "buyer_is_maker": true
+        }
+      }
+    },
+    {
+      "time_ms": 1792248923471,
+      "sequence": 346,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116354000000,
+              500000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116355000000,
+              191100000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248923392
+      }
+    },
+    {
+      "time_ms": 1792248923571,
+      "sequence": 348,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116354000000,
+              56700000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116355000000,
+              146700000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248923492
+      }
+    },
+    {
+      "time_ms": 1792248923663,
+      "sequence": 349,
+      "input": {
+        "type": "trade",
+        "trade": {
+          "symbol": "ZECUSDT",
+          "aggregate_id": 240303954,
+          "first_id": 335890434,
+          "last_id": 335890434,
+          "exchange_ms": 1792248923583,
+          "price": 116355000000,
+          "quantity": 600000,
+          "buyer_is_maker": false
+        }
+      }
+    },
+    {
+      "time_ms": 1792248923672,
+      "sequence": 351,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116354000000,
+              408200000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116355000000,
+              26000000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248923592
+      }
+    },
+    {
+      "time_ms": 1792248923677,
+      "sequence": 352,
+      "input": {
+        "type": "trade",
+        "trade": {
+          "symbol": "ZECUSDT",
+          "aggregate_id": 240303955,
+          "first_id": 335890435,
+          "last_id": 335890435,
+          "exchange_ms": 1792248923594,
+          "price": 116355000000,
+          "quantity": 26000000,
+          "buyer_is_maker": false
+        }
+      }
+    },
+    {
+      "time_ms": 1792248923678,
+      "sequence": 353,
+      "input": {
+        "type": "trade",
+        "trade": {
+          "symbol": "ZECUSDT",
+          "aggregate_id": 240303956,
+          "first_id": 335890436,
+          "last_id": 335890436,
+          "exchange_ms": 1792248923598,
+          "price": 116365000000,
+          "quantity": 12700000,
+          "buyer_is_maker": false
+        }
+      }
+    },
+    {
+      "time_ms": 1792248923774,
+      "sequence": 355,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116364000000,
+              261200000
+            ],
+            [
+              116359000000,
+              75600000
+            ],
+            [
+              116358000000,
+              191100000
+            ],
+            [
+              116356000000,
+              108600000
+            ],
+            [
+              116355000000,
+              138800000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116365000000,
+              10800000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248923692
+      }
+    },
+    {
+      "time_ms": 1792248923871,
+      "sequence": 357,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116373000000,
+              204500000
+            ],
+            [
+              116358000000,
+              115500000
+            ],
+            [
+              116356000000,
+              108600000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116374000000,
+              131600000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248923792
+      }
+    },
+    {
+      "time_ms": 1792248923972,
+      "sequence": 359,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116373000000,
+              204500000
+            ],
+            [
+              116358000000,
+              116200000
+            ],
+            [
+              116356000000,
+              108600000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116374000000,
+              155100000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248923892
+      }
+    },
+    {
+      "time_ms": 1792248924071,
+      "sequence": 361,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116373000000,
+              204500000
+            ],
+            [
+              116358000000,
+              116200000
+            ],
+            [
+              116356000000,
+              108600000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116374000000,
+              155100000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248923992
+      }
+    },
+    {
+      "time_ms": 1792248924171,
+      "sequence": 363,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116373000000,
+              204500000
+            ],
+            [
+              116358000000,
+              116200000
+            ],
+            [
+              116356000000,
+              108600000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116374000000,
+              155100000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248924092
+      }
+    },
+    {
+      "time_ms": 1792248924271,
+      "sequence": 365,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116373000000,
+              204500000
+            ],
+            [
+              116358000000,
+              116200000
+            ],
+            [
+              116356000000,
+              108600000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116374000000,
+              155100000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248924192
+      }
+    },
+    {
+      "time_ms": 1792248924372,
+      "sequence": 367,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116373000000,
+              204500000
+            ],
+            [
+              116358000000,
+              116200000
+            ],
+            [
+              116356000000,
+              108600000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116374000000,
+              155100000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248924292
+      }
+    },
+    {
+      "time_ms": 1792248924461,
+      "sequence": 368,
+      "input": {
+        "type": "trade",
+        "trade": {
+          "symbol": "ZECUSDT",
+          "aggregate_id": 240303957,
+          "first_id": 335890437,
+          "last_id": 335890437,
+          "exchange_ms": 1792248924380,
+          "price": 116374000000,
+          "quantity": 600000,
+          "buyer_is_maker": false
+        }
+      }
+    },
+    {
+      "time_ms": 1792248924461,
+      "sequence": 369,
+      "input": {
+        "type": "trade",
+        "trade": {
+          "symbol": "ZECUSDT",
+          "aggregate_id": 240303958,
+          "first_id": 335890438,
+          "last_id": 335890438,
+          "exchange_ms": 1792248924381,
+          "price": 116374000000,
+          "quantity": 22900000,
+          "buyer_is_maker": false
+        }
+      }
+    },
+    {
+      "time_ms": 1792248924473,
+      "sequence": 371,
+      "input": {
+        "type": "book",
+        "view": {
+          "bids": [
+            [
+              116382000000,
+              184200000
+            ],
+            [
+              116358000000,
+              116200000
+            ],
+            [
+              116356000000,
+              108600000
+            ],
+            [
+              39704000000,
+              3100000
+            ]
+          ],
+          "asks": [
+            [
+              116385000000,
+              75600000
+            ],
+            [
+              164435000000,
+              3200000
+            ]
+          ]
+        },
+        "exchange_ms": 1792248924392
+      }
+    }
+  ],
+  "provenance": {
+    "audit": {
+      "book_updates": 1390,
+      "clock_clamps": 7,
+      "depth_levels_retained_in_tape": 10000,
+      "end_ms": 1792249069871,
+      "exact_queue_known": false,
+      "invalidations": 0,
+      "limitations": [
+        "Market-by-price snapshots/deltas do not reveal individual order IDs, hidden liquidity, cancellations ahead of us, or exact queue rank.",
+        "Aggregate trades reveal aggressor direction, price and total quantity, not the intra-aggregate ordering or matching against our hypothetical orders.",
+        "Tape retains the known reconstructed levels/side. Missing quote-price coverage rejects entries; raw multi-level books remain in Parquet.",
+        "Recorder application sequence determines causal availability; backwards receive times during snapshot buffering are clamped forward, never sorted to introduce future books."
+      ],
+      "local_top_of_book_supported": true,
+      "prefix_complete": true,
+      "raw_messages": 1802,
+      "records": 3267,
+      "segments": 73,
+      "sequence_contiguous": true,
+      "start_ms": 1792248907181,
+      "symbol": "ZECUSDT",
+      "trade_id_gaps": 0,
+      "trades": 403
+    },
+    "book_projection": "Original bid levels between order limit and lowest trade, plus observed best/farthest bid/ask anchors; irrelevant outside levels omitted without changing through barriers or reference prices.",
+    "independent_market_evidence_count": 1,
+    "manual_regression_fees": "standard 10bps maker; original hypothetical fee eligibility is not assumed",
+    "source_scenarios_reuse_same_observation": true
+  }
+}

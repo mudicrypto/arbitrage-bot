@@ -1,0 +1,27 @@
+{
+  "capital_scope": "isolated_alternatives_5000_each_do_not_sum",
+  "sources": [
+    {
+      "root": ".local/research/run-1792248889904",
+      "legacy_completed_research": true
+    }
+  ],
+  "experiment": "config/backtest.json",
+  "current_metadata": "reports/milestone4_2/exchange_metadata.json",
+  "base_allocations_ppm": [
+    0,
+    200000,
+    500000,
+    800000
+  ],
+  "execution_models": [
+    "exact_price",
+    "conservative_through",
+    "alternative_through"
+  ],
+  "scenario_names": [
+    "standard_conservative"
+  ],
+  "fee_buffer_ppm": 100000,
+  "max_output_bytes": 268435456
+}

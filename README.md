@@ -124,3 +124,23 @@ The original 54 preliminary simulations are preserved. Diagnostics explain each 
 ```
 
 `diagnose` requires the original source and frozen configuration, evaluates only previously evaluated partitions, and writes a separate output directory. `readiness` freezes a list of finalized files and streams two checksum/sequence/book replays; it neither runs a strategy nor waits for a capture to finish. New files and the unflushed tail are outside that audit. Both commands have bounded file/event/report resources and fail explicitly on missing data. `max_quote_spread_bps` is an optional strategy width cap (default 1000bps); fees plus the required edge exceeding it reject quotes. This adds an explicit fee-feasibility guard without changing the frozen M4 experiment. Queue position remains an estimate and exact-price fills still omit trade-through activity, now reported explicitly. Stop after M4.1; do not start M5 without approval.
+
+## Funded portfolios and extended offline research (Milestone 4.2)
+
+See [M4.2 implementation and verified findings](docs/MILESTONE_4_2.md). `config/backtest_funded.json` compares base allocations of 0/20/50/80% and exact, conservative-through and alternative-through execution. Each reported market is explicitly an isolated $5,000 alternative; never sum their capital or P&L. Optional partitioned mode validates market budgets summing to one $5,000 portfolio. Initial base uses the first causal valid mid with lot rounding and quote residue; no executed conversion is claimed. Reservations include fee assets and a fee buffer, and inventory limits/skew apply around the declared initial target.
+
+```sh
+cargo build --workspace --locked
+# Fetch and freeze current public filters; no private/account commission endpoint:
+./target/debug/mm-backtest metadata .local/research/run-1792248889904/manifest.json /tmp/current-exchange-metadata.json
+# Use the committed frozen metadata/config to reproduce historical comparisons:
+./target/debug/mm-backtest batch config/backtest_funded.json /tmp/funded-research
+# Reproduce the recorded ZEC order regression; this is not a strategy-return estimate:
+./target/debug/mm-backtest case-audit .local/research/run-1792248889904 reports/milestone4_1/execution_diagnostics.json /tmp/zec-execution-case
+# Optional future campaign only; first inspect existing running collectors:
+./target/debug/mm-backtest collect-campaign config/collection_campaign.json
+```
+
+The batch runner streams source events and external traces instead of retaining a full-depth tape. It rejects incomplete captures, corrupt/fragmented/gapped session-symbols and missing tails; the whole affected session-symbol is excluded. It never fills across unknown intervals. Output must be new/empty, has a trace byte budget, and remains `INCOMPLETE` until `batch_complete.json` exists. Research remains chronological training-only, with no final OOS evaluation or optimization. Legacy `run`/`diagnose` retain their finite tape caps.
+
+Campaign resume creates new immutable session directories, bounded by session count, per-symbol bytes, campaign total bytes and free-disk checks. It does not reopen old sessions or automatically take over an unfinished directory. Reconcile unclean sessions explicitly; do not point campaign configuration at an existing capture. The current 24-hour-target collector has been preserved, not restarted; its current observed status and audit windows are in the report. No complete 24-hour dataset or profitable strategy is claimed. Stop after M4.2; M5 needs explicit approval.

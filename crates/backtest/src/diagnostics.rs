@@ -37,6 +37,9 @@ pub struct Decision {
 }
 #[derive(Debug, Clone, Default, Serialize, Deserialize, PartialEq, Eq)]
 pub struct ExecutionEvidence {
+    pub through_eligible_quantity: u128,
+    pub through_filled_quantity: u128,
+    pub unknown_through_depth_events: u64,
     pub trade_through_valid_window_events: u64,
     pub exact_price_eligible_trade_events: u64,
     pub queue_blocked_trade_events: u64,

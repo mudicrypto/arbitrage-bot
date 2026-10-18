@@ -46,6 +46,20 @@ impl CollectionConfig {
     }
 }
 pub async fn collect(config: CollectionConfig, smoke_seconds: Option<u64>) -> Result<PathBuf> {
+    collect_inner(config, smoke_seconds, None).await
+}
+pub async fn collect_session(config: CollectionConfig, session_seconds: u64) -> Result<PathBuf> {
+    ensure!(
+        (10..=21600).contains(&session_seconds),
+        "session must be 10 seconds to 6 hours"
+    );
+    collect_inner(config, None, Some(session_seconds)).await
+}
+async fn collect_inner(
+    config: CollectionConfig,
+    smoke_seconds: Option<u64>,
+    session_seconds: Option<u64>,
+) -> Result<PathBuf> {
     config.validate()?;
     ensure!(
         smoke_seconds.is_none_or(|s| (10..=120).contains(&s)),
@@ -79,10 +93,12 @@ pub async fn collect(config: CollectionConfig, smoke_seconds: Option<u64>) -> Re
         instruments.push(eligible(meta, ticker, &research.policy)?);
     }
     let start = now_ms();
-    let seconds = smoke_seconds.unwrap_or(config.duration_seconds);
+    let seconds = session_seconds
+        .or(smoke_seconds)
+        .unwrap_or(config.duration_seconds);
     let end = start + seconds * 1000;
     let root = config.root.join(format!("session-{start}"));
-    std::fs::create_dir_all(&root)?;
+    std::fs::create_dir(&root)?;
     std::fs::write(
         root.join("collection-config.json"),
         serde_json::to_vec_pretty(&config)?,
@@ -163,7 +179,7 @@ pub async fn collect(config: CollectionConfig, smoke_seconds: Option<u64>) -> Re
     std::fs::write(
         root.join("collection_finished.json"),
         serde_json::to_vec_pretty(
-            &serde_json::json!({"start_ms":start,"end_ms":actual_end,"reason":reason,"smoke":smoke_seconds.is_some(),"target_seconds":config.duration_seconds,"observed_seconds":(actual_end-start)/1000,"retention_may_have_evicted_prefix":true,"requires_replay_audit":true}),
+            &serde_json::json!({"start_ms":start,"end_ms":actual_end,"reason":reason,"smoke":smoke_seconds.is_some(),"target_seconds":config.duration_seconds,"session_target_seconds":seconds,"observed_seconds":(actual_end-start)/1000,"retention_may_have_evicted_prefix":true,"requires_replay_audit":true}),
         )?,
     )?;
     Ok(root)

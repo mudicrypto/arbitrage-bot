@@ -665,3 +665,375 @@ fn sell_post_only_rejects_at_bid_even_with_sufficient_inventory() {
     assert_eq!(e.base, p("1") as i128);
     e.reconcile().unwrap();
 }
+
+fn funded(
+    allocation: u64,
+    model: mm_backtest::portfolio::ExecutionModel,
+    fee_asset: FeeAsset,
+) -> Engine {
+    let mut s = scenario();
+    s.fees.periods[0].standard_maker_microbps = 10_000_000;
+    s.fees.periods[0].asset = fee_asset;
+    if fee_asset == FeeAsset::Bnb {
+        s.fees.periods[0].bnb_quote_price_units = Some(p("1000"));
+    }
+    Engine::funded(
+        s,
+        instrument(),
+        mm_backtest::portfolio::Initialization {
+            base_allocation_ppm: allocation,
+            valuation_price_units: p("100"),
+            valuation_time_ms: 1000,
+            fee_buffer_ppm: 100_000,
+        },
+        model,
+    )
+    .unwrap()
+}
+#[test]
+fn all_four_allocations_preserve_equity_and_have_no_synthetic_deposit() {
+    use mm_backtest::portfolio::ExecutionModel;
+    for allocation in [0, 200_000, 500_000, 800_000] {
+        let e = funded(allocation, ExecutionModel::ExactPrice, FeeAsset::Quote);
+        assert_eq!(e.marked_equity(p("100")).unwrap(), p("5000") as i128);
+        assert_eq!(e.base, p("50") as i128 * allocation as i128 / 1_000_000);
+        assert_eq!(e.balances().base_reserved, 0);
+        assert_eq!(e.balances().quote_reserved, 0);
+        assert_eq!(
+            e.ledger
+                .iter()
+                .filter(|l| l.reason == "simulated_initial_capital")
+                .count(),
+            1
+        );
+        assert_eq!(e.portfolio_pnl(p("100")).unwrap()["net_pnl_atoms"], 0);
+        e.reconcile().unwrap();
+    }
+}
+#[test]
+fn funded_inventory_target_allows_both_sides_even_at_eighty_percent_base() {
+    use mm_backtest::portfolio::ExecutionModel;
+    for allocation in [200_000, 500_000, 800_000] {
+        let mut e = funded(allocation, ExecutionModel::ExactPrice, FeeAsset::Quote);
+        e.step(&book(1000, "100", "100.02")).unwrap();
+        assert!(e.submit(true, p("100"), p("1")).unwrap());
+        assert!(e.submit(false, p("100.02"), p("1")).unwrap());
+        assert!(e.balances().quote_reserved > p("100") as i128);
+        assert_eq!(e.balances().base_reserved, p("1") as i128);
+        e.reconcile().unwrap();
+    }
+}
+#[test]
+fn funded_fee_asset_reservations_survive_partial_fill_and_cancel() {
+    use mm_backtest::portfolio::ExecutionModel;
+    for asset in [FeeAsset::Quote, FeeAsset::Base, FeeAsset::Bnb] {
+        for buy in [true, false] {
+            let mut e = funded(500_000, ExecutionModel::ExactPrice, asset);
+            e.step(&book(1000, "100", "100.02")).unwrap();
+            let price = if buy { "100" } else { "100.02" };
+            assert!(e.submit(buy, p(price), p("1")).unwrap());
+            let reserved = e.balances();
+            if buy {
+                assert!(reserved.quote_reserved >= p("100") as i128);
+            } else {
+                assert!(reserved.base_reserved >= p("1") as i128);
+            }
+            if asset == FeeAsset::Bnb {
+                assert!(reserved.bnb_reserved > 0);
+            }
+            if asset == FeeAsset::Base && !buy {
+                assert!(reserved.base_reserved > p("1") as i128);
+            }
+            e.step(&book(1011, "100", "100.02")).unwrap();
+            e.step(&trade(1020, 1020, price, "2.4", buy)).unwrap();
+            assert_eq!(e.fills[0].quantity, p("0.4"));
+            e.portfolio_pnl(e.current_mid()).unwrap();
+            e.reconcile().unwrap();
+            let after = e.balances();
+            assert!(
+                after.quote_available >= 0 && after.base_available >= 0 && after.bnb_available >= 0
+            );
+            assert!(
+                after.quote_reserved <= reserved.quote_reserved
+                    && after.base_reserved <= reserved.base_reserved
+                    && after.bnb_reserved <= reserved.bnb_reserved
+            );
+            e.cancel(1).unwrap();
+            e.step(&book(1600, "100", "100.02")).unwrap();
+            let end = e.balances();
+            assert_eq!(
+                (end.quote_reserved, end.base_reserved, end.bnb_reserved),
+                (0, 0, 0)
+            );
+            e.portfolio_pnl(e.current_mid()).unwrap();
+        }
+    }
+}
+#[test]
+fn known_future_fee_increase_is_reserved_with_buffer() {
+    use mm_backtest::portfolio::ExecutionModel;
+    let mut e = funded(500_000, ExecutionModel::ExactPrice, FeeAsset::Quote);
+    e.scenario.fees.periods[0].until_ms = Some(1100);
+    let mut next = e.scenario.fees.periods[0].clone();
+    next.from_ms = 1100;
+    next.until_ms = None;
+    next.standard_maker_microbps = 20_000_000;
+    e.scenario.fees.periods.push(next);
+    e.step(&book(1000, "100", "100.02")).unwrap();
+    e.submit(true, p("100"), p("1")).unwrap();
+    assert_eq!(e.balances().quote_reserved, p("100.22") as i128);
+    e.reconcile().unwrap();
+}
+#[test]
+fn realized_unrealized_fees_and_total_equity_reconcile_exactly() {
+    use mm_backtest::portfolio::ExecutionModel;
+    let mut e = funded(500_000, ExecutionModel::ExactPrice, FeeAsset::Quote);
+    e.step(&book(1000, "100", "100.02")).unwrap();
+    e.submit(true, p("100"), p("1")).unwrap();
+    e.step(&book(1011, "100", "100.02")).unwrap();
+    e.step(&trade(1020, 1020, "100", "3", true)).unwrap();
+    e.step(&book(1030, "102", "102.02")).unwrap();
+    e.submit(false, p("102.02"), p("1")).unwrap();
+    e.step(&book(1041, "102", "102.02")).unwrap();
+    e.step(&trade(1050, 1050, "102.02", "3", false)).unwrap();
+    assert_eq!(e.portfolio.realized_gross_atoms, p("2.02") as i128);
+    let pnl = e.portfolio_pnl(p("102.01")).unwrap();
+    assert_eq!(pnl["reconciled"], true);
+    assert_eq!(pnl["fees_atoms"], p("0.20202"));
+    e.reconcile().unwrap();
+}
+#[test]
+fn conservative_through_requires_valid_aggressor_queue_and_volume() {
+    use mm_backtest::portfolio::ExecutionModel;
+    let mut e = funded(
+        500_000,
+        ExecutionModel::ConservativeThrough,
+        FeeAsset::Quote,
+    );
+    e.step(&book(1000, "100", "100.02")).unwrap();
+    e.submit(true, p("100"), p("1")).unwrap();
+    e.step(&trade(1005, 1005, "99.99", "100", true)).unwrap();
+    assert!(e.fills.is_empty());
+    e.step(&book(1011, "100", "100.02")).unwrap();
+    e.step(&trade(1020, 1020, "99.99", "100", false)).unwrap();
+    assert!(e.fills.is_empty());
+    e.step(&trade(1030, 1030, "99.99", "1", true)).unwrap();
+    assert!(e.fills.is_empty());
+    e.step(&trade(1040, 1040, "99.99", "1.4", true)).unwrap();
+    assert_eq!(e.fills[0].quantity, p("0.4"));
+    assert_eq!(e.fills[0].price, p("100"));
+    assert_eq!(e.fills[0].observed_trade_price, p("99.99"));
+    e.portfolio_pnl(e.current_mid()).unwrap();
+}
+#[test]
+fn through_sell_and_pending_cancel_respect_activation_and_effective_time() {
+    use mm_backtest::portfolio::ExecutionModel;
+    let mut e = funded(
+        500_000,
+        ExecutionModel::ConservativeThrough,
+        FeeAsset::Quote,
+    );
+    e.step(&book(1000, "100", "100.02")).unwrap();
+    e.submit(false, p("100.02"), p("1")).unwrap();
+    e.step(&book(1011, "100", "100.02")).unwrap();
+    e.cancel(1).unwrap();
+    e.step(&trade(1020, 1020, "100.03", "2.4", false)).unwrap();
+    assert_eq!(e.fills[0].quantity, p("0.4"));
+    assert_eq!(e.fills[0].price, p("100.02"));
+    e.step(&trade(1040, 1040, "100.03", "100", false)).unwrap();
+    assert_eq!(e.fills.len(), 1);
+    e.portfolio_pnl(e.current_mid()).unwrap();
+}
+#[test]
+fn through_models_distinguish_depth_unknown_and_less_conservative_assumptions() {
+    use mm_backtest::portfolio::ExecutionModel;
+    for model in [
+        ExecutionModel::ExactPrice,
+        ExecutionModel::ConservativeThrough,
+        ExecutionModel::AlternativeThrough,
+    ] {
+        let mut e = funded(500_000, model, FeeAsset::Quote);
+        e.step(&book(1000, "100", "100.02")).unwrap();
+        e.submit(true, p("100"), p("1")).unwrap();
+        e.step(&book(1011, "100", "100.02")).unwrap();
+        e.step(&trade(1020, 1020, "98", "1", true)).unwrap();
+        if model == ExecutionModel::AlternativeThrough {
+            assert_eq!(e.fills.len(), 1);
+        } else {
+            assert!(e.fills.is_empty());
+        }
+    }
+    let mut e = funded(
+        500_000,
+        ExecutionModel::ConservativeThrough,
+        FeeAsset::Quote,
+    );
+    e.step(&book(1000, "100", "100.02")).unwrap();
+    e.submit(true, p("100"), p("1")).unwrap();
+    e.step(&book(1011, "100", "100.02")).unwrap();
+    e.step(&Tick {
+        time_ms: 1015,
+        sequence: 1015,
+        input: Input::Invalid {
+            reason: "sequence_gap".into(),
+        },
+    })
+    .unwrap();
+    e.step(&trade(1020, 1020, "99.99", "100", true)).unwrap();
+    assert!(e.fills.is_empty());
+    assert!(!e.data_ok);
+}
+proptest! {
+    #[test]
+    fn funded_allocations_rounding_preserve_equity_and_through_volume(allocation in 0u64..=800_000,q in 1u64..5000) {
+        use mm_backtest::portfolio::ExecutionModel;
+        let mut e=funded(allocation,ExecutionModel::ConservativeThrough,FeeAsset::Quote);prop_assert_eq!(e.marked_equity(p("100")).unwrap(),p("5000") as i128);
+        e.step(&book(1000,"100","100.02")).unwrap();e.submit(true,p("100"),p("1")).unwrap();e.step(&book(1011,"100","100.02")).unwrap();
+        let mut t=trade(1020,1020,"99.99","1",true);if let Input::Trade{trade}=&mut t.input {trade.quantity=q*p("0.001");}e.step(&t).unwrap();
+        let filled=e.fills.iter().map(|f|f.quantity).sum::<u64>();prop_assert!(filled<=q*p("0.001"));e.portfolio_pnl(e.current_mid()).unwrap();e.reconcile().unwrap();
+    }
+}
+#[test]
+fn two_pairs_share_one_partitioned_budget_without_duplicate_capital() {
+    use mm_backtest::portfolio::{ExecutionModel, Initialization, SharedBudget};
+    let plan = SharedBudget {
+        total_usdt: 5000,
+        markets: std::collections::BTreeMap::from([
+            ("TESTUSDT".into(), 2500),
+            ("SECONDUSDT".into(), 2500),
+        ]),
+    };
+    let init = Initialization {
+        base_allocation_ppm: 500_000,
+        valuation_price_units: p("100"),
+        valuation_time_ms: 1000,
+        fee_buffer_ppm: 100_000,
+    };
+    let mut second = instrument();
+    second.symbol = "SECONDUSDT".into();
+    second.base_asset = "SECOND".into();
+    let mut a = plan
+        .initialize(
+            scenario(),
+            instrument(),
+            init.clone(),
+            ExecutionModel::ExactPrice,
+        )
+        .unwrap();
+    let mut b = plan
+        .initialize(scenario(), second, init, ExecutionModel::ExactPrice)
+        .unwrap();
+    assert_eq!(
+        a.marked_equity(p("100")).unwrap() + b.marked_equity(p("100")).unwrap(),
+        p("5000") as i128
+    );
+    a.step(&book(1000, "100", "100.02")).unwrap();
+    b.step(&book(1000, "100", "100.02")).unwrap();
+    a.submit(true, p("100"), p("1")).unwrap();
+    b.submit(true, p("100"), p("1")).unwrap();
+    assert!(a.balances().quote_reserved + b.balances().quote_reserved <= a.cash + b.cash);
+    a.portfolio_pnl(a.current_mid()).unwrap();
+    b.portfolio_pnl(b.current_mid()).unwrap();
+    let bad = SharedBudget {
+        total_usdt: 5000,
+        markets: std::collections::BTreeMap::from([
+            ("TESTUSDT".into(), 5000),
+            ("SECONDUSDT".into(), 5000),
+        ]),
+    };
+    assert!(bad.validate().is_err());
+}
+#[test]
+fn recorded_zec_trade_through_regression_is_deterministic_and_volume_bounded() {
+    use mm_backtest::{
+        cases::{Case, replay},
+        portfolio::ExecutionModel,
+    };
+    let case: Case = serde_json::from_str(include_str!(
+        "../../../reports/milestone4_2/recorded_trade_through_case.json"
+    ))
+    .unwrap();
+    assert_eq!(case.source_scenarios.len(), 2);
+    assert_eq!(case.provenance["independent_market_evidence_count"], 1);
+    let exact = replay(&case, ExecutionModel::ExactPrice).unwrap();
+    assert!(exact.fills.is_empty());
+    for model in [
+        ExecutionModel::ConservativeThrough,
+        ExecutionModel::AlternativeThrough,
+    ] {
+        let a = replay(&case, model).unwrap();
+        let b = replay(&case, model).unwrap();
+        assert_eq!(a.fills, b.fills);
+        assert_eq!(a.ledger, b.ledger);
+        assert!(a.data_ok);
+        assert_eq!(a.fills.len(), 1);
+        let f = &a.fills[0];
+        assert_eq!(f.aggregate_trade_id, 240303953);
+        assert_eq!(f.quantity, p("0.006"));
+        assert!(f.quantity <= f.observed_trade_quantity);
+        assert_eq!(f.price, p("1163.60"));
+        assert_eq!(f.observed_trade_price, p("1163.58"));
+        a.portfolio_pnl(a.current_mid()).unwrap();
+    }
+}
+#[test]
+fn funded_target_limits_pending_sells_as_well_as_pending_buys() {
+    use mm_backtest::portfolio::ExecutionModel;
+    let mut e = funded(800_000, ExecutionModel::ExactPrice, FeeAsset::Quote);
+    e.step(&book(1000, "100", "100.02")).unwrap();
+    assert!(e.submit(false, p("100.02"), p("4")).unwrap());
+    assert!(!e.submit(false, p("100.02"), p("2")).unwrap());
+    assert_eq!(
+        e.diagnostics.rejection_reasons["position_limit_including_pending_sells"],
+        1
+    );
+    e.reconcile().unwrap();
+}
+#[test]
+fn unmodeled_fee_change_cannot_spend_another_orders_reserved_cash() {
+    use mm_backtest::portfolio::{ExecutionModel, Initialization, SharedBudget};
+    let plan = SharedBudget {
+        total_usdt: 5000,
+        markets: std::collections::BTreeMap::from([
+            ("TESTUSDT".into(), 100),
+            ("SECONDUSDT".into(), 4900),
+        ]),
+    };
+    let mut e = plan
+        .initialize(
+            scenario(),
+            instrument(),
+            Initialization {
+                base_allocation_ppm: 0,
+                valuation_price_units: p("100"),
+                valuation_time_ms: 1000,
+                fee_buffer_ppm: 0,
+            },
+            ExecutionModel::ExactPrice,
+        )
+        .unwrap();
+    e.step(&book(1000, "100", "100.02")).unwrap();
+    e.submit(true, p("100"), p("0.5")).unwrap();
+    e.submit(true, p("100"), p("0.5")).unwrap();
+    e.step(&book(1011, "100", "100.02")).unwrap();
+    e.scenario.fees.periods[0].standard_maker_microbps = 100_000_000; // Fault: unplanned fee mutation after reservation.
+    e.step(&trade(1020, 1020, "100", "2.1", true)).unwrap();
+    assert!(e.fills.is_empty());
+    assert!(!e.data_ok);
+    assert_eq!(e.cash, p("100") as i128);
+    let balance = e.balances();
+    assert!(
+        balance.quote_available >= 0 && balance.base_available >= 0 && balance.bnb_available >= 0
+    );
+    e.reconcile().unwrap();
+}
+#[test]
+fn maximum_notional_rejects_even_a_sub_atomic_fraction_over_limit() {
+    let mut e = engine();
+    e.instrument.tick_units = 1;
+    e.instrument.step_units = 1;
+    e.instrument.max_notional_units = Some(p("5.000001"));
+    assert!(!e.submit(true, p("100.00000001"), p("0.05000001")).unwrap());
+    assert_eq!(e.diagnostics.rejected_exchange_filters, 1);
+    e.reconcile().unwrap();
+}

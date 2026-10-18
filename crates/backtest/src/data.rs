@@ -75,12 +75,14 @@ pub struct DataAudit {
     pub exact_queue_known: bool,
     pub limitations: Vec<String>,
 }
-pub fn load_symbol(path: &Path, symbol: &str) -> Result<(Vec<Tick>, DataAudit)> {
+pub fn stream_symbol(
+    path: &Path,
+    symbol: &str,
+    mut visit: impl FnMut(Tick) -> Result<()>,
+) -> Result<DataAudit> {
     let files = segment_paths(path)?;
     ensure!(!files.is_empty(), "recordings missing");
     let mut audit=DataAudit {symbol:symbol.into(),segments:0,records:0,book_updates:0,trades:0,invalidations:0,prefix_complete:true,sequence_contiguous:true,clock_clamps:0,start_ms:None,end_ms:None,raw_messages:0,trade_id_gaps:0,local_top_of_book_supported:false,depth_levels_retained_in_tape:10_000,exact_queue_known:false,limitations:vec!["Market-by-price snapshots/deltas do not reveal individual order IDs, hidden liquidity, cancellations ahead of us, or exact queue rank.".into(),"Aggregate trades reveal aggressor direction, price and total quantity, not the intra-aggregate ordering or matching against our hypothetical orders.".into(),"Tape retains the known reconstructed levels/side. Missing quote-price coverage rejects entries; raw multi-level books remain in Parquet.".into(),"Recorder application sequence determines causal availability; backwards receive times during snapshot buffering are clamped forward, never sorted to introduce future books.".into()]};
-    let mut tape = vec![];
-    let mut tape_bytes = 0usize;
     let mut identity: Option<(String, u64)> = None;
     let mut clock = 0;
     let mut last_trade: Option<u64> = None;
@@ -101,13 +103,13 @@ pub fn load_symbol(path: &Path, symbol: &str) -> Result<(Vec<Tick>, DataAudit)> 
                 if let Some((id, seq)) = &identity {
                     if id != &record.recording_id || record.sequence != seq + 1 {
                         audit.sequence_contiguous = false;
-                        tape.push(Tick {
+                        visit(Tick {
                             time_ms: clock,
                             sequence: record.sequence,
                             input: Input::Invalid {
                                 reason: "retained segment discontinuity".into(),
                             },
-                        });
+                        })?;
                     }
                 } else {
                     audit.prefix_complete = record.sequence == 1;
@@ -122,13 +124,13 @@ pub fn load_symbol(path: &Path, symbol: &str) -> Result<(Vec<Tick>, DataAudit)> 
             clock = time;
             if last_session.as_deref() != Some(&record.connection_session) {
                 if last_session.is_some() {
-                    tape.push(Tick {
+                    visit(Tick {
                         time_ms: time,
                         sequence: record.sequence,
                         input: Input::Invalid {
                             reason: "new connection session".into(),
                         },
-                    });
+                    })?;
                 }
                 last_session = Some(record.connection_session.clone());
             }
@@ -161,13 +163,13 @@ pub fn load_symbol(path: &Path, symbol: &str) -> Result<(Vec<Tick>, DataAudit)> 
                     }
                     if last_trade.is_some_and(|id| trade.aggregate_id > id.saturating_add(1)) {
                         audit.trade_id_gaps += 1;
-                        tape.push(Tick {
+                        visit(Tick {
                             time_ms: time,
                             sequence: record.sequence,
                             input: Input::Invalid {
                                 reason: "aggregate trade gap".into(),
                             },
-                        });
+                        })?;
                     }
                     last_trade = Some(trade.aggregate_id);
                     audit.trades += 1;
@@ -184,26 +186,14 @@ pub fn load_symbol(path: &Path, symbol: &str) -> Result<(Vec<Tick>, DataAudit)> 
                 _ => None,
             };
             if let Some(input) = input {
-                tape_bytes += match &input {
-                    Input::Book { view, .. } => (view.bids.len() + view.asks.len()) * 16 + 128,
-                    _ => 512,
-                };
-                ensure!(
-                    tape_bytes <= 512 * 1024 * 1024,
-                    "bounded tape byte limit exceeded; split recording into chronological blocks"
-                );
                 audit.start_ms.get_or_insert(time);
                 audit.end_ms = Some(time);
-                tape.push(Tick {
+                visit(Tick {
                     time_ms: time,
                     sequence: record.sequence,
                     input,
-                });
+                })?;
             }
-            ensure!(
-                tape.len() <= 1_000_000,
-                "bounded tape limit exceeded; split data into smaller chronological blocks"
-            );
             Ok(())
         })?;
         if matches {
@@ -211,6 +201,23 @@ pub fn load_symbol(path: &Path, symbol: &str) -> Result<(Vec<Tick>, DataAudit)> 
         }
     }
     ensure!(identity.is_some(), "symbol recordings missing");
+    Ok(audit)
+}
+pub fn load_symbol(path: &Path, symbol: &str) -> Result<(Vec<Tick>, DataAudit)> {
+    let mut tape = vec![];
+    let mut bytes = 0usize;
+    let audit = stream_symbol(path, symbol, |tick| {
+        bytes += match &tick.input {
+            Input::Book { view, .. } => (view.bids.len() + view.asks.len()) * 16 + 128,
+            _ => 512,
+        };
+        ensure!(
+            bytes <= 512 * 1024 * 1024 && tape.len() < 1_000_000,
+            "bounded tape limit exceeded; use streaming batch command"
+        );
+        tape.push(tick);
+        Ok(())
+    })?;
     Ok((tape, audit))
 }
 pub fn audit_all(root: &Path) -> Result<Vec<serde_json::Value>> {

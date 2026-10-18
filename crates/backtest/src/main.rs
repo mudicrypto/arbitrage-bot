@@ -4,6 +4,28 @@ use std::path::Path;
 async fn main() -> Result<()> {
     let args: Vec<String> = std::env::args().skip(1).collect();
     match args.first().map(String::as_str) {
+        Some("case-audit") if args.len() == 4 => mm_backtest::cases::export(
+            Path::new(&args[1]),
+            Path::new(&args[2]),
+            Path::new(&args[3]),
+        ),
+        Some("collect-campaign") if args.len() == 2 || args.len() == 4 => {
+            let smoke = if args.len() == 4 {
+                if args[2] != "--smoke-seconds" {
+                    bail!("unknown option");
+                }
+                Some(args[3].parse()?)
+            } else {
+                None
+            };
+            mm_backtest::campaign::resume(Path::new(&args[1]), smoke).await
+        }
+        Some("batch") if args.len() == 3 => {
+            mm_backtest::batch::run(Path::new(&args[1]), Path::new(&args[2]))
+        }
+        Some("metadata") if args.len() == 3 => {
+            mm_backtest::batch::fetch_metadata(Path::new(&args[1]), Path::new(&args[2])).await
+        }
         Some("readiness") if args.len() == 3 => {
             mm_backtest::readiness::capture(Path::new(&args[1]), Path::new(&args[2]))
         }
@@ -53,7 +75,7 @@ async fn main() -> Result<()> {
             Ok(())
         }
         _ => bail!(
-            "usage: mm-backtest readiness <long-run-dir> <output.json> | diagnose <run-dir> <experiment.json> <original-results.json> <output-dir> | audit <data-root> <output.json> | run <run-dir> <experiment.json> <output-dir> [--include-final-test] | collect <collection.json> [--smoke-seconds 10..120]"
+            "usage: mm-backtest case-audit <run-dir> <previous-diagnostics.json> <output-dir> | collect-campaign <config.json> [--smoke-seconds 10..120] | batch <config.json> <new-output-dir> | metadata <manifest.json> <output.json> | readiness <long-run-dir> <output.json> | diagnose <run-dir> <experiment.json> <original-results.json> <output-dir> | audit <data-root> <output.json> | run <run-dir> <experiment.json> <output-dir> [--include-final-test] | collect <collection.json> [--smoke-seconds 10..120]"
         ),
     }
 }

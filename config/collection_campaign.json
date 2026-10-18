@@ -1,0 +1,16 @@
+{
+  "root": ".local/collection-campaigns/research-v1",
+  "collection": {
+    "duration_seconds": 86400,
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT"
+    ],
+    "bytes_per_symbol": 268435456,
+    "flush_interval_ms": 30000,
+    "root": ".local/collection-campaigns/research-v1/sessions"
+  },
+  "session_seconds": 21600,
+  "max_sessions": 12,
+  "max_campaign_bytes": 8589934592
+}

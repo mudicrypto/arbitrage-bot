@@ -1,6 +1,6 @@
 # Development instructions
 
-Use the existing isolated checkout; do not create worktrees unless the user requests one. Read README.md, ARCHITECTURE.md, ROADMAP.md and RISK_POLICY.md first. Implement only the approved milestone. M1–M4 and M4.1 are approved. M4.1 implements execution diagnostics, controlled fill-model validation and data-readiness audits. Stop after M4.1; M5 requires explicit user approval.
+Use the existing isolated checkout; do not create worktrees unless the user requests one. Read README.md, ARCHITECTURE.md, ROADMAP.md and RISK_POLICY.md first. Implement only the approved milestone. M1–M4.2 are approved. M4.2 adds explicit funded portfolios, execution-model regression and bounded completed-session research. Stop after M4.2; M5 requires explicit user approval.
 
 Never request private exchange keys or submit real orders. Keep live execution unavailable. Use integer executable prices/quantities, deterministic event ordering and explicit fee assets. Unknown submission outcomes require reconciliation. Price touch is not evidence of execution.
 
@@ -13,3 +13,5 @@ Research changes must retain real-observation provenance, exact fee arithmetic, 
 Backtesting must reuse M2/M3 recording and replay, require aggressive-trade execution evidence, conserve each asset, retain latency/cancel races and report queue uncertainty. See docs/MILESTONE_4.md. Future final out-of-sample observations must stay untouched during development. Long capture processes are public data only and may not survive cloud restoration.
 
 M4.1 diagnostic counts must reconcile, distinguish exact-price from trade-through evidence, and keep synthetic tests, historical simulated fills and actual executions separate. Preserve original M4 reports and future OOS data; audit live capture integrity without running strategies on it. See docs/MILESTONE_4_1.md.
+
+M4.2 must preserve the existing running collector. Use explicit isolated capital alternatives or validated partitions summing to one $5000 budget. Initial holdings are priced accounting allocations, never claimed executions. Only completed valid session-symbols enter batch research; do not sum independent experiments or silently reset equity over missing intervals. See docs/MILESTONE_4_2.md.

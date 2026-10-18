@@ -35,6 +35,10 @@ pub struct Execution {
 }
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
 pub struct Fill {
+    pub evidence_kind: String,
+    pub aggregate_trade_id: u64,
+    pub observed_trade_price: u64,
+    pub observed_trade_quantity: u64,
     pub observed_at_ms: u64,
     pub epoch: u64,
     pub time_ms: u64,
@@ -58,6 +62,7 @@ pub struct Order {
     pub reserved_quote: u128,
     pub reserved_base: u128,
     pub reserved_bnb: u128,
+    pub entry_book: Option<std::sync::Arc<View>>,
 }
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 pub struct EquityPoint {
@@ -122,6 +127,11 @@ pub struct Summary {
     pub warnings: Vec<String>,
 }
 pub struct Engine {
+    pub automatic_quoting: bool,
+    pub price_bounds: Option<(u64, u64)>,
+    pub portfolio: crate::portfolio::PortfolioState,
+    pub execution_model: crate::portfolio::ExecutionModel,
+    pub reservation_buffer_ppm: u64,
     pub diagnostics: crate::diagnostics::Funnel,
     pub decisions: Vec<crate::diagnostics::Decision>,
     pub execution_evidence: BTreeMap<u64, crate::diagnostics::ExecutionEvidence>,
@@ -171,6 +181,17 @@ pub struct Engine {
 }
 impl Engine {
     pub fn new(scenario: Scenario, instrument: Instrument, capital_usdt: u64) -> Result<Self> {
+        ensure!(
+            capital_usdt == 5000,
+            "legacy simulation capital must be $5000"
+        );
+        Self::new_budget(scenario, instrument, capital_usdt)
+    }
+    pub(crate) fn new_budget(
+        scenario: Scenario,
+        instrument: Instrument,
+        capital_usdt: u64,
+    ) -> Result<Self> {
         scenario.validate()?;
         ensure!(
             instrument.tick_units > 0
@@ -179,9 +200,17 @@ impl Engine {
                 && instrument.base_asset != "USDT",
             "unsupported instrument wallet alias or zero increments"
         );
-        ensure!(capital_usdt == 5000, "simulation capital must be $5000");
+        ensure!(
+            capital_usdt > 0 && capital_usdt <= 5000,
+            "subportfolio budget out of bounds"
+        );
         let capital = i128::from(capital_usdt) * i128::from(S);
         let mut e = Self {
+            automatic_quoting: true,
+            price_bounds: None,
+            portfolio: Default::default(),
+            execution_model: Default::default(),
+            reservation_buffer_ppm: 0,
             diagnostics: Default::default(),
             decisions: vec![],
             execution_evidence: BTreeMap::new(),
@@ -251,6 +280,7 @@ impl Engine {
             let cost = notional(price, u64::try_from(qty)?)? as i128;
             e.cash -= cost;
             e.bnb = qty;
+            e.portfolio.bnb_cost_basis_atoms = cost;
             e.ledger.push(LedgerEntry {
                 time_ms: 0,
                 asset: "USDT".into(),
@@ -266,6 +296,10 @@ impl Engine {
                 order_id: None,
             });
         }
+        e.portfolio.initial_equity_atoms = capital;
+        e.portfolio.initial_quote_atoms = e.cash;
+        e.portfolio.initial_bnb_units = u64::try_from(e.bnb)?;
+        e.portfolio.initial_valuation_price = e.instrument.price_units;
         Ok(e)
     }
     fn log(&mut self, action: &str, order: &Order, quantity: u64, reason: &str) -> Result<()> {
@@ -295,7 +329,7 @@ impl Engine {
             .wrapping_add(1442695040888963407);
         self.rng % (self.scenario.latency_jitter_ms + 1)
     }
-    fn bnb_price(&self) -> u64 {
+    pub(crate) fn bnb_price(&self) -> u64 {
         self.scenario
             .fees
             .at(self.clock, &self.instrument.symbol)
@@ -354,6 +388,11 @@ impl Engine {
     fn limits(&self, price: u64, qty: u64) -> Result<()> {
         let i = &self.instrument;
         ensure!(
+            self.price_bounds
+                .is_none_or(|(min, max)| (min == 0 || price >= min) && (max == 0 || price <= max)),
+            "price filter bounds"
+        );
+        ensure!(
             price > 0
                 && qty >= i.min_qty_units
                 && qty <= i.max_qty_units
@@ -361,17 +400,38 @@ impl Engine {
                 && qty.is_multiple_of(i.step_units),
             "tick/lot constraint"
         );
-        let cost = notional(price, qty)?;
+        let exact_product = u128::from(price) * u128::from(qty);
         ensure!(
-            cost >= i.min_notional_units.into()
-                && i.max_notional_units.is_none_or(|m| cost <= m.into()),
+            exact_product >= u128::from(i.min_notional_units) * u128::from(S)
+                && i.max_notional_units
+                    .is_none_or(|m| exact_product <= u128::from(m) * u128::from(S)),
             "notional constraint"
         );
         Ok(())
     }
     fn reserve(&self, buy: bool, price: u64, qty: u64) -> Result<(u128, u128, u128)> {
-        let p = self.scenario.fees.at(self.clock, &self.instrument.symbol)?;
-        let fee = p.charge(price, qty, buy, true)?;
+        // Reserve for known future fee changes and a configured fee-only buffer.
+        self.scenario.fees.at(self.clock, &self.instrument.symbol)?;
+        let mut quote_fee = 0;
+        let mut base_fee = 0;
+        let mut bnb_fee = 0;
+        for period in self.scenario.fees.periods.iter().filter(|p| {
+            p.until_ms.is_none_or(|t| t > self.clock)
+                && p.symbol
+                    .as_ref()
+                    .is_none_or(|s| s == &self.instrument.symbol)
+        }) {
+            let fee = period.charge(price, qty, buy, true)?;
+            let buffered = ceil_div(
+                fee.amount_atoms * u128::from(1_000_000 + self.reservation_buffer_ppm),
+                1_000_000,
+            )?;
+            match fee.asset {
+                FeeAsset::Quote => quote_fee = quote_fee.max(buffered),
+                FeeAsset::Base => base_fee = base_fee.max(buffered),
+                FeeAsset::Bnb => bnb_fee = bnb_fee.max(buffered),
+            }
+        }
         let quote = if buy {
             ceil_div(u128::from(price) * u128::from(qty), S.into())?
         } else {
@@ -379,22 +439,9 @@ impl Engine {
         };
         let base = if buy { 0 } else { u128::from(qty) };
         Ok((
-            quote
-                + if buy && fee.asset == FeeAsset::Quote {
-                    fee.amount_atoms
-                } else {
-                    0
-                },
-            base + if !buy && fee.asset == FeeAsset::Base {
-                fee.amount_atoms
-            } else {
-                0
-            },
-            if fee.asset == FeeAsset::Bnb {
-                fee.amount_atoms
-            } else {
-                0
-            },
+            quote + if buy { quote_fee } else { 0 },
+            base + if !buy { base_fee } else { 0 },
+            bnb_fee,
         ))
     }
     pub fn submit(&mut self, buy: bool, price: u64, qty: u64) -> Result<bool> {
@@ -432,6 +479,19 @@ impl Engine {
             self.diagnostic_decision(buy, price, qty, "rejected", "tick_lot_or_notional_filter")?;
             return Ok(false);
         }
+        if self.execution_model != crate::portfolio::ExecutionModel::ExactPrice
+            && self.orders.iter().any(|o| o.buy == buy)
+        {
+            self.diagnostics.rejected_risk_limits += 1;
+            self.diagnostic_decision(
+                buy,
+                price,
+                qty,
+                "rejected",
+                "through_model_single_order_per_side",
+            )?;
+            return Ok(false);
+        }
         let (rq, rb, rn) = self.reserve(buy, price, qty)?;
         let (cash, base, bnb) = self.available();
         let inventory = notional(self.view.as_ref().unwrap().mid(), u64::try_from(self.base)?)?;
@@ -441,12 +501,30 @@ impl Engine {
             .filter(|o| o.buy)
             .map(|o| notional(o.price, o.remaining).unwrap_or(u128::MAX))
             .sum();
+        let mid = self.view.as_ref().unwrap().mid();
+        let target = notional(mid, self.portfolio.initial_base_units)?;
+        let lower = target.saturating_sub(
+            u128::from(self.scenario.strategy.inventory_limit_usdt) * u128::from(S),
+        );
+        let pending_sells = self
+            .orders
+            .iter()
+            .filter(|o| !o.buy)
+            .try_fold(0u128, |sum, o| -> Result<u128> {
+                Ok(sum + notional(mid, u64::try_from(o.reserved_base)?)?)
+            })?;
+        let sell_limit = !buy
+            && inventory.saturating_sub(pending_sells + notional(mid, u64::try_from(rb)?)?) < lower;
         if cash < rq as i128
             || base < rb as i128
             || bnb < rn as i128
+            || sell_limit
             || buy
                 && inventory + pending_buys + notional(price, qty)?
-                    > u128::from(self.scenario.strategy.inventory_limit_usdt) * u128::from(S)
+                    > notional(
+                        self.view.as_ref().unwrap().mid(),
+                        self.portfolio.initial_base_units,
+                    )? + u128::from(self.scenario.strategy.inventory_limit_usdt) * u128::from(S)
         {
             self.diagnostics.rejected_risk_limits += 1;
             let reason = if cash < rq as i128 {
@@ -455,6 +533,8 @@ impl Engine {
                 "insufficient_available_base"
             } else if bnb < rn as i128 {
                 "insufficient_available_bnb"
+            } else if sell_limit {
+                "position_limit_including_pending_sells"
             } else {
                 "position_limit_including_pending_buys"
             };
@@ -479,6 +559,7 @@ impl Engine {
             reserved_quote: rq,
             reserved_base: rb,
             reserved_bnb: rn,
+            entry_book: None,
         };
         self.entry_deadlines.insert(order.id, due);
         self.diagnostics.submitted_to_simulated_execution += 1;
@@ -598,6 +679,9 @@ impl Engine {
                     .ahead
                     .max(earlier.ahead + u128::from(earlier.remaining));
             }
+            if self.execution_model != crate::portfolio::ExecutionModel::ExactPrice {
+                order.entry_book = self.view.clone().map(std::sync::Arc::new);
+            }
             self.initial_queue_ahead.insert(order.id, order.ahead);
             order.active = true;
             self.accepted += 1;
@@ -632,6 +716,8 @@ impl Engine {
         qty: u64,
         execution_ms: u64,
         reference_mid: u64,
+        trade: &mm_market_data::model::Trade,
+        evidence_kind: &str,
     ) -> Result<()> {
         let mut o = self.orders.remove(index);
         let qty = qty.min(o.remaining);
@@ -683,13 +769,31 @@ impl Engine {
         } else {
             0
         };
-        if self.cash + cash_delta < 0 || self.base + base_delta < 0 || self.bnb + bnb_delta < 0 {
+        let new_remaining = o.remaining - qty;
+        let remaining_reservations = if new_remaining > 0 {
+            self.reserve(o.buy, o.price, new_remaining)?
+        } else {
+            (0, 0, 0)
+        };
+        let free_without_this_order = self.available();
+        if free_without_this_order.0 + cash_delta < remaining_reservations.0 as i128
+            || free_without_this_order.1 + base_delta < remaining_reservations.1 as i128
+            || free_without_this_order.2 + bnb_delta < remaining_reservations.2 as i128
+        {
             self.rejected += 1;
             self.data_ok = false;
             self.stopped = true;
             self.log("reject", &o, 0, "fee_balance_unavailable_invalid_model")?;
             return Ok(());
         }
+        self.cost_basis_fill(
+            o.buy,
+            qty,
+            quote,
+            charge.asset,
+            charge.amount_atoms,
+            charge.quote_equivalent_atoms,
+        )?;
         self.cash += cash_delta;
         self.base += base_delta;
         self.bnb += bnb_delta;
@@ -734,7 +838,17 @@ impl Engine {
             .entry(o.id)
             .or_default()
             .filled_quantity += u128::from(qty);
+        if evidence_kind != "exact_price_after_queue_depletion" {
+            self.execution_evidence
+                .entry(o.id)
+                .or_default()
+                .through_filled_quantity += u128::from(qty);
+        }
         self.fills.push(Fill {
+            evidence_kind: evidence_kind.into(),
+            aggregate_trade_id: trade.aggregate_id,
+            observed_trade_price: trade.price,
+            observed_trade_quantity: trade.quantity,
             observed_at_ms: self.clock,
             epoch: self.epoch,
             time_ms: execution_ms,
@@ -744,12 +858,7 @@ impl Engine {
             reference_mid: mid,
             order_id: o.id,
         });
-        self.log(
-            "fill",
-            &o,
-            qty,
-            "aggressive_trade_evidence_after_queue_depletion",
-        )?;
+        self.log("fill", &o, qty, evidence_kind)?;
         let log = self.logs.last_mut().unwrap();
         log.execution_time_ms = Some(execution_ms);
         log.fee_asset = Some(asset);
@@ -834,29 +943,84 @@ impl Engine {
                 i += 1;
                 continue;
             }
-            if self.orders[i].price != t.price {
-                if (self.orders[i].buy && t.price < self.orders[i].price)
-                    || (!self.orders[i].buy && t.price > self.orders[i].price)
+            let through = self.orders[i].price != t.price;
+            let mut event_budget = eligible;
+            let mut kind = "exact_price_after_queue_depletion";
+            if through {
+                if !((self.orders[i].buy && t.price < self.orders[i].price)
+                    || (!self.orders[i].buy && t.price > self.orders[i].price))
                 {
-                    self.execution_evidence
-                        .entry(self.orders[i].id)
-                        .or_default()
-                        .trade_through_valid_window_events += 1;
+                    i += 1;
+                    continue;
                 }
-                i += 1;
-                continue;
+                self.execution_evidence
+                    .entry(self.orders[i].id)
+                    .or_default()
+                    .trade_through_valid_window_events += 1;
+                use crate::portfolio::ExecutionModel;
+                match self.execution_model {
+                    ExecutionModel::ExactPrice => {
+                        i += 1;
+                        continue;
+                    }
+                    ExecutionModel::ConservativeThrough => {
+                        let book = self.orders[i]
+                            .entry_book
+                            .as_ref()
+                            .context("entry depth unavailable")?;
+                        let levels = if self.orders[i].buy {
+                            &book.bids
+                        } else {
+                            &book.asks
+                        };
+                        let known = if self.orders[i].buy {
+                            t.price >= levels.last().unwrap().0
+                        } else {
+                            t.price <= levels.last().unwrap().0
+                        };
+                        if !known {
+                            self.execution_evidence
+                                .entry(self.orders[i].id)
+                                .or_default()
+                                .unknown_through_depth_events += 1;
+                            i += 1;
+                            continue;
+                        }
+                        let barrier: u128 = levels
+                            .iter()
+                            .filter(|(p, _)| {
+                                if self.orders[i].buy {
+                                    *p < self.orders[i].price && *p > t.price
+                                } else {
+                                    *p > self.orders[i].price && *p < t.price
+                                }
+                            })
+                            .map(|(_, q)| u128::from(*q))
+                            .sum();
+                        event_budget = event_budget.saturating_sub(barrier);
+                        kind = "conservative_trade_through_after_depth_and_queue";
+                    }
+                    ExecutionModel::AlternativeThrough => {
+                        self.orders[i].ahead = 0;
+                        kind = "alternative_trade_through_assumes_priority_cleared";
+                    }
+                }
             }
             let evidence = self
                 .execution_evidence
                 .entry(self.orders[i].id)
                 .or_default();
-            evidence.exact_price_eligible_trade_events += 1;
-            evidence.observed_eligible_quantity += eligible;
-            evidence.queue_blocked_trade_events += u64::from(self.orders[i].ahead >= eligible);
-            let consume = self.orders[i].ahead.min(eligible);
+            if through {
+                evidence.through_eligible_quantity += event_budget;
+            } else {
+                evidence.exact_price_eligible_trade_events += 1;
+            }
+            evidence.observed_eligible_quantity += event_budget;
+            evidence.queue_blocked_trade_events += u64::from(self.orders[i].ahead >= event_budget);
+            let consume = self.orders[i].ahead.min(event_budget);
             evidence.queue_consumed_quantity += consume;
             self.orders[i].ahead -= consume;
-            let remaining = (eligible - consume).min(fill_budget);
+            let remaining = (event_budget - consume).min(fill_budget);
             let fill = remaining.min(u128::from(self.orders[i].remaining)) as u64
                 / self.instrument.step_units
                 * self.instrument.step_units;
@@ -869,7 +1033,7 @@ impl Engine {
             if fill > 0 {
                 fill_budget -= u128::from(fill);
                 let id = self.orders[i].id;
-                self.fill(i, fill, t.exchange_ms, reference_mid)?;
+                self.fill(i, fill, t.exchange_ms, reference_mid, t, kind)?;
                 if self.orders.get(i).is_some_and(|o| o.id == id) {
                     i += 1;
                 }
@@ -947,10 +1111,12 @@ impl Engine {
             self.last_refresh = self.clock;
             return Ok(());
         }
-        let inventory = notional(mid, u64::try_from(self.base)?)?;
-        let skew = inventory * u128::from(self.scenario.strategy.inventory_skew_bps)
-            / (u128::from(self.scenario.strategy.inventory_limit_usdt) * u128::from(S));
-        let center = u128::from(mid) * (10_000 - skew.min(9999)) / 10_000;
+        let deviation = (self.base - i128::from(self.portfolio.initial_base_units))
+            * i128::from(mid)
+            / i128::from(S);
+        let skew = deviation * i128::from(self.scenario.strategy.inventory_skew_bps)
+            / (i128::from(self.scenario.strategy.inventory_limit_usdt) * i128::from(S));
+        let center = (i128::from(mid) * (10_000 - skew.clamp(-9999, 9999)) / 10_000) as u128;
         let half = u128::from(mid) * u128::from(spread) / (2 * 10_000);
         let tick = u128::from(self.instrument.tick_units);
         let bid = (center.saturating_sub(half) / tick * tick) as u64;
@@ -1099,7 +1265,9 @@ impl Engine {
                 });
             }
         }
-        self.quote()?;
+        if self.automatic_quoting {
+            self.quote()?;
+        }
         self.reconcile()
     }
     fn exposure(&self, start: u64, end: u64) -> f64 {
@@ -1116,6 +1284,15 @@ impl Engine {
             area += fraction * duration as f64;
         }
         area / end.saturating_sub(start).max(1) as f64
+    }
+    pub fn capital_atoms(&self) -> i128 {
+        self.capital
+    }
+    pub fn maximum_drawdown(&self) -> i128 {
+        self.max_drawdown
+    }
+    pub fn fee_asset_totals(&self) -> &BTreeMap<String, i128> {
+        &self.fee_assets
     }
     pub fn finish(&self, split: &str, start: u64, end: u64) -> Result<Summary> {
         self.reconcile()?;
