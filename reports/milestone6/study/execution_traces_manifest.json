@@ -1,0 +1,9 @@
+{
+  "result_type": "simulated_execution_audit_not_actual_orders",
+  "local_only_path": ".local/m6-execution-traces.jsonl",
+  "bytes": 35461275,
+  "sha256": "5811f003110d3f2b3b632681c94c178f6a056d3eea64173670d9ef9c64a43cbe",
+  "record_count": 52813,
+  "git_contains_full_traces": false,
+  "reproduction": "Run mm-backtest profitability with the frozen source/protocol in a new output directory. Raw source recordings and the full trace are local/ignored."
+}

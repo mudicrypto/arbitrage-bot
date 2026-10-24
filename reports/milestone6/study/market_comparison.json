@@ -1,0 +1,558 @@
+[
+  {
+    "account_fees_verified": false,
+    "aggregate_trade_gaps": 0,
+    "assumed_maker_fee_bps_each_side": 10,
+    "instrument": {
+      "base_asset": "BTC",
+      "clip_notional_units": 9983492960,
+      "clip_quantity_units": 124000,
+      "max_notional_units": 900000000000000,
+      "max_qty_units": 900000000000,
+      "min_notional_units": 500000000,
+      "min_qty_units": 1000,
+      "price_units": 8051204000000,
+      "step_units": 1000,
+      "symbol": "BTCUSDT",
+      "tick_units": 1000000,
+      "trades_24h": 1732012,
+      "volume_24h_usdt": 950174753.7853827
+    },
+    "windows": [
+      {
+        "aggregate_trade_messages": 235,
+        "concentration_p90": 0.08906266415469997,
+        "depth_median_usdt": [
+          [
+            3791422.6156795,
+            3567227.4844363
+          ],
+          [
+            6674337.9184386,
+            6873339.9954275
+          ],
+          [
+            11945756.1730984,
+            13561655.7661518
+          ],
+          [
+            19093757.7209853,
+            16498007.9519434
+          ]
+        ],
+        "median_imbalance": -0.014340520232940789,
+        "observed_duration_seconds": 60.0,
+        "quote_stability_fraction": 0.9322033898305084,
+        "realized_volatility_bps": 0.14152878843239072,
+        "reference_move_bps": -1.5821769502485326,
+        "requested_window_complete": true,
+        "samples": 60,
+        "seconds": 60,
+        "spread_p10_bps": 0.0012399485892515924,
+        "spread_p50_bps": 0.0012399485892515924,
+        "spread_p90_bps": 0.0012401009715013016,
+        "trade_frequency_per_second": 11.866666666666667,
+        "trade_quote_volume_usdt": 478095.5729087,
+        "underlying_trade_count": 712,
+        "usable_fraction": 1.0,
+        "window_end_ms": 1792835977714,
+        "window_start_ms": 1792835917714
+      },
+      {
+        "aggregate_trade_messages": 1296,
+        "concentration_p90": 0.08410364274394308,
+        "depth_median_usdt": [
+          [
+            3752445.3049626,
+            3077886.4192324
+          ],
+          [
+            6822322.5061391,
+            6551292.6891789
+          ],
+          [
+            12335563.7046936,
+            11875221.0021955
+          ],
+          [
+            19415707.6114314,
+            15878150.0232829
+          ]
+        ],
+        "median_imbalance": 0.023183111557316567,
+        "observed_duration_seconds": 300.0,
+        "quote_stability_fraction": 0.8862876254180602,
+        "realized_volatility_bps": 0.18678507622426122,
+        "reference_move_bps": 3.5642116675269118,
+        "requested_window_complete": true,
+        "samples": 300,
+        "seconds": 300,
+        "spread_p10_bps": 0.0012399485892515924,
+        "spread_p50_bps": 0.0012402840027115089,
+        "spread_p90_bps": 0.0012408252604724876,
+        "trade_frequency_per_second": 17.073333333333334,
+        "trade_quote_volume_usdt": 2028955.7613175993,
+        "underlying_trade_count": 5122,
+        "usable_fraction": 1.0,
+        "window_end_ms": 1792835977714,
+        "window_start_ms": 1792835677714
+      },
+      {
+        "aggregate_trade_messages": 4179,
+        "concentration_p90": 0.06917572625987516,
+        "depth_median_usdt": [
+          [
+            3649228.3428052,
+            3328413.2574383
+          ],
+          [
+            6882830.4881132,
+            6870534.4289199
+          ],
+          [
+            13272392.1756197,
+            11844262.569699
+          ],
+          [
+            20334230.4202949,
+            16091645.6822954
+          ]
+        ],
+        "median_imbalance": 0.006075533531922006,
+        "observed_duration_seconds": 899.996,
+        "quote_stability_fraction": 0.8896321070234113,
+        "realized_volatility_bps": 0.20767231649034917,
+        "reference_move_bps": 15.306963681049032,
+        "requested_window_complete": false,
+        "samples": 899,
+        "seconds": 900,
+        "spread_p10_bps": 0.0012401009715013016,
+        "spread_p50_bps": 0.0012408252604724876,
+        "spread_p90_bps": 0.0012420450893418557,
+        "trade_frequency_per_second": 19.387863946061984,
+        "trade_quote_volume_usdt": 6593709.099261893,
+        "underlying_trade_count": 17449,
+        "usable_fraction": 0.998893328414793,
+        "window_end_ms": 1792835977714,
+        "window_start_ms": 1792835077718
+      }
+    ]
+  },
+  {
+    "account_fees_verified": false,
+    "aggregate_trade_gaps": 0,
+    "assumed_maker_fee_bps_each_side": 10,
+    "instrument": {
+      "base_asset": "ETH",
+      "clip_notional_units": 9984365100,
+      "clip_quantity_units": 4230000,
+      "max_notional_units": 900000000000000,
+      "max_qty_units": 900000000000,
+      "min_notional_units": 500000000,
+      "min_qty_units": 10000,
+      "price_units": 236037000000,
+      "step_units": 10000,
+      "symbol": "ETHUSDT",
+      "tick_units": 1000000,
+      "trades_24h": 1556763,
+      "volume_24h_usdt": 381107161.183078
+    },
+    "windows": [
+      {
+        "aggregate_trade_messages": 143,
+        "concentration_p90": 0.04681480165346642,
+        "depth_median_usdt": [
+          [
+            971874.691987,
+            1130088.802666
+          ],
+          [
+            2260023.226152,
+            2357809.988364
+          ],
+          [
+            5042534.328079,
+            5948734.910605
+          ],
+          [
+            6684444.050783,
+            19473380.435325
+          ]
+        ],
+        "median_imbalance": -0.003233215567942396,
+        "observed_duration_seconds": 60.0,
+        "quote_stability_fraction": 0.8813559322033898,
+        "realized_volatility_bps": 0.2565107073196328,
+        "reference_move_bps": -4.8979143751675736,
+        "requested_window_complete": true,
+        "samples": 60,
+        "seconds": 60,
+        "spread_p10_bps": 0.04222339978592736,
+        "spread_p50_bps": 0.04223409938950609,
+        "spread_p90_bps": 0.04224409057977902,
+        "trade_frequency_per_second": 5.733333333333333,
+        "trade_quote_volume_usdt": 94210.239972,
+        "underlying_trade_count": 344,
+        "usable_fraction": 1.0,
+        "window_end_ms": 1792835977714,
+        "window_start_ms": 1792835917714
+      },
+      {
+        "aggregate_trade_messages": 850,
+        "concentration_p90": 0.04450827105306503,
+        "depth_median_usdt": [
+          [
+            1011343.099769,
+            1070834.959441
+          ],
+          [
+            2337705.791582,
+            2384192.124078
+          ],
+          [
+            5592048.399324,
+            5946319.812698
+          ],
+          [
+            7247516.027653,
+            19439216.612284
+          ]
+        ],
+        "median_imbalance": 0.0028251251441209955,
+        "observed_duration_seconds": 300.0,
+        "quote_stability_fraction": 0.842809364548495,
+        "realized_volatility_bps": 0.2714930188734145,
+        "reference_move_bps": 3.465215783635307,
+        "requested_window_complete": true,
+        "samples": 300,
+        "seconds": 300,
+        "spread_p10_bps": 0.04222339978592736,
+        "spread_p50_bps": 0.042243019869004396,
+        "spread_p90_bps": 0.0422690892490685,
+        "trade_frequency_per_second": 7.346666666666667,
+        "trade_quote_volume_usdt": 882532.4785219996,
+        "underlying_trade_count": 2204,
+        "usable_fraction": 1.0,
+        "window_end_ms": 1792835977714,
+        "window_start_ms": 1792835677714
+      },
+      {
+        "aggregate_trade_messages": 3152,
+        "concentration_p90": 0.04127437826218756,
+        "depth_median_usdt": [
+          [
+            1018095.465001,
+            1059510.949065
+          ],
+          [
+            2330223.77922,
+            2368631.786524
+          ],
+          [
+            5616626.036108,
+            5781155.731647
+          ],
+          [
+            7540637.777234,
+            18681008.657878
+          ]
+        ],
+        "median_imbalance": -0.003640146468830249,
+        "observed_duration_seconds": 895.995,
+        "quote_stability_fraction": 0.8288590604026845,
+        "realized_volatility_bps": 0.3149603591250961,
+        "reference_move_bps": 29.403602576840218,
+        "requested_window_complete": false,
+        "samples": 895,
+        "seconds": 900,
+        "spread_p10_bps": 0.04223409938950609,
+        "spread_p50_bps": 0.0422690892490685,
+        "spread_p90_bps": 0.04236596995829071,
+        "trade_frequency_per_second": 10.985552374734233,
+        "trade_quote_volume_usdt": 2650571.6255140007,
+        "underlying_trade_count": 9843,
+        "usable_fraction": 0.9988895027316,
+        "window_end_ms": 1792835977714,
+        "window_start_ms": 1792835081719
+      }
+    ]
+  },
+  {
+    "account_fees_verified": false,
+    "aggregate_trade_gaps": 0,
+    "assumed_maker_fee_bps_each_side": 10,
+    "instrument": {
+      "base_asset": "SOL",
+      "clip_notional_units": 9997572000,
+      "clip_quantity_units": 98800000,
+      "max_notional_units": 900000000000000,
+      "max_qty_units": 9000000000000,
+      "min_notional_units": 500000000,
+      "min_qty_units": 100000,
+      "price_units": 10119000000,
+      "step_units": 100000,
+      "symbol": "SOLUSDT",
+      "tick_units": 1000000,
+      "trades_24h": 492469,
+      "volume_24h_usdt": 178821998.86915
+    },
+    "windows": [
+      {
+        "aggregate_trade_messages": 50,
+        "concentration_p90": 0.17354101968977428,
+        "depth_median_usdt": [
+          [
+            647176.79503,
+            286931.96538
+          ],
+          [
+            1355560.77185,
+            888365.30031
+          ],
+          [
+            3878862.04644,
+            1785865.37804
+          ],
+          [
+            5612814.16051,
+            2234089.86178
+          ]
+        ],
+        "median_imbalance": 0.25392102716292114,
+        "observed_duration_seconds": 60.0,
+        "quote_stability_fraction": 0.8620689655172413,
+        "realized_volatility_bps": 0.3673358612161909,
+        "reference_move_bps": -5.912203773956742,
+        "requested_window_complete": true,
+        "samples": 60,
+        "seconds": 60,
+        "spread_p10_bps": 0.9852702103551899,
+        "spread_p50_bps": 0.9854644000985464,
+        "spread_p90_bps": 0.9857558282813348,
+        "trade_frequency_per_second": 3.45,
+        "trade_quote_volume_usdt": 159477.31219000006,
+        "underlying_trade_count": 207,
+        "usable_fraction": 1.0,
+        "window_end_ms": 1792835977714,
+        "window_start_ms": 1792835917714
+      },
+      {
+        "aggregate_trade_messages": 328,
+        "concentration_p90": 0.16743443740593295,
+        "depth_median_usdt": [
+          [
+            599450.01461,
+            268376.90971
+          ],
+          [
+            1353740.81222,
+            899958.99156
+          ],
+          [
+            3845624.57999,
+            1710426.87418
+          ],
+          [
+            5423092.52429,
+            2132684.95038
+          ]
+        ],
+        "median_imbalance": 0.21602553150017131,
+        "observed_duration_seconds": 300.0,
+        "quote_stability_fraction": 0.8691275167785235,
+        "realized_volatility_bps": 0.3579434082054799,
+        "reference_move_bps": 5.919202880678735,
+        "requested_window_complete": true,
+        "samples": 300,
+        "seconds": 300,
+        "spread_p10_bps": 0.9853672956594571,
+        "spread_p50_bps": 0.9863392020515854,
+        "spread_p90_bps": 0.9868258745744314,
+        "trade_frequency_per_second": 3.86,
+        "trade_quote_volume_usdt": 660281.3072099999,
+        "underlying_trade_count": 1158,
+        "usable_fraction": 1.0,
+        "window_end_ms": 1792835977714,
+        "window_start_ms": 1792835677714
+      },
+      {
+        "aggregate_trade_messages": 978,
+        "concentration_p90": 0.17468053213286147,
+        "depth_median_usdt": [
+          [
+            579738.35269,
+            267904.62194
+          ],
+          [
+            1356926.89088,
+            838068.83969
+          ],
+          [
+            3952517.79921,
+            1607333.77569
+          ],
+          [
+            5609951.06118,
+            2022974.05991
+          ]
+        ],
+        "median_imbalance": 0.2409990030903559,
+        "observed_duration_seconds": 891.994,
+        "quote_stability_fraction": 0.8619909502262444,
+        "realized_volatility_bps": 0.3680326308088654,
+        "reference_move_bps": 24.70966147763776,
+        "requested_window_complete": false,
+        "samples": 891,
+        "seconds": 900,
+        "spread_p10_bps": 0.9857558282813348,
+        "spread_p50_bps": 0.9868258745744314,
+        "spread_p90_bps": 0.9881911161618656,
+        "trade_frequency_per_second": 4.049354592071247,
+        "trade_quote_volume_usdt": 1316198.9762699995,
+        "underlying_trade_count": 3612,
+        "usable_fraction": 0.9988856427285385,
+        "window_end_ms": 1792835977714,
+        "window_start_ms": 1792835085720
+      }
+    ]
+  },
+  {
+    "account_fees_verified": false,
+    "aggregate_trade_gaps": 0,
+    "assumed_maker_fee_bps_each_side": 10,
+    "instrument": {
+      "base_asset": "ZEC",
+      "clip_notional_units": 9955758000,
+      "clip_quantity_units": 8700000,
+      "max_notional_units": 900000000000000,
+      "max_qty_units": 9000000000000,
+      "min_notional_units": 500000000,
+      "min_qty_units": 100000,
+      "price_units": 114434000000,
+      "step_units": 100000,
+      "symbol": "ZECUSDT",
+      "tick_units": 1000000,
+      "trades_24h": 568917,
+      "volume_24h_usdt": 179721421.39825
+    },
+    "windows": [
+      {
+        "aggregate_trade_messages": 78,
+        "concentration_p90": 0.11518726211220445,
+        "depth_median_usdt": [
+          [
+            48418.66319,
+            106156.21756
+          ],
+          [
+            159038.132,
+            244086.44219
+          ],
+          [
+            475801.63242,
+            614453.1725
+          ],
+          [
+            1248015.23589,
+            1167456.23824
+          ]
+        ],
+        "median_imbalance": -0.21868315779568717,
+        "observed_duration_seconds": 60.0,
+        "quote_stability_fraction": 0.5932203389830508,
+        "realized_volatility_bps": 0.4775234221813509,
+        "reference_move_bps": -14.289611452474052,
+        "requested_window_complete": true,
+        "samples": 60,
+        "seconds": 60,
+        "spread_p10_bps": 0.08660820612753058,
+        "spread_p50_bps": 0.08665774091935198,
+        "spread_p90_bps": 0.08671485121899403,
+        "trade_frequency_per_second": 1.85,
+        "trade_quote_volume_usdt": 11867.293520000001,
+        "underlying_trade_count": 111,
+        "usable_fraction": 1.0,
+        "window_end_ms": 1792835977714,
+        "window_start_ms": 1792835917714
+      },
+      {
+        "aggregate_trade_messages": 859,
+        "concentration_p90": 0.13830632161009887,
+        "depth_median_usdt": [
+          [
+            31370.87673,
+            103866.77843
+          ],
+          [
+            139790.52951,
+            243328.86742
+          ],
+          [
+            452656.92695,
+            564805.40697
+          ],
+          [
+            823130.61929,
+            1335116.17458
+          ]
+        ],
+        "median_imbalance": -0.26265320046960994,
+        "observed_duration_seconds": 300.0,
+        "quote_stability_fraction": 0.3979933110367893,
+        "realized_volatility_bps": 0.6087414249811881,
+        "reference_move_bps": 14.243591469478329,
+        "requested_window_complete": true,
+        "samples": 300,
+        "seconds": 300,
+        "spread_p10_bps": 0.08658345996164353,
+        "spread_p50_bps": 0.08667276265097311,
+        "spread_p90_bps": 0.08685569360785522,
+        "trade_frequency_per_second": 3.9033333333333333,
+        "trade_quote_volume_usdt": 182891.91529999996,
+        "underlying_trade_count": 1171,
+        "usable_fraction": 1.0,
+        "window_end_ms": 1792835977714,
+        "window_start_ms": 1792835677714
+      },
+      {
+        "aggregate_trade_messages": 3060,
+        "concentration_p90": 0.12651200103445315,
+        "depth_median_usdt": [
+          [
+            30023.52755,
+            104871.33551
+          ],
+          [
+            140665.41608,
+            247178.00571
+          ],
+          [
+            433209.01818,
+            607702.6816
+          ],
+          [
+            808562.03755,
+            1270794.89952
+          ]
+        ],
+        "median_imbalance": -0.2721102080347749,
+        "observed_duration_seconds": 887.993,
+        "quote_stability_fraction": 0.3936651583710407,
+        "realized_volatility_bps": 0.8334399879549045,
+        "reference_move_bps": 79.72620343294737,
+        "requested_window_complete": false,
+        "samples": 887,
+        "seconds": 900,
+        "spread_p10_bps": 0.08661945906147817,
+        "spread_p50_bps": 0.08697807717564787,
+        "spread_p90_bps": 0.08732442333133943,
+        "trade_frequency_per_second": 4.63517167365058,
+        "trade_quote_volume_usdt": 736730.4425500004,
+        "underlying_trade_count": 4116,
+        "usable_fraction": 0.9988817479417067,
+        "window_end_ms": 1792835977714,
+        "window_start_ms": 1792835089721
+      }
+    ]
+  }
+]

@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "frozen_at_ms": 1792835171319,
+  "capital_scope": "isolated_5000_alternatives_do_not_sum",
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "ZECUSDT"
+  ],
+  "train_until_ppm": 400000,
+  "validation_until_ppm": 700000,
+  "embargo_ms": 60000,
+  "min_oos_seconds": 3600,
+  "min_oos_fills": 100,
+  "scenario": {
+    "name": "standard_conservative",
+    "queue": "trade_depletion",
+    "queue_multiplier_ppm": 1000000,
+    "trade_participation_ppm": 1000000,
+    "entry_latency_ms": 50,
+    "cancel_latency_ms": 100,
+    "report_latency_ms": 500,
+    "latency_jitter_ms": 10,
+    "seed": 42,
+    "strategy": {
+      "spread_bps": 30,
+      "volatility_multiplier": 1,
+      "inventory_skew_bps": 10,
+      "clip_usdt": 100,
+      "inventory_limit_usdt": 500,
+      "refresh_ms": 500,
+      "refresh_ticks": 2,
+      "required_edge_bps": 7,
+      "max_spread_bps": 50,
+      "stale_ms": 2000,
+      "drawdown_stop_usdt": 50,
+      "max_quote_spread_bps": 30
+    },
+    "fees": {
+      "name": "manual_standard",
+      "account_verified": false,
+      "description": "Unverified conservative manual assumption: 10bps maker and 10bps taker each side; no rebate or promotion.",
+      "periods": [
+        {
+          "from_ms": 0,
+          "until_ms": null,
+          "symbol": null,
+          "standard_maker_microbps": 10000000,
+          "standard_taker_microbps": 10000000,
+          "buy_extra_microbps": 0,
+          "sell_extra_microbps": 0,
+          "bnb_discount_ppm": 0,
+          "asset": "quote",
+          "bnb_quote_price_units": null
+        }
+      ]
+    },
+    "maker_rebate_microbps": 0,
+    "hypothetical": false,
+    "promotion_verified": false,
+    "verification_reference": null,
+    "account_access_verified": false,
+    "closeout_slippage_bps": 2,
+    "adverse_terminal_shock_bps": 0,
+    "outage_every_ms": null,
+    "outage_duration_ms": 0
+  },
+  "strategies": [
+    "economic_fixed",
+    "adaptive_inventory",
+    "adaptive_filtered",
+    "research_touch_control"
+  ],
+  "sensitivities": [
+    {
+      "name": "conservative",
+      "queue_multiplier_ppm": 1000000,
+      "entry_latency_ms": 50,
+      "cancel_latency_ms": 100,
+      "model": "conservative_through"
+    },
+    {
+      "name": "queue2_latency250",
+      "queue_multiplier_ppm": 2000000,
+      "entry_latency_ms": 250,
+      "cancel_latency_ms": 250,
+      "model": "conservative_through"
+    },
+    {
+      "name": "optimistic_diagnostic_only",
+      "queue_multiplier_ppm": 1000000,
+      "entry_latency_ms": 50,
+      "cancel_latency_ms": 100,
+      "model": "alternative_through"
+    }
+  ],
+  "fee_assets": [
+    "received",
+    "quote"
+  ],
+  "selection_rule": "No optimization: all pre-registered candidates tested. Training-only candidate nomination; validation and final test never used to tune. No positive claim unless non-research standard-fee conservative and stressed OOS rows pass quality, sample, trading-PnL and risk-cost checks. Optimistic fills cannot qualify.",
+  "max_trace_bytes": 268435456
+}

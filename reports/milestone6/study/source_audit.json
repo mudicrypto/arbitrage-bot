@@ -1,0 +1,1864 @@
+{
+  "audit": {
+    "errors": [],
+    "replay_digest": "19ca5b5dc0990511b89b969fb7157d7a7316df2a55165ceb0e63cdc66a050358",
+    "symbols": {
+      "BTCUSDT": {
+        "aggregate_trades": 4179,
+        "book_exchange_time_reversals": 0,
+        "book_intervals_over_2s": [],
+        "book_updates": 8937,
+        "causal_clock_clamps": 8,
+        "first_book_ms": 1792835080403,
+        "first_received_ms": 1792835078530,
+        "first_trade_ms": 1792835079778,
+        "invalidations": {},
+        "last_book_ms": 1792835977699,
+        "last_received_ms": 1792835977699,
+        "last_trade_ms": 1792835977622,
+        "max_book_interval_ms": 498,
+        "prefix_complete": true,
+        "raw_messages": 13129,
+        "raw_receive_time_reversals": 1,
+        "record_sequence_gaps": 0,
+        "records": 22156,
+        "session_changes": [],
+        "trade_exchange_time_reversals": 0,
+        "trade_id_gaps": 0
+      },
+      "ETHUSDT": {
+        "aggregate_trades": 3152,
+        "book_exchange_time_reversals": 0,
+        "book_intervals_over_2s": [],
+        "book_updates": 8721,
+        "causal_clock_clamps": 7,
+        "first_book_ms": 1792835084055,
+        "first_received_ms": 1792835082560,
+        "first_trade_ms": 1792835082927,
+        "invalidations": {},
+        "last_book_ms": 1792835977705,
+        "last_received_ms": 1792835977705,
+        "last_trade_ms": 1792835975704,
+        "max_book_interval_ms": 349,
+        "prefix_complete": true,
+        "raw_messages": 11881,
+        "raw_receive_time_reversals": 1,
+        "record_sequence_gaps": 0,
+        "records": 20692,
+        "session_changes": [],
+        "trade_exchange_time_reversals": 0,
+        "trade_id_gaps": 0
+      },
+      "SOLUSDT": {
+        "aggregate_trades": 978,
+        "book_exchange_time_reversals": 0,
+        "book_intervals_over_2s": [],
+        "book_updates": 6486,
+        "causal_clock_clamps": 5,
+        "first_book_ms": 1792835088212,
+        "first_received_ms": 1792835086554,
+        "first_trade_ms": 1792835088328,
+        "invalidations": {},
+        "last_book_ms": 1792835977680,
+        "last_received_ms": 1792835977680,
+        "last_trade_ms": 1792835976147,
+        "max_book_interval_ms": 900,
+        "prefix_complete": true,
+        "raw_messages": 7470,
+        "raw_receive_time_reversals": 1,
+        "record_sequence_gaps": 0,
+        "records": 14045,
+        "session_changes": [],
+        "trade_exchange_time_reversals": 0,
+        "trade_id_gaps": 0
+      },
+      "ZECUSDT": {
+        "aggregate_trades": 3060,
+        "book_exchange_time_reversals": 0,
+        "book_intervals_over_2s": [],
+        "book_updates": 7783,
+        "causal_clock_clamps": 8,
+        "first_book_ms": 1792835092108,
+        "first_received_ms": 1792835090537,
+        "first_trade_ms": 1792835094096,
+        "invalidations": {},
+        "last_book_ms": 1792835977675,
+        "last_received_ms": 1792835977675,
+        "last_trade_ms": 1792835976411,
+        "max_book_interval_ms": 1000,
+        "prefix_complete": true,
+        "raw_messages": 10849,
+        "raw_receive_time_reversals": 1,
+        "record_sequence_gaps": 0,
+        "records": 18721,
+        "session_changes": [],
+        "trade_exchange_time_reversals": 0,
+        "trade_id_gaps": 0
+      }
+    }
+  },
+  "completion": {
+    "end_ms": 1792835977714,
+    "observed_seconds": 900,
+    "reason": "duration_complete",
+    "requires_replay_audit": true,
+    "retention_may_have_evicted_prefix": true,
+    "session_target_seconds": 900,
+    "smoke": false,
+    "start_ms": 1792835077714,
+    "target_seconds": 86400
+  },
+  "files": [
+    {
+      "bytes": 384774,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835090462-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000001.parquet",
+      "sha256_sidecar": "c847f931e33f8cfc581c84acb6772d1881de1ef7db09fba4b7656b2de8a1f6d0"
+    },
+    {
+      "bytes": 142404,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835100711-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000002.parquet",
+      "sha256_sidecar": "453fa48cd9c7b7077df2b369539c48f284160a1f608d03480ee87818d55d47cd"
+    },
+    {
+      "bytes": 170433,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835110961-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000003.parquet",
+      "sha256_sidecar": "b0103e75c09545a585d2bc66b4aebc435c8212c12a5ee2c4c381e53691dd348a"
+    },
+    {
+      "bytes": 129852,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835121211-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000004.parquet",
+      "sha256_sidecar": "da1cc393f91282cdbe659d527ce2f54c5b87d18baaba500f30a37c336efa3d97"
+    },
+    {
+      "bytes": 118886,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835131462-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000005.parquet",
+      "sha256_sidecar": "e810a59ca9a6085ef40f41a7aae86b1d957f7678f86df78ac61dfb7578a69f07"
+    },
+    {
+      "bytes": 211491,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835141711-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000006.parquet",
+      "sha256_sidecar": "1a207c67afe6da2c0dda0d017cb81653f78984421253e5560aafecd8696d8a67"
+    },
+    {
+      "bytes": 182995,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835151962-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000007.parquet",
+      "sha256_sidecar": "dcf679d1fd2b0b498b223e3d056f4d05d2ab66a0a880f69e1301d12d35c6983d"
+    },
+    {
+      "bytes": 152324,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835162212-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000008.parquet",
+      "sha256_sidecar": "e4ed1f1dea24b85a285032d87f53bc115a620eeaade42e5e44a7be490aa962b1"
+    },
+    {
+      "bytes": 138434,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835172461-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000009.parquet",
+      "sha256_sidecar": "de5a5a58e62cfe171bc8019db772fcded5bc84b4b27b080a173ec4ee3ca5e881"
+    },
+    {
+      "bytes": 143013,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835182711-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000010.parquet",
+      "sha256_sidecar": "1aeadbc225750efb4563791b8771ce8db24ba62b5d7d95da11bc5b356ef288c9"
+    },
+    {
+      "bytes": 117190,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835192962-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000011.parquet",
+      "sha256_sidecar": "1415d64b968687c9cc66a18c34e14051d8d056fdf55b5abec753dbcf94f18c48"
+    },
+    {
+      "bytes": 159821,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835203212-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000012.parquet",
+      "sha256_sidecar": "56e0b927dcb57aa632af5dad59a0105de7fc575aff821ca35e961516b7e13442"
+    },
+    {
+      "bytes": 131777,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835213461-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000013.parquet",
+      "sha256_sidecar": "2442d83b7a54568aa9277a104493a5dfbd90d8288dab787505e1706d80f5c36e"
+    },
+    {
+      "bytes": 196444,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835223712-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000014.parquet",
+      "sha256_sidecar": "367aae06fc61bd0090fea6aaf6fb7f47dc8b1b2bc22512e2b8cfb5701b3cf07f"
+    },
+    {
+      "bytes": 126433,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835233961-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000015.parquet",
+      "sha256_sidecar": "a02644dea64bafa171f19270177040efa60d770cd5c9c23c862b80d5ce88216f"
+    },
+    {
+      "bytes": 163121,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835244211-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000016.parquet",
+      "sha256_sidecar": "460e477c916ffe57b40fc24ed7a6d255ccc97bd4d74f45dcc3f57ae1b35edfc8"
+    },
+    {
+      "bytes": 170501,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835254462-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000017.parquet",
+      "sha256_sidecar": "b22aa633c6d33bcbe1adfa793d49c947fbc80e773b310fe8ccc6cb58558547eb"
+    },
+    {
+      "bytes": 117941,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835264713-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000018.parquet",
+      "sha256_sidecar": "b9bc4ce52ffa6eb288e6a6df7026f3de94eca3fdc4882351950c5d849f991a48"
+    },
+    {
+      "bytes": 146871,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835275017-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000019.parquet",
+      "sha256_sidecar": "75cff4eff75b1d371898b11852837be77910473f6c555a1616d6a30e8994a8e5"
+    },
+    {
+      "bytes": 167105,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835285212-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000020.parquet",
+      "sha256_sidecar": "e239f2855ea66e793c5a7919a5fa2353d7178aeb9bc062fc467cc44595a40be5"
+    },
+    {
+      "bytes": 122684,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835295461-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000021.parquet",
+      "sha256_sidecar": "a1d7a2ffde794bd798d483b661678d4ca5e17cdda8d04ecd8ec2af4f5efd9f53"
+    },
+    {
+      "bytes": 123353,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835305712-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000022.parquet",
+      "sha256_sidecar": "cb50e9167c3a609359afe5aae586b153ceaed33f75e2682848811e820046c7cd"
+    },
+    {
+      "bytes": 126325,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835315963-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000023.parquet",
+      "sha256_sidecar": "4c57c39897ee05fdd9a95afd348ca0dbab63e303821229e6852cb963b364aa6f"
+    },
+    {
+      "bytes": 140367,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835326212-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000024.parquet",
+      "sha256_sidecar": "bb29789713dc041948b3a14c72aad782c9f2f3f438bf0279685645a35b9fddff"
+    },
+    {
+      "bytes": 130233,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835336463-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000025.parquet",
+      "sha256_sidecar": "d481a9ea88d0121e0e4889908db23c390550fa2c47f51f4167a040def4ef5b01"
+    },
+    {
+      "bytes": 146370,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835346712-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000026.parquet",
+      "sha256_sidecar": "5b2992079716939c952b88e7bf01ef7b56ca49b68304e6acf8891a258f129e5a"
+    },
+    {
+      "bytes": 131253,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835356962-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000027.parquet",
+      "sha256_sidecar": "b9a325d0d5f807384d220df8e075966eb2c75fe8d4714f61202a0e8b1f4ffb08"
+    },
+    {
+      "bytes": 117099,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835367212-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000028.parquet",
+      "sha256_sidecar": "b2976b93744820bbef464daf3f43e4c2b6af3aa685580172c01e397a74fbb7a7"
+    },
+    {
+      "bytes": 142928,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835377461-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000029.parquet",
+      "sha256_sidecar": "56042fc300bb4e3a0b96d5e066b3981e1ee5367663285f7ac7da663d88302cff"
+    },
+    {
+      "bytes": 162760,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835387712-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000030.parquet",
+      "sha256_sidecar": "75cb6e855fc6686065340766ebe04ee26cf1470f9988647c386f713ce9002c89"
+    },
+    {
+      "bytes": 129378,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835397962-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000031.parquet",
+      "sha256_sidecar": "68e5a24f393e711a206d7471df73133fc21609f04544e134960a4706e88ae49b"
+    },
+    {
+      "bytes": 121710,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835408212-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000032.parquet",
+      "sha256_sidecar": "efd8b70dbd18eb3c549c201ab2505ef8294570531ac94dd3a9b22b97c9f8f88d"
+    },
+    {
+      "bytes": 140552,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835418461-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000033.parquet",
+      "sha256_sidecar": "3e9224a4e29212f0f93ff6e566ea2c4d0c1ea6123adcd6c86ed81f4b6f34e4bf"
+    },
+    {
+      "bytes": 191683,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835428712-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000034.parquet",
+      "sha256_sidecar": "8a73d4ffc2d7cb372b93d1f85074172ed80970f777fc16c2b183e2cafb233f5d"
+    },
+    {
+      "bytes": 111241,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835438962-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000035.parquet",
+      "sha256_sidecar": "36e35936474cc801056348b393e6ac07102e25805bd86577d9eee73e8a8c95cf"
+    },
+    {
+      "bytes": 115941,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835449212-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000036.parquet",
+      "sha256_sidecar": "84357beef8d9c86454651bbc07aef5c5cb54c7222ef22010884cac28717db443"
+    },
+    {
+      "bytes": 119245,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835459462-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000037.parquet",
+      "sha256_sidecar": "e584bff39ef7c185486764168a01283fcada79cf4c411e3bc43705a1be5af004"
+    },
+    {
+      "bytes": 127528,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835469716-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000038.parquet",
+      "sha256_sidecar": "a63e0afa10ccb46ca9e066ec235af7244088f79de976df656dce60116a7fab05"
+    },
+    {
+      "bytes": 119364,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835479962-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000039.parquet",
+      "sha256_sidecar": "3d90ef32727f89e7b810e68e9eda1cc43d5c24ccad1926fe29b13ba3f5fefca5"
+    },
+    {
+      "bytes": 123375,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835490212-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000040.parquet",
+      "sha256_sidecar": "96ea0870e0d2350fd11806fb49d1bbf926cf9f59876032d84ff46b31ce985718"
+    },
+    {
+      "bytes": 217159,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835500462-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000041.parquet",
+      "sha256_sidecar": "8b64966b53074eb7805e6d9757048f5cedf6d037245980e174cb574ff35cbfb2"
+    },
+    {
+      "bytes": 212268,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835510714-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000042.parquet",
+      "sha256_sidecar": "0aa3e3bbfe0130a7ab81ce37c47a9a22d7cf71c27e8e275019ce58d6b52564e3"
+    },
+    {
+      "bytes": 136470,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835520961-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000043.parquet",
+      "sha256_sidecar": "fc0c1b39cefb725d36df85a60d67282634381249ac1784066e077ac7faa5684a"
+    },
+    {
+      "bytes": 141520,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835531211-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000044.parquet",
+      "sha256_sidecar": "c8512df376244b56f93c4bf113ff8c01925491665c1e7999a3a26a95e4379a10"
+    },
+    {
+      "bytes": 165950,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835541463-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000045.parquet",
+      "sha256_sidecar": "4389accfd5f5bd23079ae8f4b3c1ce9ab0826ffe7eb77148a77ee99c3ead415a"
+    },
+    {
+      "bytes": 168796,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835551712-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000046.parquet",
+      "sha256_sidecar": "72af306ae71706b946fc87d0d4c302c0f5a070f900de68cb7d39528d535404e2"
+    },
+    {
+      "bytes": 160051,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835561963-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000047.parquet",
+      "sha256_sidecar": "4705d723cf03adf6fc7c16f16ab0f82d31aadf3a85eed6150442e6cd12aa737a"
+    },
+    {
+      "bytes": 128666,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835572212-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000048.parquet",
+      "sha256_sidecar": "5432038d1166f729e9a7afee7a1525496bd79fc8f1fa6ab4d5e5e7fadbaa15f3"
+    },
+    {
+      "bytes": 145424,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835582464-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000049.parquet",
+      "sha256_sidecar": "b2096336b5712a3f73ff03014d18b6ebce3da782403bab8ee74980f93402f546"
+    },
+    {
+      "bytes": 157439,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835592712-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000050.parquet",
+      "sha256_sidecar": "49943a0e175229908f60bb2423b006e9686dabba39b793b974f7a7199d902c0a"
+    },
+    {
+      "bytes": 130815,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835602962-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000051.parquet",
+      "sha256_sidecar": "5a467ced3ff098ebc15891feed73907ebac1f7dc283902d775fb64aa45b127fc"
+    },
+    {
+      "bytes": 124588,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835613222-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000052.parquet",
+      "sha256_sidecar": "94be805f8cac8ea085574fcbe5945b4baeb040755afcf964a8a614f19359d78d"
+    },
+    {
+      "bytes": 118798,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835623467-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000053.parquet",
+      "sha256_sidecar": "fb37b86c9c183ee0768192a57013cf2c6671e10eccc8aed1408ac42e79e2ed2f"
+    },
+    {
+      "bytes": 122450,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835633714-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000054.parquet",
+      "sha256_sidecar": "8b8950c4929ed80239af3253a6c0c511ab331563ce49025d1691d4e5b638d730"
+    },
+    {
+      "bytes": 128592,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835643965-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000055.parquet",
+      "sha256_sidecar": "29f5505e5a48a5d10193d18559f234c86b49cc8cd45d40b937a8163805d52878"
+    },
+    {
+      "bytes": 181956,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835654212-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000056.parquet",
+      "sha256_sidecar": "c74db03a221bd3035b5b82095c5e79cc7ccecf21da8afe931150d63d89d758fe"
+    },
+    {
+      "bytes": 118601,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835664327-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000057.parquet",
+      "sha256_sidecar": "ff87f9bb0dac1f7d8a20937a2956030fb286ba5f152989e08a113ceec393fc81"
+    },
+    {
+      "bytes": 116785,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835674463-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000058.parquet",
+      "sha256_sidecar": "5f7e72d2e30cfd9ef1a585318e35a07ce063312d42cc50ba618c04d4fafa8271"
+    },
+    {
+      "bytes": 134543,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835684713-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000059.parquet",
+      "sha256_sidecar": "13abde1ce6f3415fe1e7d49e9d44f8eddf9821cb3bf66f9f302521b388cdec13"
+    },
+    {
+      "bytes": 149214,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835694963-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000060.parquet",
+      "sha256_sidecar": "2f29d9ddc6065139a8120a446246dc55e8f120591627b727e965884a9d585bbf"
+    },
+    {
+      "bytes": 146842,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835705212-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000061.parquet",
+      "sha256_sidecar": "9c96b1af4f72291a57a46674421ad5eac4238b2d622b2a5aa5f811203b82932c"
+    },
+    {
+      "bytes": 200080,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835715462-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000062.parquet",
+      "sha256_sidecar": "c900ab32702f430b4bb99b294b146d4a37af27f8ddb172183ba791b55910c3e0"
+    },
+    {
+      "bytes": 142358,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835725713-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000063.parquet",
+      "sha256_sidecar": "a2a5348a17b43e446648e75810498ebfa437bdb1a8fc6ce9c4f1c9ebac9d6cd8"
+    },
+    {
+      "bytes": 125469,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835735962-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000064.parquet",
+      "sha256_sidecar": "400cb48e68bb07c9080b4704593f5acdf39e469b1d14535f219932cb2d5d003b"
+    },
+    {
+      "bytes": 120156,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835746213-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000065.parquet",
+      "sha256_sidecar": "fdaf8f3b11662bf33685aa7321ff801cc5d8db3575399885595bfc2f9d741bae"
+    },
+    {
+      "bytes": 172727,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835756462-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000066.parquet",
+      "sha256_sidecar": "ca336b095415685329458053d75ea85887edb8ae87a760b235797626ea6971a6"
+    },
+    {
+      "bytes": 139001,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835766712-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000067.parquet",
+      "sha256_sidecar": "a83ef20264213ff54ceb95b43992fb960ae730c5742d71af44c6141b7955b9ab"
+    },
+    {
+      "bytes": 129767,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835776962-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000068.parquet",
+      "sha256_sidecar": "fa74ec708c154abe54c30f2897172293c81d75575d212f416e530ee933fb97af"
+    },
+    {
+      "bytes": 143232,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835787212-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000069.parquet",
+      "sha256_sidecar": "71e10bcc222b3166432d31d0f177692d1832a3197e04337e845e44f65754196b"
+    },
+    {
+      "bytes": 141213,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835797463-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000070.parquet",
+      "sha256_sidecar": "9ce3ce93e9df93cdbdd98d203a695ce9e50f63612385547f89ad139bb087d2ee"
+    },
+    {
+      "bytes": 189917,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835807712-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000071.parquet",
+      "sha256_sidecar": "2ac453dd5fb78bd35f2e66a85371aa231b931ae0fec9db8cf897b1c9630671bb"
+    },
+    {
+      "bytes": 133626,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835817963-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000072.parquet",
+      "sha256_sidecar": "20fa9d27735a514633f4a3bb9fee83c09d02b3d142b7159693e1aa839326e597"
+    },
+    {
+      "bytes": 141943,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835828212-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000073.parquet",
+      "sha256_sidecar": "63bd19f4a1883b15a8c8861f2f043632cc1d4ba1994bef2e9fd6471896615324"
+    },
+    {
+      "bytes": 141456,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835838463-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000074.parquet",
+      "sha256_sidecar": "7761544b1d95b4c9094bb42a60a1d140a376cbd513c02153a2ca0e9ef93ea910"
+    },
+    {
+      "bytes": 138782,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835848712-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000075.parquet",
+      "sha256_sidecar": "ac9dad904fde45d048dc2ec248a04994032c787e9daa6ac57be61a19314966fc"
+    },
+    {
+      "bytes": 131942,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835858962-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000076.parquet",
+      "sha256_sidecar": "ff520bc5e0bd8833bdbfd7f00ab57da8be85b5421fb108435df0eb1db7259521"
+    },
+    {
+      "bytes": 131992,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835869212-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000077.parquet",
+      "sha256_sidecar": "db8709896b418170afb0c58dc27d39f7d5adcb11310f9d58f831b5486a42d658"
+    },
+    {
+      "bytes": 183460,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835879462-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000078.parquet",
+      "sha256_sidecar": "9dc57969246775a6d2af3cb46e469ce95d54f5533e9f8645458c1d61b92faf59"
+    },
+    {
+      "bytes": 144226,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835889713-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000079.parquet",
+      "sha256_sidecar": "434d24137f149f7673146fcbdfe104b7189ce2c8d9ced5f8b1d82624c510fa43"
+    },
+    {
+      "bytes": 124046,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835899963-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000080.parquet",
+      "sha256_sidecar": "7a11ae2f71b336290dac1396608c138e50b724acc6f748641321266867441244"
+    },
+    {
+      "bytes": 121806,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835910213-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000081.parquet",
+      "sha256_sidecar": "0f52db1ef9217f3e255cebf85514a179924fafe25b58a2d31789b7398240edca"
+    },
+    {
+      "bytes": 119494,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835920463-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000082.parquet",
+      "sha256_sidecar": "bdbfe57595f9f180c4543b06982db5d7b7f5a7845655731c57fe6cfc197dfbb8"
+    },
+    {
+      "bytes": 121738,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835930715-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000083.parquet",
+      "sha256_sidecar": "b164c66e376b8964a3ede692f58cc98714314dd49be3162701524379b7d0a504"
+    },
+    {
+      "bytes": 125849,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835940964-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000084.parquet",
+      "sha256_sidecar": "ed3ad8e1802167351bb0db39d8fcff4f21f2b1515ff0663f7e22e260f9243ba1"
+    },
+    {
+      "bytes": 125030,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835951214-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000085.parquet",
+      "sha256_sidecar": "4073bfa829def9271fae0f2a27b1780712307710841b867a5c6e3d17ffb531f4"
+    },
+    {
+      "bytes": 141730,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835961463-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000086.parquet",
+      "sha256_sidecar": "e632eac6b6e2a477bf97f1baf47f4b1422b7afb98a6e272f4fc3eddd7f03206a"
+    },
+    {
+      "bytes": 147374,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835971713-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000087.parquet",
+      "sha256_sidecar": "9189823b9b9b00400ed2b7ef13572591bb085394bd1481123925d6343b6499d6"
+    },
+    {
+      "bytes": 117298,
+      "path": ".local/milestone6/session-1792835077714/recordings/BTCUSDT/00000001792835977727-313db617-7ab5-448a-a6fb-62de2ac3a02f-00000000000000000088.parquet",
+      "sha256_sidecar": "1644f4445d27d4a4415d5c3c0de213e5c7fd87fcd064efbc1861e7875a2ed78c"
+    },
+    {
+      "bytes": 368200,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835094114-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000001.parquet",
+      "sha256_sidecar": "2de0958ae0bac8952ffacc1e4b1f0980714c9e86c7a0aff343e38e7fa133f17d"
+    },
+    {
+      "bytes": 132628,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835104362-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000002.parquet",
+      "sha256_sidecar": "b8de356f51ad49a63d30b94d5352a6577f6b99511fd2a5871ecd4e639ffa8b3b"
+    },
+    {
+      "bytes": 160171,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835114612-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000003.parquet",
+      "sha256_sidecar": "ec28f43ec46ada12cd238008a453cc07b592edffee2ea681c0cf6a1d23034a80"
+    },
+    {
+      "bytes": 124823,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835124862-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000004.parquet",
+      "sha256_sidecar": "e3febd8aa07254f5684e9b28600484f07530a97c8e8cfe22a1c9c67f5d2c69fa"
+    },
+    {
+      "bytes": 168911,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835135113-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000005.parquet",
+      "sha256_sidecar": "7b6d4ff88e9fc69640a3efb3fa282225f182dd4281c769c84135a06a5136cd07"
+    },
+    {
+      "bytes": 176862,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835145363-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000006.parquet",
+      "sha256_sidecar": "4b6f62f18eec4807be23a8af93b80ffd297927e75e2681d7b7625059282e778f"
+    },
+    {
+      "bytes": 153179,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835155612-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000007.parquet",
+      "sha256_sidecar": "d752fa3bbbef74ba0094ecc0353e8c358c67413bf1318156ff24fdf80436a65c"
+    },
+    {
+      "bytes": 137798,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835165863-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000008.parquet",
+      "sha256_sidecar": "accb9371bd576dfa0d53c341543379c9c896351de218b29f1244c4867b240eed"
+    },
+    {
+      "bytes": 136432,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835176112-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000009.parquet",
+      "sha256_sidecar": "bdc875f83f9ee05ba3818b5295cc4a759c4ea909f56b0c908a249c84d4dbdfac"
+    },
+    {
+      "bytes": 145641,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835186362-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000010.parquet",
+      "sha256_sidecar": "66cf15afe66a37f84bff0232e05a8421c315ccabe21c56b31d83fbf17c935435"
+    },
+    {
+      "bytes": 128984,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835196613-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000011.parquet",
+      "sha256_sidecar": "50d53e0b3fa6345b4b6e50ffa02bd7d034960c143f4493f43870276ea04b0988"
+    },
+    {
+      "bytes": 133687,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835206863-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000012.parquet",
+      "sha256_sidecar": "74ef83c287cc7352943e99dfbdd1f1f37d74f4ac78778277b8666aea099cf213"
+    },
+    {
+      "bytes": 160346,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835217112-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000013.parquet",
+      "sha256_sidecar": "e6d12aeb3dd3a1ee2387743203e29573879795e4a7badaf1c421c09ec2dbd21b"
+    },
+    {
+      "bytes": 165863,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835227366-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000014.parquet",
+      "sha256_sidecar": "bdb06a349383bb81066d67e2ddd9a4c02294a7415307fb6abe0fc26a08b77634"
+    },
+    {
+      "bytes": 137033,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835237613-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000015.parquet",
+      "sha256_sidecar": "dd2a155fb30e3013f606b0bee1bcd2294b216a05e4389fcfcc33758122c36dfe"
+    },
+    {
+      "bytes": 204914,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835247862-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000016.parquet",
+      "sha256_sidecar": "1b6c66005404bd170020fd1caee4a3262f714f726da0211dbf3dfe0210188655"
+    },
+    {
+      "bytes": 155465,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835258113-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000017.parquet",
+      "sha256_sidecar": "3102e90f739ef81058a6e4b320a90a9cbdca057addffca87c06e06e13531db43"
+    },
+    {
+      "bytes": 142061,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835268363-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000018.parquet",
+      "sha256_sidecar": "d227ed0157fb8f8cdddfce6cbc53d4218783b94ac8c88780a920b9ebbead6bf8"
+    },
+    {
+      "bytes": 125754,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835278613-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000019.parquet",
+      "sha256_sidecar": "fa7a8885901c1cb801d52c08117726e785bfec84c2a1778bc96890ca357f7641"
+    },
+    {
+      "bytes": 137478,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835288863-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000020.parquet",
+      "sha256_sidecar": "d4e9818fa63752952d37f78b68be64aecd635697b179914a8cad970fd79025f4"
+    },
+    {
+      "bytes": 119314,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835299112-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000021.parquet",
+      "sha256_sidecar": "a9c3518117fd8717e73cbfc962f2724310a2545721f83a56646fa7463f000832"
+    },
+    {
+      "bytes": 128304,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835309363-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000022.parquet",
+      "sha256_sidecar": "9a9937a30f4eecd995843916abd412b99eb2572e4944c033c47140d56623b57e"
+    },
+    {
+      "bytes": 141285,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835319653-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000023.parquet",
+      "sha256_sidecar": "9c6e855d232111eea2fcf291fc8dc19dcc02de4cf13944f02fc35aa4404d77d3"
+    },
+    {
+      "bytes": 129033,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835329865-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000024.parquet",
+      "sha256_sidecar": "635d4e5c20ffc6ea4896597e75b384f71d15b2e29a1468b789e7d37802b8b9ea"
+    },
+    {
+      "bytes": 126969,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835340113-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000025.parquet",
+      "sha256_sidecar": "4b4dd8d0083696c388a31f1edcedc665052520999e9b8e9777bb95830528cb17"
+    },
+    {
+      "bytes": 161406,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835350363-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000026.parquet",
+      "sha256_sidecar": "fa4c4e3c578c02efe476297332137bb046462d38da620a2c8a07aff68322ff7b"
+    },
+    {
+      "bytes": 131413,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835360613-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000027.parquet",
+      "sha256_sidecar": "92032706cc88fddafac2c408034526756298391951d690a59fdfcf273013cc0b"
+    },
+    {
+      "bytes": 102997,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835370863-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000028.parquet",
+      "sha256_sidecar": "20f1f0ffc4e83644456c395def3caf7b5b3a4a45d8f224114d6b2891f92fb5c0"
+    },
+    {
+      "bytes": 156171,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835381113-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000029.parquet",
+      "sha256_sidecar": "cf71e8e30a255e1dbad72c883002a24d5b86a8d5d0cf63e89c990d73ab0ae6db"
+    },
+    {
+      "bytes": 153656,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835391363-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000030.parquet",
+      "sha256_sidecar": "1c79cfb2200c22ca6f2e30c87fc29de81e6d47b9b09a26d33f66ed7fcbeb840c"
+    },
+    {
+      "bytes": 122464,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835401613-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000031.parquet",
+      "sha256_sidecar": "bca56357463c5c5e1f96085bbf48d412b9d71d9f70bc85073f6fe889c3938eb3"
+    },
+    {
+      "bytes": 118460,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835411863-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000032.parquet",
+      "sha256_sidecar": "7c2157311beed57332730e0b392d274be36808b588eac46513d869b84e297295"
+    },
+    {
+      "bytes": 159940,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835422113-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000033.parquet",
+      "sha256_sidecar": "253b3c3355cc4d4ebb23c408bf68c6ba19f69144e8a8228be425fd04f1a78d7d"
+    },
+    {
+      "bytes": 172697,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835432363-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000034.parquet",
+      "sha256_sidecar": "96716360d5e506b51842e0ab114cbfbde62e59fa4d3bac82fb1485f640196ad2"
+    },
+    {
+      "bytes": 124669,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835442613-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000035.parquet",
+      "sha256_sidecar": "ba1a546a06e51d59a861393c8edcf62cec7dc3aa44ac5736e3de1fd37c9be30e"
+    },
+    {
+      "bytes": 130574,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835452863-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000036.parquet",
+      "sha256_sidecar": "29a5444be502c96e566fd9b9aaeed7eb76ea30e4945fa3832fda75089d416e5a"
+    },
+    {
+      "bytes": 153501,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835463113-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000037.parquet",
+      "sha256_sidecar": "d4e96420f0b816d61e69f867e2b6643ce40c780021830c817a9e65ddf32e7f13"
+    },
+    {
+      "bytes": 112034,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835473362-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000038.parquet",
+      "sha256_sidecar": "ba18e62d782c64b43f9e5401e5b9887b10959dea68730bed2736d985f3be3512"
+    },
+    {
+      "bytes": 110812,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835483613-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000039.parquet",
+      "sha256_sidecar": "ab2c0f98453a6a01c308d9b13dac4bbe68b90de526dfce71f231e75711ddf154"
+    },
+    {
+      "bytes": 141917,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835493863-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000040.parquet",
+      "sha256_sidecar": "3764de61aab31da98548fc015e1ee257e7397a3da3edef209603299b03706959"
+    },
+    {
+      "bytes": 300478,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835504113-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000041.parquet",
+      "sha256_sidecar": "7e61f24d1fbe3aa3e9464bd0feb0eed63bbd38936551c519d6a5b3fa0686e974"
+    },
+    {
+      "bytes": 188292,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835514363-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000042.parquet",
+      "sha256_sidecar": "3c49a65477285e8a933a509ef9b05476f4e700f21858aa781eb0577357eafae5"
+    },
+    {
+      "bytes": 150454,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835524613-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000043.parquet",
+      "sha256_sidecar": "e849106c5b804d89b7012e2c9bc605411a0d4ade9e7ce395e0ca2a75374d0263"
+    },
+    {
+      "bytes": 161839,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835534863-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000044.parquet",
+      "sha256_sidecar": "269b5f315c701d84084a63f4639521ddff9e78f86edb2114ab1104bb9f538087"
+    },
+    {
+      "bytes": 211102,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835545113-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000045.parquet",
+      "sha256_sidecar": "298715967753d083bd8ef49f54c8c07ad91d6295ec7eb831db18f98f79ec2720"
+    },
+    {
+      "bytes": 137462,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835555366-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000046.parquet",
+      "sha256_sidecar": "b9ce257a2be9e75ef8205e927eaf38dbb8ebf2873b8f84777db86c76e1d5bdf9"
+    },
+    {
+      "bytes": 165476,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835565613-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000047.parquet",
+      "sha256_sidecar": "ddcaf24f427b1d004ffb8e0c3ce1b11e2a1b507dc217b89f23ac8cbc30a357c3"
+    },
+    {
+      "bytes": 129589,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835575863-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000048.parquet",
+      "sha256_sidecar": "bf7af92539455d5a7be9a42db9c8432c884790bd30bb569d12454724cc51460e"
+    },
+    {
+      "bytes": 124922,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835586114-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000049.parquet",
+      "sha256_sidecar": "03599e3de2c99100b910b4f41abf3bf3843231aa96be02406ffe607831adc5ef"
+    },
+    {
+      "bytes": 126488,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835596363-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000050.parquet",
+      "sha256_sidecar": "ef76a9a8f1ef7e154c75ade3a0c1ec5b81b95588c0ebd75af1855c8cb03ac966"
+    },
+    {
+      "bytes": 123338,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835606613-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000051.parquet",
+      "sha256_sidecar": "419d8d6f3f907b22086b08e6af4e2239d0d2a9c559444bfff9807a56c95ed65e"
+    },
+    {
+      "bytes": 115710,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835616865-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000052.parquet",
+      "sha256_sidecar": "faf9fac990923ea699100e6e7ff4539229c9c68158d85cb31b1cf771ad66ff4f"
+    },
+    {
+      "bytes": 114948,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835627115-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000053.parquet",
+      "sha256_sidecar": "67174db67b60e07dbdca8694fbac94613d34bc7790c8f58eb9890e70e34865db"
+    },
+    {
+      "bytes": 130533,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835637365-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000054.parquet",
+      "sha256_sidecar": "5627fe90e8be3dea6b1894c8d07029afbe638fa7c2809d3c065ccb2e55c7bcd0"
+    },
+    {
+      "bytes": 134366,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835647613-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000055.parquet",
+      "sha256_sidecar": "9749b1e30cd1c15a2012b5e0cf3eace62019c638ab2c933ec37d93338975ec3f"
+    },
+    {
+      "bytes": 179091,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835657863-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000056.parquet",
+      "sha256_sidecar": "35ed49467e599ee298e5c1753e49173aebe021bc89ffd95092bd7f46d5be41db"
+    },
+    {
+      "bytes": 111925,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835668115-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000057.parquet",
+      "sha256_sidecar": "7c75cf85eeb74f293407ad04516dfa850d00a467e47ffc1dbb2f8ea566bfc383"
+    },
+    {
+      "bytes": 108194,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835678363-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000058.parquet",
+      "sha256_sidecar": "f08415b7f42add7c3a4163c97a5cbdba2da1c869a88298fb66900f281861a442"
+    },
+    {
+      "bytes": 117631,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835688614-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000059.parquet",
+      "sha256_sidecar": "1358a09b32fa5764594561c9b1436203f6af08fda8e018b64c749f067ac1daa5"
+    },
+    {
+      "bytes": 126648,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835698863-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000060.parquet",
+      "sha256_sidecar": "1ce8476fc1115a4160e807f3ab943fde80a09e8baf34dd551da8d3c4550bcf6e"
+    },
+    {
+      "bytes": 145998,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835709113-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000061.parquet",
+      "sha256_sidecar": "83db14a2f023bb6aeab9043674563986b1f5607f845970ccd83a0eb63140df5a"
+    },
+    {
+      "bytes": 137292,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835719364-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000062.parquet",
+      "sha256_sidecar": "f1a6abb8125f78f9a7e90b689160d20ec16b5f4e55b7e361df2e62df4c55e69d"
+    },
+    {
+      "bytes": 125932,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835729613-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000063.parquet",
+      "sha256_sidecar": "33d3bf30a68322ec357577beea00242d90c3aceb81d1e2b46d34630314359470"
+    },
+    {
+      "bytes": 113757,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835739864-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000064.parquet",
+      "sha256_sidecar": "7082c86cee1eb0c7ecaed55a2d4f17f15f6dacd2a1ffd2c57bac7ce1ecd30444"
+    },
+    {
+      "bytes": 136979,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835750113-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000065.parquet",
+      "sha256_sidecar": "dc272839b2c8ae0abed2abb65c6f0c9c491ed7451754e50a7da2c0109dd433b3"
+    },
+    {
+      "bytes": 137933,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835760363-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000066.parquet",
+      "sha256_sidecar": "d9333dbca4f2af13b7adfc41dffd61245b076ba96baf10ea0410578b443413f4"
+    },
+    {
+      "bytes": 119722,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835770613-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000067.parquet",
+      "sha256_sidecar": "ec9f0ed4ad72cce1eccbbbe518e91db4232dc2ca505c588f48eac3ddbbc1f549"
+    },
+    {
+      "bytes": 121164,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835780864-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000068.parquet",
+      "sha256_sidecar": "75cb0fac54cebbd483ac383d0fb86964f5f552c5b67b0fe1d596e49b2b08b816"
+    },
+    {
+      "bytes": 119088,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835791114-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000069.parquet",
+      "sha256_sidecar": "fed941b3a0ad3bf22f2936d4697ec3f1ea7da9d153c50bcf56b7a50c85061c9e"
+    },
+    {
+      "bytes": 166761,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835801364-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000070.parquet",
+      "sha256_sidecar": "835a81615f82f911d58483ef26c122328aa6c66fd3f8f23100e9055017f763e9"
+    },
+    {
+      "bytes": 177675,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835811614-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000071.parquet",
+      "sha256_sidecar": "6fedd0d89e10ab9d7ac19b240b85b19a4e40d1d730c0402b08e2abb597461d7a"
+    },
+    {
+      "bytes": 135885,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835821864-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000072.parquet",
+      "sha256_sidecar": "5edf6715391c818064bd7264c0d5313498bc4f2b2745e72bf8479bc5de81c9a1"
+    },
+    {
+      "bytes": 143772,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835832114-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000073.parquet",
+      "sha256_sidecar": "426309157a6b11cbe1d3b524bfe761967608b28f4e750c29f3a92f9a2796e590"
+    },
+    {
+      "bytes": 142151,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835842363-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000074.parquet",
+      "sha256_sidecar": "e3ab984fb10a76ff016cddc1cb21bb06aef915e4b50e7dea9dca9815da707c41"
+    },
+    {
+      "bytes": 142360,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835852614-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000075.parquet",
+      "sha256_sidecar": "ab3fc7c1475d241376306332b3f6b97d2d29f9bb50365fefd0fe739419107644"
+    },
+    {
+      "bytes": 118423,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835862863-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000076.parquet",
+      "sha256_sidecar": "9b04fc47e6698036ec4c935209749e13cf289df7bc32e63cf031f1b1ff59bedd"
+    },
+    {
+      "bytes": 146811,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835873114-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000077.parquet",
+      "sha256_sidecar": "ae19af045746043430b86568d5edc3cc5322e714a069181131dc0e613e4ef411"
+    },
+    {
+      "bytes": 174488,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835883363-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000078.parquet",
+      "sha256_sidecar": "f4fa34bb16ea49e0a520872aa156f148aee71c3e7d8e02151193994600d77c95"
+    },
+    {
+      "bytes": 160106,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835893614-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000079.parquet",
+      "sha256_sidecar": "29814bdb1c4a771c6075baa93465b61f177fbd209d017bb06551d74e384721e8"
+    },
+    {
+      "bytes": 113188,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835903863-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000080.parquet",
+      "sha256_sidecar": "36c72ed73b212b6c48eb189902fcd04910838a98135825036e6b83a6169d1516"
+    },
+    {
+      "bytes": 120454,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835914114-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000081.parquet",
+      "sha256_sidecar": "2237f9233f8ec8ab7dc9aac515822b62f0b74ad8f2a82590dbfee92cdbdc9573"
+    },
+    {
+      "bytes": 115796,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835924363-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000082.parquet",
+      "sha256_sidecar": "58d916fda778036cbbebb75a90d8f1bba10492cfaf359c4012a362983d210430"
+    },
+    {
+      "bytes": 110155,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835934616-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000083.parquet",
+      "sha256_sidecar": "29e69ddc404900b400d6c77459ef8a1dbf8b41686f74415219941ebc922eece1"
+    },
+    {
+      "bytes": 137534,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835944867-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000084.parquet",
+      "sha256_sidecar": "ec7628033bd488732334bebd918b6bdab2bccea62287b414c4fc5f019672e72d"
+    },
+    {
+      "bytes": 132702,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835955118-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000085.parquet",
+      "sha256_sidecar": "6e980c21878db09c313a50457932910fa36842fbf23a745caa4176bea51377e5"
+    },
+    {
+      "bytes": 144813,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835965364-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000086.parquet",
+      "sha256_sidecar": "17f3d2bc966473b262f54ba94d14095c4c762122b869bffd4d439addadf3c74f"
+    },
+    {
+      "bytes": 118983,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835975614-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000087.parquet",
+      "sha256_sidecar": "ef4168c8fd8da553cb2668ba8f1b7dc7810164a4f3ab435a5085acc70fd64448"
+    },
+    {
+      "bytes": 89670,
+      "path": ".local/milestone6/session-1792835077714/recordings/ETHUSDT/00000001792835977728-2b2f370e-6e61-4e3d-ab8c-544340028629-00000000000000000088.parquet",
+      "sha256_sidecar": "250d47c455ce06419225f80f95b58586cebe540009c53c6c289e122c5d2a9abd"
+    },
+    {
+      "bytes": 357895,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835098251-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000001.parquet",
+      "sha256_sidecar": "23aea1ddacf3d2e9c8346927ffb5c91ce679b77441f18f269af91c1fc2f5f288"
+    },
+    {
+      "bytes": 110062,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835108501-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000002.parquet",
+      "sha256_sidecar": "9d087ae1798ab7913f25367365e990fa93844fd37b5dc80fa028500573cd9dfe"
+    },
+    {
+      "bytes": 109571,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835118752-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000003.parquet",
+      "sha256_sidecar": "12d59143a089a36d491b63f6af0dd68a60e1c2eee3f3d7321ddc08655452db9f"
+    },
+    {
+      "bytes": 107108,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835129003-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000004.parquet",
+      "sha256_sidecar": "4fd41413cc707780c8f0218a7ebfa6a362360ef42494211d54aebd605961da60"
+    },
+    {
+      "bytes": 116445,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835139251-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000005.parquet",
+      "sha256_sidecar": "d4fcb5a62263a16a99afe1339c463bd9fda406ff18e778418ef54f098662b452"
+    },
+    {
+      "bytes": 113481,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835149504-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000006.parquet",
+      "sha256_sidecar": "5b1c25e74d3ecbd353c0a527482eb6566d824c804368a3374d0b478d4a9b185d"
+    },
+    {
+      "bytes": 115668,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835159752-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000007.parquet",
+      "sha256_sidecar": "ee1e3ea499bf08e81945345f3a12e09617971b21117418cf7987859181762ef2"
+    },
+    {
+      "bytes": 102586,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835170003-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000008.parquet",
+      "sha256_sidecar": "e3c97402ff17af149f7f14c22572845c350196ffbe48df37e697be9b9692d351"
+    },
+    {
+      "bytes": 115870,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835180251-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000009.parquet",
+      "sha256_sidecar": "2ba7c7d474a7643a2887e81b40c51d3f68517b3835f5e7c6666d5b20556b7b7f"
+    },
+    {
+      "bytes": 109657,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835190504-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000010.parquet",
+      "sha256_sidecar": "2d913dd3ea7b269a4b564a8dba83f23e54fea7f4ad2f349947644bcb424e0a47"
+    },
+    {
+      "bytes": 113995,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835200752-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000011.parquet",
+      "sha256_sidecar": "f4b9ed26fcb7ea693278ce5410bda44dfe15d26ebe5f495f8b8862e10482681b"
+    },
+    {
+      "bytes": 114069,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835211004-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000012.parquet",
+      "sha256_sidecar": "05c3413f5326599caffc3aac31da0155c3c5e04655aff3fd0b969db7c49b4c9e"
+    },
+    {
+      "bytes": 116443,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835221310-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000013.parquet",
+      "sha256_sidecar": "8289aded116dbbca79d8658dea0cc8676a2b83bafed5c27c17f035e9dfbe149f"
+    },
+    {
+      "bytes": 108265,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835231504-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000014.parquet",
+      "sha256_sidecar": "cd53a2c95c00516c79179aaf402bb7480a59260f22d3a750ce04367961a85f44"
+    },
+    {
+      "bytes": 110896,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835241752-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000015.parquet",
+      "sha256_sidecar": "c953d1f3eb6796a1c0ed471154fbb9c0340da41960a1182ab202314b39756136"
+    },
+    {
+      "bytes": 120879,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835252004-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000016.parquet",
+      "sha256_sidecar": "969bba481996b44eb92021764c486e6d3d884c5814a77ba7dc8d9228c4468297"
+    },
+    {
+      "bytes": 111413,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835262251-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000017.parquet",
+      "sha256_sidecar": "ace61222f5fdc3bae1b73ff52a3b41cefc336846313690b83d1eb1c01c612d28"
+    },
+    {
+      "bytes": 109349,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835272504-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000018.parquet",
+      "sha256_sidecar": "de854961166fc7c8123b6d57ad261e33e78683b63d8cfedd6ff6674c4c821e3b"
+    },
+    {
+      "bytes": 111543,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835282752-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000019.parquet",
+      "sha256_sidecar": "89ea38b4e056e69af8c16c4d5cc1950e4cb7b5131a33cf58c0830ac00057c34e"
+    },
+    {
+      "bytes": 110877,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835293004-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000020.parquet",
+      "sha256_sidecar": "d32a628000d124372a0a76510e5f0f53cfd82b536c132e41755445e7ec1ae797"
+    },
+    {
+      "bytes": 104647,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835303251-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000021.parquet",
+      "sha256_sidecar": "e0acb9376546e55ce75d83068d8c4f5c1cc087091ec8a898f789540e8dfd91e2"
+    },
+    {
+      "bytes": 104964,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835313506-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000022.parquet",
+      "sha256_sidecar": "e199f6875cd4fc450d76cd17c0e8a5f5b441b611045e66262d5be5cf119d59be"
+    },
+    {
+      "bytes": 109599,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835323752-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000023.parquet",
+      "sha256_sidecar": "f1423c689eb88bbedda7ed72bb062f2bf765dba99d37d1e938f774225796c282"
+    },
+    {
+      "bytes": 110081,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835334012-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000024.parquet",
+      "sha256_sidecar": "1d23c9a185820c6e65a469dc81a92f47fb8edf3e26df292ddf66631d5ef0b7e0"
+    },
+    {
+      "bytes": 110024,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835344252-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000025.parquet",
+      "sha256_sidecar": "feccf36004b9f3ab27cb9920612c20f46b98e0f566bfbe3cb45aca1f7385b87f"
+    },
+    {
+      "bytes": 109793,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835354505-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000026.parquet",
+      "sha256_sidecar": "6c97dedc7128624a7135eec3dff29eea1ca0b7657b33821e7e9bb740ac22e0cc"
+    },
+    {
+      "bytes": 106206,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835364752-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000027.parquet",
+      "sha256_sidecar": "29e236c82557162a6d2609339926f55c93003fef857c1cbe7e848c4fb85355be"
+    },
+    {
+      "bytes": 106615,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835375004-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000028.parquet",
+      "sha256_sidecar": "37561f4b69d8eae0e40e874c403d8f967bc9d23458b024935d65bf6feb7fbe02"
+    },
+    {
+      "bytes": 110864,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835385252-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000029.parquet",
+      "sha256_sidecar": "bade633e1f34dae78d2c81a8870cf967d93cb27e1fce2d838d3a659ffac2cc87"
+    },
+    {
+      "bytes": 114695,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835395503-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000030.parquet",
+      "sha256_sidecar": "767cfb00e549c25560be9b6cc0535faf7bc870cca5ef94f1520ba0a1ea83c714"
+    },
+    {
+      "bytes": 105057,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835405752-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000031.parquet",
+      "sha256_sidecar": "86446a8091e643caedac9405bfe3dc0ed7507d874e137a8d10da790d204d99a9"
+    },
+    {
+      "bytes": 110057,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835416003-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000032.parquet",
+      "sha256_sidecar": "d6bbb6f3e01bf4621b70d2404c8e71157e2fbf686b7644300ffbca2d49d03acf"
+    },
+    {
+      "bytes": 120660,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835426252-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000033.parquet",
+      "sha256_sidecar": "481bd2b325ff6ae56176116aafe594964b2ad53b8f2022bdfb10c74c062b6ceb"
+    },
+    {
+      "bytes": 107387,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835436504-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000034.parquet",
+      "sha256_sidecar": "a5613c7c5631e3088b914ef86db70ac1132fa23125ac9c615661af84b4ccf80e"
+    },
+    {
+      "bytes": 105093,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835446752-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000035.parquet",
+      "sha256_sidecar": "7f8078259f3a45f6b85d224f5a29dee133a9a865015918f75712c9e8a0ebbebc"
+    },
+    {
+      "bytes": 108997,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835457003-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000036.parquet",
+      "sha256_sidecar": "931c31df566f410de293566c5f0fd47bb1af4554fbe82a8383879e544ed995f2"
+    },
+    {
+      "bytes": 109481,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835467252-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000037.parquet",
+      "sha256_sidecar": "eb298aefa03f09b74e4edc3b7223b23d421f4710e24b5bbba4aac1da8cd1215f"
+    },
+    {
+      "bytes": 102957,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835477504-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000038.parquet",
+      "sha256_sidecar": "dc55f8730685027dfa2961d7ee41378bdd945176f4125c39ea2f825942f24e6a"
+    },
+    {
+      "bytes": 106728,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835487752-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000039.parquet",
+      "sha256_sidecar": "d5bad81c3323d34808f39fac1b6e2202c68f8c1abe10e153281e63ff03681e3a"
+    },
+    {
+      "bytes": 110281,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835498004-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000040.parquet",
+      "sha256_sidecar": "1e5f9fea0859c01dee369eba9861aead2da45459f80f7257e3802b78094cdf5b"
+    },
+    {
+      "bytes": 133844,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835508252-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000041.parquet",
+      "sha256_sidecar": "b44ef256f804c901d19aea9805dfe7309a54c74e0b43fd61c6591285ee5123ca"
+    },
+    {
+      "bytes": 116110,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835518504-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000042.parquet",
+      "sha256_sidecar": "44fc0a092cd3fd52c7f3fecba574ea20279141899d633f67d28d634a67984e14"
+    },
+    {
+      "bytes": 112119,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835528752-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000043.parquet",
+      "sha256_sidecar": "b1a240d7c013639e889606ac552be38806691b3df8bed0103db85551f9f42f86"
+    },
+    {
+      "bytes": 114197,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835539005-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000044.parquet",
+      "sha256_sidecar": "c40b4fa9ae99abeedfdcd19198c5163193712ae91e4c8fa99f907067b6647fa2"
+    },
+    {
+      "bytes": 111948,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835549252-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000045.parquet",
+      "sha256_sidecar": "b067d9b0a47fdc6386443cc12599f6e4987cf2589974b0509dc8c2f5c8db7c41"
+    },
+    {
+      "bytes": 111661,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835559508-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000046.parquet",
+      "sha256_sidecar": "6eb7272df811fc84fc034f190a5bcc23a1d73e4ae80046da64a85a271f6f9606"
+    },
+    {
+      "bytes": 105775,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835569752-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000047.parquet",
+      "sha256_sidecar": "7e0f32ea3b69635de24ba50f61f53b3f4b351a7d62f8792dca96219850bcac18"
+    },
+    {
+      "bytes": 102446,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835580005-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000048.parquet",
+      "sha256_sidecar": "0bb03b90733648fdf0e693427c7edf8e2d97fa36d3d3eb3055442f85d0873ebd"
+    },
+    {
+      "bytes": 112599,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835590254-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000049.parquet",
+      "sha256_sidecar": "aa49c847d983ac932eadeed6f1e187e846b03c68bef2ba6a2ffc7d9f98a9ab16"
+    },
+    {
+      "bytes": 111709,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835600504-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000050.parquet",
+      "sha256_sidecar": "229c70fd2362790e4b509dee82b6b67750be0a9626a296e93793d1c9c93a3405"
+    },
+    {
+      "bytes": 104163,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835610753-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000051.parquet",
+      "sha256_sidecar": "8aceb55336d3cf9e4c97737c8034aa5432371104d76af281de3ecf903f3af850"
+    },
+    {
+      "bytes": 102110,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835621004-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000052.parquet",
+      "sha256_sidecar": "f7e0b866b90b5267e4870151cbc1540fb160a33ba9b1181ca48c9c9845744d08"
+    },
+    {
+      "bytes": 100059,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835631252-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000053.parquet",
+      "sha256_sidecar": "9170408cac2ffe2a81bb3661818e654402c313f8e21cc7adb29e4ecd4b59bde5"
+    },
+    {
+      "bytes": 104539,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835641505-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000054.parquet",
+      "sha256_sidecar": "19438d971f2ce4ef26f7fc9a6733bc3718fdf1992b968447be2d616627da99d7"
+    },
+    {
+      "bytes": 112142,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835651752-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000055.parquet",
+      "sha256_sidecar": "f995e3b2a1fce617e82b24218fc5740508380dfe7a66c76250ff8abec41c9b75"
+    },
+    {
+      "bytes": 108562,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835662007-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000056.parquet",
+      "sha256_sidecar": "4592c288bcc9c7e4af13ef8edbac0a0a97e71cef08a17dfa030f555ede8ad465"
+    },
+    {
+      "bytes": 106197,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835672253-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000057.parquet",
+      "sha256_sidecar": "07f05477877efa169512ac517fcd2a2e1fe28ce820da6d650f69490403b4a8c6"
+    },
+    {
+      "bytes": 102990,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835682507-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000058.parquet",
+      "sha256_sidecar": "996ee2d5d85bc4aad0c4442d57499075604f5270746154377ab496e761af9310"
+    },
+    {
+      "bytes": 106085,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835692752-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000059.parquet",
+      "sha256_sidecar": "bbdd31c96dbb3da027cea0997f5a9f437ca2e88e7eec0cb16e552df540ac48eb"
+    },
+    {
+      "bytes": 109770,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835703005-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000060.parquet",
+      "sha256_sidecar": "56ae20ed4ac620a4330bf9d97108f69bafb9676ed97ef20e7f32cea1e5eb63c1"
+    },
+    {
+      "bytes": 111980,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835713253-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000061.parquet",
+      "sha256_sidecar": "b0745b107ad1ee255fa7be2755e427d81fc740a096ffee36410f2bb1d730c1ba"
+    },
+    {
+      "bytes": 103881,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835723505-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000062.parquet",
+      "sha256_sidecar": "0feb19aed011f09d49ccb9aa5e1213fc46fa869ccece5f552b92354378216dec"
+    },
+    {
+      "bytes": 103304,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835733753-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000063.parquet",
+      "sha256_sidecar": "1beb4c57a844c5ec83aaaa8102e714c54616eb04439636cea30a357181d56b97"
+    },
+    {
+      "bytes": 111104,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835744004-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000064.parquet",
+      "sha256_sidecar": "dc62201c766343ae1215c696ffb53926d8509ae8afffd72ca459ea9da4016d29"
+    },
+    {
+      "bytes": 116153,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835754253-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000065.parquet",
+      "sha256_sidecar": "be9dabc1347770116aff4b26c0a1982d692ddd6191c1105a4a575c814fedd8cb"
+    },
+    {
+      "bytes": 107961,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835764506-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000066.parquet",
+      "sha256_sidecar": "fa8b5f4702ddf7267ba79c27ec435b01a4510b2d0bd95ba250225c6d5a40d50b"
+    },
+    {
+      "bytes": 104087,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835774753-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000067.parquet",
+      "sha256_sidecar": "5451e2bd6cddf7e275d55528029cb96546e89b525f57206c1e506b21580a553e"
+    },
+    {
+      "bytes": 102716,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835785005-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000068.parquet",
+      "sha256_sidecar": "0cd55684384695e2ce4502cd3edde308785043e76c56e05cac8b72e2862b24fd"
+    },
+    {
+      "bytes": 109627,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835795253-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000069.parquet",
+      "sha256_sidecar": "a24bae94328dad79b2904871b8c4382b90a030929c0107454ec46eea4d9de54d"
+    },
+    {
+      "bytes": 123035,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835805505-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000070.parquet",
+      "sha256_sidecar": "b26a905077e2f438a3a235f5d815f0b7f505017510d42e3fd85564ec7227ec9a"
+    },
+    {
+      "bytes": 108042,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835815753-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000071.parquet",
+      "sha256_sidecar": "9924640e615ca1e9860178c6bde77771c26605895a1b6b761f28b84b360452b8"
+    },
+    {
+      "bytes": 114613,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835826006-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000072.parquet",
+      "sha256_sidecar": "f240d60184f41f3ad13ebb9c76ea746a7a318a4625f1c89d7d9e1d6414f35112"
+    },
+    {
+      "bytes": 108016,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835836252-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000073.parquet",
+      "sha256_sidecar": "2aca2f01d8d22e617fafab68f96639e16f502c1d9a0be2b70560de73a1b22fad"
+    },
+    {
+      "bytes": 113613,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835846504-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000074.parquet",
+      "sha256_sidecar": "21772a84ce13db65fadb384b06ec6e151703bc4bfef595c4906639c0f2bd3dc3"
+    },
+    {
+      "bytes": 104177,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835856752-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000075.parquet",
+      "sha256_sidecar": "47befde0b2b3637240745bec430ba6f18d76c744aa1333384cee52127821c937"
+    },
+    {
+      "bytes": 102095,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835867005-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000076.parquet",
+      "sha256_sidecar": "af927d7ffa00652a6b2f524f5ff2129888b1e53963d03f777b4707eacda36330"
+    },
+    {
+      "bytes": 116115,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835877252-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000077.parquet",
+      "sha256_sidecar": "a11bd62d87e5055652642768928e4a1b554507937ec08b81b144acf31f83edff"
+    },
+    {
+      "bytes": 134199,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835887504-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000078.parquet",
+      "sha256_sidecar": "026cf3fbf07742395726c3f8d8189ad27ccdedbe639ebcad302e6f1634ab7346"
+    },
+    {
+      "bytes": 111330,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835897761-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000079.parquet",
+      "sha256_sidecar": "11e7812e76a3d225aa5bad1784a20d4fba2d9dfd999d52d6b912ba226ae86cfc"
+    },
+    {
+      "bytes": 106653,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835908004-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000080.parquet",
+      "sha256_sidecar": "cde133a0cc49e104970ab757bfc8d752be9a17b12ca7ce8a2ea440c591635b13"
+    },
+    {
+      "bytes": 102319,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835918252-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000081.parquet",
+      "sha256_sidecar": "c31b20ae37bb19f00cf5f5c5c732d4582a3e366acc52c3596c8904be1fbd2a54"
+    },
+    {
+      "bytes": 108217,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835928515-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000082.parquet",
+      "sha256_sidecar": "73de349ed62ab7efe504994bb05af00b0361bbbc10f76b807d9109c6e0ebfc43"
+    },
+    {
+      "bytes": 109036,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835938753-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000083.parquet",
+      "sha256_sidecar": "ff97e16ef4564585bce59487ccf7b36381c491687e3741640b3ae5e3c56ed7c7"
+    },
+    {
+      "bytes": 106076,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835949005-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000084.parquet",
+      "sha256_sidecar": "687c562320143036c83bee33c18e01085ea6662b2363b3ca577d9b5ad399cec2"
+    },
+    {
+      "bytes": 102137,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835959253-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000085.parquet",
+      "sha256_sidecar": "dde92fdee50d9d41ad90b64fe40174a985621135a6e966feb0885898d4a60f64"
+    },
+    {
+      "bytes": 108972,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835969505-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000086.parquet",
+      "sha256_sidecar": "a5c5a5ee528cf8de07cad23d5e8a7fa4d055ed97928f70d5f74fc1b4f890f0b0"
+    },
+    {
+      "bytes": 106330,
+      "path": ".local/milestone6/session-1792835077714/recordings/SOLUSDT/00000001792835977734-77b12cae-4d12-4e8c-ae71-f3d9f9b97f5e-00000000000000000087.parquet",
+      "sha256_sidecar": "30085925c04a4e624b92656718d086773aa872c3a854478cb754ef2ea45d7dd0"
+    },
+    {
+      "bytes": 336200,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835102157-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000001.parquet",
+      "sha256_sidecar": "ebd12d8cf45ef6fe87e57d3e277beddf9752c6d6c1cc62d08489d4eb384321b6"
+    },
+    {
+      "bytes": 145952,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835112407-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000002.parquet",
+      "sha256_sidecar": "16011a8e24cbfaccd5548cb70152cc556f262b879b59d560c345a86e237269b2"
+    },
+    {
+      "bytes": 121030,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835122656-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000003.parquet",
+      "sha256_sidecar": "c2c967bdffbd8cd725aa8bb21b9d608aa368d8f6ba6dc3274692d6dffc7bc0e1"
+    },
+    {
+      "bytes": 138391,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835132908-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000004.parquet",
+      "sha256_sidecar": "7d788e07256976ff993316542bbaf0e5a83b3e6af18d05f7e6974bec2f746db3"
+    },
+    {
+      "bytes": 155587,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835143157-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000005.parquet",
+      "sha256_sidecar": "cb9c53a04d3bd75354f8be71511d07d0f65873f2e132c51c08d03d87216f61bc"
+    },
+    {
+      "bytes": 131248,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835153408-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000006.parquet",
+      "sha256_sidecar": "5dcbff8eb9fef114fa227c0a657edfc164557c2978cec73d4f439fd4d91988ff"
+    },
+    {
+      "bytes": 127257,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835163657-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000007.parquet",
+      "sha256_sidecar": "09384b351beb2debc33e86a08affaca04aee54997ccc90b52f4ea6dce8bfce89"
+    },
+    {
+      "bytes": 131259,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835173907-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000008.parquet",
+      "sha256_sidecar": "a099a8e28a1b1a854bb14f4c47301d926dd81ab70d105f0338a6a9d75eda3f9f"
+    },
+    {
+      "bytes": 121167,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835184157-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000009.parquet",
+      "sha256_sidecar": "2239ed7bbd3adc215c81d77e5f2ff906f0193ce55a3184ca6fa89f682882e6e4"
+    },
+    {
+      "bytes": 133518,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835194408-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000010.parquet",
+      "sha256_sidecar": "8e777c3209c04090fe3d848312b11ffc9a579a862d766aa88faf7a54505c4f01"
+    },
+    {
+      "bytes": 119132,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835204656-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000011.parquet",
+      "sha256_sidecar": "7b084edf596bef2c590a15a393af84fe2f9e218cd1542fe18e753ccba42d9386"
+    },
+    {
+      "bytes": 120552,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835214906-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000012.parquet",
+      "sha256_sidecar": "05604296fbb2c340b384fe25a972ed987cbeaba4eb0fb691a8af68671e7ca039"
+    },
+    {
+      "bytes": 141493,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835225158-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000013.parquet",
+      "sha256_sidecar": "9c5812daf571ae6e0027ae12262f88c818e7c2ed45872616f99e05991cba18cf"
+    },
+    {
+      "bytes": 117969,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835235412-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000014.parquet",
+      "sha256_sidecar": "46f7c87e989a7e384405c54c0ce490b08b0a16cc9f950bfe0cb20cef5e3dd129"
+    },
+    {
+      "bytes": 138238,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835245657-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000015.parquet",
+      "sha256_sidecar": "c53eee80ac9694ee917d1befb22126803e99739c195780cf810d88fd2ecf3c8c"
+    },
+    {
+      "bytes": 125212,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835255911-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000016.parquet",
+      "sha256_sidecar": "a421deeacfb5fd50bd2c3d0adf97eb7c698d69164e5e7e312409e543de971387"
+    },
+    {
+      "bytes": 113861,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835266157-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000017.parquet",
+      "sha256_sidecar": "6e942c7b65d1e9469dd61e68e74b9f001ba9628ed8ef6e814ac4d5f52836801b"
+    },
+    {
+      "bytes": 123706,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835276407-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000018.parquet",
+      "sha256_sidecar": "fb0a444af626e83b28bdcdb6c85d3c7063a1cb5d665083c2111bf42996e5b820"
+    },
+    {
+      "bytes": 139775,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835286657-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000019.parquet",
+      "sha256_sidecar": "415d2af9f0f7c82ef53040bbe950a38b81639b80983a126467505cdcda843ec3"
+    },
+    {
+      "bytes": 104386,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835296907-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000020.parquet",
+      "sha256_sidecar": "aaa2a08a23e1cd1cc6a4c2fec9fcd5c04f13b136cd1826bc52eaa0aa4de8a2b0"
+    },
+    {
+      "bytes": 117761,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835307158-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000021.parquet",
+      "sha256_sidecar": "63438af9cef94ce546e2918274a6cbbcca86bce3b168f5ed3292246f97d85aa6"
+    },
+    {
+      "bytes": 112111,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835317409-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000022.parquet",
+      "sha256_sidecar": "0243ab933964beb7802e9f35b0ce13f6dc02c12d6d229b16e62b0191097c6990"
+    },
+    {
+      "bytes": 125759,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835327663-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000023.parquet",
+      "sha256_sidecar": "5e204ab2320a05807a3b26495c2a8a544356b238d5acdb6cae09c893e7164dba"
+    },
+    {
+      "bytes": 115765,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835337909-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000024.parquet",
+      "sha256_sidecar": "cb6f9eb7fb005f6c72a9c0763459524bee25fb7c3e7aa883ec01c2645efa3bcc"
+    },
+    {
+      "bytes": 147136,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835348157-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000025.parquet",
+      "sha256_sidecar": "095afdff2457ca7d01858c5c8dd8553f6ae8501b1dd9c7c2e95bbbd965e2676e"
+    },
+    {
+      "bytes": 103806,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835358408-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000026.parquet",
+      "sha256_sidecar": "ddeb206d8b619becc5b93c224e00907f0919229a216e5dcfce1bb95e1a874da0"
+    },
+    {
+      "bytes": 120891,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835368657-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000027.parquet",
+      "sha256_sidecar": "05fc50bcc811b1ddd59e8d477db2239b49144310189287dc56adb09bc26eb545"
+    },
+    {
+      "bytes": 121641,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835378907-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000028.parquet",
+      "sha256_sidecar": "535cc3dcb1e68f48e5008ecf3ffc45cddc2490c5be52c8a7f1cfebc1ec75162e"
+    },
+    {
+      "bytes": 130238,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835389156-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000029.parquet",
+      "sha256_sidecar": "820f34b50444eb8b6b4bd680f21cc65b5ccdc7a7adf85be51505939f5bd16b06"
+    },
+    {
+      "bytes": 108572,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835399407-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000030.parquet",
+      "sha256_sidecar": "fee54cef3b28bfc2241b724ee8aed90d6d452f72533c18bde8940389f7594b6e"
+    },
+    {
+      "bytes": 101786,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835409657-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000031.parquet",
+      "sha256_sidecar": "00860a94064672239b1933d683d2b349531ca088a6522b02cfaf7e293c2d576b"
+    },
+    {
+      "bytes": 111403,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835419907-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000032.parquet",
+      "sha256_sidecar": "5bda32a56f70ab526196d02e61850a95facbf6524a90d6f4777c95397194146d"
+    },
+    {
+      "bytes": 126478,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835430157-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000033.parquet",
+      "sha256_sidecar": "dbaee9e58b62365f3fd7bbaaeab6abb0cd4b947ac333c75e0a9e58375afc12ee"
+    },
+    {
+      "bytes": 105878,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835440408-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000034.parquet",
+      "sha256_sidecar": "6306e7024257dbe0937cb5007d38ac4ce436652fe523baea213a239ddff12e1a"
+    },
+    {
+      "bytes": 135502,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835450657-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000035.parquet",
+      "sha256_sidecar": "0b5c51516620136407fb28d4a40a040947f44763e92031eaeaa6c2836c96bbdd"
+    },
+    {
+      "bytes": 104674,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835460907-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000036.parquet",
+      "sha256_sidecar": "7c91c3c188712c4a3f06ff5e0aa7685a7e636243c23164fe013dcdcfbe340cfa"
+    },
+    {
+      "bytes": 104514,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835471157-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000037.parquet",
+      "sha256_sidecar": "b8723518b16ed8738b8cdca1650c39ff77e92a461c90cea19f54c7507e109eb6"
+    },
+    {
+      "bytes": 108825,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835481412-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000038.parquet",
+      "sha256_sidecar": "13b24d35aef936dee7236e9f44d3968b9e30ca13be8f95f505d59547317b7387"
+    },
+    {
+      "bytes": 115299,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835491657-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000039.parquet",
+      "sha256_sidecar": "6a507a557f84103bd7ffa93205b576f13861b1c14968fab13668681fedbd753c"
+    },
+    {
+      "bytes": 136516,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835501907-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000040.parquet",
+      "sha256_sidecar": "18849a476e91e64cecb867fee65fcbf1952b4995d0c4bb9c0ebe74dfe563988f"
+    },
+    {
+      "bytes": 166407,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835512157-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000041.parquet",
+      "sha256_sidecar": "7ab844852f3edfa51f6e51191bbc0747afae3b3710696817b5248939b44c35ac"
+    },
+    {
+      "bytes": 141056,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835522408-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000042.parquet",
+      "sha256_sidecar": "ba958b5a3045baed0a8549ad7cee68c7345775d4cfa54a510749ece498877b11"
+    },
+    {
+      "bytes": 136596,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835532657-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000043.parquet",
+      "sha256_sidecar": "2603a0e0cbbd132af2fbace113104d26562b6b2da2867ab4ca0c1d0be1639728"
+    },
+    {
+      "bytes": 146591,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835542908-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000044.parquet",
+      "sha256_sidecar": "d6b62a8eb9435c908a4bff4f00e0d310cc5330c5cf4f7582a94478b64e1e56d5"
+    },
+    {
+      "bytes": 131567,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835553157-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000045.parquet",
+      "sha256_sidecar": "1d778dbbd441f1a89a9b9ada01f0e2090b34761f95e1730dd9aefdc49146c6ad"
+    },
+    {
+      "bytes": 141465,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835563409-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000046.parquet",
+      "sha256_sidecar": "f7bcaf0d6779154ccae0af9e37f93480d3397095689c7d51b595acb06a95de2a"
+    },
+    {
+      "bytes": 107760,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835573657-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000047.parquet",
+      "sha256_sidecar": "aea07adfaf5c1b94f32e153baa67cfff7c19f1b0ceddfaf7e6e0bda97cf4e9a3"
+    },
+    {
+      "bytes": 115777,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835583911-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000048.parquet",
+      "sha256_sidecar": "98296b8aec6f5a380b3359169e3d1215bcf04b9150f9a473e9474a456a801fdc"
+    },
+    {
+      "bytes": 123081,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835594157-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000049.parquet",
+      "sha256_sidecar": "286ea7f80c16c0764b28abb5f089b7c61e85f59ca1305e9c89cfc493fa34325f"
+    },
+    {
+      "bytes": 121367,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835604407-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000050.parquet",
+      "sha256_sidecar": "343ba479c78c8fa2018253ba5c6da0e7fdd9c0b5f2fa87254fc4bdc728369d23"
+    },
+    {
+      "bytes": 115207,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835614658-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000051.parquet",
+      "sha256_sidecar": "b3b790f3f1515027a43a0fc00010f38a5f0220d81581205bcea9c1088c4b8aab"
+    },
+    {
+      "bytes": 113398,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835624915-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000052.parquet",
+      "sha256_sidecar": "e2fd0608153e493b352cc541b06387cb8822ebc500da1f0dc5dfe61b87d0d7c4"
+    },
+    {
+      "bytes": 116711,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835635157-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000053.parquet",
+      "sha256_sidecar": "e0323b6eee523364c44937c4e5ba5f8aa036c58b63ad7f1c2cdc4051ccc5946a"
+    },
+    {
+      "bytes": 110002,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835645410-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000054.parquet",
+      "sha256_sidecar": "48bdf113aa24333da3958dba9d9938c415688d261d5636f9235f5a25c93cd4a1"
+    },
+    {
+      "bytes": 138792,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835655657-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000055.parquet",
+      "sha256_sidecar": "5034fe8a840475015d8745dca7325dd11803c25ec5269fed5a4c68c26dafdc42"
+    },
+    {
+      "bytes": 117476,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835665910-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000056.parquet",
+      "sha256_sidecar": "cf877a29c81c8aa6b18dea4a12b15599c6aaefad21670c4466ed05c45fc12aba"
+    },
+    {
+      "bytes": 114399,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835676157-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000057.parquet",
+      "sha256_sidecar": "a70d5514bcedd33f93cd38b67a4467bb2c0f27c0aeed68e8644e253346699fb3"
+    },
+    {
+      "bytes": 123031,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835686411-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000058.parquet",
+      "sha256_sidecar": "aeae3ad9ea3008bcb7a11898f4e07bf1d4e5cdc8a0451db5c3d1bb42564d73d8"
+    },
+    {
+      "bytes": 123849,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835696657-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000059.parquet",
+      "sha256_sidecar": "83ac487e1c4c5ff932f468979258fa81b82f04cb90f29554e0541a00af9e7ab8"
+    },
+    {
+      "bytes": 115170,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835706908-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000060.parquet",
+      "sha256_sidecar": "04daf7209dc7f6cea31f64791f01abfbbba0ddbc70532bc9e45ae129d0079b6d"
+    },
+    {
+      "bytes": 124238,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835717158-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000061.parquet",
+      "sha256_sidecar": "51860c17248bab58b38d3ab9238b2d7cdc29ff4b5188e21f09d1b2efd27a0706"
+    },
+    {
+      "bytes": 108560,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835727408-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000062.parquet",
+      "sha256_sidecar": "7cf55038036cc6a9b354b173e7bd1daf267fe03ed32ff13081c09e6861445350"
+    },
+    {
+      "bytes": 103059,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835737657-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000063.parquet",
+      "sha256_sidecar": "32b60770b10c4fb2769fb66a1a7fb04dd620d9b07efdf54c5b2a43a96b2a2f1e"
+    },
+    {
+      "bytes": 113980,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835747907-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000064.parquet",
+      "sha256_sidecar": "b15f66cf24e9629934b709140f6a7dc668ae5e929885854a3619952541dedbf7"
+    },
+    {
+      "bytes": 128961,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835758157-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000065.parquet",
+      "sha256_sidecar": "2a3e78b2cb3a3a5dc9649dbf1245c5cbafab7767b2788a3f8117aa0a3964de76"
+    },
+    {
+      "bytes": 112329,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835768408-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000066.parquet",
+      "sha256_sidecar": "041613c232b02029a9f26f7b141b8dc61cb53eb8accc6f9fcfe5d787cf44d9b7"
+    },
+    {
+      "bytes": 118763,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835778658-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000067.parquet",
+      "sha256_sidecar": "76c0045c64d115e137e75a64e7949f1468c1444501583425284f05977e893fc8"
+    },
+    {
+      "bytes": 105001,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835788907-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000068.parquet",
+      "sha256_sidecar": "9d38e0b1580027fa14cc0a9b4937021badb0e0616077721a94d40ab59ca0a7f4"
+    },
+    {
+      "bytes": 139466,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835799157-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000069.parquet",
+      "sha256_sidecar": "862fde57bff01bdad42bf18e65764eddcca347bc21878689cd8fcfe219b337d4"
+    },
+    {
+      "bytes": 146937,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835809409-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000070.parquet",
+      "sha256_sidecar": "7e9e527af8e56daf7762484b397a9ed474f399680a71eee413d3525ad70cb990"
+    },
+    {
+      "bytes": 119569,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835819657-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000071.parquet",
+      "sha256_sidecar": "2750969c18960d633c09d4a8718af7e19f023d954ae80b339570ea71658d66f2"
+    },
+    {
+      "bytes": 137591,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835829910-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000072.parquet",
+      "sha256_sidecar": "fdd3b9dd8aa6b184f3ef4e98e8cedb4c7aac4fbab2d577697a777fff7f4a5fc7"
+    },
+    {
+      "bytes": 124231,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835840158-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000073.parquet",
+      "sha256_sidecar": "ab042f67bd4109708701491c2cf708ccd2e15714d9886f3e194160f88ccb4d97"
+    },
+    {
+      "bytes": 122199,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835850407-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000074.parquet",
+      "sha256_sidecar": "4bebdd061719cb4c8a5972ec58c38cbfac69631b893e40d9ffafe5994dbd14aa"
+    },
+    {
+      "bytes": 124752,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835860658-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000075.parquet",
+      "sha256_sidecar": "33be1ca81edba881fb79ee28e637b8627e4f1f8cc0e6b0b63f80cfab198ffdcd"
+    },
+    {
+      "bytes": 116384,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835870907-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000076.parquet",
+      "sha256_sidecar": "ce74873dbc1b7104a9d59660b532437a77c400aa3f4abfc6e37212418500d927"
+    },
+    {
+      "bytes": 125916,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835881157-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000077.parquet",
+      "sha256_sidecar": "4463aec7004fbf27906f5784d12380f0cd012225225d3af2c9a4f1254c1a8585"
+    },
+    {
+      "bytes": 132712,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835891413-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000078.parquet",
+      "sha256_sidecar": "0a2f022b04822de543d1cedd31b9406572d19864ea6a8d6233cbf36159bb5cf9"
+    },
+    {
+      "bytes": 109408,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835901658-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000079.parquet",
+      "sha256_sidecar": "4923fc8f42add5562d57091cc47fc6a7651b8a75617ce4860c936e1b33192e1b"
+    },
+    {
+      "bytes": 107993,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835911908-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000080.parquet",
+      "sha256_sidecar": "8e326e329f7fc3e0660e6783a57897bfc208095228d6eb130baee27f73c0990e"
+    },
+    {
+      "bytes": 109004,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835922159-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000081.parquet",
+      "sha256_sidecar": "942d8660152994d0674210795a06b359ccb9985c9dbc2e9acf3fefbd21bfdde0"
+    },
+    {
+      "bytes": 105652,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835932409-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000082.parquet",
+      "sha256_sidecar": "30a7953ff0f2e333af73cc9b28671d8d6789b746385e2f8bd5276ddc7ab8870f"
+    },
+    {
+      "bytes": 118957,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835942661-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000083.parquet",
+      "sha256_sidecar": "ce816b5d0b9c2fe5a0330c1a9a210b2a04c05f4ce98b1ad2afa7ccc7aa8be654"
+    },
+    {
+      "bytes": 107144,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835952910-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000084.parquet",
+      "sha256_sidecar": "02a6bfc7d879c0c2834085dbc20bb1cda27e60beb0acc863f8dfb4f2c10f7701"
+    },
+    {
+      "bytes": 116320,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835963159-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000085.parquet",
+      "sha256_sidecar": "35b08041da5adec8c7384630633d86e3428e7cd08857f1f64f8787964eca5cc1"
+    },
+    {
+      "bytes": 109069,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835973407-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000086.parquet",
+      "sha256_sidecar": "2574c9d4ac2816d0c66635e79961441e76914b2ae2d0349fc0b3be482c7683c7"
+    },
+    {
+      "bytes": 87831,
+      "path": ".local/milestone6/session-1792835077714/recordings/ZECUSDT/00000001792835977729-6a266675-fb8d-4a5e-9761-859801804c4b-00000000000000000087.parquet",
+      "sha256_sidecar": "46c7d099f40f7b3d98a2c7efad86bea070ad4d1dbfe449c7152d4a9566de3ae6"
+    }
+  ],
+  "source": ".local/milestone6/session-1792835077714"
+}

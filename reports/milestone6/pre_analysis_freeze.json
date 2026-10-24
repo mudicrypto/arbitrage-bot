@@ -1,0 +1,28 @@
+{
+  "recorded_at_ms": 1792835977837,
+  "source": ".local/milestone6/session-1792835077714",
+  "first_study_run_not_yet_executed": true,
+  "protocol_frozen_at_ms": 1792835171319,
+  "files": [
+    {
+      "path": "config/milestone6.json",
+      "sha256": "cc427544d6539a8339c1c1f597ff4ac4e4811164d2c82975b8ff36ca582044ac"
+    },
+    {
+      "path": "config/milestone6_collection.json",
+      "sha256": "065f04adb0ccc0994ca0cc77dacfc189177f0c324f20a29245d661ddf0d3a8f3"
+    },
+    {
+      "path": "crates/backtest/src/profitability.rs",
+      "sha256": "7f9fe45dba20b93f92645ae05db19ed1921634f801ea0295f50dbc1ddda0f911"
+    },
+    {
+      "path": "crates/backtest/src/engine.rs",
+      "sha256": "1c3a7b6a0fd6c6779b33562c20452d2b418c2ffff7e7c1d2244cd4c46f2a8044"
+    },
+    {
+      "path": "crates/backtest/src/paper.rs",
+      "sha256": "ffe520bb66217ab37c48dff1a147c403d2267d0d637e07eae295e50c5d5ad0d0"
+    }
+  ]
+}

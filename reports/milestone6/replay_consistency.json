@@ -1,0 +1,35 @@
+{
+  "same_completed_source_and_frozen_protocol": true,
+  "files": [
+    {
+      "file": "results.json",
+      "bytes": 1206653,
+      "sha256": "2835872e925f9cfd77affaf880ec87591732d893a649c25bafcc21cb7ec8c01f",
+      "byte_identical": true
+    },
+    {
+      "file": "results.csv",
+      "bytes": 35839,
+      "sha256": "a0a5bec706414525655a002ca9d54e52f324185113e10b04706d5d0a5b71ed42",
+      "byte_identical": true
+    },
+    {
+      "file": "execution_traces.jsonl",
+      "bytes": 35461275,
+      "sha256": "5811f003110d3f2b3b632681c94c178f6a056d3eea64173670d9ef9c64a43cbe",
+      "byte_identical": true
+    },
+    {
+      "file": "market_comparison.json",
+      "bytes": 17077,
+      "sha256": "d1dbf959fb0ef7c10c88dd7a3dc58ed65478bc280a464abfdb0fd37a55e3fd76",
+      "byte_identical": true
+    },
+    {
+      "file": "economic_gate_audit.json",
+      "bytes": 17782,
+      "sha256": "049b1a8dfae31c055cd7c84cc1d2989517a021e819df17e3ab3aec272249b74c",
+      "byte_identical": true
+    }
+  ]
+}

@@ -11,3 +11,5 @@ pub mod portfolio;
 pub mod readiness;
 
 pub mod paper;
+
+pub mod profitability;

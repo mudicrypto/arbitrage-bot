@@ -167,3 +167,17 @@ bash scripts/paper.sh research --seconds 60
 ```
 
 Each state directory is a separate $5,000 simulated alternative; never add their funds or P&L together. Configuration changes on an existing wallet fail closed. Defaults persist under `.local/paper/research/` or `economic/`. `status.json` is a local machine-readable view; freshness requires a recent `time_ms`, `status=running` and non-null market price. `wallet.json` is the authoritative atomic checkpoint. Do not edit it while running. Public raw data and paper event journals have bounded retention. See [M5 launch, observed results and limitations](MILESTONE_5.md). Trading on the actual exchange remains disabled.
+
+## Profitability discovery (Milestone 6)
+
+M6 reuses the recorder, deterministic replay, funded backtester and paper fee configuration. No new services are required. The committed protocol freezes four markets, four strategies, fee-asset assumptions, chronological 40/30/30 splits with 60-second embargoes, and queue/latency sensitivities. Raw data is local and required to reproduce results.
+
+```sh
+cargo build --workspace --locked
+# Optional new public-only 15-minute capture; preserve any existing collectors:
+./target/debug/mm-backtest collect-session config/milestone6_collection.json 900
+# Evaluate the completed capture (output must be new/empty):
+./target/debug/mm-backtest profitability .local/milestone6/session-1792835077714 config/milestone6.json /tmp/m6-study
+```
+
+The protocol must be frozen before the first holdout; this check deliberately rejects using the committed future-dated protocol on older sources. For a new experiment, copy the protocol, declare its freeze time before collection/holdouts, and preserve that copy. Do not edit a protocol to fit observed test results. Read [MILESTONE_6.md](MILESTONE_6.md) for observed economics, strict qualification and limitations; detailed results are in `reports/milestone6/`. Research-only and optimistic fills are never profitability evidence. Stop after M6. Actual exchange trading remains unavailable.

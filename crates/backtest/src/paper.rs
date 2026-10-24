@@ -42,7 +42,7 @@ impl Profile {
         }
     }
 }
-fn scenario(profile: Profile, spread: u64) -> Result<Scenario> {
+pub(crate) fn scenario(profile: Profile, spread: u64) -> Result<Scenario> {
     ensure!(spread <= 100, "spread must be 0..100bps");
     let experiment: Experiment =
         serde_json::from_str(include_str!("../../../config/backtest.json"))?;

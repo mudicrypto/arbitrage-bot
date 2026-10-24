@@ -1,0 +1,23 @@
+[
+  {
+    "name": "binance_fee_schedule",
+    "url": "https://www.binance.com/en/fee/trading",
+    "retrieved_at_ms": 1792835771054,
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "fee_table_verified": false
+  },
+  {
+    "name": "kraken_spot_fees",
+    "url": "https://www.kraken.com/features/fee-schedule",
+    "retrieved_at_ms": 1792835771051,
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "fee_table_verified": false
+  },
+  {
+    "name": "coinbase_exchange_fees",
+    "url": "https://help.coinbase.com/en/exchange/trading-and-funding/exchange-fees",
+    "retrieved_at_ms": 1792835771049,
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "fee_table_verified": false
+  }
+]

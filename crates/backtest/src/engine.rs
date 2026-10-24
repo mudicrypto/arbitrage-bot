@@ -1049,7 +1049,7 @@ impl Engine {
         }
         Ok(())
     }
-    fn quote(&mut self) -> Result<()> {
+    pub(crate) fn quote(&mut self) -> Result<()> {
         if self.stopped
             || self.settling
             || self.clock.saturating_sub(self.last_refresh) < self.scenario.strategy.refresh_ms

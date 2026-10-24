@@ -1,0 +1,518 @@
+[
+  {
+    "interpretation": "fee threshold is a quote-width feasibility gate, never observed executable profitability; default30 passes, widths below27 fail. Volatility above the cap and market/funding/filter limits may independently prevent quotes.",
+    "probes": [
+      {
+        "configured_net_after_cost_allowance_bps": -27,
+        "exchange_filter_rejections": 0,
+        "fee_rejections": 2,
+        "funnel": {
+          "dependency_failures": {},
+          "existing_quote_retained_or_canceling": 0,
+          "fee_widened_opportunities": 2,
+          "generated_quote_intents": 2,
+          "quote_opportunities": 2,
+          "rejected_exchange_filters": 0,
+          "rejected_fee_constraints": 2,
+          "rejected_market_data": 0,
+          "rejected_risk_limits": 0,
+          "rejection_reasons": {
+            "fee_aware_width_exceeds_max_quote_spread": 2
+          },
+          "submitted_to_simulated_execution": 0
+        },
+        "open_simulated_orders": 0,
+        "requested_bps": 0,
+        "required_minimum_bps": 27,
+        "risk_rejections": 0,
+        "submitted": 0
+      },
+      {
+        "configured_net_after_cost_allowance_bps": -26,
+        "exchange_filter_rejections": 0,
+        "fee_rejections": 2,
+        "funnel": {
+          "dependency_failures": {},
+          "existing_quote_retained_or_canceling": 0,
+          "fee_widened_opportunities": 2,
+          "generated_quote_intents": 2,
+          "quote_opportunities": 2,
+          "rejected_exchange_filters": 0,
+          "rejected_fee_constraints": 2,
+          "rejected_market_data": 0,
+          "rejected_risk_limits": 0,
+          "rejection_reasons": {
+            "fee_aware_width_exceeds_max_quote_spread": 2
+          },
+          "submitted_to_simulated_execution": 0
+        },
+        "open_simulated_orders": 0,
+        "requested_bps": 1,
+        "required_minimum_bps": 27,
+        "risk_rejections": 0,
+        "submitted": 0
+      },
+      {
+        "configured_net_after_cost_allowance_bps": -1,
+        "exchange_filter_rejections": 0,
+        "fee_rejections": 2,
+        "funnel": {
+          "dependency_failures": {},
+          "existing_quote_retained_or_canceling": 0,
+          "fee_widened_opportunities": 2,
+          "generated_quote_intents": 2,
+          "quote_opportunities": 2,
+          "rejected_exchange_filters": 0,
+          "rejected_fee_constraints": 2,
+          "rejected_market_data": 0,
+          "rejected_risk_limits": 0,
+          "rejection_reasons": {
+            "fee_aware_width_exceeds_max_quote_spread": 2
+          },
+          "submitted_to_simulated_execution": 0
+        },
+        "open_simulated_orders": 0,
+        "requested_bps": 26,
+        "required_minimum_bps": 27,
+        "risk_rejections": 0,
+        "submitted": 0
+      },
+      {
+        "configured_net_after_cost_allowance_bps": 0,
+        "exchange_filter_rejections": 0,
+        "fee_rejections": 0,
+        "funnel": {
+          "dependency_failures": {},
+          "existing_quote_retained_or_canceling": 0,
+          "fee_widened_opportunities": 0,
+          "generated_quote_intents": 2,
+          "quote_opportunities": 2,
+          "rejected_exchange_filters": 0,
+          "rejected_fee_constraints": 0,
+          "rejected_market_data": 0,
+          "rejected_risk_limits": 0,
+          "rejection_reasons": {},
+          "submitted_to_simulated_execution": 2
+        },
+        "open_simulated_orders": 2,
+        "requested_bps": 27,
+        "required_minimum_bps": 27,
+        "risk_rejections": 0,
+        "submitted": 2
+      },
+      {
+        "configured_net_after_cost_allowance_bps": 3,
+        "exchange_filter_rejections": 0,
+        "fee_rejections": 0,
+        "funnel": {
+          "dependency_failures": {},
+          "existing_quote_retained_or_canceling": 0,
+          "fee_widened_opportunities": 0,
+          "generated_quote_intents": 2,
+          "quote_opportunities": 2,
+          "rejected_exchange_filters": 0,
+          "rejected_fee_constraints": 0,
+          "rejected_market_data": 0,
+          "rejected_risk_limits": 0,
+          "rejection_reasons": {},
+          "submitted_to_simulated_execution": 2
+        },
+        "open_simulated_orders": 2,
+        "requested_bps": 30,
+        "required_minimum_bps": 27,
+        "risk_rejections": 0,
+        "submitted": 2
+      }
+    ],
+    "source_sequence": 25,
+    "source_time_ms": 1792835080403,
+    "symbol": "BTCUSDT"
+  },
+  {
+    "interpretation": "fee threshold is a quote-width feasibility gate, never observed executable profitability; default30 passes, widths below27 fail. Volatility above the cap and market/funding/filter limits may independently prevent quotes.",
+    "probes": [
+      {
+        "configured_net_after_cost_allowance_bps": -27,
+        "exchange_filter_rejections": 0,
+        "fee_rejections": 2,
+        "funnel": {
+          "dependency_failures": {},
+          "existing_quote_retained_or_canceling": 0,
+          "fee_widened_opportunities": 2,
+          "generated_quote_intents": 2,
+          "quote_opportunities": 2,
+          "rejected_exchange_filters": 0,
+          "rejected_fee_constraints": 2,
+          "rejected_market_data": 0,
+          "rejected_risk_limits": 0,
+          "rejection_reasons": {
+            "fee_aware_width_exceeds_max_quote_spread": 2
+          },
+          "submitted_to_simulated_execution": 0
+        },
+        "open_simulated_orders": 0,
+        "requested_bps": 0,
+        "required_minimum_bps": 27,
+        "risk_rejections": 0,
+        "submitted": 0
+      },
+      {
+        "configured_net_after_cost_allowance_bps": -26,
+        "exchange_filter_rejections": 0,
+        "fee_rejections": 2,
+        "funnel": {
+          "dependency_failures": {},
+          "existing_quote_retained_or_canceling": 0,
+          "fee_widened_opportunities": 2,
+          "generated_quote_intents": 2,
+          "quote_opportunities": 2,
+          "rejected_exchange_filters": 0,
+          "rejected_fee_constraints": 2,
+          "rejected_market_data": 0,
+          "rejected_risk_limits": 0,
+          "rejection_reasons": {
+            "fee_aware_width_exceeds_max_quote_spread": 2
+          },
+          "submitted_to_simulated_execution": 0
+        },
+        "open_simulated_orders": 0,
+        "requested_bps": 1,
+        "required_minimum_bps": 27,
+        "risk_rejections": 0,
+        "submitted": 0
+      },
+      {
+        "configured_net_after_cost_allowance_bps": -1,
+        "exchange_filter_rejections": 0,
+        "fee_rejections": 2,
+        "funnel": {
+          "dependency_failures": {},
+          "existing_quote_retained_or_canceling": 0,
+          "fee_widened_opportunities": 2,
+          "generated_quote_intents": 2,
+          "quote_opportunities": 2,
+          "rejected_exchange_filters": 0,
+          "rejected_fee_constraints": 2,
+          "rejected_market_data": 0,
+          "rejected_risk_limits": 0,
+          "rejection_reasons": {
+            "fee_aware_width_exceeds_max_quote_spread": 2
+          },
+          "submitted_to_simulated_execution": 0
+        },
+        "open_simulated_orders": 0,
+        "requested_bps": 26,
+        "required_minimum_bps": 27,
+        "risk_rejections": 0,
+        "submitted": 0
+      },
+      {
+        "configured_net_after_cost_allowance_bps": 0,
+        "exchange_filter_rejections": 0,
+        "fee_rejections": 0,
+        "funnel": {
+          "dependency_failures": {},
+          "existing_quote_retained_or_canceling": 0,
+          "fee_widened_opportunities": 0,
+          "generated_quote_intents": 2,
+          "quote_opportunities": 2,
+          "rejected_exchange_filters": 0,
+          "rejected_fee_constraints": 0,
+          "rejected_market_data": 0,
+          "rejected_risk_limits": 0,
+          "rejection_reasons": {},
+          "submitted_to_simulated_execution": 2
+        },
+        "open_simulated_orders": 2,
+        "requested_bps": 27,
+        "required_minimum_bps": 27,
+        "risk_rejections": 0,
+        "submitted": 2
+      },
+      {
+        "configured_net_after_cost_allowance_bps": 3,
+        "exchange_filter_rejections": 0,
+        "fee_rejections": 0,
+        "funnel": {
+          "dependency_failures": {},
+          "existing_quote_retained_or_canceling": 0,
+          "fee_widened_opportunities": 0,
+          "generated_quote_intents": 2,
+          "quote_opportunities": 2,
+          "rejected_exchange_filters": 0,
+          "rejected_fee_constraints": 0,
+          "rejected_market_data": 0,
+          "rejected_risk_limits": 0,
+          "rejection_reasons": {},
+          "submitted_to_simulated_execution": 2
+        },
+        "open_simulated_orders": 2,
+        "requested_bps": 30,
+        "required_minimum_bps": 27,
+        "risk_rejections": 0,
+        "submitted": 2
+      }
+    ],
+    "source_sequence": 22,
+    "source_time_ms": 1792835084055,
+    "symbol": "ETHUSDT"
+  },
+  {
+    "interpretation": "fee threshold is a quote-width feasibility gate, never observed executable profitability; default30 passes, widths below27 fail. Volatility above the cap and market/funding/filter limits may independently prevent quotes.",
+    "probes": [
+      {
+        "configured_net_after_cost_allowance_bps": -27,
+        "exchange_filter_rejections": 0,
+        "fee_rejections": 2,
+        "funnel": {
+          "dependency_failures": {},
+          "existing_quote_retained_or_canceling": 0,
+          "fee_widened_opportunities": 2,
+          "generated_quote_intents": 2,
+          "quote_opportunities": 2,
+          "rejected_exchange_filters": 0,
+          "rejected_fee_constraints": 2,
+          "rejected_market_data": 0,
+          "rejected_risk_limits": 0,
+          "rejection_reasons": {
+            "fee_aware_width_exceeds_max_quote_spread": 2
+          },
+          "submitted_to_simulated_execution": 0
+        },
+        "open_simulated_orders": 0,
+        "requested_bps": 0,
+        "required_minimum_bps": 27,
+        "risk_rejections": 0,
+        "submitted": 0
+      },
+      {
+        "configured_net_after_cost_allowance_bps": -26,
+        "exchange_filter_rejections": 0,
+        "fee_rejections": 2,
+        "funnel": {
+          "dependency_failures": {},
+          "existing_quote_retained_or_canceling": 0,
+          "fee_widened_opportunities": 2,
+          "generated_quote_intents": 2,
+          "quote_opportunities": 2,
+          "rejected_exchange_filters": 0,
+          "rejected_fee_constraints": 2,
+          "rejected_market_data": 0,
+          "rejected_risk_limits": 0,
+          "rejection_reasons": {
+            "fee_aware_width_exceeds_max_quote_spread": 2
+          },
+          "submitted_to_simulated_execution": 0
+        },
+        "open_simulated_orders": 0,
+        "requested_bps": 1,
+        "required_minimum_bps": 27,
+        "risk_rejections": 0,
+        "submitted": 0
+      },
+      {
+        "configured_net_after_cost_allowance_bps": -1,
+        "exchange_filter_rejections": 0,
+        "fee_rejections": 2,
+        "funnel": {
+          "dependency_failures": {},
+          "existing_quote_retained_or_canceling": 0,
+          "fee_widened_opportunities": 2,
+          "generated_quote_intents": 2,
+          "quote_opportunities": 2,
+          "rejected_exchange_filters": 0,
+          "rejected_fee_constraints": 2,
+          "rejected_market_data": 0,
+          "rejected_risk_limits": 0,
+          "rejection_reasons": {
+            "fee_aware_width_exceeds_max_quote_spread": 2
+          },
+          "submitted_to_simulated_execution": 0
+        },
+        "open_simulated_orders": 0,
+        "requested_bps": 26,
+        "required_minimum_bps": 27,
+        "risk_rejections": 0,
+        "submitted": 0
+      },
+      {
+        "configured_net_after_cost_allowance_bps": 0,
+        "exchange_filter_rejections": 0,
+        "fee_rejections": 0,
+        "funnel": {
+          "dependency_failures": {},
+          "existing_quote_retained_or_canceling": 0,
+          "fee_widened_opportunities": 0,
+          "generated_quote_intents": 2,
+          "quote_opportunities": 2,
+          "rejected_exchange_filters": 0,
+          "rejected_fee_constraints": 0,
+          "rejected_market_data": 0,
+          "rejected_risk_limits": 0,
+          "rejection_reasons": {},
+          "submitted_to_simulated_execution": 2
+        },
+        "open_simulated_orders": 2,
+        "requested_bps": 27,
+        "required_minimum_bps": 27,
+        "risk_rejections": 0,
+        "submitted": 2
+      },
+      {
+        "configured_net_after_cost_allowance_bps": 3,
+        "exchange_filter_rejections": 0,
+        "fee_rejections": 0,
+        "funnel": {
+          "dependency_failures": {},
+          "existing_quote_retained_or_canceling": 0,
+          "fee_widened_opportunities": 0,
+          "generated_quote_intents": 2,
+          "quote_opportunities": 2,
+          "rejected_exchange_filters": 0,
+          "rejected_fee_constraints": 0,
+          "rejected_market_data": 0,
+          "rejected_risk_limits": 0,
+          "rejection_reasons": {},
+          "submitted_to_simulated_execution": 2
+        },
+        "open_simulated_orders": 2,
+        "requested_bps": 30,
+        "required_minimum_bps": 27,
+        "risk_rejections": 0,
+        "submitted": 2
+      }
+    ],
+    "source_sequence": 13,
+    "source_time_ms": 1792835088212,
+    "symbol": "SOLUSDT"
+  },
+  {
+    "interpretation": "fee threshold is a quote-width feasibility gate, never observed executable profitability; default30 passes, widths below27 fail. Volatility above the cap and market/funding/filter limits may independently prevent quotes.",
+    "probes": [
+      {
+        "configured_net_after_cost_allowance_bps": -27,
+        "exchange_filter_rejections": 0,
+        "fee_rejections": 2,
+        "funnel": {
+          "dependency_failures": {},
+          "existing_quote_retained_or_canceling": 0,
+          "fee_widened_opportunities": 2,
+          "generated_quote_intents": 2,
+          "quote_opportunities": 2,
+          "rejected_exchange_filters": 0,
+          "rejected_fee_constraints": 2,
+          "rejected_market_data": 0,
+          "rejected_risk_limits": 0,
+          "rejection_reasons": {
+            "fee_aware_width_exceeds_max_quote_spread": 2
+          },
+          "submitted_to_simulated_execution": 0
+        },
+        "open_simulated_orders": 0,
+        "requested_bps": 0,
+        "required_minimum_bps": 27,
+        "risk_rejections": 0,
+        "submitted": 0
+      },
+      {
+        "configured_net_after_cost_allowance_bps": -26,
+        "exchange_filter_rejections": 0,
+        "fee_rejections": 2,
+        "funnel": {
+          "dependency_failures": {},
+          "existing_quote_retained_or_canceling": 0,
+          "fee_widened_opportunities": 2,
+          "generated_quote_intents": 2,
+          "quote_opportunities": 2,
+          "rejected_exchange_filters": 0,
+          "rejected_fee_constraints": 2,
+          "rejected_market_data": 0,
+          "rejected_risk_limits": 0,
+          "rejection_reasons": {
+            "fee_aware_width_exceeds_max_quote_spread": 2
+          },
+          "submitted_to_simulated_execution": 0
+        },
+        "open_simulated_orders": 0,
+        "requested_bps": 1,
+        "required_minimum_bps": 27,
+        "risk_rejections": 0,
+        "submitted": 0
+      },
+      {
+        "configured_net_after_cost_allowance_bps": -1,
+        "exchange_filter_rejections": 0,
+        "fee_rejections": 2,
+        "funnel": {
+          "dependency_failures": {},
+          "existing_quote_retained_or_canceling": 0,
+          "fee_widened_opportunities": 2,
+          "generated_quote_intents": 2,
+          "quote_opportunities": 2,
+          "rejected_exchange_filters": 0,
+          "rejected_fee_constraints": 2,
+          "rejected_market_data": 0,
+          "rejected_risk_limits": 0,
+          "rejection_reasons": {
+            "fee_aware_width_exceeds_max_quote_spread": 2
+          },
+          "submitted_to_simulated_execution": 0
+        },
+        "open_simulated_orders": 0,
+        "requested_bps": 26,
+        "required_minimum_bps": 27,
+        "risk_rejections": 0,
+        "submitted": 0
+      },
+      {
+        "configured_net_after_cost_allowance_bps": 0,
+        "exchange_filter_rejections": 0,
+        "fee_rejections": 0,
+        "funnel": {
+          "dependency_failures": {},
+          "existing_quote_retained_or_canceling": 0,
+          "fee_widened_opportunities": 0,
+          "generated_quote_intents": 2,
+          "quote_opportunities": 2,
+          "rejected_exchange_filters": 0,
+          "rejected_fee_constraints": 0,
+          "rejected_market_data": 0,
+          "rejected_risk_limits": 0,
+          "rejection_reasons": {},
+          "submitted_to_simulated_execution": 2
+        },
+        "open_simulated_orders": 2,
+        "requested_bps": 27,
+        "required_minimum_bps": 27,
+        "risk_rejections": 0,
+        "submitted": 2
+      },
+      {
+        "configured_net_after_cost_allowance_bps": 3,
+        "exchange_filter_rejections": 0,
+        "fee_rejections": 0,
+        "funnel": {
+          "dependency_failures": {},
+          "existing_quote_retained_or_canceling": 0,
+          "fee_widened_opportunities": 0,
+          "generated_quote_intents": 2,
+          "quote_opportunities": 2,
+          "rejected_exchange_filters": 0,
+          "rejected_fee_constraints": 0,
+          "rejected_market_data": 0,
+          "rejected_risk_limits": 0,
+          "rejection_reasons": {},
+          "submitted_to_simulated_execution": 2
+        },
+        "open_simulated_orders": 2,
+        "requested_bps": 30,
+        "required_minimum_bps": 27,
+        "risk_rejections": 0,
+        "submitted": 2
+      }
+    ],
+    "source_sequence": 16,
+    "source_time_ms": 1792835092108,
+    "symbol": "ZECUSDT"
+  }
+]

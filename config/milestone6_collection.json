@@ -1,0 +1,12 @@
+{
+  "duration_seconds": 86400,
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "ZECUSDT"
+  ],
+  "bytes_per_symbol": 268435456,
+  "flush_interval_ms": 10000,
+  "root": ".local/milestone6"
+}

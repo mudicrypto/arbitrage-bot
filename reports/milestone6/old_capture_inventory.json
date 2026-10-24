@@ -1,0 +1,76 @@
+{
+  "completion_marker": {
+    "end_ms": 1792337664110,
+    "observed_seconds": 86400,
+    "reason": "duration_complete",
+    "requires_replay_audit": true,
+    "retention_may_have_evicted_prefix": true,
+    "smoke": false,
+    "start_ms": 1792251264110,
+    "target_seconds": 86400
+  },
+  "retained_symbols": [
+    {
+      "symbol": "BTCUSDT",
+      "retained_segments": 3183,
+      "retained_parquet_bytes": 781481081,
+      "first_retained_sequence": 1,
+      "last_retained_sequence": 2241495,
+      "first_retained_receive_ms": 1792251264892,
+      "last_retained_receive_ms": 1792337664093,
+      "prefix_complete": true,
+      "validation_scope": "First and last finalized segment checksum/sequence replay only; not a full retained-history audit",
+      "excluded_from_study": true,
+      "reason": "previously_observed_feed_interruptions_prevent_assuming_continuous_executable_coverage"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "retained_segments": 3116,
+      "retained_parquet_bytes": 773734787,
+      "first_retained_sequence": 1,
+      "last_retained_sequence": 2072986,
+      "first_retained_receive_ms": 1792251268931,
+      "last_retained_receive_ms": 1792337664097,
+      "prefix_complete": true,
+      "validation_scope": "First and last finalized segment checksum/sequence replay only; not a full retained-history audit",
+      "excluded_from_study": true,
+      "reason": "previously_observed_feed_interruptions_prevent_assuming_continuous_executable_coverage"
+    }
+  ],
+  "continuous_24h_data_verified": false,
+  "collector_status_metrics": {
+    "BTCUSDT": {
+      "connection_attempts": 181,
+      "reconnections": 180,
+      "synchronization_failures": 14,
+      "data_gaps": 0,
+      "duplicates": 1754,
+      "invalid_messages": 0,
+      "stale_events": 1,
+      "disconnections": 180,
+      "buffer_overflows": 170,
+      "recording_failures": 0,
+      "updates": 848325,
+      "last_lag_ms": 79,
+      "max_lag_ms": 1476
+    },
+    "ETHUSDT": {
+      "connection_attempts": 66,
+      "reconnections": 65,
+      "synchronization_failures": 3,
+      "data_gaps": 0,
+      "duplicates": 855,
+      "invalid_messages": 0,
+      "stale_events": 0,
+      "disconnections": 65,
+      "buffer_overflows": 62,
+      "recording_failures": 0,
+      "updates": 825995,
+      "last_lag_ms": 82,
+      "max_lag_ms": 1458
+    }
+  },
+  "full_legacy_replay_completed": false,
+  "full_legacy_replay_status": "Read-only audit stopped after approximately ten CPU minutes; no final audit result produced. First/last segment replay and collector metrics are not a full-history verification.",
+  "strategy_evaluated_on_legacy_source": false
+}

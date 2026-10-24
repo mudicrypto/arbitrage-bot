@@ -1,0 +1,35 @@
+{
+  "rust_tests_passed": 113,
+  "typescript_tests_passed": 7,
+  "commands": [
+    {
+      "command": "bash scripts/check.sh",
+      "result": "passed: rustfmt, Clippy workspace/all-targets -D warnings, Rust tests, Prettier, TypeScript typecheck/tests"
+    },
+    {
+      "command": "cargo build --workspace --locked",
+      "result": "passed"
+    },
+    {
+      "command": "npm --prefix control-api run build",
+      "result": "passed"
+    },
+    {
+      "command": "cargo --config 'profile.dev.package.mm-market-data.opt-level=3' --config 'profile.dev.package.mm-backtest.opt-level=2' build -p mm-backtest --locked",
+      "result": "passed; identical financial source, faster read-only replay"
+    },
+    {
+      "command": "docker compose up -d --wait postgres; psql foundation migration and scripts/db-test.sql with ON_ERROR_STOP=1",
+      "result": "passed"
+    },
+    {
+      "command": "profitability same completed capture and frozen protocol twice",
+      "result": "byte-identical results.json, results.csv, execution traces, market comparison and gate audit"
+    }
+  ],
+  "source_code_and_protocol_match_pre_analysis_hashes": true,
+  "synthetic_tests_not_profitability_evidence": true,
+  "initial_errors_corrected": "JSON macro recursion/syntax, Clippy argument/style and item order issues corrected before final passing checks. An initial slow debug replay was interrupted and left INCOMPLETE; it is not interpreted as a result.",
+  "legacy_capture_full_replay": "not completed; stopped read-only audit after approximately ten CPU minutes, no claim of full-history validity",
+  "primary_study_complete_and_replayed_identically": true
+}

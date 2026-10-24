@@ -45,3 +45,10 @@
 Use BTCUSDT, a terminal view and the existing Engine/Observer/recorder rather than adding frontend services or another execution model. Research bypasses only the fee-derived minimum width and clamps proposed prices to the public BBA; actual configured fees and every funding/risk/execution guard remain. Economic retains fee widening but caps width at the requested setting, so insufficient settings refuse quotes. Both use conservative through execution and manual 10bps/side quote-asset fees.
 
 Persist one isolated wallet per state directory; initialize only once from a causal book. Restart preserves balances and risk, voids virtual quotes and models no offline fills. Use an authoritative atomic checkpoint plus bounded sequenced audit journal; this engineering checkpoint does not claim an archival production OMS. No exchange execution or further milestone is authorized.
+
+
+## M6: fixed hypotheses and chronological profitability screening
+
+Reuse the funded Engine and actual M5 economic scenario; expose its internal quoting method only within the Rust crate. Compare fixed, causal volatility-adaptive, imbalance/momentum-filtered and clearly research-only touch controls. Standard 10bps/side is manual and unverified: received-asset and quote-asset costs are both tested; no favorable discount qualifies. Keep $100 clips, $500 inventory deviation and $50 drawdown controls.
+
+Use isolated folds with no capital aggregation, 60-second embargoes and 65-second terminal settlement/markout observation. Only training nominates candidates. Validation/test cannot select or retune. A conservative inventory-neutral envelope caps net excess over initial holdings by spread capture less fees and unfavorable 60s markouts; then applies closeout stress and risk allowance. Report this separately from actual MTM and fee accounting. Insufficient/invalid data must produce an inconclusive result rather than a manufactured winner or a claim that all strategies are impossible.

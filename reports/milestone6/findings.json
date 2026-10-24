@@ -1,0 +1,2090 @@
+{
+  "defensible_positive_simulated_edge": false,
+  "preliminary": true,
+  "capital_scope": "isolated_5000_alternatives_do_not_sum",
+  "baseline_manual_fee_bps_each_side": 10,
+  "account_specific_commissions_verified": false,
+  "simulation_rows": 288,
+  "data_quality_valid_rows": 288,
+  "training_nominations": [],
+  "qualifying_candidates": [],
+  "hypotheses_frozen_before_holdout": true,
+  "protocol_sha256": "cc427544d6539a8339c1c1f597ff4ac4e4811164d2c82975b8ff36ca582044ac",
+  "source_books": {
+    "BTCUSDT": 8937,
+    "ETHUSDT": 8721,
+    "SOLUSDT": 6486,
+    "ZECUSDT": 7783
+  },
+  "source_aggregate_trade_messages": {
+    "BTCUSDT": 4179,
+    "ETHUSDT": 3152,
+    "SOLUSDT": 978,
+    "ZECUSDT": 3060
+  },
+  "final_test_primary_received_asset_rows": [
+    {
+      "accepted": 32,
+      "accounting": {
+        "cost_basis": "moving average; fee-asset disposals recognize their valuation less allocated cost basis; fees deducted once",
+        "fees_atoms": 0,
+        "net_pnl_atoms": 83695990,
+        "realized_gross_atoms": 0,
+        "rebates_atoms": 0,
+        "reconciled": true,
+        "unrealized_gross_atoms": 83695990
+      },
+      "actual_exchange_executions": 0,
+      "books": 2091,
+      "cancelled": 32,
+      "capital_scope": "isolated_5000_alternatives_do_not_sum",
+      "capital_usdt": 5000,
+      "closeout_stress_atoms": 300076754,
+      "conservative_net_edge_bps_per_executed_notional": null,
+      "conservative_trading_pnl_atoms": -300076754,
+      "data_quality_valid": true,
+      "drawdown_stopped": false,
+      "eligible_positive_oos_row": false,
+      "ending_balances": {
+        "base_available": 3101000,
+        "base_reserved": 0,
+        "base_total": 3101000,
+        "bnb_available": 0,
+        "bnb_reserved": 0,
+        "bnb_total": 0,
+        "quote_available": 250032653875,
+        "quote_reserved": 0,
+        "quote_total": 250032653875
+      },
+      "excess_over_hold_atoms": 0,
+      "executed_notional_atoms": 0,
+      "fee_asset_assumption": "received",
+      "fee_assets": {},
+      "fees_atoms": 0,
+      "fills": 0,
+      "filtered_events": 0,
+      "funnel": {
+        "dependency_failures": {},
+        "existing_quote_retained_or_canceling": 512,
+        "fee_widened_opportunities": 0,
+        "generated_quote_intents": 32,
+        "quote_opportunities": 544,
+        "rejected_exchange_filters": 0,
+        "rejected_fee_constraints": 0,
+        "rejected_market_data": 0,
+        "rejected_risk_limits": 0,
+        "rejection_reasons": {},
+        "submitted_to_simulated_execution": 32
+      },
+      "gross_spread_capture_atoms": 0,
+      "incremental_inventory_pnl_atoms": 0,
+      "initial_inventory_hold_pnl_atoms": 83695990,
+      "initialization": {
+        "base_cost_basis_atoms": 249967346125,
+        "bnb_cost_basis_atoms": 0,
+        "initial_base_units": 3101000,
+        "initial_bnb_units": 0,
+        "initial_equity_atoms": 500000000000,
+        "initial_quote_atoms": 250032653875,
+        "initial_valuation_price": 8060862500000,
+        "initial_valuation_time_ms": 1792835767799,
+        "realized_gross_atoms": 0
+      },
+      "markouts": [
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 1,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 5,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 30,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 60,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        }
+      ],
+      "max_drawdown_atoms": 39971890,
+      "net_mtm_atoms": 83695990,
+      "observed_duration_ms": 209915,
+      "open_orders": 0,
+      "rejection_reasons": [
+        "insufficient_simulated_fill_count",
+        "insufficient_observation_duration",
+        "no_positive_inventory_neutral_edge_after_fees_and_costs"
+      ],
+      "result_type": "historical_paper_simulation_not_exchange_execution",
+      "risk_allowance_atoms": 0,
+      "sensitivity": {
+        "cancel_latency_ms": 100,
+        "entry_latency_ms": 50,
+        "model": "conservative_through",
+        "name": "conservative",
+        "queue_multiplier_ppm": 1000000
+      },
+      "split": "test",
+      "spread_capture_less_fees_atoms": 0,
+      "spread_capture_less_fees_bps_per_executed_notional": null,
+      "strategy": "economic_fixed",
+      "submitted": 32,
+      "symbol": "BTCUSDT",
+      "trades": 859,
+      "window": {
+        "end_ms": 1792835977714,
+        "split": "test",
+        "start_ms": 1792835767715
+      }
+    },
+    {
+      "accepted": 32,
+      "accounting": {
+        "cost_basis": "moving average; fee-asset disposals recognize their valuation less allocated cost basis; fees deducted once",
+        "fees_atoms": 0,
+        "net_pnl_atoms": 83695990,
+        "realized_gross_atoms": 0,
+        "rebates_atoms": 0,
+        "reconciled": true,
+        "unrealized_gross_atoms": 83695990
+      },
+      "actual_exchange_executions": 0,
+      "books": 2091,
+      "cancelled": 32,
+      "capital_scope": "isolated_5000_alternatives_do_not_sum",
+      "capital_usdt": 5000,
+      "closeout_stress_atoms": 300076754,
+      "conservative_net_edge_bps_per_executed_notional": null,
+      "conservative_trading_pnl_atoms": -300076754,
+      "data_quality_valid": true,
+      "drawdown_stopped": false,
+      "eligible_positive_oos_row": false,
+      "ending_balances": {
+        "base_available": 3101000,
+        "base_reserved": 0,
+        "base_total": 3101000,
+        "bnb_available": 0,
+        "bnb_reserved": 0,
+        "bnb_total": 0,
+        "quote_available": 250032653875,
+        "quote_reserved": 0,
+        "quote_total": 250032653875
+      },
+      "excess_over_hold_atoms": 0,
+      "executed_notional_atoms": 0,
+      "fee_asset_assumption": "received",
+      "fee_assets": {},
+      "fees_atoms": 0,
+      "fills": 0,
+      "filtered_events": 52,
+      "funnel": {
+        "dependency_failures": {},
+        "existing_quote_retained_or_canceling": 496,
+        "fee_widened_opportunities": 0,
+        "generated_quote_intents": 32,
+        "quote_opportunities": 528,
+        "rejected_exchange_filters": 0,
+        "rejected_fee_constraints": 0,
+        "rejected_market_data": 0,
+        "rejected_risk_limits": 0,
+        "rejection_reasons": {},
+        "submitted_to_simulated_execution": 32
+      },
+      "gross_spread_capture_atoms": 0,
+      "incremental_inventory_pnl_atoms": 0,
+      "initial_inventory_hold_pnl_atoms": 83695990,
+      "initialization": {
+        "base_cost_basis_atoms": 249967346125,
+        "bnb_cost_basis_atoms": 0,
+        "initial_base_units": 3101000,
+        "initial_bnb_units": 0,
+        "initial_equity_atoms": 500000000000,
+        "initial_quote_atoms": 250032653875,
+        "initial_valuation_price": 8060862500000,
+        "initial_valuation_time_ms": 1792835767799,
+        "realized_gross_atoms": 0
+      },
+      "markouts": [
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 1,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 5,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 30,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 60,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        }
+      ],
+      "max_drawdown_atoms": 39971890,
+      "net_mtm_atoms": 83695990,
+      "observed_duration_ms": 209915,
+      "open_orders": 0,
+      "rejection_reasons": [
+        "insufficient_simulated_fill_count",
+        "insufficient_observation_duration",
+        "no_positive_inventory_neutral_edge_after_fees_and_costs"
+      ],
+      "result_type": "historical_paper_simulation_not_exchange_execution",
+      "risk_allowance_atoms": 0,
+      "sensitivity": {
+        "cancel_latency_ms": 100,
+        "entry_latency_ms": 50,
+        "model": "conservative_through",
+        "name": "conservative",
+        "queue_multiplier_ppm": 1000000
+      },
+      "split": "test",
+      "spread_capture_less_fees_atoms": 0,
+      "spread_capture_less_fees_bps_per_executed_notional": null,
+      "strategy": "adaptive_inventory",
+      "submitted": 32,
+      "symbol": "BTCUSDT",
+      "trades": 859,
+      "window": {
+        "end_ms": 1792835977714,
+        "split": "test",
+        "start_ms": 1792835767715
+      }
+    },
+    {
+      "accepted": 32,
+      "accounting": {
+        "cost_basis": "moving average; fee-asset disposals recognize their valuation less allocated cost basis; fees deducted once",
+        "fees_atoms": 0,
+        "net_pnl_atoms": 83695990,
+        "realized_gross_atoms": 0,
+        "rebates_atoms": 0,
+        "reconciled": true,
+        "unrealized_gross_atoms": 83695990
+      },
+      "actual_exchange_executions": 0,
+      "books": 2091,
+      "cancelled": 32,
+      "capital_scope": "isolated_5000_alternatives_do_not_sum",
+      "capital_usdt": 5000,
+      "closeout_stress_atoms": 300076754,
+      "conservative_net_edge_bps_per_executed_notional": null,
+      "conservative_trading_pnl_atoms": -300076754,
+      "data_quality_valid": true,
+      "drawdown_stopped": false,
+      "eligible_positive_oos_row": false,
+      "ending_balances": {
+        "base_available": 3101000,
+        "base_reserved": 0,
+        "base_total": 3101000,
+        "bnb_available": 0,
+        "bnb_reserved": 0,
+        "bnb_total": 0,
+        "quote_available": 250032653875,
+        "quote_reserved": 0,
+        "quote_total": 250032653875
+      },
+      "excess_over_hold_atoms": 0,
+      "executed_notional_atoms": 0,
+      "fee_asset_assumption": "received",
+      "fee_assets": {},
+      "fees_atoms": 0,
+      "fills": 0,
+      "filtered_events": 52,
+      "funnel": {
+        "dependency_failures": {},
+        "existing_quote_retained_or_canceling": 496,
+        "fee_widened_opportunities": 0,
+        "generated_quote_intents": 32,
+        "quote_opportunities": 528,
+        "rejected_exchange_filters": 0,
+        "rejected_fee_constraints": 0,
+        "rejected_market_data": 0,
+        "rejected_risk_limits": 0,
+        "rejection_reasons": {},
+        "submitted_to_simulated_execution": 32
+      },
+      "gross_spread_capture_atoms": 0,
+      "incremental_inventory_pnl_atoms": 0,
+      "initial_inventory_hold_pnl_atoms": 83695990,
+      "initialization": {
+        "base_cost_basis_atoms": 249967346125,
+        "bnb_cost_basis_atoms": 0,
+        "initial_base_units": 3101000,
+        "initial_bnb_units": 0,
+        "initial_equity_atoms": 500000000000,
+        "initial_quote_atoms": 250032653875,
+        "initial_valuation_price": 8060862500000,
+        "initial_valuation_time_ms": 1792835767799,
+        "realized_gross_atoms": 0
+      },
+      "markouts": [
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 1,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 5,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 30,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 60,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        }
+      ],
+      "max_drawdown_atoms": 39971890,
+      "net_mtm_atoms": 83695990,
+      "observed_duration_ms": 209915,
+      "open_orders": 0,
+      "rejection_reasons": [
+        "insufficient_simulated_fill_count",
+        "insufficient_observation_duration",
+        "no_positive_inventory_neutral_edge_after_fees_and_costs"
+      ],
+      "result_type": "historical_paper_simulation_not_exchange_execution",
+      "risk_allowance_atoms": 0,
+      "sensitivity": {
+        "cancel_latency_ms": 100,
+        "entry_latency_ms": 50,
+        "model": "conservative_through",
+        "name": "conservative",
+        "queue_multiplier_ppm": 1000000
+      },
+      "split": "test",
+      "spread_capture_less_fees_atoms": 0,
+      "spread_capture_less_fees_bps_per_executed_notional": null,
+      "strategy": "adaptive_filtered",
+      "submitted": 32,
+      "symbol": "BTCUSDT",
+      "trades": 859,
+      "window": {
+        "end_ms": 1792835977714,
+        "split": "test",
+        "start_ms": 1792835767715
+      }
+    },
+    {
+      "accepted": 36,
+      "accounting": {
+        "cost_basis": "moving average; fee-asset disposals recognize their valuation less allocated cost basis; fees deducted once",
+        "fees_atoms": 29991922,
+        "net_pnl_atoms": 50069801,
+        "realized_gross_atoms": 2499513,
+        "rebates_atoms": 0,
+        "reconciled": true,
+        "unrealized_gross_atoms": 77562210
+      },
+      "actual_exchange_executions": 0,
+      "books": 2091,
+      "cancelled": 33,
+      "capital_scope": "isolated_5000_alternatives_do_not_sum",
+      "capital_usdt": 5000,
+      "closeout_stress_atoms": 288065555,
+      "conservative_net_edge_bps_per_executed_notional": -111.06692061790085,
+      "conservative_trading_pnl_atoms": -333111030,
+      "data_quality_valid": true,
+      "drawdown_stopped": false,
+      "eligible_positive_oos_row": false,
+      "ending_balances": {
+        "base_available": 2976876,
+        "base_reserved": 0,
+        "base_total": 2976876,
+        "bnb_available": 0,
+        "bnb_reserved": 0,
+        "bnb_total": 0,
+        "quote_available": 260007842763,
+        "quote_reserved": 0,
+        "quote_total": 260007842763
+      },
+      "excess_over_hold_atoms": -33626189,
+      "executed_notional_atoms": 29991920920,
+      "fee_asset_assumption": "received",
+      "fee_assets": {
+        "BTC": 124,
+        "USDT": 19993552
+      },
+      "fees_atoms": 29991922,
+      "fills": 3,
+      "filtered_events": 0,
+      "funnel": {
+        "dependency_failures": {},
+        "existing_quote_retained_or_canceling": 508,
+        "fee_widened_opportunities": 0,
+        "generated_quote_intents": 36,
+        "quote_opportunities": 544,
+        "rejected_exchange_filters": 0,
+        "rejected_fee_constraints": 0,
+        "rejected_market_data": 0,
+        "rejected_risk_limits": 0,
+        "rejection_reasons": {},
+        "submitted_to_simulated_execution": 36
+      },
+      "gross_spread_capture_atoms": 1860,
+      "incremental_inventory_pnl_atoms": -3636127,
+      "initial_inventory_hold_pnl_atoms": 83695990,
+      "initialization": {
+        "base_cost_basis_atoms": 239964664828,
+        "bnb_cost_basis_atoms": 0,
+        "initial_base_units": 3101000,
+        "initial_bnb_units": 0,
+        "initial_equity_atoms": 500000000000,
+        "initial_quote_atoms": 250032653875,
+        "initial_valuation_price": 8060862500000,
+        "initial_valuation_time_ms": 1792835767799,
+        "realized_gross_atoms": 2499513
+      },
+      "markouts": [
+        {
+          "completed": 3,
+          "missing": 0,
+          "seconds": 1,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 3,
+          "missing": 0,
+          "seconds": 5,
+          "signed_adverse_atoms": 659680,
+          "unfavorable_adverse_atoms": 659680
+        },
+        {
+          "completed": 3,
+          "missing": 0,
+          "seconds": 30,
+          "signed_adverse_atoms": 5560160,
+          "unfavorable_adverse_atoms": 5560160
+        },
+        {
+          "completed": 3,
+          "missing": 0,
+          "seconds": 60,
+          "signed_adverse_atoms": 2529600,
+          "unfavorable_adverse_atoms": 4558240
+        }
+      ],
+      "max_drawdown_atoms": 45988132,
+      "net_mtm_atoms": 50069801,
+      "observed_duration_ms": 209915,
+      "open_orders": 0,
+      "rejection_reasons": [
+        "research_only_uneconomic_control",
+        "insufficient_simulated_fill_count",
+        "insufficient_observation_duration",
+        "no_positive_inventory_neutral_edge_after_fees_and_costs"
+      ],
+      "result_type": "historical_paper_simulation_not_exchange_execution",
+      "risk_allowance_atoms": 10497173,
+      "sensitivity": {
+        "cancel_latency_ms": 100,
+        "entry_latency_ms": 50,
+        "model": "conservative_through",
+        "name": "conservative",
+        "queue_multiplier_ppm": 1000000
+      },
+      "split": "test",
+      "spread_capture_less_fees_atoms": -29990062,
+      "spread_capture_less_fees_bps_per_executed_notional": -9.999380193084345,
+      "strategy": "research_touch_control",
+      "submitted": 36,
+      "symbol": "BTCUSDT",
+      "trades": 859,
+      "window": {
+        "end_ms": 1792835977714,
+        "split": "test",
+        "start_ms": 1792835767715
+      }
+    },
+    {
+      "accepted": 50,
+      "accounting": {
+        "cost_basis": "moving average; fee-asset disposals recognize their valuation less allocated cost basis; fees deducted once",
+        "fees_atoms": 0,
+        "net_pnl_atoms": 83455600,
+        "realized_gross_atoms": 0,
+        "rebates_atoms": 0,
+        "reconciled": true,
+        "unrealized_gross_atoms": 83455600
+      },
+      "actual_exchange_executions": 0,
+      "books": 2021,
+      "cancelled": 50,
+      "capital_scope": "isolated_5000_alternatives_do_not_sum",
+      "capital_usdt": 5000,
+      "closeout_stress_atoms": 300612671,
+      "conservative_net_edge_bps_per_executed_notional": null,
+      "conservative_trading_pnl_atoms": -300612671,
+      "data_quality_valid": true,
+      "drawdown_stopped": false,
+      "eligible_positive_oos_row": false,
+      "ending_balances": {
+        "base_available": 105640000,
+        "base_reserved": 0,
+        "base_total": 105640000,
+        "bnb_available": 0,
+        "bnb_reserved": 0,
+        "bnb_total": 0,
+        "quote_available": 250012975800,
+        "quote_reserved": 0,
+        "quote_total": 250012975800
+      },
+      "excess_over_hold_atoms": 0,
+      "executed_notional_atoms": 0,
+      "fee_asset_assumption": "received",
+      "fee_assets": {},
+      "fees_atoms": 0,
+      "fills": 0,
+      "filtered_events": 0,
+      "funnel": {
+        "dependency_failures": {},
+        "existing_quote_retained_or_canceling": 486,
+        "fee_widened_opportunities": 0,
+        "generated_quote_intents": 50,
+        "quote_opportunities": 536,
+        "rejected_exchange_filters": 0,
+        "rejected_fee_constraints": 0,
+        "rejected_market_data": 0,
+        "rejected_risk_limits": 0,
+        "rejection_reasons": {},
+        "submitted_to_simulated_execution": 50
+      },
+      "gross_spread_capture_atoms": 0,
+      "incremental_inventory_pnl_atoms": 0,
+      "initial_inventory_hold_pnl_atoms": 83455600,
+      "initialization": {
+        "base_cost_basis_atoms": 249987024200,
+        "bnb_cost_basis_atoms": 0,
+        "initial_base_units": 105640000,
+        "initial_bnb_units": 0,
+        "initial_equity_atoms": 500000000000,
+        "initial_quote_atoms": 250012975800,
+        "initial_valuation_price": 236640500000,
+        "initial_valuation_time_ms": 1792835769004,
+        "realized_gross_atoms": 0
+      },
+      "markouts": [
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 1,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 5,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 30,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 60,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        }
+      ],
+      "max_drawdown_atoms": 169024000,
+      "net_mtm_atoms": 83455600,
+      "observed_duration_ms": 208710,
+      "open_orders": 0,
+      "rejection_reasons": [
+        "insufficient_simulated_fill_count",
+        "insufficient_observation_duration",
+        "no_positive_inventory_neutral_edge_after_fees_and_costs"
+      ],
+      "result_type": "historical_paper_simulation_not_exchange_execution",
+      "risk_allowance_atoms": 0,
+      "sensitivity": {
+        "cancel_latency_ms": 100,
+        "entry_latency_ms": 50,
+        "model": "conservative_through",
+        "name": "conservative",
+        "queue_multiplier_ppm": 1000000
+      },
+      "split": "test",
+      "spread_capture_less_fees_atoms": 0,
+      "spread_capture_less_fees_bps_per_executed_notional": null,
+      "strategy": "economic_fixed",
+      "submitted": 50,
+      "symbol": "ETHUSDT",
+      "trades": 637,
+      "window": {
+        "end_ms": 1792835977714,
+        "split": "test",
+        "start_ms": 1792835768915
+      }
+    },
+    {
+      "accepted": 50,
+      "accounting": {
+        "cost_basis": "moving average; fee-asset disposals recognize their valuation less allocated cost basis; fees deducted once",
+        "fees_atoms": 0,
+        "net_pnl_atoms": 83455600,
+        "realized_gross_atoms": 0,
+        "rebates_atoms": 0,
+        "reconciled": true,
+        "unrealized_gross_atoms": 83455600
+      },
+      "actual_exchange_executions": 0,
+      "books": 2021,
+      "cancelled": 50,
+      "capital_scope": "isolated_5000_alternatives_do_not_sum",
+      "capital_usdt": 5000,
+      "closeout_stress_atoms": 300612671,
+      "conservative_net_edge_bps_per_executed_notional": null,
+      "conservative_trading_pnl_atoms": -300612671,
+      "data_quality_valid": true,
+      "drawdown_stopped": false,
+      "eligible_positive_oos_row": false,
+      "ending_balances": {
+        "base_available": 105640000,
+        "base_reserved": 0,
+        "base_total": 105640000,
+        "bnb_available": 0,
+        "bnb_reserved": 0,
+        "bnb_total": 0,
+        "quote_available": 250012975800,
+        "quote_reserved": 0,
+        "quote_total": 250012975800
+      },
+      "excess_over_hold_atoms": 0,
+      "executed_notional_atoms": 0,
+      "fee_asset_assumption": "received",
+      "fee_assets": {},
+      "fees_atoms": 0,
+      "fills": 0,
+      "filtered_events": 42,
+      "funnel": {
+        "dependency_failures": {},
+        "existing_quote_retained_or_canceling": 472,
+        "fee_widened_opportunities": 0,
+        "generated_quote_intents": 50,
+        "quote_opportunities": 522,
+        "rejected_exchange_filters": 0,
+        "rejected_fee_constraints": 0,
+        "rejected_market_data": 0,
+        "rejected_risk_limits": 0,
+        "rejection_reasons": {},
+        "submitted_to_simulated_execution": 50
+      },
+      "gross_spread_capture_atoms": 0,
+      "incremental_inventory_pnl_atoms": 0,
+      "initial_inventory_hold_pnl_atoms": 83455600,
+      "initialization": {
+        "base_cost_basis_atoms": 249987024200,
+        "bnb_cost_basis_atoms": 0,
+        "initial_base_units": 105640000,
+        "initial_bnb_units": 0,
+        "initial_equity_atoms": 500000000000,
+        "initial_quote_atoms": 250012975800,
+        "initial_valuation_price": 236640500000,
+        "initial_valuation_time_ms": 1792835769004,
+        "realized_gross_atoms": 0
+      },
+      "markouts": [
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 1,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 5,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 30,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 60,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        }
+      ],
+      "max_drawdown_atoms": 169024000,
+      "net_mtm_atoms": 83455600,
+      "observed_duration_ms": 208710,
+      "open_orders": 0,
+      "rejection_reasons": [
+        "insufficient_simulated_fill_count",
+        "insufficient_observation_duration",
+        "no_positive_inventory_neutral_edge_after_fees_and_costs"
+      ],
+      "result_type": "historical_paper_simulation_not_exchange_execution",
+      "risk_allowance_atoms": 0,
+      "sensitivity": {
+        "cancel_latency_ms": 100,
+        "entry_latency_ms": 50,
+        "model": "conservative_through",
+        "name": "conservative",
+        "queue_multiplier_ppm": 1000000
+      },
+      "split": "test",
+      "spread_capture_less_fees_atoms": 0,
+      "spread_capture_less_fees_bps_per_executed_notional": null,
+      "strategy": "adaptive_inventory",
+      "submitted": 50,
+      "symbol": "ETHUSDT",
+      "trades": 637,
+      "window": {
+        "end_ms": 1792835977714,
+        "split": "test",
+        "start_ms": 1792835768915
+      }
+    },
+    {
+      "accepted": 50,
+      "accounting": {
+        "cost_basis": "moving average; fee-asset disposals recognize their valuation less allocated cost basis; fees deducted once",
+        "fees_atoms": 0,
+        "net_pnl_atoms": 83455600,
+        "realized_gross_atoms": 0,
+        "rebates_atoms": 0,
+        "reconciled": true,
+        "unrealized_gross_atoms": 83455600
+      },
+      "actual_exchange_executions": 0,
+      "books": 2021,
+      "cancelled": 50,
+      "capital_scope": "isolated_5000_alternatives_do_not_sum",
+      "capital_usdt": 5000,
+      "closeout_stress_atoms": 300612671,
+      "conservative_net_edge_bps_per_executed_notional": null,
+      "conservative_trading_pnl_atoms": -300612671,
+      "data_quality_valid": true,
+      "drawdown_stopped": false,
+      "eligible_positive_oos_row": false,
+      "ending_balances": {
+        "base_available": 105640000,
+        "base_reserved": 0,
+        "base_total": 105640000,
+        "bnb_available": 0,
+        "bnb_reserved": 0,
+        "bnb_total": 0,
+        "quote_available": 250012975800,
+        "quote_reserved": 0,
+        "quote_total": 250012975800
+      },
+      "excess_over_hold_atoms": 0,
+      "executed_notional_atoms": 0,
+      "fee_asset_assumption": "received",
+      "fee_assets": {},
+      "fees_atoms": 0,
+      "fills": 0,
+      "filtered_events": 42,
+      "funnel": {
+        "dependency_failures": {},
+        "existing_quote_retained_or_canceling": 472,
+        "fee_widened_opportunities": 0,
+        "generated_quote_intents": 50,
+        "quote_opportunities": 522,
+        "rejected_exchange_filters": 0,
+        "rejected_fee_constraints": 0,
+        "rejected_market_data": 0,
+        "rejected_risk_limits": 0,
+        "rejection_reasons": {},
+        "submitted_to_simulated_execution": 50
+      },
+      "gross_spread_capture_atoms": 0,
+      "incremental_inventory_pnl_atoms": 0,
+      "initial_inventory_hold_pnl_atoms": 83455600,
+      "initialization": {
+        "base_cost_basis_atoms": 249987024200,
+        "bnb_cost_basis_atoms": 0,
+        "initial_base_units": 105640000,
+        "initial_bnb_units": 0,
+        "initial_equity_atoms": 500000000000,
+        "initial_quote_atoms": 250012975800,
+        "initial_valuation_price": 236640500000,
+        "initial_valuation_time_ms": 1792835769004,
+        "realized_gross_atoms": 0
+      },
+      "markouts": [
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 1,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 5,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 30,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 60,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        }
+      ],
+      "max_drawdown_atoms": 169024000,
+      "net_mtm_atoms": 83455600,
+      "observed_duration_ms": 208710,
+      "open_orders": 0,
+      "rejection_reasons": [
+        "insufficient_simulated_fill_count",
+        "insufficient_observation_duration",
+        "no_positive_inventory_neutral_edge_after_fees_and_costs"
+      ],
+      "result_type": "historical_paper_simulation_not_exchange_execution",
+      "risk_allowance_atoms": 0,
+      "sensitivity": {
+        "cancel_latency_ms": 100,
+        "entry_latency_ms": 50,
+        "model": "conservative_through",
+        "name": "conservative",
+        "queue_multiplier_ppm": 1000000
+      },
+      "split": "test",
+      "spread_capture_less_fees_atoms": 0,
+      "spread_capture_less_fees_bps_per_executed_notional": null,
+      "strategy": "adaptive_filtered",
+      "submitted": 50,
+      "symbol": "ETHUSDT",
+      "trades": 637,
+      "window": {
+        "end_ms": 1792835977714,
+        "split": "test",
+        "start_ms": 1792835768915
+      }
+    },
+    {
+      "accepted": 50,
+      "accounting": {
+        "cost_basis": "moving average; fee-asset disposals recognize their valuation less allocated cost basis; fees deducted once",
+        "fees_atoms": 19979506,
+        "net_pnl_atoms": 63855894,
+        "realized_gross_atoms": 7047400,
+        "rebates_atoms": 0,
+        "reconciled": true,
+        "unrealized_gross_atoms": 76788000
+      },
+      "actual_exchange_executions": 0,
+      "books": 2021,
+      "cancelled": 48,
+      "capital_scope": "isolated_5000_alternatives_do_not_sum",
+      "capital_usdt": 5000,
+      "closeout_stress_atoms": 276595528,
+      "conservative_net_edge_bps_per_executed_notional": -155.2134808581049,
+      "conservative_trading_pnl_atoms": -310108861,
+      "data_quality_valid": true,
+      "drawdown_stopped": false,
+      "eligible_positive_oos_row": false,
+      "ending_balances": {
+        "base_available": 97200000,
+        "base_reserved": 0,
+        "base_total": 97200000,
+        "bnb_available": 0,
+        "bnb_reserved": 0,
+        "bnb_total": 0,
+        "quote_available": 269972501894,
+        "quote_reserved": 0,
+        "quote_total": 269972501894
+      },
+      "excess_over_hold_atoms": -19599706,
+      "executed_notional_atoms": 19979505600,
+      "fee_asset_assumption": "received",
+      "fee_assets": {
+        "USDT": 19979506
+      },
+      "fees_atoms": 19979506,
+      "fills": 2,
+      "filtered_events": 0,
+      "funnel": {
+        "dependency_failures": {},
+        "existing_quote_retained_or_canceling": 486,
+        "fee_widened_opportunities": 0,
+        "generated_quote_intents": 50,
+        "quote_opportunities": 536,
+        "rejected_exchange_filters": 0,
+        "rejected_fee_constraints": 0,
+        "rejected_market_data": 0,
+        "rejected_risk_limits": 0,
+        "rejection_reasons": {},
+        "submitted_to_simulated_execution": 50
+      },
+      "gross_spread_capture_atoms": 1055000,
+      "incremental_inventory_pnl_atoms": -675200,
+      "initial_inventory_hold_pnl_atoms": 83455600,
+      "initialization": {
+        "base_cost_basis_atoms": 230014566000,
+        "bnb_cost_basis_atoms": 0,
+        "initial_base_units": 105640000,
+        "initial_bnb_units": 0,
+        "initial_equity_atoms": 500000000000,
+        "initial_quote_atoms": 250012975800,
+        "initial_valuation_price": 236640500000,
+        "initial_valuation_time_ms": 1792835769004,
+        "realized_gross_atoms": 7047400
+      },
+      "markouts": [
+        {
+          "completed": 2,
+          "missing": 0,
+          "seconds": 1,
+          "signed_adverse_atoms": 4768600,
+          "unfavorable_adverse_atoms": 4768600
+        },
+        {
+          "completed": 2,
+          "missing": 0,
+          "seconds": 5,
+          "signed_adverse_atoms": 6203400,
+          "unfavorable_adverse_atoms": 6203400
+        },
+        {
+          "completed": 2,
+          "missing": 0,
+          "seconds": 30,
+          "signed_adverse_atoms": 2363200,
+          "unfavorable_adverse_atoms": 3122800
+        },
+        {
+          "completed": 2,
+          "missing": 0,
+          "seconds": 60,
+          "signed_adverse_atoms": 7596000,
+          "unfavorable_adverse_atoms": 7596000
+        }
+      ],
+      "max_drawdown_atoms": 155520000,
+      "net_mtm_atoms": 63855894,
+      "observed_duration_ms": 208710,
+      "open_orders": 0,
+      "rejection_reasons": [
+        "research_only_uneconomic_control",
+        "insufficient_simulated_fill_count",
+        "insufficient_observation_duration",
+        "no_positive_inventory_neutral_edge_after_fees_and_costs"
+      ],
+      "result_type": "historical_paper_simulation_not_exchange_execution",
+      "risk_allowance_atoms": 6992827,
+      "sensitivity": {
+        "cancel_latency_ms": 100,
+        "entry_latency_ms": 50,
+        "model": "conservative_through",
+        "name": "conservative",
+        "queue_multiplier_ppm": 1000000
+      },
+      "split": "test",
+      "spread_capture_less_fees_atoms": -18924506,
+      "spread_capture_less_fees_bps_per_executed_notional": -9.471959105935033,
+      "strategy": "research_touch_control",
+      "submitted": 50,
+      "symbol": "ETHUSDT",
+      "trades": 637,
+      "window": {
+        "end_ms": 1792835977714,
+        "split": "test",
+        "start_ms": 1792835768915
+      }
+    },
+    {
+      "accepted": 22,
+      "accounting": {
+        "cost_basis": "moving average; fee-asset disposals recognize their valuation less allocated cost basis; fees deducted once",
+        "fees_atoms": 0,
+        "net_pnl_atoms": 222030000,
+        "realized_gross_atoms": 0,
+        "rebates_atoms": 0,
+        "reconciled": true,
+        "unrealized_gross_atoms": 222030000
+      },
+      "actual_exchange_executions": 0,
+      "books": 1489,
+      "cancelled": 22,
+      "capital_scope": "isolated_5000_alternatives_do_not_sum",
+      "capital_usdt": 5000,
+      "closeout_stress_atoms": 312591103,
+      "conservative_net_edge_bps_per_executed_notional": null,
+      "conservative_trading_pnl_atoms": -312591103,
+      "data_quality_valid": true,
+      "drawdown_stopped": false,
+      "eligible_positive_oos_row": false,
+      "ending_balances": {
+        "base_available": 2467000000,
+        "base_reserved": 0,
+        "base_total": 2467000000,
+        "bnb_available": 0,
+        "bnb_reserved": 0,
+        "bnb_total": 0,
+        "quote_available": 250006555000,
+        "quote_reserved": 0,
+        "quote_total": 250006555000
+      },
+      "excess_over_hold_atoms": 0,
+      "executed_notional_atoms": 0,
+      "fee_asset_assumption": "received",
+      "fee_assets": {},
+      "fees_atoms": 0,
+      "fills": 0,
+      "filtered_events": 0,
+      "funnel": {
+        "dependency_failures": {},
+        "existing_quote_retained_or_canceling": 474,
+        "fee_widened_opportunities": 0,
+        "generated_quote_intents": 22,
+        "quote_opportunities": 496,
+        "rejected_exchange_filters": 0,
+        "rejected_fee_constraints": 0,
+        "rejected_market_data": 0,
+        "rejected_risk_limits": 0,
+        "rejection_reasons": {},
+        "submitted_to_simulated_execution": 22
+      },
+      "gross_spread_capture_atoms": 0,
+      "incremental_inventory_pnl_atoms": 0,
+      "initial_inventory_hold_pnl_atoms": 222030000,
+      "initialization": {
+        "base_cost_basis_atoms": 249993445000,
+        "bnb_cost_basis_atoms": 0,
+        "initial_base_units": 2467000000,
+        "initial_bnb_units": 0,
+        "initial_equity_atoms": 500000000000,
+        "initial_quote_atoms": 250006555000,
+        "initial_valuation_price": 10133500000,
+        "initial_valuation_time_ms": 1792835770179,
+        "realized_gross_atoms": 0
+      },
+      "markouts": [
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 1,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 5,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 30,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 60,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        }
+      ],
+      "max_drawdown_atoms": 197360000,
+      "net_mtm_atoms": 222030000,
+      "observed_duration_ms": 207535,
+      "open_orders": 0,
+      "rejection_reasons": [
+        "insufficient_simulated_fill_count",
+        "insufficient_observation_duration",
+        "no_positive_inventory_neutral_edge_after_fees_and_costs"
+      ],
+      "result_type": "historical_paper_simulation_not_exchange_execution",
+      "risk_allowance_atoms": 0,
+      "sensitivity": {
+        "cancel_latency_ms": 100,
+        "entry_latency_ms": 50,
+        "model": "conservative_through",
+        "name": "conservative",
+        "queue_multiplier_ppm": 1000000
+      },
+      "split": "test",
+      "spread_capture_less_fees_atoms": 0,
+      "spread_capture_less_fees_bps_per_executed_notional": null,
+      "strategy": "economic_fixed",
+      "submitted": 22,
+      "symbol": "SOLUSDT",
+      "trades": 248,
+      "window": {
+        "end_ms": 1792835977714,
+        "split": "test",
+        "start_ms": 1792835770115
+      }
+    },
+    {
+      "accepted": 22,
+      "accounting": {
+        "cost_basis": "moving average; fee-asset disposals recognize their valuation less allocated cost basis; fees deducted once",
+        "fees_atoms": 0,
+        "net_pnl_atoms": 222030000,
+        "realized_gross_atoms": 0,
+        "rebates_atoms": 0,
+        "reconciled": true,
+        "unrealized_gross_atoms": 222030000
+      },
+      "actual_exchange_executions": 0,
+      "books": 1489,
+      "cancelled": 22,
+      "capital_scope": "isolated_5000_alternatives_do_not_sum",
+      "capital_usdt": 5000,
+      "closeout_stress_atoms": 312591103,
+      "conservative_net_edge_bps_per_executed_notional": null,
+      "conservative_trading_pnl_atoms": -312591103,
+      "data_quality_valid": true,
+      "drawdown_stopped": false,
+      "eligible_positive_oos_row": false,
+      "ending_balances": {
+        "base_available": 2467000000,
+        "base_reserved": 0,
+        "base_total": 2467000000,
+        "bnb_available": 0,
+        "bnb_reserved": 0,
+        "bnb_total": 0,
+        "quote_available": 250006555000,
+        "quote_reserved": 0,
+        "quote_total": 250006555000
+      },
+      "excess_over_hold_atoms": 0,
+      "executed_notional_atoms": 0,
+      "fee_asset_assumption": "received",
+      "fee_assets": {},
+      "fees_atoms": 0,
+      "fills": 0,
+      "filtered_events": 38,
+      "funnel": {
+        "dependency_failures": {},
+        "existing_quote_retained_or_canceling": 458,
+        "fee_widened_opportunities": 0,
+        "generated_quote_intents": 22,
+        "quote_opportunities": 480,
+        "rejected_exchange_filters": 0,
+        "rejected_fee_constraints": 0,
+        "rejected_market_data": 0,
+        "rejected_risk_limits": 0,
+        "rejection_reasons": {},
+        "submitted_to_simulated_execution": 22
+      },
+      "gross_spread_capture_atoms": 0,
+      "incremental_inventory_pnl_atoms": 0,
+      "initial_inventory_hold_pnl_atoms": 222030000,
+      "initialization": {
+        "base_cost_basis_atoms": 249993445000,
+        "bnb_cost_basis_atoms": 0,
+        "initial_base_units": 2467000000,
+        "initial_bnb_units": 0,
+        "initial_equity_atoms": 500000000000,
+        "initial_quote_atoms": 250006555000,
+        "initial_valuation_price": 10133500000,
+        "initial_valuation_time_ms": 1792835770179,
+        "realized_gross_atoms": 0
+      },
+      "markouts": [
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 1,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 5,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 30,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 60,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        }
+      ],
+      "max_drawdown_atoms": 197360000,
+      "net_mtm_atoms": 222030000,
+      "observed_duration_ms": 207535,
+      "open_orders": 0,
+      "rejection_reasons": [
+        "insufficient_simulated_fill_count",
+        "insufficient_observation_duration",
+        "no_positive_inventory_neutral_edge_after_fees_and_costs"
+      ],
+      "result_type": "historical_paper_simulation_not_exchange_execution",
+      "risk_allowance_atoms": 0,
+      "sensitivity": {
+        "cancel_latency_ms": 100,
+        "entry_latency_ms": 50,
+        "model": "conservative_through",
+        "name": "conservative",
+        "queue_multiplier_ppm": 1000000
+      },
+      "split": "test",
+      "spread_capture_less_fees_atoms": 0,
+      "spread_capture_less_fees_bps_per_executed_notional": null,
+      "strategy": "adaptive_inventory",
+      "submitted": 22,
+      "symbol": "SOLUSDT",
+      "trades": 248,
+      "window": {
+        "end_ms": 1792835977714,
+        "split": "test",
+        "start_ms": 1792835770115
+      }
+    },
+    {
+      "accepted": 22,
+      "accounting": {
+        "cost_basis": "moving average; fee-asset disposals recognize their valuation less allocated cost basis; fees deducted once",
+        "fees_atoms": 0,
+        "net_pnl_atoms": 222030000,
+        "realized_gross_atoms": 0,
+        "rebates_atoms": 0,
+        "reconciled": true,
+        "unrealized_gross_atoms": 222030000
+      },
+      "actual_exchange_executions": 0,
+      "books": 1489,
+      "cancelled": 22,
+      "capital_scope": "isolated_5000_alternatives_do_not_sum",
+      "capital_usdt": 5000,
+      "closeout_stress_atoms": 312591103,
+      "conservative_net_edge_bps_per_executed_notional": null,
+      "conservative_trading_pnl_atoms": -312591103,
+      "data_quality_valid": true,
+      "drawdown_stopped": false,
+      "eligible_positive_oos_row": false,
+      "ending_balances": {
+        "base_available": 2467000000,
+        "base_reserved": 0,
+        "base_total": 2467000000,
+        "bnb_available": 0,
+        "bnb_reserved": 0,
+        "bnb_total": 0,
+        "quote_available": 250006555000,
+        "quote_reserved": 0,
+        "quote_total": 250006555000
+      },
+      "excess_over_hold_atoms": 0,
+      "executed_notional_atoms": 0,
+      "fee_asset_assumption": "received",
+      "fee_assets": {},
+      "fees_atoms": 0,
+      "fills": 0,
+      "filtered_events": 43,
+      "funnel": {
+        "dependency_failures": {},
+        "existing_quote_retained_or_canceling": 456,
+        "fee_widened_opportunities": 0,
+        "generated_quote_intents": 22,
+        "quote_opportunities": 478,
+        "rejected_exchange_filters": 0,
+        "rejected_fee_constraints": 0,
+        "rejected_market_data": 0,
+        "rejected_risk_limits": 0,
+        "rejection_reasons": {},
+        "submitted_to_simulated_execution": 22
+      },
+      "gross_spread_capture_atoms": 0,
+      "incremental_inventory_pnl_atoms": 0,
+      "initial_inventory_hold_pnl_atoms": 222030000,
+      "initialization": {
+        "base_cost_basis_atoms": 249993445000,
+        "bnb_cost_basis_atoms": 0,
+        "initial_base_units": 2467000000,
+        "initial_bnb_units": 0,
+        "initial_equity_atoms": 500000000000,
+        "initial_quote_atoms": 250006555000,
+        "initial_valuation_price": 10133500000,
+        "initial_valuation_time_ms": 1792835770179,
+        "realized_gross_atoms": 0
+      },
+      "markouts": [
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 1,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 5,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 30,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 60,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        }
+      ],
+      "max_drawdown_atoms": 197360000,
+      "net_mtm_atoms": 222030000,
+      "observed_duration_ms": 207535,
+      "open_orders": 0,
+      "rejection_reasons": [
+        "insufficient_simulated_fill_count",
+        "insufficient_observation_duration",
+        "no_positive_inventory_neutral_edge_after_fees_and_costs"
+      ],
+      "result_type": "historical_paper_simulation_not_exchange_execution",
+      "risk_allowance_atoms": 0,
+      "sensitivity": {
+        "cancel_latency_ms": 100,
+        "entry_latency_ms": 50,
+        "model": "conservative_through",
+        "name": "conservative",
+        "queue_multiplier_ppm": 1000000
+      },
+      "split": "test",
+      "spread_capture_less_fees_atoms": 0,
+      "spread_capture_less_fees_bps_per_executed_notional": null,
+      "strategy": "adaptive_filtered",
+      "submitted": 22,
+      "symbol": "SOLUSDT",
+      "trades": 248,
+      "window": {
+        "end_ms": 1792835977714,
+        "split": "test",
+        "start_ms": 1792835770115
+      }
+    },
+    {
+      "accepted": 23,
+      "accounting": {
+        "cost_basis": "moving average; fee-asset disposals recognize their valuation less allocated cost basis; fees deducted once",
+        "fees_atoms": 19994108,
+        "net_pnl_atoms": 195133892,
+        "realized_gross_atoms": 10846000,
+        "rebates_atoms": 0,
+        "reconciled": true,
+        "unrealized_gross_atoms": 204282000
+      },
+      "actual_exchange_executions": 0,
+      "books": 1489,
+      "cancelled": 21,
+      "capital_scope": "isolated_5000_alternatives_do_not_sum",
+      "capital_usdt": 5000,
+      "closeout_stress_atoms": 287604089,
+      "conservative_net_edge_bps_per_executed_notional": -160.7964381306733,
+      "conservative_trading_pnl_atoms": -321498135,
+      "data_quality_valid": true,
+      "drawdown_stopped": false,
+      "eligible_positive_oos_row": false,
+      "ending_balances": {
+        "base_available": 2269800000,
+        "base_reserved": 0,
+        "base_total": 2269800000,
+        "bnb_available": 0,
+        "bnb_reserved": 0,
+        "bnb_total": 0,
+        "quote_available": 269980668892,
+        "quote_reserved": 0,
+        "quote_total": 269980668892
+      },
+      "excess_over_hold_atoms": -26896108,
+      "executed_notional_atoms": 19994108000,
+      "fee_asset_assumption": "received",
+      "fee_assets": {
+        "USDT": 19994108
+      },
+      "fees_atoms": 19994108,
+      "fills": 2,
+      "filtered_events": 0,
+      "funnel": {
+        "dependency_failures": {},
+        "existing_quote_retained_or_canceling": 473,
+        "fee_widened_opportunities": 0,
+        "generated_quote_intents": 23,
+        "quote_opportunities": 496,
+        "rejected_exchange_filters": 0,
+        "rejected_fee_constraints": 0,
+        "rejected_market_data": 0,
+        "rejected_risk_limits": 0,
+        "rejection_reasons": {},
+        "submitted_to_simulated_execution": 23
+      },
+      "gross_spread_capture_atoms": 0,
+      "incremental_inventory_pnl_atoms": -6902000,
+      "initial_inventory_hold_pnl_atoms": 222030000,
+      "initialization": {
+        "base_cost_basis_atoms": 230010183000,
+        "bnb_cost_basis_atoms": 0,
+        "initial_base_units": 2467000000,
+        "initial_bnb_units": 0,
+        "initial_equity_atoms": 500000000000,
+        "initial_quote_atoms": 250006555000,
+        "initial_valuation_price": 10133500000,
+        "initial_valuation_time_ms": 1792835770179,
+        "realized_gross_atoms": 10846000
+      },
+      "markouts": [
+        {
+          "completed": 2,
+          "missing": 0,
+          "seconds": 1,
+          "signed_adverse_atoms": 986000,
+          "unfavorable_adverse_atoms": 986000
+        },
+        {
+          "completed": 2,
+          "missing": 0,
+          "seconds": 5,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 1972000
+        },
+        {
+          "completed": 2,
+          "missing": 0,
+          "seconds": 30,
+          "signed_adverse_atoms": -1972000,
+          "unfavorable_adverse_atoms": 1972000
+        },
+        {
+          "completed": 2,
+          "missing": 0,
+          "seconds": 60,
+          "signed_adverse_atoms": 986000,
+          "unfavorable_adverse_atoms": 1972000
+        }
+      ],
+      "max_drawdown_atoms": 181584000,
+      "net_mtm_atoms": 195133892,
+      "observed_duration_ms": 207535,
+      "open_orders": 0,
+      "rejection_reasons": [
+        "research_only_uneconomic_control",
+        "insufficient_simulated_fill_count",
+        "insufficient_observation_duration",
+        "no_positive_inventory_neutral_edge_after_fees_and_costs"
+      ],
+      "result_type": "historical_paper_simulation_not_exchange_execution",
+      "risk_allowance_atoms": 6997938,
+      "sensitivity": {
+        "cancel_latency_ms": 100,
+        "entry_latency_ms": 50,
+        "model": "conservative_through",
+        "name": "conservative",
+        "queue_multiplier_ppm": 1000000
+      },
+      "split": "test",
+      "spread_capture_less_fees_atoms": -19994108,
+      "spread_capture_less_fees_bps_per_executed_notional": -10.0,
+      "strategy": "research_touch_control",
+      "submitted": 23,
+      "symbol": "SOLUSDT",
+      "trades": 248,
+      "window": {
+        "end_ms": 1792835977714,
+        "split": "test",
+        "start_ms": 1792835770115
+      }
+    },
+    {
+      "accepted": 116,
+      "accounting": {
+        "cost_basis": "moving average; fee-asset disposals recognize their valuation less allocated cost basis; fees deducted once",
+        "fees_atoms": 0,
+        "net_pnl_atoms": 240870000,
+        "realized_gross_atoms": 0,
+        "rebates_atoms": 0,
+        "reconciled": true,
+        "unrealized_gross_atoms": 240870000
+      },
+      "actual_exchange_executions": 0,
+      "books": 1792,
+      "cancelled": 116,
+      "capital_scope": "isolated_5000_alternatives_do_not_sum",
+      "capital_usdt": 5000,
+      "closeout_stress_atoms": 301335097,
+      "conservative_net_edge_bps_per_executed_notional": null,
+      "conservative_trading_pnl_atoms": -301335097,
+      "data_quality_valid": true,
+      "drawdown_stopped": false,
+      "eligible_positive_oos_row": false,
+      "ending_balances": {
+        "base_available": 217000000,
+        "base_reserved": 0,
+        "base_total": 217000000,
+        "bnb_available": 0,
+        "bnb_reserved": 0,
+        "bnb_total": 0,
+        "quote_available": 250032275000,
+        "quote_reserved": 0,
+        "quote_total": 250032275000
+      },
+      "excess_over_hold_atoms": 0,
+      "executed_notional_atoms": 0,
+      "fee_asset_assumption": "received",
+      "fee_assets": {},
+      "fees_atoms": 0,
+      "fills": 0,
+      "filtered_events": 0,
+      "funnel": {
+        "dependency_failures": {},
+        "existing_quote_retained_or_canceling": 404,
+        "fee_widened_opportunities": 0,
+        "generated_quote_intents": 116,
+        "quote_opportunities": 520,
+        "rejected_exchange_filters": 0,
+        "rejected_fee_constraints": 0,
+        "rejected_market_data": 0,
+        "rejected_risk_limits": 0,
+        "rejection_reasons": {},
+        "submitted_to_simulated_execution": 116
+      },
+      "gross_spread_capture_atoms": 0,
+      "incremental_inventory_pnl_atoms": 0,
+      "initial_inventory_hold_pnl_atoms": 240870000,
+      "initialization": {
+        "base_cost_basis_atoms": 249967725000,
+        "bnb_cost_basis_atoms": 0,
+        "initial_base_units": 217000000,
+        "initial_bnb_units": 0,
+        "initial_equity_atoms": 500000000000,
+        "initial_quote_atoms": 250032275000,
+        "initial_valuation_price": 115192500000,
+        "initial_valuation_time_ms": 1792835771373,
+        "realized_gross_atoms": 0
+      },
+      "markouts": [
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 1,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 5,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 30,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 60,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        }
+      ],
+      "max_drawdown_atoms": 542500000,
+      "net_mtm_atoms": 240870000,
+      "observed_duration_ms": 206341,
+      "open_orders": 0,
+      "rejection_reasons": [
+        "insufficient_simulated_fill_count",
+        "insufficient_observation_duration",
+        "no_positive_inventory_neutral_edge_after_fees_and_costs"
+      ],
+      "result_type": "historical_paper_simulation_not_exchange_execution",
+      "risk_allowance_atoms": 0,
+      "sensitivity": {
+        "cancel_latency_ms": 100,
+        "entry_latency_ms": 50,
+        "model": "conservative_through",
+        "name": "conservative",
+        "queue_multiplier_ppm": 1000000
+      },
+      "split": "test",
+      "spread_capture_less_fees_atoms": 0,
+      "spread_capture_less_fees_bps_per_executed_notional": null,
+      "strategy": "economic_fixed",
+      "submitted": 116,
+      "symbol": "ZECUSDT",
+      "trades": 543,
+      "window": {
+        "end_ms": 1792835977714,
+        "split": "test",
+        "start_ms": 1792835771316
+      }
+    },
+    {
+      "accepted": 112,
+      "accounting": {
+        "cost_basis": "moving average; fee-asset disposals recognize their valuation less allocated cost basis; fees deducted once",
+        "fees_atoms": 0,
+        "net_pnl_atoms": 240870000,
+        "realized_gross_atoms": 0,
+        "rebates_atoms": 0,
+        "reconciled": true,
+        "unrealized_gross_atoms": 240870000
+      },
+      "actual_exchange_executions": 0,
+      "books": 1792,
+      "cancelled": 112,
+      "capital_scope": "isolated_5000_alternatives_do_not_sum",
+      "capital_usdt": 5000,
+      "closeout_stress_atoms": 301335097,
+      "conservative_net_edge_bps_per_executed_notional": null,
+      "conservative_trading_pnl_atoms": -301335097,
+      "data_quality_valid": true,
+      "drawdown_stopped": false,
+      "eligible_positive_oos_row": false,
+      "ending_balances": {
+        "base_available": 217000000,
+        "base_reserved": 0,
+        "base_total": 217000000,
+        "bnb_available": 0,
+        "bnb_reserved": 0,
+        "bnb_total": 0,
+        "quote_available": 250032275000,
+        "quote_reserved": 0,
+        "quote_total": 250032275000
+      },
+      "excess_over_hold_atoms": 0,
+      "executed_notional_atoms": 0,
+      "fee_asset_assumption": "received",
+      "fee_assets": {},
+      "fees_atoms": 0,
+      "fills": 0,
+      "filtered_events": 68,
+      "funnel": {
+        "dependency_failures": {},
+        "existing_quote_retained_or_canceling": 390,
+        "fee_widened_opportunities": 0,
+        "generated_quote_intents": 112,
+        "quote_opportunities": 502,
+        "rejected_exchange_filters": 0,
+        "rejected_fee_constraints": 0,
+        "rejected_market_data": 0,
+        "rejected_risk_limits": 0,
+        "rejection_reasons": {},
+        "submitted_to_simulated_execution": 112
+      },
+      "gross_spread_capture_atoms": 0,
+      "incremental_inventory_pnl_atoms": 0,
+      "initial_inventory_hold_pnl_atoms": 240870000,
+      "initialization": {
+        "base_cost_basis_atoms": 249967725000,
+        "bnb_cost_basis_atoms": 0,
+        "initial_base_units": 217000000,
+        "initial_bnb_units": 0,
+        "initial_equity_atoms": 500000000000,
+        "initial_quote_atoms": 250032275000,
+        "initial_valuation_price": 115192500000,
+        "initial_valuation_time_ms": 1792835771373,
+        "realized_gross_atoms": 0
+      },
+      "markouts": [
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 1,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 5,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 30,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 60,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        }
+      ],
+      "max_drawdown_atoms": 542500000,
+      "net_mtm_atoms": 240870000,
+      "observed_duration_ms": 206341,
+      "open_orders": 0,
+      "rejection_reasons": [
+        "insufficient_simulated_fill_count",
+        "insufficient_observation_duration",
+        "no_positive_inventory_neutral_edge_after_fees_and_costs"
+      ],
+      "result_type": "historical_paper_simulation_not_exchange_execution",
+      "risk_allowance_atoms": 0,
+      "sensitivity": {
+        "cancel_latency_ms": 100,
+        "entry_latency_ms": 50,
+        "model": "conservative_through",
+        "name": "conservative",
+        "queue_multiplier_ppm": 1000000
+      },
+      "split": "test",
+      "spread_capture_less_fees_atoms": 0,
+      "spread_capture_less_fees_bps_per_executed_notional": null,
+      "strategy": "adaptive_inventory",
+      "submitted": 112,
+      "symbol": "ZECUSDT",
+      "trades": 543,
+      "window": {
+        "end_ms": 1792835977714,
+        "split": "test",
+        "start_ms": 1792835771316
+      }
+    },
+    {
+      "accepted": 112,
+      "accounting": {
+        "cost_basis": "moving average; fee-asset disposals recognize their valuation less allocated cost basis; fees deducted once",
+        "fees_atoms": 0,
+        "net_pnl_atoms": 240870000,
+        "realized_gross_atoms": 0,
+        "rebates_atoms": 0,
+        "reconciled": true,
+        "unrealized_gross_atoms": 240870000
+      },
+      "actual_exchange_executions": 0,
+      "books": 1792,
+      "cancelled": 112,
+      "capital_scope": "isolated_5000_alternatives_do_not_sum",
+      "capital_usdt": 5000,
+      "closeout_stress_atoms": 301335097,
+      "conservative_net_edge_bps_per_executed_notional": null,
+      "conservative_trading_pnl_atoms": -301335097,
+      "data_quality_valid": true,
+      "drawdown_stopped": false,
+      "eligible_positive_oos_row": false,
+      "ending_balances": {
+        "base_available": 217000000,
+        "base_reserved": 0,
+        "base_total": 217000000,
+        "bnb_available": 0,
+        "bnb_reserved": 0,
+        "bnb_total": 0,
+        "quote_available": 250032275000,
+        "quote_reserved": 0,
+        "quote_total": 250032275000
+      },
+      "excess_over_hold_atoms": 0,
+      "executed_notional_atoms": 0,
+      "fee_asset_assumption": "received",
+      "fee_assets": {},
+      "fees_atoms": 0,
+      "fills": 0,
+      "filtered_events": 69,
+      "funnel": {
+        "dependency_failures": {},
+        "existing_quote_retained_or_canceling": 390,
+        "fee_widened_opportunities": 0,
+        "generated_quote_intents": 112,
+        "quote_opportunities": 502,
+        "rejected_exchange_filters": 0,
+        "rejected_fee_constraints": 0,
+        "rejected_market_data": 0,
+        "rejected_risk_limits": 0,
+        "rejection_reasons": {},
+        "submitted_to_simulated_execution": 112
+      },
+      "gross_spread_capture_atoms": 0,
+      "incremental_inventory_pnl_atoms": 0,
+      "initial_inventory_hold_pnl_atoms": 240870000,
+      "initialization": {
+        "base_cost_basis_atoms": 249967725000,
+        "bnb_cost_basis_atoms": 0,
+        "initial_base_units": 217000000,
+        "initial_bnb_units": 0,
+        "initial_equity_atoms": 500000000000,
+        "initial_quote_atoms": 250032275000,
+        "initial_valuation_price": 115192500000,
+        "initial_valuation_time_ms": 1792835771373,
+        "realized_gross_atoms": 0
+      },
+      "markouts": [
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 1,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 5,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 30,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        },
+        {
+          "completed": 0,
+          "missing": 0,
+          "seconds": 60,
+          "signed_adverse_atoms": 0,
+          "unfavorable_adverse_atoms": 0
+        }
+      ],
+      "max_drawdown_atoms": 542500000,
+      "net_mtm_atoms": 240870000,
+      "observed_duration_ms": 206341,
+      "open_orders": 0,
+      "rejection_reasons": [
+        "insufficient_simulated_fill_count",
+        "insufficient_observation_duration",
+        "no_positive_inventory_neutral_edge_after_fees_and_costs"
+      ],
+      "result_type": "historical_paper_simulation_not_exchange_execution",
+      "risk_allowance_atoms": 0,
+      "sensitivity": {
+        "cancel_latency_ms": 100,
+        "entry_latency_ms": 50,
+        "model": "conservative_through",
+        "name": "conservative",
+        "queue_multiplier_ppm": 1000000
+      },
+      "split": "test",
+      "spread_capture_less_fees_atoms": 0,
+      "spread_capture_less_fees_bps_per_executed_notional": null,
+      "strategy": "adaptive_filtered",
+      "submitted": 112,
+      "symbol": "ZECUSDT",
+      "trades": 543,
+      "window": {
+        "end_ms": 1792835977714,
+        "split": "test",
+        "start_ms": 1792835771316
+      }
+    },
+    {
+      "accepted": 119,
+      "accounting": {
+        "cost_basis": "moving average; fee-asset disposals recognize their valuation less allocated cost basis; fees deducted once",
+        "fees_atoms": 61603581,
+        "net_pnl_atoms": 185917855,
+        "realized_gross_atoms": 55731998,
+        "rebates_atoms": 0,
+        "reconciled": true,
+        "unrealized_gross_atoms": 191789438
+      },
+      "actual_exchange_executions": 0,
+      "books": 1792,
+      "cancelled": 113,
+      "capital_scope": "isolated_5000_alternatives_do_not_sum",
+      "capital_usdt": 5000,
+      "closeout_stress_atoms": 277425338,
+      "conservative_net_edge_bps_per_executed_notional": -64.24856584230064,
+      "conservative_trading_pnl_atoms": -395794173,
+      "data_quality_valid": true,
+      "drawdown_stopped": false,
+      "eligible_positive_oos_row": false,
+      "ending_balances": {
+        "base_available": 199781900,
+        "base_reserved": 0,
+        "base_total": 199781900,
+        "bnb_available": 0,
+        "bnb_reserved": 0,
+        "bnb_total": 0,
+        "quote_available": 269830394789,
+        "quote_reserved": 0,
+        "quote_total": 269830394789
+      },
+      "excess_over_hold_atoms": -54952145,
+      "executed_notional_atoms": 61603581000,
+      "fee_asset_assumption": "received",
+      "fee_assets": {
+        "USDT": 40721211,
+        "ZEC": 18100
+      },
+      "fees_atoms": 61603581,
+      "fills": 10,
+      "filtered_events": 0,
+      "funnel": {
+        "dependency_failures": {},
+        "existing_quote_retained_or_canceling": 400,
+        "fee_widened_opportunities": 0,
+        "generated_quote_intents": 120,
+        "quote_opportunities": 520,
+        "rejected_exchange_filters": 0,
+        "rejected_fee_constraints": 0,
+        "rejected_market_data": 0,
+        "rejected_risk_limits": 0,
+        "rejection_reasons": {},
+        "submitted_to_simulated_execution": 120
+      },
+      "gross_spread_capture_atoms": 3151000,
+      "incremental_inventory_pnl_atoms": 3500436,
+      "initial_inventory_hold_pnl_atoms": 240870000,
+      "initialization": {
+        "base_cost_basis_atoms": 230163733628,
+        "bnb_cost_basis_atoms": 0,
+        "initial_base_units": 217000000,
+        "initial_bnb_units": 0,
+        "initial_equity_atoms": 500000000000,
+        "initial_quote_atoms": 250032275000,
+        "initial_valuation_price": 115192500000,
+        "initial_valuation_time_ms": 1792835771373,
+        "realized_gross_atoms": 55731998
+      },
+      "markouts": [
+        {
+          "completed": 10,
+          "missing": 0,
+          "seconds": 1,
+          "signed_adverse_atoms": 6092000,
+          "unfavorable_adverse_atoms": 7859000
+        },
+        {
+          "completed": 10,
+          "missing": 0,
+          "seconds": 5,
+          "signed_adverse_atoms": 8096000,
+          "unfavorable_adverse_atoms": 16079000
+        },
+        {
+          "completed": 10,
+          "missing": 0,
+          "seconds": 30,
+          "signed_adverse_atoms": 24169000,
+          "unfavorable_adverse_atoms": 48922000
+        },
+        {
+          "completed": 10,
+          "missing": 0,
+          "seconds": 60,
+          "signed_adverse_atoms": 10714000,
+          "unfavorable_adverse_atoms": 38355000
+        }
+      ],
+      "max_drawdown_atoms": 499590857,
+      "net_mtm_atoms": 185917855,
+      "observed_duration_ms": 206341,
+      "open_orders": 0,
+      "rejection_reasons": [
+        "research_only_uneconomic_control",
+        "insufficient_simulated_fill_count",
+        "insufficient_observation_duration",
+        "no_positive_inventory_neutral_edge_after_fees_and_costs"
+      ],
+      "result_type": "historical_paper_simulation_not_exchange_execution",
+      "risk_allowance_atoms": 21561254,
+      "sensitivity": {
+        "cancel_latency_ms": 100,
+        "entry_latency_ms": 50,
+        "model": "conservative_through",
+        "name": "conservative",
+        "queue_multiplier_ppm": 1000000
+      },
+      "split": "test",
+      "spread_capture_less_fees_atoms": -58452581,
+      "spread_capture_less_fees_bps_per_executed_notional": -9.488503760844683,
+      "strategy": "research_touch_control",
+      "submitted": 120,
+      "symbol": "ZECUSDT",
+      "trades": 543,
+      "window": {
+        "end_ms": 1792835977714,
+        "split": "test",
+        "start_ms": 1792835771316
+      }
+    }
+  ],
+  "conclusion": "No defensible positive simulated edge was identified under the standard manual tier. Economic strategies had no fills; the research touch control lost spread-capture P&L after fees. Positive MTM was not a trading edge. Duration/sample floors were not met; this does not prove all Binance strategies impossible."
+}

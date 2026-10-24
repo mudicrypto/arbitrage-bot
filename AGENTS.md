@@ -1,6 +1,6 @@
 # Development instructions
 
-Use the existing isolated checkout; do not create worktrees unless the user requests one. Read README.md, ARCHITECTURE.md, ROADMAP.md and RISK_POLICY.md first. Implement only the approved milestone. M1–M5 are approved. M5 connects public live data to funded simulated execution with research/economic profiles. Stop after M5; M6/live execution requires fresh explicit approval.
+Use the existing isolated checkout; do not create worktrees unless the user requests one. Read README.md, ARCHITECTURE.md, ROADMAP.md and RISK_POLICY.md first. Implement only the approved milestone. M1–M6 are approved. M6 reuses the existing engine for pre-registered profitability discovery. Stop after M6; further milestones/live execution require fresh explicit approval.
 
 Never request private exchange keys or submit real orders. Keep live execution unavailable. Use integer executable prices/quantities, deterministic event ordering and explicit fee assets. Unknown submission outcomes require reconciliation. Price touch is not evidence of execution.
 
@@ -17,3 +17,5 @@ M4.1 diagnostic counts must reconcile, distinguish exact-price from trade-throug
 M4.2 must preserve the existing running collector. Use explicit isolated capital alternatives or validated partitions summing to one $5000 budget. Initial holdings are priced accounting allocations, never claimed executions. Only completed valid session-symbols enter batch research; do not sum independent experiments or silently reset equity over missing intervals. See docs/MILESTONE_4_2.md.
 
 M5 paper wallets must preserve capital/fee/drawdown state on restart; void virtual orders and require fresh books after outages. Research may bypass fee-width guards only with explicit research labeling; it still pays configured fees and retains all funding, post-only, position and drawdown controls. Never call paper fills actual exchange executions. See MILESTONE_5.md.
+
+M6 comparisons must preserve frozen configuration, chronological train/validation/test boundaries and embargoes. Holdouts may not tune strategies. Use standard unverified manual fees without discounts, separate inventory appreciation, and require conservative/stressed agreement. Invalid rows and optimistic/research-only fills never qualify. Never interpret missing fills as measured zero edge. See MILESTONE_6.md.
